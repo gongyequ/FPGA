@@ -1,0 +1,93 @@
+{
+  "name": "data_arm_d4_w8_k2",
+  "description": "多层B臂链，各层被替换臂交替，B规则关闭时不要求命中",
+  "input_pmux_count": 4,
+  "ports": [
+    {
+      "name": "a0",
+      "width": 8,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b0",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s0",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a1",
+      "width": 8,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b1",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s1",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a2",
+      "width": 8,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b2",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s2",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a3",
+      "width": 8,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b3",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s3",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "out0",
+      "width": 8,
+      "direction": "output",
+      "kind": "data"
+    }
+  ],
+  "selection": null,
+  "expect_unchanged": false,
+  "min_removed_with_default": 0,
+  "min_removed_with_b": 2,
+  "simulate": true,
+  "samples": 512,
+  "scope": "supplemental structural regression; not official nine-case area/performance",
+  "input_sha256": "a2072ea3cbe75349e2b187d6ee782ef666c2b9f08aa1aaa3826f2214038d9f86"
+}

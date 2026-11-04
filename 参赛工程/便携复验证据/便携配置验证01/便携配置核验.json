@@ -1,0 +1,58 @@
+{
+  "dependencies": {
+    "suite": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\官方工具\\oss-cad-suite",
+    "gnu_make": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\等价验证\\官方依赖\\make-4.4.1\\WinRel\\gnumake.exe",
+    "git_usr_bin": "D:\\Git\\usr\\bin",
+    "stage_root": "C:\\Users\\13889\\AppData\\Local\\Temp",
+    "temporary_drive_candidates": [
+      "X:",
+      "W:",
+      "V:",
+      "U:",
+      "T:",
+      "P:",
+      "Q:"
+    ],
+    "tool_execution": "none; path inspection only"
+  },
+  "binary_sha256": {
+    "原版程序": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "优化程序": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53"
+  },
+  "checks": [
+    {
+      "variant": "原版程序",
+      "check": "版本",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "variant": "原版程序",
+      "check": "实际综合默认流程",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "variant": "优化程序",
+      "check": "版本",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "variant": "优化程序",
+      "check": "实际综合默认流程",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "variant": "优化程序",
+      "check": "实际ABC配置",
+      "passed": true,
+      "exit_code": 0
+    }
+  ],
+  "package_root": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容",
+  "official_tools_inside_package": true,
+  "default_pass": "pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm",
+  "uniform_abc": "+&dch,-f,-r;,&if,{W},{D},{R},-a,-v,-F,4,-c;,&mfs"
+}

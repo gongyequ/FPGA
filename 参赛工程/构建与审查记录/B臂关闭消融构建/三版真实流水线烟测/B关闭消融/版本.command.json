@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "R:/yosys.exe",
+    "-V"
+  ],
+  "cwd": "C:\\Users\\13889\\AppData\\Local\\Temp\\pmux-config-audit-s7p2m6c5",
+  "returncode": 0
+}

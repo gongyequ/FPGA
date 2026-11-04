@@ -1,0 +1,1570 @@
+[
+  {
+    "command": [
+      "V:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/rar_test1/original-area.ys"
+    ],
+    "variant": "original",
+    "started_utc": "2026-11-03T18:19:50.963253+00:00",
+    "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.588187400251627,
+    "peak_working_set_bytes": 24174592,
+    "memory_samples": 383,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "rar_test1",
+    "top": "test1",
+    "script_sha256": "ebcd3d1dcc118f3c6b5fe62ab04a6882efa9d84102370db9f9c4a92cf21ea5da",
+    "abc_process_count": 1,
+    "pmux_messages": [],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&scorr",
+      "&sweep",
+      "&dc2",
+      "&dch -f -r",
+      "&ps",
+      "&if -W 300 -v",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 222,
+      "$lut": 288
+    },
+    "lut": 288,
+    "inverters": 0,
+    "logic_area": 288,
+    "dff": 222,
+    "io_bits": 285,
+    "ports": {
+      "clock": {
+        "direction": "input",
+        "width": 1
+      },
+      "reset": {
+        "direction": "input",
+        "width": 1
+      },
+      "valid": {
+        "direction": "input",
+        "width": 1
+      },
+      "I0": {
+        "direction": "input",
+        "width": 16
+      },
+      "I1": {
+        "direction": "input",
+        "width": 16
+      },
+      "I2": {
+        "direction": "input",
+        "width": 16
+      },
+      "I3": {
+        "direction": "input",
+        "width": 16
+      },
+      "I4": {
+        "direction": "input",
+        "width": 16
+      },
+      "I5": {
+        "direction": "input",
+        "width": 16
+      },
+      "I6": {
+        "direction": "input",
+        "width": 16
+      },
+      "I7": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q0": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q1": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q2": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q3": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q4": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q5": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q6": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q7": {
+        "direction": "input",
+        "width": 16
+      },
+      "por6_out": {
+        "direction": "output",
+        "width": 1
+      },
+      "inter0007_out": {
+        "direction": "output",
+        "width": 1
+      },
+      "inter0008_out": {
+        "direction": "output",
+        "width": 12
+      },
+      "inter0009_out": {
+        "direction": "output",
+        "width": 12
+      }
+    },
+    "raw_il_sha256": "c0e66b7453dd056a07dd16f2ffb627529979558044495ce94ce2c8bde1f89f45",
+    "raw_json_sha256": "5835c2051d58c11ac1cbbdfdc65d1f9d4c153d278da8cf2dc232e55f0e954775"
+  },
+  {
+    "command": [
+      "U:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/rar_test1/optimized-area.ys"
+    ],
+    "variant": "optimized",
+    "started_utc": "2026-11-03T18:19:51.575720+00:00",
+    "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.4586327997967601,
+    "peak_working_set_bytes": 23891968,
+    "memory_samples": 296,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "rar_test1",
+    "top": "test1",
+    "script_sha256": "0df3b2cd9de3e1601c802625183d20662fe953bd4886eb386f5e314d1e162ec7",
+    "abc_process_count": 1,
+    "pmux_messages": [
+      "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 3 decoder tables."
+    ],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&dch -f -r",
+      "&if -W 300 -a -v -F 4 -c",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 222,
+      "$lut": 288
+    },
+    "lut": 288,
+    "inverters": 0,
+    "logic_area": 288,
+    "dff": 222,
+    "io_bits": 285,
+    "ports": {
+      "clock": {
+        "direction": "input",
+        "width": 1
+      },
+      "reset": {
+        "direction": "input",
+        "width": 1
+      },
+      "valid": {
+        "direction": "input",
+        "width": 1
+      },
+      "I0": {
+        "direction": "input",
+        "width": 16
+      },
+      "I1": {
+        "direction": "input",
+        "width": 16
+      },
+      "I2": {
+        "direction": "input",
+        "width": 16
+      },
+      "I3": {
+        "direction": "input",
+        "width": 16
+      },
+      "I4": {
+        "direction": "input",
+        "width": 16
+      },
+      "I5": {
+        "direction": "input",
+        "width": 16
+      },
+      "I6": {
+        "direction": "input",
+        "width": 16
+      },
+      "I7": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q0": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q1": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q2": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q3": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q4": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q5": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q6": {
+        "direction": "input",
+        "width": 16
+      },
+      "Q7": {
+        "direction": "input",
+        "width": 16
+      },
+      "por6_out": {
+        "direction": "output",
+        "width": 1
+      },
+      "inter0007_out": {
+        "direction": "output",
+        "width": 1
+      },
+      "inter0008_out": {
+        "direction": "output",
+        "width": 12
+      },
+      "inter0009_out": {
+        "direction": "output",
+        "width": 12
+      }
+    },
+    "raw_il_sha256": "65403d8f486b36191776b0bd9e3f41689c3580dac9bf5311e6ffbf9693f29303",
+    "raw_json_sha256": "5f25709b8ba8e2c4795259607c64ea9259fb9d56121ef40d41cd1ac2d0f7bb06"
+  },
+  {
+    "command": [
+      "V:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/rar_test2/original-area.ys"
+    ],
+    "variant": "original",
+    "started_utc": "2026-11-03T18:19:52.055758+00:00",
+    "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.24468370014801621,
+    "peak_working_set_bytes": 17522688,
+    "memory_samples": 154,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "rar_test2",
+    "top": "test2",
+    "script_sha256": "888afa3f923e058553be0fcf37b1f0e3b3164bbade37c6e0cd2f8a6a35aae97f",
+    "abc_process_count": 1,
+    "pmux_messages": [],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&scorr",
+      "&sweep",
+      "&dc2",
+      "&dch -f -r",
+      "&ps",
+      "&if -W 300 -v",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "$lut": 25
+    },
+    "lut": 25,
+    "inverters": 0,
+    "logic_area": 25,
+    "dff": 0,
+    "io_bits": 30,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "a": {
+        "direction": "input",
+        "width": 1
+      },
+      "b": {
+        "direction": "input",
+        "width": 1
+      },
+      "c": {
+        "direction": "input",
+        "width": 1
+      },
+      "d": {
+        "direction": "input",
+        "width": 1
+      },
+      "dataa": {
+        "direction": "input",
+        "width": 5
+      },
+      "datab": {
+        "direction": "input",
+        "width": 5
+      },
+      "datac": {
+        "direction": "input",
+        "width": 5
+      },
+      "datad": {
+        "direction": "input",
+        "width": 5
+      },
+      "out": {
+        "direction": "output",
+        "width": 5
+      }
+    },
+    "raw_il_sha256": "261b2dddba64f6e1f22b3d316e81c9f6f343e16755cace7c9fa3ca1715c5eb6c",
+    "raw_json_sha256": "39b7c43825c709da67e14325ae68103f6b7ac845810e4939bbd228325aee61e8"
+  },
+  {
+    "command": [
+      "U:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/rar_test2/optimized-area.ys"
+    ],
+    "variant": "optimized",
+    "started_utc": "2026-11-03T18:19:52.330738+00:00",
+    "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.2546761999838054,
+    "peak_working_set_bytes": 17555456,
+    "memory_samples": 163,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "rar_test2",
+    "top": "test2",
+    "script_sha256": "a25efb73f229c6455b453dec7d8750f1bd46058c1499c09e445f79bd2d9e39f2",
+    "abc_process_count": 1,
+    "pmux_messages": [
+      "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 0 decoder tables."
+    ],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&dch -f -r",
+      "&if -W 300 -a -v -F 4 -c",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "$lut": 15
+    },
+    "lut": 15,
+    "inverters": 0,
+    "logic_area": 15,
+    "dff": 0,
+    "io_bits": 30,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "a": {
+        "direction": "input",
+        "width": 1
+      },
+      "b": {
+        "direction": "input",
+        "width": 1
+      },
+      "c": {
+        "direction": "input",
+        "width": 1
+      },
+      "d": {
+        "direction": "input",
+        "width": 1
+      },
+      "dataa": {
+        "direction": "input",
+        "width": 5
+      },
+      "datab": {
+        "direction": "input",
+        "width": 5
+      },
+      "datac": {
+        "direction": "input",
+        "width": 5
+      },
+      "datad": {
+        "direction": "input",
+        "width": 5
+      },
+      "out": {
+        "direction": "output",
+        "width": 5
+      }
+    },
+    "raw_il_sha256": "618961369ae3109b41520f853d04f31c133b8c75dda1e6be2a64d1f24fcc9723",
+    "raw_json_sha256": "2a801d7ba18a4d9aa03c72919b6722836b4c9bccf9787aa8708c5b533644e141"
+  },
+  {
+    "command": [
+      "V:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/rar_test3/original-area.ys"
+    ],
+    "variant": "original",
+    "started_utc": "2026-11-03T18:19:52.620964+00:00",
+    "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.2727963998913765,
+    "peak_working_set_bytes": 18280448,
+    "memory_samples": 176,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "rar_test3",
+    "top": "test3",
+    "script_sha256": "7246a426712369d11ccac2f1c579232bb0f6316262d2908c0fe6b724b01f080e",
+    "abc_process_count": 1,
+    "pmux_messages": [],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&scorr",
+      "&sweep",
+      "&dc2",
+      "&dch -f -r",
+      "&ps",
+      "&if -W 300 -v",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "$lut": 12,
+      "dffeas": 17
+    },
+    "lut": 12,
+    "inverters": 0,
+    "logic_area": 12,
+    "dff": 17,
+    "io_bits": 12,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "cs": {
+        "direction": "input",
+        "width": 1
+      },
+      "sr_in": {
+        "direction": "input",
+        "width": 1
+      },
+      "gpioout": {
+        "direction": "output",
+        "width": 8
+      },
+      "sr_out": {
+        "direction": "output",
+        "width": 1
+      }
+    },
+    "raw_il_sha256": "193e9e8091e53ed4692b0db9442ab7e509c0f4d1eac55d48e6b606ece777ec01",
+    "raw_json_sha256": "79bfeef90e68da5baae74dd8326f7022973e3a84ac681e00c5f9b4df184aaad0"
+  },
+  {
+    "command": [
+      "U:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/rar_test3/optimized-area.ys"
+    ],
+    "variant": "optimized",
+    "started_utc": "2026-11-03T18:19:52.912982+00:00",
+    "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.2525885999202728,
+    "peak_working_set_bytes": 18378752,
+    "memory_samples": 161,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "rar_test3",
+    "top": "test3",
+    "script_sha256": "217192d0c9cc76ebbd6559a00d1cb9d0096ac3a65741e88244829214300c8b22",
+    "abc_process_count": 1,
+    "pmux_messages": [
+      "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 3 decoder tables."
+    ],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&dch -f -r",
+      "&if -W 300 -a -v -F 4 -c",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "$lut": 12,
+      "dffeas": 17
+    },
+    "lut": 12,
+    "inverters": 0,
+    "logic_area": 12,
+    "dff": 17,
+    "io_bits": 12,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "cs": {
+        "direction": "input",
+        "width": 1
+      },
+      "sr_in": {
+        "direction": "input",
+        "width": 1
+      },
+      "gpioout": {
+        "direction": "output",
+        "width": 8
+      },
+      "sr_out": {
+        "direction": "output",
+        "width": 1
+      }
+    },
+    "raw_il_sha256": "8b9933057150c75f0fc999dc7957e1abfee182860e69765fa4d53230b94f711d",
+    "raw_json_sha256": "b3df1a4828cd7340ebc31b38a9e193f3afb3d94fb11db8073c0be8a1bd5f3154"
+  },
+  {
+    "command": [
+      "V:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/rar_test4/original-area.ys"
+    ],
+    "variant": "original",
+    "started_utc": "2026-11-03T18:19:53.179562+00:00",
+    "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.2743555000051856,
+    "peak_working_set_bytes": 18731008,
+    "memory_samples": 174,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "rar_test4",
+    "top": "test4",
+    "script_sha256": "2b76def751930e53d19800cffc3f765be47c6f530afd81d07f5a851c05126e9b",
+    "abc_process_count": 1,
+    "pmux_messages": [],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&scorr",
+      "&sweep",
+      "&dc2",
+      "&dch -f -r",
+      "&ps",
+      "&if -W 300 -v",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 10,
+      "$lut": 31
+    },
+    "lut": 31,
+    "inverters": 0,
+    "logic_area": 31,
+    "dff": 10,
+    "io_bits": 18,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "reset_n": {
+        "direction": "input",
+        "width": 1
+      },
+      "ena": {
+        "direction": "input",
+        "width": 1
+      },
+      "datain": {
+        "direction": "input",
+        "width": 5
+      },
+      "dataout": {
+        "direction": "output",
+        "width": 6
+      },
+      "only_5b": {
+        "direction": "output",
+        "width": 1
+      },
+      "datain_5bis7": {
+        "direction": "output",
+        "width": 1
+      },
+      "data_dp": {
+        "direction": "output",
+        "width": 1
+      },
+      "data_dn": {
+        "direction": "output",
+        "width": 1
+      }
+    },
+    "raw_il_sha256": "a234386a19ad7ef70612334205ee4355c5f6b421f631def0dfcc97d717cc248e",
+    "raw_json_sha256": "802f25b0cc3cf193c64611aed8c2f6b60b61a7f53a327175df361ae941d6eb35"
+  },
+  {
+    "command": [
+      "U:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/rar_test4/optimized-area.ys"
+    ],
+    "variant": "optimized",
+    "started_utc": "2026-11-03T18:19:53.487106+00:00",
+    "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.2973831999115646,
+    "peak_working_set_bytes": 18731008,
+    "memory_samples": 191,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "rar_test4",
+    "top": "test4",
+    "script_sha256": "ed34c7262804970b7ccc37435cce64370fff98e28912ae0777a98f1023125bb7",
+    "abc_process_count": 1,
+    "pmux_messages": [
+      "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 0 decoder tables."
+    ],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&dch -f -r",
+      "&if -W 300 -a -v -F 4 -c",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 10,
+      "$lut": 24
+    },
+    "lut": 24,
+    "inverters": 0,
+    "logic_area": 24,
+    "dff": 10,
+    "io_bits": 18,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "reset_n": {
+        "direction": "input",
+        "width": 1
+      },
+      "ena": {
+        "direction": "input",
+        "width": 1
+      },
+      "datain": {
+        "direction": "input",
+        "width": 5
+      },
+      "dataout": {
+        "direction": "output",
+        "width": 6
+      },
+      "only_5b": {
+        "direction": "output",
+        "width": 1
+      },
+      "datain_5bis7": {
+        "direction": "output",
+        "width": 1
+      },
+      "data_dp": {
+        "direction": "output",
+        "width": 1
+      },
+      "data_dn": {
+        "direction": "output",
+        "width": 1
+      }
+    },
+    "raw_il_sha256": "55c53841aeba161a24ba956f7dc3c8d1ae42eb0ad1eddb4cf634b3df46639528",
+    "raw_json_sha256": "cedcc9ae3025d4cd3195056874b7d790de3c1dd677232a30d862a29efea06fef"
+  },
+  {
+    "command": [
+      "V:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/zip_case01/original-area.ys"
+    ],
+    "variant": "original",
+    "started_utc": "2026-11-03T18:19:53.833685+00:00",
+    "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.5034404997713864,
+    "peak_working_set_bytes": 23289856,
+    "memory_samples": 325,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "zip_case01",
+    "top": "pmux_case01_balanced",
+    "script_sha256": "393a70eaa6478eafe3173803e1306c2a40018ffbe2653fd8d388628ead626a5a",
+    "abc_process_count": 1,
+    "pmux_messages": [],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&scorr",
+      "&sweep",
+      "&dc2",
+      "&dch -f -r",
+      "&ps",
+      "&if -W 300 -v",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 12,
+      "$lut": 405
+    },
+    "lut": 405,
+    "inverters": 0,
+    "logic_area": 405,
+    "dff": 12,
+    "io_bits": 79,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "en": {
+        "direction": "input",
+        "width": 1
+      },
+      "data_in": {
+        "direction": "input",
+        "width": 48
+      },
+      "ctrl_in": {
+        "direction": "input",
+        "width": 16
+      },
+      "data_out": {
+        "direction": "output",
+        "width": 12
+      }
+    },
+    "raw_il_sha256": "620f8c42ab0776311586f12675680f99039e72d0e12a6737d9520624e18fa69f",
+    "raw_json_sha256": "ad8e92c4eb7ebb1fa3de8754606598b5a383bd7f27c5d90d01d81a629272bbf8"
+  },
+  {
+    "command": [
+      "U:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/zip_case01/optimized-area.ys"
+    ],
+    "variant": "optimized",
+    "started_utc": "2026-11-03T18:19:54.360526+00:00",
+    "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.526496300008148,
+    "peak_working_set_bytes": 22515712,
+    "memory_samples": 340,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "zip_case01",
+    "top": "pmux_case01_balanced",
+    "script_sha256": "28c7cbe7f9d658fdcde1f5f7bf20c0d8f28cffdbb38269418d7a9f507da3d096",
+    "abc_process_count": 1,
+    "pmux_messages": [
+      "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 1 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 5 decoder tables."
+    ],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&dch -f -r",
+      "&if -W 300 -a -v -F 4 -c",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 12,
+      "$lut": 348
+    },
+    "lut": 348,
+    "inverters": 0,
+    "logic_area": 348,
+    "dff": 12,
+    "io_bits": 79,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "en": {
+        "direction": "input",
+        "width": 1
+      },
+      "data_in": {
+        "direction": "input",
+        "width": 48
+      },
+      "ctrl_in": {
+        "direction": "input",
+        "width": 16
+      },
+      "data_out": {
+        "direction": "output",
+        "width": 12
+      }
+    },
+    "raw_il_sha256": "69a298d6c1f240a58eafc2b422fb59ad0c1a5b48a1f8aaddc74adcc5b5c28922",
+    "raw_json_sha256": "84d2a1c63a4fb8d3b46d9d3d4090e8c768d9592a805a112baf834679b15aaf9e"
+  },
+  {
+    "command": [
+      "V:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/zip_case02/original-area.ys"
+    ],
+    "variant": "original",
+    "started_utc": "2026-11-03T18:19:54.902991+00:00",
+    "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.5478995000012219,
+    "peak_working_set_bytes": 25182208,
+    "memory_samples": 357,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "zip_case02",
+    "top": "pmux_case02_pipeline",
+    "script_sha256": "e62b3fa19f8b5e54e9a9c80f10111adea2695f159bd795b97e058a64535a5d56",
+    "abc_process_count": 1,
+    "pmux_messages": [],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&scorr",
+      "&sweep",
+      "&dc2",
+      "&dch -f -r",
+      "&ps",
+      "&if -W 300 -v",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 24,
+      "$lut": 446
+    },
+    "lut": 446,
+    "inverters": 0,
+    "logic_area": 446,
+    "dff": 24,
+    "io_bits": 127,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "en": {
+        "direction": "input",
+        "width": 1
+      },
+      "data_in": {
+        "direction": "input",
+        "width": 48
+      },
+      "ctrl_in": {
+        "direction": "input",
+        "width": 64
+      },
+      "data_out": {
+        "direction": "output",
+        "width": 12
+      }
+    },
+    "raw_il_sha256": "3b0ae7f16d693ce0bdd033536d2e4808c973e65c4f4bb8b4a7962cd80604b8e2",
+    "raw_json_sha256": "b7a4706982b7c208f284bc7f71918604f3c5307c1c5de12e7849175ef1f1bd97"
+  },
+  {
+    "command": [
+      "U:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/zip_case02/optimized-area.ys"
+    ],
+    "variant": "optimized",
+    "started_utc": "2026-11-03T18:19:55.477804+00:00",
+    "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.5792829999700189,
+    "peak_working_set_bytes": 25231360,
+    "memory_samples": 378,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "zip_case02",
+    "top": "pmux_case02_pipeline",
+    "script_sha256": "83af9fa45c2fe834bde1c6ff4ab9e6ddc24c6fc0919f1ebbb0055c41e1c92be2",
+    "abc_process_count": 1,
+    "pmux_messages": [
+      "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 24 decoder tables."
+    ],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&dch -f -r",
+      "&if -W 300 -a -v -F 4 -c",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 24,
+      "$lut": 400
+    },
+    "lut": 400,
+    "inverters": 0,
+    "logic_area": 400,
+    "dff": 24,
+    "io_bits": 127,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "en": {
+        "direction": "input",
+        "width": 1
+      },
+      "data_in": {
+        "direction": "input",
+        "width": 48
+      },
+      "ctrl_in": {
+        "direction": "input",
+        "width": 64
+      },
+      "data_out": {
+        "direction": "output",
+        "width": 12
+      }
+    },
+    "raw_il_sha256": "75493c1d7babb277829b20c5579758b0f7f5c19f6030648593963bd00a1a5041",
+    "raw_json_sha256": "d9cc652d0d1ebb14e0356d363d1f04c11ddf24bdaf2881e4c75e94d58f8a9741"
+  },
+  {
+    "command": [
+      "V:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/zip_case03/original-area.ys"
+    ],
+    "variant": "original",
+    "started_utc": "2026-11-03T18:19:56.075082+00:00",
+    "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.5200176001526415,
+    "peak_working_set_bytes": 23945216,
+    "memory_samples": 338,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "zip_case03",
+    "top": "pmux_case03_crossbar",
+    "script_sha256": "092f543e5b223d88896c78134e6e14945c500d4fa38b0b4a2b8d42dd57b72af7",
+    "abc_process_count": 1,
+    "pmux_messages": [],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&scorr",
+      "&sweep",
+      "&dc2",
+      "&dch -f -r",
+      "&ps",
+      "&if -W 300 -v",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 10,
+      "$lut": 401
+    },
+    "lut": 401,
+    "inverters": 0,
+    "logic_area": 401,
+    "dff": 10,
+    "io_bits": 85,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "en": {
+        "direction": "input",
+        "width": 1
+      },
+      "data_in": {
+        "direction": "input",
+        "width": 40
+      },
+      "ctrl_in": {
+        "direction": "input",
+        "width": 32
+      },
+      "data_out": {
+        "direction": "output",
+        "width": 10
+      }
+    },
+    "raw_il_sha256": "b347541a518995273a651c29e950353cacab03ddc2ac5b86cabe2165b10f38cf",
+    "raw_json_sha256": "feb533a76413d52919d1f30e504dc5f5ac0905b672e519aed7a95bafd2c116d5"
+  },
+  {
+    "command": [
+      "U:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/zip_case03/optimized-area.ys"
+    ],
+    "variant": "optimized",
+    "started_utc": "2026-11-03T18:19:56.618772+00:00",
+    "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.5266305999830365,
+    "peak_working_set_bytes": 24440832,
+    "memory_samples": 342,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "zip_case03",
+    "top": "pmux_case03_crossbar",
+    "script_sha256": "afa247c34a6f9b043b87c9f7e31768a798845ec7f54b96855395bb12dae41127",
+    "abc_process_count": 1,
+    "pmux_messages": [
+      "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 10 decoder tables."
+    ],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&dch -f -r",
+      "&if -W 300 -a -v -F 4 -c",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 10,
+      "$lut": 370
+    },
+    "lut": 370,
+    "inverters": 0,
+    "logic_area": 370,
+    "dff": 10,
+    "io_bits": 85,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "en": {
+        "direction": "input",
+        "width": 1
+      },
+      "data_in": {
+        "direction": "input",
+        "width": 40
+      },
+      "ctrl_in": {
+        "direction": "input",
+        "width": 32
+      },
+      "data_out": {
+        "direction": "output",
+        "width": 10
+      }
+    },
+    "raw_il_sha256": "6a3023191a0bf3cb8b1ac2e88d6db17f3517b003435e5fc42d7df81d71c60211",
+    "raw_json_sha256": "42ec77b3941e80274362d646e32b71806d447a2960b8e294d43ad62e12b6bb05"
+  },
+  {
+    "command": [
+      "V:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/zip_case04/original-area.ys"
+    ],
+    "variant": "original",
+    "started_utc": "2026-11-03T18:19:57.160316+00:00",
+    "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.4382710000500083,
+    "peak_working_set_bytes": 22843392,
+    "memory_samples": 283,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "zip_case04",
+    "top": "pmux_case04_feedback",
+    "script_sha256": "bbab38be90f8663879fa862baa1a16ff55eed10097ec3d3908a337b5490d3933",
+    "abc_process_count": 1,
+    "pmux_messages": [],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&scorr",
+      "&sweep",
+      "&dc2",
+      "&dch -f -r",
+      "&ps",
+      "&if -W 300 -v",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 16,
+      "$lut": 371
+    },
+    "lut": 371,
+    "inverters": 0,
+    "logic_area": 371,
+    "dff": 16,
+    "io_bits": 115,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "en": {
+        "direction": "input",
+        "width": 1
+      },
+      "data_in": {
+        "direction": "input",
+        "width": 64
+      },
+      "ctrl_in": {
+        "direction": "input",
+        "width": 32
+      },
+      "data_out": {
+        "direction": "output",
+        "width": 16
+      }
+    },
+    "raw_il_sha256": "daeaa06f04ec2be8759fa0fd1a05d4cc6dff07340a8263f2f416ade4db2489fe",
+    "raw_json_sha256": "a7565aec7cc08af6f688235804c73c92a6c819f023376901e9957f77f9bb0ca0"
+  },
+  {
+    "command": [
+      "U:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/zip_case04/optimized-area.ys"
+    ],
+    "variant": "optimized",
+    "started_utc": "2026-11-03T18:19:57.625334+00:00",
+    "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.45465270010754466,
+    "peak_working_set_bytes": 23105536,
+    "memory_samples": 296,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "zip_case04",
+    "top": "pmux_case04_feedback",
+    "script_sha256": "c92e18bfef4760e5468e5864c0dfc0ae66bcaa749bb862e6fc84c502c310c837",
+    "abc_process_count": 1,
+    "pmux_messages": [
+      "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 8 decoder tables."
+    ],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&dch -f -r",
+      "&if -W 300 -a -v -F 4 -c",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 16,
+      "$lut": 292
+    },
+    "lut": 292,
+    "inverters": 0,
+    "logic_area": 292,
+    "dff": 16,
+    "io_bits": 115,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "en": {
+        "direction": "input",
+        "width": 1
+      },
+      "data_in": {
+        "direction": "input",
+        "width": 64
+      },
+      "ctrl_in": {
+        "direction": "input",
+        "width": 32
+      },
+      "data_out": {
+        "direction": "output",
+        "width": 16
+      }
+    },
+    "raw_il_sha256": "8867ecda1f824c30f5fbd883262324804b18baa52cb60eb0043e8e4411bbc0d5",
+    "raw_json_sha256": "07b528dcc722b70c4fbcdcf830aefae169a19df3f97d0dd75bc6e2957805224d"
+  },
+  {
+    "command": [
+      "V:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/zip_case05/original-area.ys"
+    ],
+    "variant": "original",
+    "started_utc": "2026-11-03T18:19:58.099188+00:00",
+    "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.5030303997918963,
+    "peak_working_set_bytes": 23412736,
+    "memory_samples": 324,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "zip_case05",
+    "top": "pmux_case05_nested",
+    "script_sha256": "e14778e51cd0bfef036e278f0c402ef8735be0295f30f95312c8fd1b517edddc",
+    "abc_process_count": 1,
+    "pmux_messages": [],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&scorr",
+      "&sweep",
+      "&dc2",
+      "&dch -f -r",
+      "&ps",
+      "&if -W 300 -v",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 12,
+      "$lut": 410
+    },
+    "lut": 410,
+    "inverters": 0,
+    "logic_area": 410,
+    "dff": 12,
+    "io_bits": 79,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "en": {
+        "direction": "input",
+        "width": 1
+      },
+      "data_in": {
+        "direction": "input",
+        "width": 48
+      },
+      "ctrl_in": {
+        "direction": "input",
+        "width": 16
+      },
+      "data_out": {
+        "direction": "output",
+        "width": 12
+      }
+    },
+    "raw_il_sha256": "521db3626b68681ec4915cd44727201f556b7b09cf78550e60fe7783cf0431f7",
+    "raw_json_sha256": "2f0c2dc69083dd5bb78011874754672f5be4ffc06dab77a31778573256b9b037"
+  },
+  {
+    "command": [
+      "U:/yosys.exe",
+      "-Q",
+      "-s",
+      "X:/area/zip_case05/optimized-area.ys"
+    ],
+    "variant": "optimized",
+    "started_utc": "2026-11-03T18:19:58.629283+00:00",
+    "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+    "timeout_seconds": 120,
+    "exit_code": 0,
+    "wall_seconds": 0.5277464999817312,
+    "peak_working_set_bytes": 23310336,
+    "memory_samples": 340,
+    "final_memory_query_ok": true,
+    "timed_out": false,
+    "case": "zip_case05",
+    "top": "pmux_case05_nested",
+    "script_sha256": "fe07832ec797b194279c2457182fcf00ef39bc5c873dc5223997ea3236b6f333",
+    "abc_process_count": 1,
+    "pmux_messages": [
+      "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 5 decoder tables."
+    ],
+    "actual_abc_commands": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&dch -f -r",
+      "&if -W 300 -a -v -F 4 -c",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "cell_types": {
+      "dffeas": 12,
+      "$lut": 366
+    },
+    "lut": 366,
+    "inverters": 0,
+    "logic_area": 366,
+    "dff": 12,
+    "io_bits": 79,
+    "ports": {
+      "clk": {
+        "direction": "input",
+        "width": 1
+      },
+      "rst": {
+        "direction": "input",
+        "width": 1
+      },
+      "en": {
+        "direction": "input",
+        "width": 1
+      },
+      "data_in": {
+        "direction": "input",
+        "width": 48
+      },
+      "ctrl_in": {
+        "direction": "input",
+        "width": 16
+      },
+      "data_out": {
+        "direction": "output",
+        "width": 12
+      }
+    },
+    "raw_il_sha256": "05814834c5b2e31072a422dd9e817066ed1bfe320d6d212fc7643d9693337fa7",
+    "raw_json_sha256": "363cd5fc0d97d7bd1c7af9ea26955b6fffadbe53292c37778618755c96de318c"
+  }
+]

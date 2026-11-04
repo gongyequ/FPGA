@@ -1,0 +1,578 @@
+{
+  "date": "2026-11-04",
+  "scope": "只读核查资料；未编辑正式DOCX/PDF、未改源码、未执行EDA。",
+  "inputs": [
+    {
+      "path": "效率与面积研究_20261104/本轮研究结果汇总.json",
+      "sha256": "5c73e82e202a51f5c96d838b5bfbd7095147840c09d571637a9e0e7e91c2d201"
+    },
+    {
+      "path": "零点六九基线重做/验收标准/答疑原文_完整提取.json",
+      "sha256": "b66306e579a1e36d38383c331720833d0d0db9d351705fac1183240364458f29"
+    },
+    {
+      "path": "效率与面积研究_20261104/构建记录/B臂嵌套_实际C++验证/验证汇总.json",
+      "sha256": "60e72218c50257be44c26afacf8c47b7dbf1c2ba01609ec7e8533b4142566ca4"
+    },
+    {
+      "path": "效率与面积研究_20261104/验收候选/B臂集成F4c/源码/passes/opt/pmux_opt.cc",
+      "sha256": "a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3"
+    },
+    {
+      "path": "效率与面积研究_20261104/验收候选/B臂集成F4c/程序/yosys.exe",
+      "sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53"
+    }
+  ],
+  "core_facts": {
+    "area": {
+      "case_count": 9,
+      "mean_reduction_percent": 14.080533528168981,
+      "original_total": 2389,
+      "optimized_total": 2115,
+      "total_reduction_percent": 11.46923398911679,
+      "area_gate_pass": true,
+      "gate_definition": "逐例下降百分比算术平均>=10%；9例均无面积反增；DFF和顶层IO保持不变。",
+      "cases": [
+        {
+          "case": "rar_test1",
+          "original": 288,
+          "optimized": 288,
+          "reduction_percent": 0.0,
+          "no_area_increase": true,
+          "dff_unchanged": true,
+          "io_unchanged": true
+        },
+        {
+          "case": "rar_test2",
+          "original": 25,
+          "optimized": 15,
+          "reduction_percent": 40.0,
+          "no_area_increase": true,
+          "dff_unchanged": true,
+          "io_unchanged": true
+        },
+        {
+          "case": "rar_test3",
+          "original": 12,
+          "optimized": 12,
+          "reduction_percent": 0.0,
+          "no_area_increase": true,
+          "dff_unchanged": true,
+          "io_unchanged": true
+        },
+        {
+          "case": "rar_test4",
+          "original": 31,
+          "optimized": 24,
+          "reduction_percent": 22.580645161290324,
+          "no_area_increase": true,
+          "dff_unchanged": true,
+          "io_unchanged": true
+        },
+        {
+          "case": "zip_case01",
+          "original": 405,
+          "optimized": 348,
+          "reduction_percent": 14.074074074074074,
+          "no_area_increase": true,
+          "dff_unchanged": true,
+          "io_unchanged": true
+        },
+        {
+          "case": "zip_case02",
+          "original": 446,
+          "optimized": 400,
+          "reduction_percent": 10.31390134529148,
+          "no_area_increase": true,
+          "dff_unchanged": true,
+          "io_unchanged": true
+        },
+        {
+          "case": "zip_case03",
+          "original": 401,
+          "optimized": 370,
+          "reduction_percent": 7.73067331670823,
+          "no_area_increase": true,
+          "dff_unchanged": true,
+          "io_unchanged": true
+        },
+        {
+          "case": "zip_case04",
+          "original": 371,
+          "optimized": 292,
+          "reduction_percent": 21.29380053908356,
+          "no_area_increase": true,
+          "dff_unchanged": true,
+          "io_unchanged": true
+        },
+        {
+          "case": "zip_case05",
+          "original": 410,
+          "optimized": 366,
+          "reduction_percent": 10.731707317073171,
+          "no_area_increase": true,
+          "dff_unchanged": true,
+          "io_unchanged": true
+        }
+      ]
+    },
+    "performance_batches": [
+      {
+        "batch": 1,
+        "report": {
+          "path": "效率与面积研究_20261104/全量验收/B臂集成F4c_性能_预定01/报告.json",
+          "sha256": "3b0c5bb88798147d7a10248a34773c473ee48ff180f7a94bb57bdbdfee01ab2c"
+        },
+        "candidate_raw_samples": 24,
+        "review_cases": [
+          "rar_test3",
+          "zip_case04",
+          "zip_case05"
+        ],
+        "all_nine_within_5_percent": true
+      },
+      {
+        "batch": 2,
+        "report": {
+          "path": "效率与面积研究_20261104/全量验收/B臂集成F4c_性能_预定02/报告.json",
+          "sha256": "2658207d76525786378e92aa4d017212d4538ec0a63290cdf30d2dae5ef72616"
+        },
+        "candidate_raw_samples": 14,
+        "review_cases": [
+          "zip_case03"
+        ],
+        "all_nine_within_5_percent": true
+      },
+      {
+        "batch": 3,
+        "report": {
+          "path": "效率与面积研究_20261104/全量验收/B臂集成F4c_性能_预定03/报告.json",
+          "sha256": "8e372d6420bc3a835ed2178d06cecb146579f098c5a137dbd1c2bea4c0e29090"
+        },
+        "candidate_raw_samples": 14,
+        "review_cases": [
+          "zip_case02"
+        ],
+        "all_nine_within_5_percent": true
+      }
+    ],
+    "performance_max_overhead": {
+      "time_batch": 3,
+      "time_case": "zip_case01",
+      "time_percent": 3.328623944221376,
+      "memory_batch": 1,
+      "memory_case": "rar_test2",
+      "memory_percent": 1.0767790262172339
+    },
+    "raw_candidates": {
+      "count": 52,
+      "max_wall_seconds": 0.5547154997475445,
+      "max_peak_working_set_bytes": 25587712
+    },
+    "eqy": {
+      "pass_count": 9,
+      "report": {
+        "file": "全量验收/B臂集成F4c_面积等价_01/报告.json",
+        "sha256": "3030e1efe743688c04da62dcd5e5e6624524fa0cba60cc86214cd827eb4afcf2"
+      },
+      "scope": "ABC后IL；受限dffeas按官方ff_map逆适配，opt_clean、setundef -zero -init；真实EQY/Yosys SAT时间归纳。不是未归一化全四态或原RTL到器件全链路形式证明。"
+    },
+    "actual_cpp": {
+      "vectors": 323840,
+      "guards": 17,
+      "program_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+      "source_sha256": "a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3"
+    },
+    "expanded_strict_four_state": {
+      "programs": {
+        "original": {
+          "path": "C:\\Users\\13889\\Desktop\\项目\\零点六九参赛交付包_20261103\\原版程序",
+          "sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4"
+        },
+        "optimized": {
+          "path": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\候选程序\\B臂集成F4c",
+          "sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53"
+        }
+      },
+      "pass": "pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm",
+      "summary": {
+        "vectors": 12800,
+        "bits": 111104,
+        "known_bits": 46056,
+        "x_bits": 41736,
+        "z_bits": 23312,
+        "errors": 0
+      },
+      "multilevel": [
+        {
+          "case": "fallback_d4_w8_k2",
+          "removed_original_pmux": 3
+        },
+        {
+          "case": "fallback_d8_w5_k2",
+          "removed_original_pmux": 7
+        },
+        {
+          "case": "fallback_d6_w16_k3",
+          "removed_original_pmux": 4
+        },
+        {
+          "case": "data_arm_d4_w8_k2",
+          "removed_original_pmux": 3
+        },
+        {
+          "case": "data_arm_d6_w12_k3",
+          "removed_original_pmux": 4
+        },
+        {
+          "case": "mixed_chain_d7_w12_k2",
+          "removed_original_pmux": 6
+        }
+      ],
+      "scale": [
+        {
+          "case": "scale_998_pmux_cells",
+          "cells_before": 998,
+          "cells_after": 1030,
+          "removed_original_cells": 64,
+          "baseline_standalone_wall_seconds": 0.15051089972257614,
+          "candidate_standalone_wall_seconds": 0.33302490040659904
+        },
+        {
+          "case": "scale_1000_pmux_cells",
+          "cells_before": 1000,
+          "cells_after": 1032,
+          "removed_original_cells": 64,
+          "baseline_standalone_wall_seconds": 0.14951569959521294,
+          "candidate_standalone_wall_seconds": 0.3191315997391939
+        },
+        {
+          "case": "scale_1002_pmux_cells",
+          "cells_before": 1002,
+          "cells_after": 1034,
+          "removed_original_cells": 64,
+          "baseline_standalone_wall_seconds": 0.1587763000279665,
+          "candidate_standalone_wall_seconds": 0.3631238001398742
+        }
+      ]
+    },
+    "B_rule_net_saved": 96,
+    "versus_frozen_F2c_saved": 125
+  },
+  "scoring": [
+    {
+      "topic": "资源口径与平均",
+      "formula": "Li = LUT数 + 取反逻辑单元数；ri = (Li,base - Li,opt)/Li,base ×100%；Rmean = (r1+…+r9)/9。",
+      "meaning": "赛事口径为逐例百分比算术平均；总量比例Rtotal=(ΣLbase−ΣLopt)/ΣLbase单独披露。各例不允许反增。",
+      "cells": [
+        "C25",
+        "C67",
+        "C130",
+        "C150",
+        "C165"
+      ]
+    },
+    {
+      "topic": "面积评分",
+      "formula": "本地基本目标Rmean≥10%；指南面积项40分，达到20%以上为满分档。",
+      "meaning": "未公布中间得分的完整插值公式，不从14.0805%自行推算具体分数；7例下降、2例持平。",
+      "cells": [
+        "C25",
+        "C130",
+        "C150"
+      ]
+    },
+    {
+      "topic": "相对效率",
+      "formula": "ΔT=(Topt/Tbase−1)×100%；ΔM=(Mopt/Mbase−1)×100%。复核时先分别求两版均值，再求比值。",
+      "meaning": "所有例两项均≤5%是效率满分的相对条件，不是资格线；任一例任一项>15%则效率项0分。5%<增幅≤15%属于扣分区间，精确扣分函数未知。",
+      "cells": [
+        "B105",
+        "C105",
+        "C166"
+      ]
+    },
+    {
+      "topic": "绝对效率",
+      "formula": "节点规模≤1000：完整优化耗时≤60s、运行峰值内存≤2GB；原版本身超过时有超限例外。",
+      "meaning": "不要将60s或2GB作为5%/15%分母。本地同时报告2,000,000,000字节及2GiB两种边界，不冒称答疑定义了GB二进制单位。",
+      "cells": [
+        "B37",
+        "C37"
+      ]
+    },
+    {
+      "topic": "测量对象",
+      "formula": "时间=Yosys进程启动至完整synth_intel结束的墙钟；内存=同次Yosys主进程历史峰值工作集。",
+      "meaning": "包含ABC运行及等待的墙钟；不把子进程峰值相加作为本次评分内存。编译、EQY和独立仿真不计为优化运行耗时。",
+      "cells": [
+        "C147",
+        "C151",
+        "C165"
+      ]
+    },
+    {
+      "topic": "预热复核",
+      "formula": "测试开始/重启：原版pmux_case05_nested预热10次。初测原版→优化版；任一指标>5%的短例复核两版各5次，取均值之比。",
+      "meaning": "C147明确1～10s同短例；10s精确边界与初测是否纳入5次未完全明确。本地公开采用max(两版初测)<10s触发、另取5对新样本，不选最小值。三批均事前固定完整九例，不能拼最佳单例。",
+      "cells": [
+        "C132",
+        "C147",
+        "C148",
+        "C164",
+        "C166"
+      ]
+    },
+    {
+      "topic": "版本和流水线",
+      "formula": "0.69大版本；同评测脚本、相应ABC；新pass接入synth_intel默认路径，全部用例统一ABC脚本。",
+      "meaning": "允许0.69小版本差异；不改其他pass实现或顺序，不额外多次调用ABC，不做ABC后自研LUT改写。",
+      "cells": [
+        "C37",
+        "C53",
+        "C130",
+        "C147",
+        "C162",
+        "C165",
+        "C166"
+      ]
+    },
+    {
+      "topic": "EQY与其他资源",
+      "formula": "ABC后/map_cells前IL；自备EQY配置。DFF或IO超过原版20%影响评分，当前候选二者逐例不变。",
+      "meaning": "答疑允许验证策略及x/z按0初始化，但未逐项完全定义初始化截面。本项目须披露现有dffeas适配及setundef -zero -init，不能宣称组委会已验证。",
+      "cells": [
+        "C53",
+        "C165",
+        "C166",
+        "C167"
+      ]
+    }
+  ],
+  "faq_original_cells": {
+    "B105": "老师好，关于赛题二有三个问题我们需要进一步明确\n1. 对于算法效率的评分标准，是否可以这么认为：假设原版yosys的用时为x，Peak Memory为y，优化后yosys的用时不超过1.05x，Peak Memory不超过1.05y，并在所有样例上都满足这一关系，就能在算法效率上拿满分？在任一样例上，优化后yosys的用时超过1.15x或内存占用超过1.15y，算法效率就不计分？\n2. 实际评测时，在已有4个样例以外，是否会添加新的样例？\n3. 官方能否提供实际评测时使用的EQY脚本供参赛队参考？还是说由参赛队自行编写EQY脚本并提交？",
+    "B37": "对于赛题二有如下疑问希望主办方解答：1.实测表明yosys执行到不存在的PASS时会直接报错退出，评测流程说原版yosys和优化后yosys会运行相同的脚本，那么原版yosys在执行到自定义PASS处则会直接报错退出，所以我们希望可以更加清楚地了解评测的流程、评测时使用的脚本 2.之前提到过“取的优化前后各项指标对比的相对量，可排除掉pc配置的差异性”，但赛题的评分标准明确给出了60s;2GB的时间、内存开销约束，这并不是取相对量，我们希望能够再明确一下赛题的评分标准 3.我们注意到问题汇总提及了“如果0.69效果更好，统一在0.69的版本上开发”，这是比较模糊的，我们想要知道主办方会不会去明确的规定yosys的版本号",
+    "C105": "1.是的\n2.会增加效率测试用例\n3.自行编写即可，eqy只是为了验证优化后功能是否正确",
+    "C130": "1.需要用统一脚本，脚本在优化某个用例的基础上不能对其他用例起副作用。\n2.主要看逻辑单元，dff增加不做关注；个别用例也不可以增加，是通用优化而不是针对个别用例的优化",
+    "C132": "运行前先预热跑原版+case10次，然后开始先跑原版再跑优化版，后台程序保持统一的运行方式，杀软关闭，若某次结果超过%5,如果case很小（总时间不足1s)，可进行复核5次取平均值，若是大的case(10s以上)则只有一次运行机会。",
+    "C147": "1.不允许\n2.是的，必须保证原版与优化版使用同一性能测试工具比较\n3.1~10s视同1s以下复核\n4.不会调整",
+    "C148": "测试开始，系统重启时需预热一次",
+    "C150": "需要都加上",
+    "C151": "已提供，纠正是墙钟时间",
+    "C162": "1.之前答复不清楚所谓的自定义规则，若是自定义abc脚本是允许的。总之就是可以修改abc的脚本，新增优化pass，其他修改不允许。\n2.大版本是0.69即可，主要是对比优化前的原版和优化后的资源差异，小版本差异是允许的。Abc应对应所用的yosys版本",
+    "C164": "1.问题已答复\n2.请咨询赛事方\n3.一次指的就是「运行前先预热跑原版+case10 次」；复核两者都要跑",
+    "C165": "1.大版本必须以0.69为基线\n2.评测脚本都一样\n3.映射用synth_intel -family cycloneiv，eqy验证abc之后的输出与gold比较，因完全映射之后的cycloneiv单元eqy不能识别功能，因此在运行abc之后输出ilang进行eqy验证。\n4.全部用例已提供\n5.yosys主进程；时间即墙钟时间",
+    "C166": "1.已答复\n2.x/z按0初始化，验证方法策略自行修改决定。\n3.不允许优化其他pass的代码，调节调用顺序也不允许。Abc调用在synth_intel会进行调用，不得额外多次调用abc\n4.预热即「运行前先预热跑原版+case10 次」case选pmux_case05_nested，只跑原版即可。5%性能指标有一个超过都算。对两版求平均后计算比例\n5.大版本是0.69即可\n6.若dff或者io超过了原版的20%则影响评分。\n7.eqy的验证脚本需要提供，其他的无热别要求，关心的主要是优化效果",
+    "C167": "1.见上面答复\n2.上面也已答复",
+    "C25": "按照每个用例的平均算，主要看逻辑单元的优化效果\n至于dff不做硬性要求，但不应该多于优化前的数量",
+    "C37": "1.脚本中直接用synth_intel这个组合命令集，优化版应在synth_intel.cc中加入你的优化pass调用\n2.case都规模不大，常规pc都不应超过这个临界，若原版超过则优化版超过也允许，超过原版的打分标准已说明\n3.都用0.69",
+    "C53": "问题1：请都用yosys自带的abc9运行，这个需要统一\n问题2：就是这个要求，把新加的优化pass放到synth_intel.cc里编译到exe中，脚本相同，yosys.exe不同；\n问题3：主要看lut逻辑单元，原则上其他单元不能增加（如dff,io）\n问题4:eqy可以选择其他版本，这个是为了验证\n问题5：切换设计模式验证是允许的，算作通过",
+    "C67": "取反单元也算在逻辑单元中，也作为评测计数"
+  },
+  "algorithm": {
+    "default_command": "pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm",
+    "abc_script": "&dch -f -r; &if {W} {D} {R} -a -v -F 4 -c; &mfs",
+    "abc_notes": [
+      "每次综合一次外部ABC调用、一次&if映射；-F 4是该映射流程的迭代参数，不是4次ABC。",
+      "{W}/{D}/{R}由Yosys按映射约束替换，未设置的可选项为空，不能原样当可执行独立ABC脚本。",
+      "-c来自官方真值表/叶子排列机制；不能泛称输出全部LUT已完全NPN规范化。"
+    ],
+    "baseline": "官方Yosys 0.69+286，commit 37f25dae90177888ac89573be92c3826da71f26e；两版同MSVC Release、同官方ABC及相同Windows Tcl初始化兼容补丁。",
+    "abc_commit": "6c5104934c90eb3cdef9ea063318f7588908a185",
+    "official_boundary": "Yosys/ABC/EQY/仿真库为官方；pmux_opt、默认入口集成、共同Tcl运行兼容补丁、测量及验证配套分别披露为本项目实现。不得称未修改的官方发布二进制。",
+    "model": "P(A,B,S)表示固定0.69官方simlib的$pmux；无有效1且无X时输出A，唯一有效1输出对应B，多选或出现X导致未知。S中的Z在该case模型不激活分支；数据Z按所选数据传播。此结论限定该单元模型，不是把所有电路Z当0。",
+    "b_rule": {
+      "before": "T=P(Ai,Bi,Si)，外层第j个数据臂为T，选择位t=So[j]，其余数据/选择臂记为Bo_other/So_other。",
+      "after": "先构造h=P(1,全0数据,Si)，G=P(全0向量,[h,Si],t)。用[Ai,Bi]及G替换外层第j个数据臂和选择位，其余臂保持成对关系。G必须由单选择臂PMUX实现。",
+      "four_state_reason": "t=0或Z时G全0，避免未选中内层未知值泄漏；t=1时G保留内层默认、单选和多选行为；t=X时G为X，保持外层未知传播。不能用普通AND或MUX无条件替换该门控。",
+      "guards": [
+        "两层均被选中；非辅助控制门；内层完整同序Y恰被外层一个B臂消费，拒绝部分/逆序、共享及顶层输出扇出。",
+        "拒绝自环、PMUX驱动歧义、宽度不一致及未知连接用户。",
+        "数据宽W>Ki+1、合并后Ko+Ki≤16；每模块每次命令最多32次B合并，每次重建连接信息。"
+      ],
+      "source_lines": "passes/opt/pmux_opt.cc:152–243；默认调用techlibs/intel/synth_intel.cc:215。",
+      "proof_boundary": "依据官方模型进行分类推导并用实际C++输出作有限严格四态回归；有限回归本身不等于所有输入的数学形式证明。"
+    },
+    "other_rules": "保留固定零选择臂清理、重复位列共享、B/S成对译码排序、默认A臂嵌套展平；无选中PMUX时通用提前结束分析，但统一ABC配置仍先执行。",
+    "disabled_research": "完整四位索引-index-full-x默认关闭且因RAR1 288→321被拒；shiftx-small、const-decode、const-polarity、desc-order非本候选默认收益来源。",
+    "increment": "同pmux源码、同F4c脚本，只改变synth_intel是否启用-flatten-data-arm：2211→2115，B规则净省96；不可把全部274个下降归功于B规则。"
+  },
+  "references": [
+    {
+      "id": "R1",
+      "type": "会议论文",
+      "authors": [
+        "Clifford Wolf",
+        "Johann Glaser"
+      ],
+      "title": "Yosys - A Free Verilog Synthesis Suite",
+      "year": 2013,
+      "venue": "Austrochip Workshop on Microelectronics 2013",
+      "pages": "47–52",
+      "doi": null,
+      "url": "https://yosyshq.net/yosys/files/yosys-austrochip2013.pdf",
+      "verified_sources": [
+        "https://yosyshq.net/yosys/documentation.html",
+        "https://research.jku.at/de/publications/yosys-a-free-verilog-synthesis-suite/"
+      ],
+      "verification": "已浏览官方论文PDF及官方文献索引；作者机构书目核实年份、页码。未查证到DOI，不补造。",
+      "use": "支持Yosys的RTLIL与可扩展pass框架背景；不用于证明本项目新规则或成绩。",
+      "citation": "WOLF C, GLASER J. Yosys - A Free Verilog Synthesis Suite[C]//Austrochip Workshop on Microelectronics 2013. 2013: 47–52."
+    },
+    {
+      "id": "R2",
+      "type": "会议论文",
+      "authors": [
+        "Robert Brayton",
+        "Alan Mishchenko"
+      ],
+      "title": "ABC: An Academic Industrial-Strength Verification Tool",
+      "year": 2010,
+      "venue": "Computer Aided Verification (CAV 2010), Lecture Notes in Computer Science, vol. 6174",
+      "pages": "24–40",
+      "doi": "10.1007/978-3-642-14295-6_5",
+      "url": "https://doi.org/10.1007/978-3-642-14295-6_5",
+      "verified_sources": [
+        "https://link.springer.com/chapter/10.1007/978-3-642-14295-6_5",
+        "https://people.eecs.berkeley.edu/~alanmi/publications/"
+      ],
+      "verification": "Springer出版者页面与作者官方发表列表一致，核实作者、标题、会议、卷、页码、2010年和DOI。",
+      "use": "说明ABC作为官方逻辑综合与验证工具的背景；本项目只统一配置其脚本，不把ABC算法说成自研。",
+      "citation": "BRAYTON R, MISHCHENKO A. ABC: An Academic Industrial-Strength Verification Tool[C]//Computer Aided Verification. LNCS 6174. Berlin, Heidelberg: Springer, 2010: 24–40. DOI: 10.1007/978-3-642-14295-6_5."
+    },
+    {
+      "id": "R3",
+      "type": "官方固定版本源码",
+      "authors": [
+        "YosysHQ contributors"
+      ],
+      "title": "Yosys Open SYnthesis Suite — techlibs/common/simlib.v",
+      "year": null,
+      "commit": "37f25dae90177888ac89573be92c3826da71f26e",
+      "doi": null,
+      "url": "https://github.com/YosysHQ/yosys/blob/37f25dae90177888ac89573be92c3826da71f26e/techlibs/common/simlib.v",
+      "verified_sources": [
+        "https://github.com/YosysHQ/yosys/tree/37f25dae90177888ac89573be92c3826da71f26e"
+      ],
+      "verification": "网页缓存未返回固定提交文件，随后GitHub插件成功读取同一提交的树和simlib.v完整内容；核查$pmux实际case分支。",
+      "use": "本项目四态模型的直接依据；单独引用$pmux模型所在固定源码，不以浮动latest代替0.69行为。",
+      "citation": "YosysHQ. Yosys Open SYnthesis Suite: techlibs/common/simlib.v[CP/OL]. 提交37f25dae90177888ac89573be92c3826da71f26e[2026-11-04]."
+    },
+    {
+      "id": "R4",
+      "type": "官方文档",
+      "authors": [
+        "YosysHQ"
+      ],
+      "title": "EQY Strategies",
+      "year": null,
+      "doi": null,
+      "url": "https://yosyshq.readthedocs.io/projects/eqy/en/latest/strategies.html",
+      "verified_sources": [
+        "https://yosyshq.readthedocs.io/projects/eqy/en/latest/strategies.html"
+      ],
+      "verification": "已浏览官方文档The sat Strategy及depth定义。网页没有独立发表年份，不把页脚2026版权年冒充发表年。",
+      "use": "说明use sat调用Yosys sat -tempinduct进行k归纳；depth是尝试深度上限。",
+      "citation": "YosysHQ. EQY Strategies[EB/OL].[2026-11-04]."
+    },
+    {
+      "id": "R5",
+      "type": "官方文档",
+      "authors": [
+        "YosysHQ"
+      ],
+      "title": "Equivalence and X-Propagation",
+      "year": null,
+      "doi": null,
+      "url": "https://yosyshq.readthedocs.io/projects/eqy/en/latest/xprop.html",
+      "verified_sources": [
+        "https://yosyshq.readthedocs.io/projects/eqy/en/latest/xprop.html"
+      ],
+      "verification": "已浏览官方Safe-Replacement Equivalence、Formal X-Propagation和Avoiding X-Bits说明。没有独立发表日期。",
+      "use": "解释EQY的安全替换关系与X语义，说明归一化证明和未经归一化四态仿真的不同范围。",
+      "citation": "YosysHQ. Equivalence and X-Propagation[EB/OL].[2026-11-04]."
+    },
+    {
+      "id": "R6",
+      "type": "官方工具发布页",
+      "authors": [
+        "YosysHQ"
+      ],
+      "title": "OSS CAD Suite — Release 2026-10-13",
+      "year": 2026,
+      "release_date": "2026-10-13",
+      "doi": null,
+      "url": "https://github.com/YosysHQ/oss-cad-suite-build/releases/tag/2026-10-13",
+      "verified_sources": [
+        "https://github.com/YosysHQ/oss-cad-suite-build/releases/tag/2026-10-13"
+      ],
+      "verification": "已浏览官方发布页，标题2026-10-13、发布日13 Oct可见。网页动态资产列表未展开；具体Windows包文件名及程序身份另由本地官方依赖清单支持，未声称从网页读到全部资产。",
+      "use": "说明官方工具来源；工具版本与可执行文件哈希以项目依赖清单固定。",
+      "citation": "YosysHQ. OSS CAD Suite: Release 2026-10-13[CP/OL]. 2026-10-13[2026-11-04]."
+    }
+  ],
+  "document_references": [
+    "[1] 全国大学生嵌入式芯片与系统设计竞赛. 2026 FPGA赛道选题指南（中科亿海微）：选题二——多路选择器PMUX结构优化[Z]. 2026: 4–5. 赛事PDF原件随代码提交。",
+    "[2] FPGA创新大赛问题汇总[Z]. 最新所用文件“FPGA创新大赛问题汇总 (1).xlsx”，Sheet1!C25、C67、B105/C105、C130、C132、C147、C150–C151、C162、C164–C167；原件随代码提交。",
+    "[3] YosysHQ. Yosys官方源代码[CP/OL]. 提交37f25dae90177888ac89573be92c3826da71f26e[2026-11-04]. 相关文件：techlibs/common/simlib.v、techlibs/intel/synth_intel.cc、techlibs/intel/common/ff_map.v。 https://github.com/YosysHQ/yosys/tree/37f25dae90177888ac89573be92c3826da71f26e",
+    "[4] WOLF C, GLASER J. Yosys - A Free Verilog Synthesis Suite[C]//Austrochip Workshop on Microelectronics 2013. 2013: 47–52. https://yosyshq.net/yosys/files/yosys-austrochip2013.pdf",
+    "[5] BRAYTON R, MISHCHENKO A. ABC: An Academic Industrial-Strength Verification Tool[C]//Computer Aided Verification. LNCS 6174. Springer, 2010: 24–40. DOI: 10.1007/978-3-642-14295-6_5. 实际ABC取自Yosys官方子模块[2026-11-04]： https://github.com/YosysHQ/abc/tree/6c5104934c90eb3cdef9ea063318f7588908a185",
+    "[6] YosysHQ. EQY Strategies[EB/OL].[2026-11-04]. https://yosyshq.readthedocs.io/projects/eqy/en/latest/strategies.html",
+    "[7] YosysHQ. Equivalence and X-Propagation[EB/OL].[2026-11-04]. https://yosyshq.readthedocs.io/projects/eqy/en/latest/xprop.html",
+    "[8] YosysHQ. OSS CAD Suite: Release 2026-10-13[CP/OL]. 2026-10-13[2026-11-04]. Windows x64工具来源与哈希见随包依赖清单。 https://github.com/YosysHQ/oss-cad-suite-build/releases/tag/2026-10-13",
+    "[9] 本项目. B臂F4c版本原始测试记录[Z]. 2026-11-04，未公开工程资料，随代码提交。含九例面积与EQY、预先固定三批性能、实际C++四态回归、扩展结构回归及程序/源码SHA256。"
+  ],
+  "abc_repository_verification": {
+    "url": "https://github.com/YosysHQ/abc/blob/6c5104934c90eb3cdef9ea063318f7588908a185/README.md",
+    "method": "2026-11-04 GitHub插件实际读取官方Yosys子模块固定提交README；根Yosys树中abc条目也指向此提交。",
+    "doi_claim": "ABC论文DOI来自Springer出版者页面；源码本身不编造DOI。"
+  },
+  "template": {
+    "chapters": [
+      "作品名称与摘要",
+      "第一部分 作品概述",
+      "第二部分 系统组成及功能说明",
+      "第三部分 完成情况及性能参数",
+      "第四部分 总结",
+      "第五部分 参考文献"
+    ],
+    "limits": {
+      "摘要": 800,
+      "功能与特性": 400,
+      "应用领域": 400,
+      "主要技术特点": 400,
+      "主要性能指标": 200,
+      "主要创新点": 200,
+      "设计流程": 200,
+      "可扩展之处": 300,
+      "心得体会": 1000,
+      "参考文献篇数": 20
+    },
+    "anonymity": "模板要求不要出现涉及学校名称等内容；同时审查封面、正文、页眉页脚、图像、属性及路径。真实公开文献作者照实引用，作者机构无需列出。",
+    "software_scope": "机械/板级电路/开发板实物不适用应如实注明，用真实软件架构和测试证据说明，不伪造硬件照片。",
+    "old_script_warning": "旧生成正式文档.py内仍硬编码F2c、45组仿真及4.9845%；校核修订脚本只改引用/术语，不会自动升级数据，不能直接无审查复用。"
+  },
+  "final_checklist": [
+    "所有新候选结论绑定a603b6…程序、a3f12a…自研源码；旧F2c只作为注明身份的历史对照。",
+    "摘要、性能表、总结、图表统一14.0805335%均值及11.469234%总量，不能沿用10.5086%或把总量当均值。",
+    "5%写成效率满分相对条件；不自行计算精确总分，不承诺晋级或正式认证。",
+    "最大时间增幅3.328624%与内存1.076779%来自三批复核后结果；52次原始候选样本另列，不宣称每个原始样本≤5%。",
+    "323840次实际C++四态比较+17保护与12800输出向量/111104位是两个不同测试集，不能简单相加成统一案例数。",
+    "扩展测试18个结构检查、15个普通仿真结构；X41736位/Z23312位均严格比较，没有借setundef过关。",
+    "旧45组/45000周期/560000位/974912四态属于旧F2c，不能列作本候选执行结果。",
+    "998/1000/1002压力记录是独立pass含读写约0.32–0.36s，不是完整综合效率或峰值内存成绩。",
+    "EQY为ABC后两版IL、受限触发器逆适配及opt_clean→setundef -zero -init→prep、整组SAT归纳；不是未经归一化全四态证明或原RTL到器件全链路证明。",
+    "模型说明不把PMUX等同优先级MUX，不把选择Z当X；不宣称全部任意网表均保证减小面积。",
+    "不写EQ6HL130上板、PCB、功耗、最高频率或布局布线实测；目前是软件优化器与统一Cyclone IV逻辑计数口径。",
+    "引用有真实标题/作者/年份或访问日期/URL，来源类型明确；本地测试记录不是公开学术论文。",
+    "模板原作者/lastModifiedBy、批注/修订/属性、学校信息/路径匿名；不篡改真实文献作者名来满足匿名。",
+    "中文正文设zh-CN及中文字体；术语、文件名、代码/URL、SHA仅对应英文run设noProof，清除遗留proofErr。不能以全篇关闭拼写检查掩盖中文错字。",
+    "DOCX提取复核U+FFFD、异常问号、字节串及旧版本残留；最终PDF逐页视觉核查。拼写/编码检查不等于内容正确或排版通过。",
+    "交付路径、压缩包是否真的包含新材料须按最终打包结果更新；不能照抄旧包名字与旧报告引用。"
+  ],
+  "local_reference_notes": [
+    "赛事指南：用户提供官方选题指南，选题二第4–5页；以原件标题为准，不编出版社、ISBN或网络发表地址。",
+    "最新答疑：FPGA创新大赛问题汇总 (1).xlsx，SHA256 127d8d2d6a3f05350020219c76f203ff8bf93648acf3aaa4b2c8ab39f0833b7a；按Sheet1精确单元格引用。",
+    "本项目B臂F4c实际记录为未公开工程证据，可列[Z]并注明2026-11-04及交付相对路径，不能伪装公开论文。"
+  ]
+}

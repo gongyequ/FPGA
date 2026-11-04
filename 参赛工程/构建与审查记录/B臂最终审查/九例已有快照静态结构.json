@@ -1,0 +1,579 @@
+[
+  {
+    "case": "rar_test1",
+    "module": "test1",
+    "source": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\九例插入点结构\\rar_test1\\before.json",
+    "source_sha256": "71078fadaca928881b979d27dba7f8446b9c0cc4371a6667d10ade4a22775d5c",
+    "initial_pmux_count": 5,
+    "initial_data_edges": 0,
+    "initially_admitted_edges": 0,
+    "edges": [],
+    "scope": "saved before-pass snapshot; does not simulate preceding fallback rewrite or sequential merges"
+  },
+  {
+    "case": "rar_test2",
+    "module": "GND",
+    "source": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\九例插入点结构\\rar_test2\\before.json",
+    "source_sha256": "893a2843415638aac07418eaae721cf22542df1620355f2de2f7668b319380b9",
+    "initial_pmux_count": 0,
+    "initial_data_edges": 0,
+    "initially_admitted_edges": 0,
+    "edges": [],
+    "scope": "saved before-pass snapshot; does not simulate preceding fallback rewrite or sequential merges"
+  },
+  {
+    "case": "rar_test3",
+    "module": "test3",
+    "source": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\九例插入点结构\\rar_test3\\before.json",
+    "source_sha256": "7f9fdc24cc101004116c3102382a336328c572f51dfcc3b17f8e42e2cafcc6a9",
+    "initial_pmux_count": 3,
+    "initial_data_edges": 0,
+    "initially_admitted_edges": 0,
+    "edges": [],
+    "scope": "saved before-pass snapshot; does not simulate preceding fallback rewrite or sequential merges"
+  },
+  {
+    "case": "rar_test4",
+    "module": "GND",
+    "source": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\九例插入点结构\\rar_test4\\before.json",
+    "source_sha256": "29e3c94317826aa74fba954a463018aacb14d882d3c11cd5b47d4f065a7e97ac",
+    "initial_pmux_count": 0,
+    "initial_data_edges": 0,
+    "initially_admitted_edges": 0,
+    "edges": [],
+    "scope": "saved before-pass snapshot; does not simulate preceding fallback rewrite or sequential merges"
+  },
+  {
+    "case": "zip_case01",
+    "module": "pmux_case01_balanced",
+    "source": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\九例插入点结构\\zip_case01\\before.json",
+    "source_sha256": "ac1ab1c55850b8068cf754566b97659d35a9c2a3ae2807b1c138cd4750ff0cd9",
+    "initial_pmux_count": 5,
+    "initial_data_edges": 3,
+    "initially_admitted_edges": 3,
+    "edges": [
+      {
+        "outer": "$procmux$28",
+        "inner": "$procmux$38",
+        "arm": 0,
+        "width": 12,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$28",
+        "inner": "$procmux$43",
+        "arm": 1,
+        "width": 12,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$28",
+        "inner": "$procmux$48",
+        "arm": 2,
+        "width": 12,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      }
+    ],
+    "scope": "saved before-pass snapshot; does not simulate preceding fallback rewrite or sequential merges"
+  },
+  {
+    "case": "zip_case02",
+    "module": "pmux_case02_pipeline",
+    "source": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\九例插入点结构\\zip_case02\\before.json",
+    "source_sha256": "e78154ff62860b0b230bf6c30ba597e2918a0e9da47193cbee1f8038fff788ac",
+    "initial_pmux_count": 24,
+    "initial_data_edges": 16,
+    "initially_admitted_edges": 0,
+    "edges": [
+      {
+        "outer": "$procmux$106",
+        "inner": "$procmux$111",
+        "arm": 1,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$106",
+        "inner": "$procmux$116",
+        "arm": 2,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$131",
+        "inner": "$procmux$136",
+        "arm": 1,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$131",
+        "inner": "$procmux$141",
+        "arm": 2,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$146",
+        "inner": "$procmux$151",
+        "arm": 1,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$146",
+        "inner": "$procmux$156",
+        "arm": 2,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$171",
+        "inner": "$procmux$176",
+        "arm": 1,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$171",
+        "inner": "$procmux$181",
+        "arm": 2,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$186",
+        "inner": "$procmux$191",
+        "arm": 1,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$186",
+        "inner": "$procmux$196",
+        "arm": 2,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$211",
+        "inner": "$procmux$216",
+        "arm": 1,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$211",
+        "inner": "$procmux$221",
+        "arm": 2,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$226",
+        "inner": "$procmux$231",
+        "arm": 1,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$226",
+        "inner": "$procmux$236",
+        "arm": 2,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$91",
+        "inner": "$procmux$96",
+        "arm": 1,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$91",
+        "inner": "$procmux$101",
+        "arm": 2,
+        "width": 3,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": false,
+        "initially_admitted": false
+      }
+    ],
+    "scope": "saved before-pass snapshot; does not simulate preceding fallback rewrite or sequential merges"
+  },
+  {
+    "case": "zip_case03",
+    "module": "pmux_case03_crossbar",
+    "source": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\九例插入点结构\\zip_case03\\before.json",
+    "source_sha256": "65039bfc87a79c1b22ba89d3fb50468f42396d4eb7ae94be3f363966f89d7bf1",
+    "initial_pmux_count": 10,
+    "initial_data_edges": 8,
+    "initially_admitted_edges": 8,
+    "edges": [
+      {
+        "outer": "$procmux$54",
+        "inner": "$procmux$63",
+        "arm": 3,
+        "width": 5,
+        "inner_arms": 3,
+        "outer_arms": 7,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$54",
+        "inner": "$procmux$68",
+        "arm": 4,
+        "width": 5,
+        "inner_arms": 3,
+        "outer_arms": 7,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$54",
+        "inner": "$procmux$73",
+        "arm": 5,
+        "width": 5,
+        "inner_arms": 3,
+        "outer_arms": 7,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$54",
+        "inner": "$procmux$78",
+        "arm": 6,
+        "width": 5,
+        "inner_arms": 3,
+        "outer_arms": 7,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$88",
+        "inner": "$procmux$97",
+        "arm": 3,
+        "width": 5,
+        "inner_arms": 3,
+        "outer_arms": 7,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$88",
+        "inner": "$procmux$102",
+        "arm": 4,
+        "width": 5,
+        "inner_arms": 3,
+        "outer_arms": 7,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$88",
+        "inner": "$procmux$107",
+        "arm": 5,
+        "width": 5,
+        "inner_arms": 3,
+        "outer_arms": 7,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$88",
+        "inner": "$procmux$112",
+        "arm": 6,
+        "width": 5,
+        "inner_arms": 3,
+        "outer_arms": 7,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      }
+    ],
+    "scope": "saved before-pass snapshot; does not simulate preceding fallback rewrite or sequential merges"
+  },
+  {
+    "case": "zip_case04",
+    "module": "pmux_case04_feedback",
+    "source": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\九例插入点结构\\zip_case04\\before.json",
+    "source_sha256": "bc0e905a493855f6de70217a7d4c499bf7b7ba36e28501bdee1d77c1c07f0731",
+    "initial_pmux_count": 8,
+    "initial_data_edges": 12,
+    "initially_admitted_edges": 2,
+    "edges": [
+      {
+        "outer": "$procmux$35",
+        "inner": "$procmux$50",
+        "arm": 0,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": false,
+        "cost_guard": true,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$35",
+        "inner": "$procmux$45",
+        "arm": 1,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": false,
+        "cost_guard": true,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$35",
+        "inner": "$procmux$40",
+        "arm": 2,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$40",
+        "inner": "$procmux$50",
+        "arm": 1,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": false,
+        "cost_guard": true,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$40",
+        "inner": "$procmux$45",
+        "arm": 2,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": false,
+        "cost_guard": true,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$45",
+        "inner": "$procmux$50",
+        "arm": 2,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": false,
+        "cost_guard": true,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$57",
+        "inner": "$procmux$72",
+        "arm": 0,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": false,
+        "cost_guard": true,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$57",
+        "inner": "$procmux$67",
+        "arm": 1,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": false,
+        "cost_guard": true,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$57",
+        "inner": "$procmux$62",
+        "arm": 2,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$62",
+        "inner": "$procmux$72",
+        "arm": 1,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": false,
+        "cost_guard": true,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$62",
+        "inner": "$procmux$67",
+        "arm": 2,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": false,
+        "cost_guard": true,
+        "initially_admitted": false
+      },
+      {
+        "outer": "$procmux$67",
+        "inner": "$procmux$72",
+        "arm": 2,
+        "width": 8,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": false,
+        "cost_guard": true,
+        "initially_admitted": false
+      }
+    ],
+    "scope": "saved before-pass snapshot; does not simulate preceding fallback rewrite or sequential merges"
+  },
+  {
+    "case": "zip_case05",
+    "module": "pmux_case05_nested",
+    "source": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\九例插入点结构\\zip_case05\\before.json",
+    "source_sha256": "5fb210728380a20620e7477f06445f9e45ac4f061ec23940e95071d1c09f0c87",
+    "initial_pmux_count": 5,
+    "initial_data_edges": 4,
+    "initially_admitted_edges": 4,
+    "edges": [
+      {
+        "outer": "$procmux$61",
+        "inner": "$procmux$49",
+        "arm": 2,
+        "width": 12,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$68",
+        "inner": "$procmux$27",
+        "arm": 0,
+        "width": 12,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$68",
+        "inner": "$procmux$36",
+        "arm": 1,
+        "width": 12,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      },
+      {
+        "outer": "$procmux$68",
+        "inner": "$procmux$61",
+        "arm": 2,
+        "width": 12,
+        "inner_arms": 3,
+        "outer_arms": 3,
+        "single_consumer": true,
+        "cost_guard": true,
+        "initially_admitted": true
+      }
+    ],
+    "scope": "saved before-pass snapshot; does not simulate preceding fallback rewrite or sequential merges"
+  }
+]

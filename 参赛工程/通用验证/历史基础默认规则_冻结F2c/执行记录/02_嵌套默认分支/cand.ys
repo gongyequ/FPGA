@@ -1,0 +1,14 @@
+read_rtlil cand.il
+pmux_opt -flatten-fallback
+rename case0_ref case0_cand
+rename case1_ref case1_cand
+rename case2_ref case2_cand
+rename case3_ref case3_cand
+rename case4_ref case4_cand
+rename case5_ref case5_cand
+rename case6_ref case6_cand
+rename case7_ref case7_cand
+rename case8_ref case8_cand
+check
+write_verilog -noexpr -noattr cand.v
+write_json cand.json

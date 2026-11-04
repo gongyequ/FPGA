@@ -1,0 +1,51 @@
+{
+  "name": "no_matching_pmux_width",
+  "description": "W=2、K=3嵌套，命中成本限制而保留结构",
+  "input_pmux_count": 2,
+  "ports": [
+    {
+      "name": "a0",
+      "width": 2,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b0",
+      "width": 6,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s0",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b1",
+      "width": 6,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s1",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "out0",
+      "width": 2,
+      "direction": "output",
+      "kind": "data"
+    }
+  ],
+  "selection": null,
+  "expect_unchanged": true,
+  "min_removed_with_default": 0,
+  "min_removed_with_b": 0,
+  "simulate": true,
+  "samples": 512,
+  "scope": "supplemental structural regression; not official nine-case area/performance",
+  "input_sha256": "ed95133265f3c6d952983e35699b3b8378dcbce42ff90389f0c320dd01c11cd3"
+}

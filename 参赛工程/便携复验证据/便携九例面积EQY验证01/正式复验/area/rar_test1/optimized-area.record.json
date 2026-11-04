@@ -1,0 +1,144 @@
+{
+  "command": [
+    "U:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/area/rar_test1/optimized-area.ys"
+  ],
+  "variant": "optimized",
+  "started_utc": "2026-11-03T18:19:51.575720+00:00",
+  "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.4586327997967601,
+  "peak_working_set_bytes": 23891968,
+  "memory_samples": 296,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "rar_test1",
+  "top": "test1",
+  "script_sha256": "0df3b2cd9de3e1601c802625183d20662fe953bd4886eb386f5e314d1e162ec7",
+  "abc_process_count": 1,
+  "pmux_messages": [
+    "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 3 decoder tables."
+  ],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&dch -f -r",
+    "&if -W 300 -a -v -F 4 -c",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ],
+  "cell_types": {
+    "dffeas": 222,
+    "$lut": 288
+  },
+  "lut": 288,
+  "inverters": 0,
+  "logic_area": 288,
+  "dff": 222,
+  "io_bits": 285,
+  "ports": {
+    "clock": {
+      "direction": "input",
+      "width": 1
+    },
+    "reset": {
+      "direction": "input",
+      "width": 1
+    },
+    "valid": {
+      "direction": "input",
+      "width": 1
+    },
+    "I0": {
+      "direction": "input",
+      "width": 16
+    },
+    "I1": {
+      "direction": "input",
+      "width": 16
+    },
+    "I2": {
+      "direction": "input",
+      "width": 16
+    },
+    "I3": {
+      "direction": "input",
+      "width": 16
+    },
+    "I4": {
+      "direction": "input",
+      "width": 16
+    },
+    "I5": {
+      "direction": "input",
+      "width": 16
+    },
+    "I6": {
+      "direction": "input",
+      "width": 16
+    },
+    "I7": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q0": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q1": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q2": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q3": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q4": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q5": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q6": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q7": {
+      "direction": "input",
+      "width": 16
+    },
+    "por6_out": {
+      "direction": "output",
+      "width": 1
+    },
+    "inter0007_out": {
+      "direction": "output",
+      "width": 1
+    },
+    "inter0008_out": {
+      "direction": "output",
+      "width": 12
+    },
+    "inter0009_out": {
+      "direction": "output",
+      "width": 12
+    }
+  },
+  "raw_il_sha256": "65403d8f486b36191776b0bd9e3f41689c3580dac9bf5311e6ffbf9693f29303",
+  "raw_json_sha256": "5f25709b8ba8e2c4795259607c64ea9259fb9d56121ef40d41cd1ac2d0f7bb06"
+}

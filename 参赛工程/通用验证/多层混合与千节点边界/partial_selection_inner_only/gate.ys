@@ -1,0 +1,10 @@
+read_rtlil input.il
+check -assert
+pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm partial_selection_inner_only/p0
+select *
+check -assert
+rename partial_selection_inner_only gate
+write_json gate.json
+write_rtlil gate.il
+write_verilog -noexpr -noattr gate.v
+stat

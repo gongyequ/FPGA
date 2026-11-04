@@ -1,0 +1,173 @@
+[
+  {
+    "case": "rar_test1",
+    "top": "test1",
+    "semantic_scope": "Exact FF replacement only; original ports, all non-FF cells and all original netnames unchanged.",
+    "results": {
+      "gold": {
+        "cells": 510,
+        "converted_ff_count": 222,
+        "unchanged_non_ff_cells": 288,
+        "status": "PASS"
+      },
+      "gate": {
+        "cells": 510,
+        "converted_ff_count": 222,
+        "unchanged_non_ff_cells": 288,
+        "status": "PASS"
+      }
+    }
+  },
+  {
+    "case": "rar_test2",
+    "top": "test2",
+    "semantic_scope": "Exact FF replacement only; original ports, all non-FF cells and all original netnames unchanged.",
+    "results": {
+      "gold": {
+        "cells": 25,
+        "converted_ff_count": 0,
+        "unchanged_non_ff_cells": 25,
+        "status": "PASS"
+      },
+      "gate": {
+        "cells": 15,
+        "converted_ff_count": 0,
+        "unchanged_non_ff_cells": 15,
+        "status": "PASS"
+      }
+    }
+  },
+  {
+    "case": "rar_test3",
+    "top": "test3",
+    "semantic_scope": "Exact FF replacement only; original ports, all non-FF cells and all original netnames unchanged.",
+    "results": {
+      "gold": {
+        "cells": 29,
+        "converted_ff_count": 17,
+        "unchanged_non_ff_cells": 12,
+        "status": "PASS"
+      },
+      "gate": {
+        "cells": 29,
+        "converted_ff_count": 17,
+        "unchanged_non_ff_cells": 12,
+        "status": "PASS"
+      }
+    }
+  },
+  {
+    "case": "rar_test4",
+    "top": "test4",
+    "semantic_scope": "Exact FF replacement only; original ports, all non-FF cells and all original netnames unchanged.",
+    "results": {
+      "gold": {
+        "cells": 41,
+        "converted_ff_count": 10,
+        "unchanged_non_ff_cells": 31,
+        "status": "PASS"
+      },
+      "gate": {
+        "cells": 34,
+        "converted_ff_count": 10,
+        "unchanged_non_ff_cells": 24,
+        "status": "PASS"
+      }
+    }
+  },
+  {
+    "case": "zip_case01",
+    "top": "pmux_case01_balanced",
+    "semantic_scope": "Exact FF replacement only; original ports, all non-FF cells and all original netnames unchanged.",
+    "results": {
+      "gold": {
+        "cells": 417,
+        "converted_ff_count": 12,
+        "unchanged_non_ff_cells": 405,
+        "status": "PASS"
+      },
+      "gate": {
+        "cells": 360,
+        "converted_ff_count": 12,
+        "unchanged_non_ff_cells": 348,
+        "status": "PASS"
+      }
+    }
+  },
+  {
+    "case": "zip_case02",
+    "top": "pmux_case02_pipeline",
+    "semantic_scope": "Exact FF replacement only; original ports, all non-FF cells and all original netnames unchanged.",
+    "results": {
+      "gold": {
+        "cells": 470,
+        "converted_ff_count": 24,
+        "unchanged_non_ff_cells": 446,
+        "status": "PASS"
+      },
+      "gate": {
+        "cells": 424,
+        "converted_ff_count": 24,
+        "unchanged_non_ff_cells": 400,
+        "status": "PASS"
+      }
+    }
+  },
+  {
+    "case": "zip_case03",
+    "top": "pmux_case03_crossbar",
+    "semantic_scope": "Exact FF replacement only; original ports, all non-FF cells and all original netnames unchanged.",
+    "results": {
+      "gold": {
+        "cells": 411,
+        "converted_ff_count": 10,
+        "unchanged_non_ff_cells": 401,
+        "status": "PASS"
+      },
+      "gate": {
+        "cells": 380,
+        "converted_ff_count": 10,
+        "unchanged_non_ff_cells": 370,
+        "status": "PASS"
+      }
+    }
+  },
+  {
+    "case": "zip_case04",
+    "top": "pmux_case04_feedback",
+    "semantic_scope": "Exact FF replacement only; original ports, all non-FF cells and all original netnames unchanged.",
+    "results": {
+      "gold": {
+        "cells": 387,
+        "converted_ff_count": 16,
+        "unchanged_non_ff_cells": 371,
+        "status": "PASS"
+      },
+      "gate": {
+        "cells": 308,
+        "converted_ff_count": 16,
+        "unchanged_non_ff_cells": 292,
+        "status": "PASS"
+      }
+    }
+  },
+  {
+    "case": "zip_case05",
+    "top": "pmux_case05_nested",
+    "semantic_scope": "Exact FF replacement only; original ports, all non-FF cells and all original netnames unchanged.",
+    "results": {
+      "gold": {
+        "cells": 422,
+        "converted_ff_count": 12,
+        "unchanged_non_ff_cells": 410,
+        "status": "PASS"
+      },
+      "gate": {
+        "cells": 378,
+        "converted_ff_count": 12,
+        "unchanged_non_ff_cells": 366,
+        "status": "PASS"
+      }
+    }
+  }
+]

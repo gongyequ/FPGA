@@ -1,0 +1,37 @@
+{
+  "all_nine_uniform_per_variant": true,
+  "actual_sequences": {
+    "original": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&scorr",
+      "&sweep",
+      "&dc2",
+      "&dch -f -r",
+      "&ps",
+      "&if -W 300 -v",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ],
+    "optimized": [
+      "read_lut <abc-temp-dir>/lutdefs.txt",
+      "read_box <abc-temp-dir>/input.box",
+      "&read <abc-temp-dir>/input.xaig",
+      "&ps",
+      "&dch -f -r",
+      "&if -W 300 -a -v -F 4 -c",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&mfs",
+      "&ps -l",
+      "&write -n <abc-temp-dir>/output.aig",
+      "&verify",
+      "time"
+    ]
+  }
+}

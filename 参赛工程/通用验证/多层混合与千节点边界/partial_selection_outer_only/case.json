@@ -1,0 +1,53 @@
+{
+  "name": "partial_selection_outer_only",
+  "description": "部分选区：不允许删除选区外内层或更改选区外外层",
+  "input_pmux_count": 2,
+  "ports": [
+    {
+      "name": "a0",
+      "width": 8,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b0",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s0",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b1",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s1",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "out0",
+      "width": 8,
+      "direction": "output",
+      "kind": "data"
+    }
+  ],
+  "selection": [
+    "p1"
+  ],
+  "expect_unchanged": true,
+  "min_removed_with_default": 0,
+  "min_removed_with_b": 0,
+  "simulate": true,
+  "samples": 512,
+  "scope": "supplemental structural regression; not official nine-case area/performance",
+  "input_sha256": "73d62faf50e371dfd5e9a34fb828ff8c1e22f34f8a24eeca9e867d8c07bd5330"
+}

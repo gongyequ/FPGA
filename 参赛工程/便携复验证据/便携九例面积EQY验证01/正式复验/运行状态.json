@@ -1,0 +1,11 @@
+{
+  "status": "EQY_COMPLETE",
+  "completed_stages": [
+    "identity",
+    "area",
+    "eqy"
+  ],
+  "stage_requested": "eqy",
+  "started_utc": "2026-11-03T18:17:39.461089+00:00",
+  "finished_utc": "2026-11-03T18:21:54.849030+00:00"
+}

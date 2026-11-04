@@ -1,0 +1,5 @@
+{
+  "all_bound_files_unchanged": true,
+  "scope": "两版程序及完整运行依赖、候选/原版源码依据、工具、复测/证明脚本、官方RTL及输入副本、ABC覆盖原件与副本",
+  "binding_sha256": "82ab01f3845416bf52583d2071d144a9a621e8e49d30bda65256096eec586110"
+}

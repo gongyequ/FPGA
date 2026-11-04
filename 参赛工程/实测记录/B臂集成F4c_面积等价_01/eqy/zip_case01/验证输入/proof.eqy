@@ -1,0 +1,30 @@
+[options]
+splitnets off
+
+[gold]
+read_rtlil gold.il
+opt_clean
+setundef -zero -init
+prep -top pmux_case01_balanced
+
+[gate]
+read_rtlil gate.il
+opt_clean
+setundef -zero -init
+prep -top pmux_case01_balanced
+
+[match *]
+nodefault
+gold-match clk
+gold-match rst
+gold-match en
+gold-match data_in
+gold-match ctrl_in
+gold-match data_out
+
+[collect *]
+group *
+
+[strategy sat]
+use sat
+depth 20

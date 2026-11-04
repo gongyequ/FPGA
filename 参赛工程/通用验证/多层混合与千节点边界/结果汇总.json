@@ -1,0 +1,10 @@
+{
+  "status": "SUPPLEMENTAL_REGRESSION_PASS",
+  "cases": 18,
+  "simulation_cases": 15,
+  "vectors": 12800,
+  "bits": 111104,
+  "errors": 0,
+  "identity_sha256": "d522183e2c558eefbe8cc3229126768b20860c283896bb09c18bf1cfe9216339",
+  "scope": "finite supplemental structural regression; not official EQY, area, efficiency or certification"
+}

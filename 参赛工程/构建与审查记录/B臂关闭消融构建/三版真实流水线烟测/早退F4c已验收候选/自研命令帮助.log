@@ -1,0 +1,24 @@
+
+-- Running command `help pmux_opt' --
+
+    pmux_opt [-shiftx-small] [-flatten-fallback] [-const-decode] [-const-polarity] [-order-decode [-desc-order]] [-uniform-abc] [selection]
+
+Remove constant-zero select arms and share identical data columns.
+A one-arm cell remains a $pmux; B == A is not a removal condition.
+-shiftx-small invokes upstream pmux2shiftx only for dense, mutually
+exclusive 2/3-bit decoders covering all but at most one code point.
+-flatten-fallback merges single-use nested fallback PMUXes using
+a PMUX control gate, preserving unknown and multi-select semantics.
+-const-decode propagates eq/logic_not selection predicates into
+their own B arms only; A, S and the PMUX cell type remain intact.
+-const-polarity complements only 0/1/X constant A/B tables and
+adds a real output NOT; dynamic or Z-valued A/B are excluded.
+-order-decode sorts B/S arms together by their constant decoder
+value on the same control word. -desc-order selects descending
+rather than ascending order. No arms are removed or combined.
+-uniform-abc installs the same area-oriented ABC9 script for every
+design, unless the caller has explicitly supplied abc9.script.
+
+End of script. Logfile hash: 89b7f240ca
+Yosys 0.69+286 (git sha1 37f25dae9-dirty, Release, MSVC C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 19.44.35215.0) [C:Users889Desktop�圭洰\pmux-optyosys-src at HEAD]
+Time spent: 50% 1x help (0 sec), 50% 0x id_gc (0 sec)

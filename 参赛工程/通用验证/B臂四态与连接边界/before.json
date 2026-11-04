@@ -1,0 +1,1759 @@
+{
+  "creator": "Yosys 0.69+286 (git sha1 37f25dae9-dirty, Release, MSVC C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 19.44.35215.0) [C:Users\u000B889Desktop\uFFFFFFE6\uFFFFFFA4\uFFFFFFE5\uFFFFFF9C\uFFFFFFAD\uFFFFFFE6\uFFFFFFB4\uFFFFFFB0\\pmux-optyosys-src at HEAD]",
+  "modules": {
+    "reject_ambiguous_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 34, 35, 36, 37, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        },
+        "second_driver": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_arm_limit_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 192, 193, 194, 195, 196, 197, 198, 199 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 200, 201, 202, 203, 204, 205, 206, 207, 208 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 209, 210, 211, 212, 213, 214, 215, 216, 217, 218 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001000",
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ],
+            "B": [ 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101 ],
+            "S": [ 192, 193, 194, 195, 196, 197, 198, 199 ],
+            "Y": [ 219, 220, 221, 222, 223, 224, 225, 226, 227, 228 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000001001",
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ],
+            "B": [ 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191 ],
+            "S": [ 200, 201, 202, 203, 204, 205, 206, 207, 208 ],
+            "Y": [ 209, 210, 211, 212, 213, 214, 215, 216, 217, 218 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 192, 193, 194, 195, 196, 197, 198, 199 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 200, 201, 202, 203, 204, 205, 206, 207, 208 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 219, 220, 221, 222, 223, 224, 225, 226, 227, 228 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 209, 210, 211, 212, 213, 214, 215, 216, 217, 218 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_fanout_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        }
+      },
+      "cells": {
+        "consumer": {
+          "hide_name": 0,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34, 35, 36, 37 ],
+            "Y": [ 38, 39, 40, 41 ]
+          }
+        },
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 34, 35, 36, 37, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "extra": {
+          "hide_name": 0,
+          "bits": [ 38, 39, 40, 41 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_inner_unselected_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 34, 35, 36, 37, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_marked_inner_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "pmux_opt_data_gate": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 34, 35, 36, 37, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_marked_outer_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "pmux_opt_control_gate": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 34, 35, 36, 37, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_outer_unselected_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 34, 35, 36, 37, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_partial_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 6, 35, 36, 37, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_reordered_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 37, 36, 35, 34, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_self_loop_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 30, 31, 32, 33, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_top_output_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        },
+        "t": {
+          "direction": "output",
+          "bits": [ 34, 35, 36, 37 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 34, 35, 36, 37, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_unknown_consumer_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 26, 27 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 28, 29 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 30, 31, 32, 33 ]
+        }
+      },
+      "cells": {
+        "consumer": {
+          "hide_name": 0,
+          "type": "unknown_user_cell",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "P": [ 34, 35, 36, 37 ]
+          }
+        },
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8, 9 ],
+            "B": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "S": [ 26, 27 ],
+            "Y": [ 34, 35, 36, 37 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ 34, 35, 36, 37, 22, 23, 24, 25 ],
+            "S": [ 28, 29 ],
+            "Y": [ 30, 31, 32, 33 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 26, 27 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 28, 29 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33 ],
+          "attributes": {
+          }
+        }
+      }
+    },
+    "reject_width_limit_guard": {
+      "attributes": {
+      },
+      "ports": {
+        "ao": {
+          "direction": "input",
+          "bits": [ 2, 3, 4 ]
+        },
+        "ai": {
+          "direction": "input",
+          "bits": [ 5, 6, 7 ]
+        },
+        "bi": {
+          "direction": "input",
+          "bits": [ 8, 9, 10, 11, 12, 13 ]
+        },
+        "bo": {
+          "direction": "input",
+          "bits": [ 14, 15, 16, 17, 18, 19 ]
+        },
+        "si": {
+          "direction": "input",
+          "bits": [ 20, 21 ]
+        },
+        "so": {
+          "direction": "input",
+          "bits": [ 22, 23 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 24, 25, 26 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5, 6, 7 ],
+            "B": [ 8, 9, 10, 11, 12, 13 ],
+            "S": [ 20, 21 ],
+            "Y": [ 27, 28, 29 ]
+          }
+        },
+        "outer": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4 ],
+            "B": [ 27, 28, 29, 17, 18, 19 ],
+            "S": [ 22, 23 ],
+            "Y": [ 24, 25, 26 ]
+          }
+        }
+      },
+      "netnames": {
+        "ai": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7 ],
+          "attributes": {
+          }
+        },
+        "ao": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4 ],
+          "attributes": {
+          }
+        },
+        "bi": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+          }
+        },
+        "bo": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17, 18, 19 ],
+          "attributes": {
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 20, 21 ],
+          "attributes": {
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 22, 23 ],
+          "attributes": {
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 27, 28, 29 ],
+          "attributes": {
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 24, 25, 26 ],
+          "attributes": {
+          }
+        }
+      }
+    }
+  }
+}

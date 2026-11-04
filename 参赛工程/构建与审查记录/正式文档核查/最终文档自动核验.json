@@ -1,0 +1,26 @@
+[
+  {
+    "document": "技术",
+    "pages": 9,
+    "pdf_bytes": 639462,
+    "docx_sha256": "bf064504b7773307b038f97fc68b347ef61747ce6b018459853c10a5500e76cd",
+    "pdf_sha256": "a228c35ab377d75e2850db45b94b36914a678d22e7560fbd9166b6ab1a28d375",
+    "technical_noProof_spans": 187,
+    "author_metadata": "",
+    "replacement_character_count": 0,
+    "new_metrics_present": true,
+    "real_doi_present": true
+  },
+  {
+    "document": "设计",
+    "pages": 12,
+    "pdf_bytes": 672466,
+    "docx_sha256": "05a8c12ed946db77d1c47860c8dcc9456de022029946a73c36712d402911ae66",
+    "pdf_sha256": "7e44fcc681a903f8ff3982b85e2ffbab8e877ae7bcd3fa43605bb9e96ee2a23f",
+    "technical_noProof_spans": 470,
+    "author_metadata": "",
+    "replacement_character_count": 0,
+    "new_metrics_present": true,
+    "real_doi_present": true
+  }
+]

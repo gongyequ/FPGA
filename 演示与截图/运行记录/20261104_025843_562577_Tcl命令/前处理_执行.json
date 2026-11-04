@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "X:/yosys.exe",
+    "-Q",
+    "-T",
+    "-c",
+    "W:/prepare.tcl"
+  ],
+  "returncode": 0,
+  "exe_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+  "tcl_sha256": "a50e1613d2577c11093520cd661b171bb3aa08dd6dfe36938237b46e4fe52d9e"
+}

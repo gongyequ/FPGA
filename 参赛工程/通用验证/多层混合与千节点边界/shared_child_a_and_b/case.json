@@ -1,0 +1,75 @@
+{
+  "name": "shared_child_a_and_b",
+  "description": "同一内层同时作为A和B消费；不得删除共享驱动",
+  "input_pmux_count": 3,
+  "ports": [
+    {
+      "name": "a0",
+      "width": 8,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b0",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s0",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b1",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s1",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a2",
+      "width": 8,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b2",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s2",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "out0",
+      "width": 8,
+      "direction": "output",
+      "kind": "data"
+    },
+    {
+      "name": "out1",
+      "width": 8,
+      "direction": "output",
+      "kind": "data"
+    }
+  ],
+  "selection": null,
+  "expect_unchanged": true,
+  "min_removed_with_default": 0,
+  "min_removed_with_b": 0,
+  "simulate": true,
+  "samples": 512,
+  "scope": "supplemental structural regression; not official nine-case area/performance",
+  "input_sha256": "ef82b3e753ca2ea0434a48474b0821a4c9ee6bc82e0b9a1e01ac135784474ecb"
+}

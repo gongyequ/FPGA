@@ -1,0 +1,132 @@
+{
+  "creator": "Yosys 0.69+286 (git sha1 37f25dae9-dirty, Release, MSVC C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 19.44.35215.0) [C:Users\u000B889Desktop\uFFFFFFE6\uFFFFFFA4\uFFFFFFE5\uFFFFFF9C\uFFFFFFAD\uFFFFFFE6\uFFFFFFB4\uFFFFFFB0\\pmux-optyosys-src at HEAD]",
+  "modules": {
+    "gate": {
+      "attributes": {
+        "top": "00000000000000000000000000000001"
+      },
+      "ports": {
+        "a0": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "b0": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7, 8, 9 ]
+        },
+        "s0": {
+          "direction": "input",
+          "bits": [ 10, 11, 12 ]
+        },
+        "b1": {
+          "direction": "input",
+          "bits": [ 13, 14, 15, 16, 17, 18 ]
+        },
+        "s1": {
+          "direction": "input",
+          "bits": [ 19, 20, 21 ]
+        },
+        "out0": {
+          "direction": "output",
+          "bits": [ 22, 23 ]
+        }
+      },
+      "cells": {
+        "p0": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000011",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ 4, 5, 6, 7, 8, 9 ],
+            "S": [ 10, 11, 12 ],
+            "Y": [ 24, 25 ]
+          }
+        },
+        "p1": {
+          "hide_name": 0,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000011",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24, 25 ],
+            "B": [ 13, 14, 15, 16, 17, 18 ],
+            "S": [ 19, 20, 21 ],
+            "Y": [ 22, 23 ]
+          }
+        }
+      },
+      "netnames": {
+        "a0": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+          }
+        },
+        "b0": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+          }
+        },
+        "b1": {
+          "hide_name": 0,
+          "bits": [ 13, 14, 15, 16, 17, 18 ],
+          "attributes": {
+          }
+        },
+        "out0": {
+          "hide_name": 0,
+          "bits": [ 22, 23 ],
+          "attributes": {
+          }
+        },
+        "s0": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12 ],
+          "attributes": {
+          }
+        },
+        "s1": {
+          "hide_name": 0,
+          "bits": [ 19, 20, 21 ],
+          "attributes": {
+          }
+        },
+        "y0": {
+          "hide_name": 0,
+          "bits": [ 24, 25 ],
+          "attributes": {
+          }
+        },
+        "y1": {
+          "hide_name": 0,
+          "bits": [ 22, 23 ],
+          "attributes": {
+          }
+        }
+      }
+    }
+  }
+}

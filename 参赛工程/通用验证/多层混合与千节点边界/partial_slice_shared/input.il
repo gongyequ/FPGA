@@ -1,0 +1,31 @@
+autoidx 1
+attribute \top 1
+module \partial_slice_shared
+  wire width 8 input 1 \a0
+  wire width 16 input 2 \b0
+  wire width 2 input 3 \s0
+  wire width 8 \y0
+  wire width 8 input 4 \b1
+  wire width 2 input 5 \s1
+  wire width 4 \y1
+  wire width 4 output 6 \out0
+  wire width 4 output 7 \out1
+  cell $pmux \p0
+    parameter \WIDTH 8
+    parameter \S_WIDTH 2
+    connect \A \a0
+    connect \B { \b0 [15:8] \b0 [7:0] }
+    connect \S { \s0 [1] \s0 [0] }
+    connect \Y \y0
+  end
+  cell $pmux \p1
+    parameter \WIDTH 4
+    parameter \S_WIDTH 2
+    connect \A \y0 [3:0]
+    connect \B { \b1 [7:4] \b1 [3:0] }
+    connect \S { \s1 [1] \s1 [0] }
+    connect \Y \y1
+  end
+  connect \out0 \y1
+  connect \out1 \y0 [7:4]
+end

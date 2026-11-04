@@ -1,0 +1,1249 @@
+{
+  "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01",
+  "identity_sha256": "6de222e818ad67b2a32f500e9e4e78932b631c62e891f9e6e63027762f3f4444",
+  "area": {
+    "case_count": 9,
+    "mean_reduction_percent": 14.080533528168981,
+    "original_total": 2389,
+    "optimized_total": 2115,
+    "total_reduction_percent": 11.46923398911679,
+    "area_gate_pass": true,
+    "gate_definition": "逐例下降百分比算术平均>=10%；9例均无面积反增；DFF和顶层IO保持不变。",
+    "cases": [
+      {
+        "case": "rar_test1",
+        "original": 288,
+        "optimized": 288,
+        "reduction_percent": 0.0,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "rar_test2",
+        "original": 25,
+        "optimized": 15,
+        "reduction_percent": 40.0,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "rar_test3",
+        "original": 12,
+        "optimized": 12,
+        "reduction_percent": 0.0,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "rar_test4",
+        "original": 31,
+        "optimized": 24,
+        "reduction_percent": 22.580645161290324,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case01",
+        "original": 405,
+        "optimized": 348,
+        "reduction_percent": 14.074074074074074,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case02",
+        "original": 446,
+        "optimized": 400,
+        "reduction_percent": 10.31390134529148,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case03",
+        "original": 401,
+        "optimized": 370,
+        "reduction_percent": 7.73067331670823,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case04",
+        "original": 371,
+        "optimized": 292,
+        "reduction_percent": 21.29380053908356,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case05",
+        "original": 410,
+        "optimized": 366,
+        "reduction_percent": 10.731707317073171,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      }
+    ]
+  },
+  "eqy": {
+    "official_case_count": 9,
+    "executed_case_count": 9,
+    "pass_count": 9,
+    "all_nine_pass": true,
+    "cases": [
+      {
+        "case": "rar_test1",
+        "top": "test1",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "c0e66b7453dd056a07dd16f2ffb627529979558044495ce94ce2c8bde1f89f45",
+            "raw_cell_counts": {
+              "dffeas": 222,
+              "$lut": 288
+            },
+            "converted_ff_count": 222,
+            "ports": {
+              "clock": {
+                "direction": "input",
+                "width": 1
+              },
+              "reset": {
+                "direction": "input",
+                "width": 1
+              },
+              "valid": {
+                "direction": "input",
+                "width": 1
+              },
+              "I0": {
+                "direction": "input",
+                "width": 16
+              },
+              "I1": {
+                "direction": "input",
+                "width": 16
+              },
+              "I2": {
+                "direction": "input",
+                "width": 16
+              },
+              "I3": {
+                "direction": "input",
+                "width": 16
+              },
+              "I4": {
+                "direction": "input",
+                "width": 16
+              },
+              "I5": {
+                "direction": "input",
+                "width": 16
+              },
+              "I6": {
+                "direction": "input",
+                "width": 16
+              },
+              "I7": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q0": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q1": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q2": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q3": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q4": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q5": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q6": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q7": {
+                "direction": "input",
+                "width": 16
+              },
+              "por6_out": {
+                "direction": "output",
+                "width": 1
+              },
+              "inter0007_out": {
+                "direction": "output",
+                "width": 1
+              },
+              "inter0008_out": {
+                "direction": "output",
+                "width": 12
+              },
+              "inter0009_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          },
+          "gate": {
+            "sha256": "65403d8f486b36191776b0bd9e3f41689c3580dac9bf5311e6ffbf9693f29303",
+            "raw_cell_counts": {
+              "dffeas": 222,
+              "$lut": 288
+            },
+            "converted_ff_count": 222,
+            "ports": {
+              "clock": {
+                "direction": "input",
+                "width": 1
+              },
+              "reset": {
+                "direction": "input",
+                "width": 1
+              },
+              "valid": {
+                "direction": "input",
+                "width": 1
+              },
+              "I0": {
+                "direction": "input",
+                "width": 16
+              },
+              "I1": {
+                "direction": "input",
+                "width": 16
+              },
+              "I2": {
+                "direction": "input",
+                "width": 16
+              },
+              "I3": {
+                "direction": "input",
+                "width": 16
+              },
+              "I4": {
+                "direction": "input",
+                "width": 16
+              },
+              "I5": {
+                "direction": "input",
+                "width": 16
+              },
+              "I6": {
+                "direction": "input",
+                "width": 16
+              },
+              "I7": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q0": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q1": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q2": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q3": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q4": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q5": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q6": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q7": {
+                "direction": "input",
+                "width": 16
+              },
+              "por6_out": {
+                "direction": "output",
+                "width": 1
+              },
+              "inter0007_out": {
+                "direction": "output",
+                "width": 1
+              },
+              "inter0008_out": {
+                "direction": "output",
+                "width": 12
+              },
+              "inter0009_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 28.57551739970222
+      },
+      {
+        "case": "rar_test2",
+        "top": "test2",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "261b2dddba64f6e1f22b3d316e81c9f6f343e16755cace7c9fa3ca1715c5eb6c",
+            "raw_cell_counts": {
+              "$lut": 25
+            },
+            "converted_ff_count": 0,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "a": {
+                "direction": "input",
+                "width": 1
+              },
+              "b": {
+                "direction": "input",
+                "width": 1
+              },
+              "c": {
+                "direction": "input",
+                "width": 1
+              },
+              "d": {
+                "direction": "input",
+                "width": 1
+              },
+              "dataa": {
+                "direction": "input",
+                "width": 5
+              },
+              "datab": {
+                "direction": "input",
+                "width": 5
+              },
+              "datac": {
+                "direction": "input",
+                "width": 5
+              },
+              "datad": {
+                "direction": "input",
+                "width": 5
+              },
+              "out": {
+                "direction": "output",
+                "width": 5
+              }
+            }
+          },
+          "gate": {
+            "sha256": "618961369ae3109b41520f853d04f31c133b8c75dda1e6be2a64d1f24fcc9723",
+            "raw_cell_counts": {
+              "$lut": 15
+            },
+            "converted_ff_count": 0,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "a": {
+                "direction": "input",
+                "width": 1
+              },
+              "b": {
+                "direction": "input",
+                "width": 1
+              },
+              "c": {
+                "direction": "input",
+                "width": 1
+              },
+              "d": {
+                "direction": "input",
+                "width": 1
+              },
+              "dataa": {
+                "direction": "input",
+                "width": 5
+              },
+              "datab": {
+                "direction": "input",
+                "width": 5
+              },
+              "datac": {
+                "direction": "input",
+                "width": 5
+              },
+              "datad": {
+                "direction": "input",
+                "width": 5
+              },
+              "out": {
+                "direction": "output",
+                "width": 5
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 1.6899176998995245
+      },
+      {
+        "case": "rar_test3",
+        "top": "test3",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "193e9e8091e53ed4692b0db9442ab7e509c0f4d1eac55d48e6b606ece777ec01",
+            "raw_cell_counts": {
+              "$lut": 12,
+              "dffeas": 17
+            },
+            "converted_ff_count": 17,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "cs": {
+                "direction": "input",
+                "width": 1
+              },
+              "sr_in": {
+                "direction": "input",
+                "width": 1
+              },
+              "gpioout": {
+                "direction": "output",
+                "width": 8
+              },
+              "sr_out": {
+                "direction": "output",
+                "width": 1
+              }
+            }
+          },
+          "gate": {
+            "sha256": "8b9933057150c75f0fc999dc7957e1abfee182860e69765fa4d53230b94f711d",
+            "raw_cell_counts": {
+              "$lut": 12,
+              "dffeas": 17
+            },
+            "converted_ff_count": 17,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "cs": {
+                "direction": "input",
+                "width": 1
+              },
+              "sr_in": {
+                "direction": "input",
+                "width": 1
+              },
+              "gpioout": {
+                "direction": "output",
+                "width": 8
+              },
+              "sr_out": {
+                "direction": "output",
+                "width": 1
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 2.7003398998640478
+      },
+      {
+        "case": "rar_test4",
+        "top": "test4",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "a234386a19ad7ef70612334205ee4355c5f6b421f631def0dfcc97d717cc248e",
+            "raw_cell_counts": {
+              "dffeas": 10,
+              "$lut": 31
+            },
+            "converted_ff_count": 10,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "reset_n": {
+                "direction": "input",
+                "width": 1
+              },
+              "ena": {
+                "direction": "input",
+                "width": 1
+              },
+              "datain": {
+                "direction": "input",
+                "width": 5
+              },
+              "dataout": {
+                "direction": "output",
+                "width": 6
+              },
+              "only_5b": {
+                "direction": "output",
+                "width": 1
+              },
+              "datain_5bis7": {
+                "direction": "output",
+                "width": 1
+              },
+              "data_dp": {
+                "direction": "output",
+                "width": 1
+              },
+              "data_dn": {
+                "direction": "output",
+                "width": 1
+              }
+            }
+          },
+          "gate": {
+            "sha256": "55c53841aeba161a24ba956f7dc3c8d1ae42eb0ad1eddb4cf634b3df46639528",
+            "raw_cell_counts": {
+              "dffeas": 10,
+              "$lut": 24
+            },
+            "converted_ff_count": 10,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "reset_n": {
+                "direction": "input",
+                "width": 1
+              },
+              "ena": {
+                "direction": "input",
+                "width": 1
+              },
+              "datain": {
+                "direction": "input",
+                "width": 5
+              },
+              "dataout": {
+                "direction": "output",
+                "width": 6
+              },
+              "only_5b": {
+                "direction": "output",
+                "width": 1
+              },
+              "datain_5bis7": {
+                "direction": "output",
+                "width": 1
+              },
+              "data_dp": {
+                "direction": "output",
+                "width": 1
+              },
+              "data_dn": {
+                "direction": "output",
+                "width": 1
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 1.7350214999169111
+      },
+      {
+        "case": "zip_case01",
+        "top": "pmux_case01_balanced",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "620f8c42ab0776311586f12675680f99039e72d0e12a6737d9520624e18fa69f",
+            "raw_cell_counts": {
+              "dffeas": 12,
+              "$lut": 405
+            },
+            "converted_ff_count": 12,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 16
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          },
+          "gate": {
+            "sha256": "69a298d6c1f240a58eafc2b422fb59ad0c1a5b48a1f8aaddc74adcc5b5c28922",
+            "raw_cell_counts": {
+              "dffeas": 12,
+              "$lut": 348
+            },
+            "converted_ff_count": 12,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 16
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 2.1428992999717593
+      },
+      {
+        "case": "zip_case02",
+        "top": "pmux_case02_pipeline",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "3b0ae7f16d693ce0bdd033536d2e4808c973e65c4f4bb8b4a7962cd80604b8e2",
+            "raw_cell_counts": {
+              "dffeas": 24,
+              "$lut": 446
+            },
+            "converted_ff_count": 24,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 64
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          },
+          "gate": {
+            "sha256": "75493c1d7babb277829b20c5579758b0f7f5c19f6030648593963bd00a1a5041",
+            "raw_cell_counts": {
+              "dffeas": 24,
+              "$lut": 400
+            },
+            "converted_ff_count": 24,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 64
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 3.431574400048703
+      },
+      {
+        "case": "zip_case03",
+        "top": "pmux_case03_crossbar",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "b347541a518995273a651c29e950353cacab03ddc2ac5b86cabe2165b10f38cf",
+            "raw_cell_counts": {
+              "dffeas": 10,
+              "$lut": 401
+            },
+            "converted_ff_count": 10,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 40
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 32
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 10
+              }
+            }
+          },
+          "gate": {
+            "sha256": "6a3023191a0bf3cb8b1ac2e88d6db17f3517b003435e5fc42d7df81d71c60211",
+            "raw_cell_counts": {
+              "dffeas": 10,
+              "$lut": 370
+            },
+            "converted_ff_count": 10,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 40
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 32
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 10
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 2.0437082001008093
+      },
+      {
+        "case": "zip_case04",
+        "top": "pmux_case04_feedback",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "daeaa06f04ec2be8759fa0fd1a05d4cc6dff07340a8263f2f416ade4db2489fe",
+            "raw_cell_counts": {
+              "dffeas": 16,
+              "$lut": 371
+            },
+            "converted_ff_count": 16,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 64
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 32
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 16
+              }
+            }
+          },
+          "gate": {
+            "sha256": "8867ecda1f824c30f5fbd883262324804b18baa52cb60eb0043e8e4411bbc0d5",
+            "raw_cell_counts": {
+              "dffeas": 16,
+              "$lut": 292
+            },
+            "converted_ff_count": 16,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 64
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 32
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 16
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 2.009400200098753
+      },
+      {
+        "case": "zip_case05",
+        "top": "pmux_case05_nested",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "521db3626b68681ec4915cd44727201f556b7b09cf78550e60fe7783cf0431f7",
+            "raw_cell_counts": {
+              "dffeas": 12,
+              "$lut": 410
+            },
+            "converted_ff_count": 12,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 16
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          },
+          "gate": {
+            "sha256": "05814834c5b2e31072a422dd9e817066ed1bfe320d6d212fc7643d9693337fa7",
+            "raw_cell_counts": {
+              "dffeas": 12,
+              "$lut": 366
+            },
+            "converted_ff_count": 12,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 16
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 2.13188729993999
+      }
+    ]
+  },
+  "inputs": {
+    "checked_utc": "2026-11-03T17:30:08.883213+00:00",
+    "raw_directory": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area",
+    "case_count": 9,
+    "all_nine_bound_to_new_raw_netlists": true,
+    "scope": "Source, prepared raw, executed raw and summary hashes agree; adapted ILANG/config also agree with actual executed inputs; genuine EQY PASS present.",
+    "cases": [
+      {
+        "case": "rar_test1",
+        "inputs_match_executed_proof": true,
+        "inputs": {
+          "gold": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\rar_test1\\original-area.il",
+            "raw_sha256": {
+              "release_raw": "c0e66b7453dd056a07dd16f2ffb627529979558044495ce94ce2c8bde1f89f45",
+              "summary_raw": "c0e66b7453dd056a07dd16f2ffb627529979558044495ce94ce2c8bde1f89f45",
+              "prepared_raw": "c0e66b7453dd056a07dd16f2ffb627529979558044495ce94ce2c8bde1f89f45",
+              "executed_raw": "c0e66b7453dd056a07dd16f2ffb627529979558044495ce94ce2c8bde1f89f45"
+            },
+            "normalized_sha256": "2f70a89157aa9714451dee5d61f39110dfd5114aa43bef39afb2ae6be53a4aae",
+            "all_identical": true
+          },
+          "gate": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\rar_test1\\optimized-area.il",
+            "raw_sha256": {
+              "release_raw": "65403d8f486b36191776b0bd9e3f41689c3580dac9bf5311e6ffbf9693f29303",
+              "summary_raw": "65403d8f486b36191776b0bd9e3f41689c3580dac9bf5311e6ffbf9693f29303",
+              "prepared_raw": "65403d8f486b36191776b0bd9e3f41689c3580dac9bf5311e6ffbf9693f29303",
+              "executed_raw": "65403d8f486b36191776b0bd9e3f41689c3580dac9bf5311e6ffbf9693f29303"
+            },
+            "normalized_sha256": "354d988c78e1dade3ac3312cf406d72bf9caff9badc333de0b059dafdf08b1dd",
+            "all_identical": true
+          }
+        },
+        "eqy_config_sha256": "3efb4f9ecc0d9354764d12b5684165b3de9c5d64544e84b674603bafee6ac404"
+      },
+      {
+        "case": "rar_test2",
+        "inputs_match_executed_proof": true,
+        "inputs": {
+          "gold": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\rar_test2\\original-area.il",
+            "raw_sha256": {
+              "release_raw": "261b2dddba64f6e1f22b3d316e81c9f6f343e16755cace7c9fa3ca1715c5eb6c",
+              "summary_raw": "261b2dddba64f6e1f22b3d316e81c9f6f343e16755cace7c9fa3ca1715c5eb6c",
+              "prepared_raw": "261b2dddba64f6e1f22b3d316e81c9f6f343e16755cace7c9fa3ca1715c5eb6c",
+              "executed_raw": "261b2dddba64f6e1f22b3d316e81c9f6f343e16755cace7c9fa3ca1715c5eb6c"
+            },
+            "normalized_sha256": "87f7e214a338d043528080fdeddc711a221f81421ae2f1f914ba4dd79a693f02",
+            "all_identical": true
+          },
+          "gate": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\rar_test2\\optimized-area.il",
+            "raw_sha256": {
+              "release_raw": "618961369ae3109b41520f853d04f31c133b8c75dda1e6be2a64d1f24fcc9723",
+              "summary_raw": "618961369ae3109b41520f853d04f31c133b8c75dda1e6be2a64d1f24fcc9723",
+              "prepared_raw": "618961369ae3109b41520f853d04f31c133b8c75dda1e6be2a64d1f24fcc9723",
+              "executed_raw": "618961369ae3109b41520f853d04f31c133b8c75dda1e6be2a64d1f24fcc9723"
+            },
+            "normalized_sha256": "02ed917d3c87d49b5bbf7ad671c202a640178c873d45b4b7e1ff08c020a21f76",
+            "all_identical": true
+          }
+        },
+        "eqy_config_sha256": "2986a264c140410b46e06a7ab44be7257d8b64e5fa61fa7f0e28ac68ddf3e14c"
+      },
+      {
+        "case": "rar_test3",
+        "inputs_match_executed_proof": true,
+        "inputs": {
+          "gold": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\rar_test3\\original-area.il",
+            "raw_sha256": {
+              "release_raw": "193e9e8091e53ed4692b0db9442ab7e509c0f4d1eac55d48e6b606ece777ec01",
+              "summary_raw": "193e9e8091e53ed4692b0db9442ab7e509c0f4d1eac55d48e6b606ece777ec01",
+              "prepared_raw": "193e9e8091e53ed4692b0db9442ab7e509c0f4d1eac55d48e6b606ece777ec01",
+              "executed_raw": "193e9e8091e53ed4692b0db9442ab7e509c0f4d1eac55d48e6b606ece777ec01"
+            },
+            "normalized_sha256": "eeb56dd72d155d8e7ece6f3cfe07e607f947cfeb93551454bd37d4009d175d63",
+            "all_identical": true
+          },
+          "gate": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\rar_test3\\optimized-area.il",
+            "raw_sha256": {
+              "release_raw": "8b9933057150c75f0fc999dc7957e1abfee182860e69765fa4d53230b94f711d",
+              "summary_raw": "8b9933057150c75f0fc999dc7957e1abfee182860e69765fa4d53230b94f711d",
+              "prepared_raw": "8b9933057150c75f0fc999dc7957e1abfee182860e69765fa4d53230b94f711d",
+              "executed_raw": "8b9933057150c75f0fc999dc7957e1abfee182860e69765fa4d53230b94f711d"
+            },
+            "normalized_sha256": "29ce36bc8ef3a93cc6faf856970f525ae35e3dad46e9f0cca43570b9f243e9db",
+            "all_identical": true
+          }
+        },
+        "eqy_config_sha256": "5d98b09e3d6cb665b30b6ee280563b735d3cb1e807e35963dcc3023b81de69d5"
+      },
+      {
+        "case": "rar_test4",
+        "inputs_match_executed_proof": true,
+        "inputs": {
+          "gold": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\rar_test4\\original-area.il",
+            "raw_sha256": {
+              "release_raw": "a234386a19ad7ef70612334205ee4355c5f6b421f631def0dfcc97d717cc248e",
+              "summary_raw": "a234386a19ad7ef70612334205ee4355c5f6b421f631def0dfcc97d717cc248e",
+              "prepared_raw": "a234386a19ad7ef70612334205ee4355c5f6b421f631def0dfcc97d717cc248e",
+              "executed_raw": "a234386a19ad7ef70612334205ee4355c5f6b421f631def0dfcc97d717cc248e"
+            },
+            "normalized_sha256": "7c278b6e8b24d8d5855d04eabfff6fbf202c593e487c833668e57936920edfea",
+            "all_identical": true
+          },
+          "gate": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\rar_test4\\optimized-area.il",
+            "raw_sha256": {
+              "release_raw": "55c53841aeba161a24ba956f7dc3c8d1ae42eb0ad1eddb4cf634b3df46639528",
+              "summary_raw": "55c53841aeba161a24ba956f7dc3c8d1ae42eb0ad1eddb4cf634b3df46639528",
+              "prepared_raw": "55c53841aeba161a24ba956f7dc3c8d1ae42eb0ad1eddb4cf634b3df46639528",
+              "executed_raw": "55c53841aeba161a24ba956f7dc3c8d1ae42eb0ad1eddb4cf634b3df46639528"
+            },
+            "normalized_sha256": "c0ae1955031754c281717bb11c2e672d4bb7db95e5ce5e58b38c10ef0a1a57d1",
+            "all_identical": true
+          }
+        },
+        "eqy_config_sha256": "7a14f176342bc88783bb1aa4dc529a8f519a0a60fd1197f12bbede562ef8ccaa"
+      },
+      {
+        "case": "zip_case01",
+        "inputs_match_executed_proof": true,
+        "inputs": {
+          "gold": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\zip_case01\\original-area.il",
+            "raw_sha256": {
+              "release_raw": "620f8c42ab0776311586f12675680f99039e72d0e12a6737d9520624e18fa69f",
+              "summary_raw": "620f8c42ab0776311586f12675680f99039e72d0e12a6737d9520624e18fa69f",
+              "prepared_raw": "620f8c42ab0776311586f12675680f99039e72d0e12a6737d9520624e18fa69f",
+              "executed_raw": "620f8c42ab0776311586f12675680f99039e72d0e12a6737d9520624e18fa69f"
+            },
+            "normalized_sha256": "fc476332529b77ed2d4003373e8868cbdffc39b2043cabf8d6f5830b108395c8",
+            "all_identical": true
+          },
+          "gate": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\zip_case01\\optimized-area.il",
+            "raw_sha256": {
+              "release_raw": "69a298d6c1f240a58eafc2b422fb59ad0c1a5b48a1f8aaddc74adcc5b5c28922",
+              "summary_raw": "69a298d6c1f240a58eafc2b422fb59ad0c1a5b48a1f8aaddc74adcc5b5c28922",
+              "prepared_raw": "69a298d6c1f240a58eafc2b422fb59ad0c1a5b48a1f8aaddc74adcc5b5c28922",
+              "executed_raw": "69a298d6c1f240a58eafc2b422fb59ad0c1a5b48a1f8aaddc74adcc5b5c28922"
+            },
+            "normalized_sha256": "95a11e13807405bcfbf8b2fcd21da635653f1ffcfafc110db7c0da7b8381e7da",
+            "all_identical": true
+          }
+        },
+        "eqy_config_sha256": "4a77ee7dc367f1ac2a7263d5b987c37b9cfd9de8050779580fb5b293cc5b995f"
+      },
+      {
+        "case": "zip_case02",
+        "inputs_match_executed_proof": true,
+        "inputs": {
+          "gold": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\zip_case02\\original-area.il",
+            "raw_sha256": {
+              "release_raw": "3b0ae7f16d693ce0bdd033536d2e4808c973e65c4f4bb8b4a7962cd80604b8e2",
+              "summary_raw": "3b0ae7f16d693ce0bdd033536d2e4808c973e65c4f4bb8b4a7962cd80604b8e2",
+              "prepared_raw": "3b0ae7f16d693ce0bdd033536d2e4808c973e65c4f4bb8b4a7962cd80604b8e2",
+              "executed_raw": "3b0ae7f16d693ce0bdd033536d2e4808c973e65c4f4bb8b4a7962cd80604b8e2"
+            },
+            "normalized_sha256": "efc3c3a99b6190fe9c03717fae44aa7a8e5268c8b4f7bc38b43c29f176aeeda3",
+            "all_identical": true
+          },
+          "gate": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\zip_case02\\optimized-area.il",
+            "raw_sha256": {
+              "release_raw": "75493c1d7babb277829b20c5579758b0f7f5c19f6030648593963bd00a1a5041",
+              "summary_raw": "75493c1d7babb277829b20c5579758b0f7f5c19f6030648593963bd00a1a5041",
+              "prepared_raw": "75493c1d7babb277829b20c5579758b0f7f5c19f6030648593963bd00a1a5041",
+              "executed_raw": "75493c1d7babb277829b20c5579758b0f7f5c19f6030648593963bd00a1a5041"
+            },
+            "normalized_sha256": "6fba10c3d360cb3c13430735b4faf3b1634ab931935b4944f147437e303ff124",
+            "all_identical": true
+          }
+        },
+        "eqy_config_sha256": "02ca0a4877a077fef8e6a767964ac1e729aeda1b7f99213f7ebe9ebf03baf955"
+      },
+      {
+        "case": "zip_case03",
+        "inputs_match_executed_proof": true,
+        "inputs": {
+          "gold": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\zip_case03\\original-area.il",
+            "raw_sha256": {
+              "release_raw": "b347541a518995273a651c29e950353cacab03ddc2ac5b86cabe2165b10f38cf",
+              "summary_raw": "b347541a518995273a651c29e950353cacab03ddc2ac5b86cabe2165b10f38cf",
+              "prepared_raw": "b347541a518995273a651c29e950353cacab03ddc2ac5b86cabe2165b10f38cf",
+              "executed_raw": "b347541a518995273a651c29e950353cacab03ddc2ac5b86cabe2165b10f38cf"
+            },
+            "normalized_sha256": "77e5936010185a80a2f738858cc753efd6d17c3a710d495897dd350f2402f916",
+            "all_identical": true
+          },
+          "gate": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\zip_case03\\optimized-area.il",
+            "raw_sha256": {
+              "release_raw": "6a3023191a0bf3cb8b1ac2e88d6db17f3517b003435e5fc42d7df81d71c60211",
+              "summary_raw": "6a3023191a0bf3cb8b1ac2e88d6db17f3517b003435e5fc42d7df81d71c60211",
+              "prepared_raw": "6a3023191a0bf3cb8b1ac2e88d6db17f3517b003435e5fc42d7df81d71c60211",
+              "executed_raw": "6a3023191a0bf3cb8b1ac2e88d6db17f3517b003435e5fc42d7df81d71c60211"
+            },
+            "normalized_sha256": "727e3c876d575eb5629b8470fbf7bd13604cdad21800eb8639568268ff129a4f",
+            "all_identical": true
+          }
+        },
+        "eqy_config_sha256": "a25cb8005c7339da29ff8ffbc392baebb103bc8c9d10b5f1e0cde8060acdbc82"
+      },
+      {
+        "case": "zip_case04",
+        "inputs_match_executed_proof": true,
+        "inputs": {
+          "gold": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\zip_case04\\original-area.il",
+            "raw_sha256": {
+              "release_raw": "daeaa06f04ec2be8759fa0fd1a05d4cc6dff07340a8263f2f416ade4db2489fe",
+              "summary_raw": "daeaa06f04ec2be8759fa0fd1a05d4cc6dff07340a8263f2f416ade4db2489fe",
+              "prepared_raw": "daeaa06f04ec2be8759fa0fd1a05d4cc6dff07340a8263f2f416ade4db2489fe",
+              "executed_raw": "daeaa06f04ec2be8759fa0fd1a05d4cc6dff07340a8263f2f416ade4db2489fe"
+            },
+            "normalized_sha256": "c894ac34c9e1de66133884bd5bfd210b8918d62e18e8d1944a17654a13fc3e70",
+            "all_identical": true
+          },
+          "gate": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\zip_case04\\optimized-area.il",
+            "raw_sha256": {
+              "release_raw": "8867ecda1f824c30f5fbd883262324804b18baa52cb60eb0043e8e4411bbc0d5",
+              "summary_raw": "8867ecda1f824c30f5fbd883262324804b18baa52cb60eb0043e8e4411bbc0d5",
+              "prepared_raw": "8867ecda1f824c30f5fbd883262324804b18baa52cb60eb0043e8e4411bbc0d5",
+              "executed_raw": "8867ecda1f824c30f5fbd883262324804b18baa52cb60eb0043e8e4411bbc0d5"
+            },
+            "normalized_sha256": "7fd3997ae5b41508917eac5a89fefe61ebb91262fe1d0d4c55cf117e9d9a8bec",
+            "all_identical": true
+          }
+        },
+        "eqy_config_sha256": "ec3ffcc05dde2ae4f8f7e51e196f410a888536f38e7d564a4ff11e5a6e5612eb"
+      },
+      {
+        "case": "zip_case05",
+        "inputs_match_executed_proof": true,
+        "inputs": {
+          "gold": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\zip_case05\\original-area.il",
+            "raw_sha256": {
+              "release_raw": "521db3626b68681ec4915cd44727201f556b7b09cf78550e60fe7783cf0431f7",
+              "summary_raw": "521db3626b68681ec4915cd44727201f556b7b09cf78550e60fe7783cf0431f7",
+              "prepared_raw": "521db3626b68681ec4915cd44727201f556b7b09cf78550e60fe7783cf0431f7",
+              "executed_raw": "521db3626b68681ec4915cd44727201f556b7b09cf78550e60fe7783cf0431f7"
+            },
+            "normalized_sha256": "a9fde27e19e24325ff296f8f3722c6f9234e5bbe1558df45100777edb67c7524",
+            "all_identical": true
+          },
+          "gate": {
+            "source": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\全量验收\\B臂集成F4c_面积等价_01\\area\\zip_case05\\optimized-area.il",
+            "raw_sha256": {
+              "release_raw": "05814834c5b2e31072a422dd9e817066ed1bfe320d6d212fc7643d9693337fa7",
+              "summary_raw": "05814834c5b2e31072a422dd9e817066ed1bfe320d6d212fc7643d9693337fa7",
+              "prepared_raw": "05814834c5b2e31072a422dd9e817066ed1bfe320d6d212fc7643d9693337fa7",
+              "executed_raw": "05814834c5b2e31072a422dd9e817066ed1bfe320d6d212fc7643d9693337fa7"
+            },
+            "normalized_sha256": "6d6587b0982ca347310e76c8b35f53fc3b4d4ac894c2491fe281293905bac65c",
+            "all_identical": true
+          }
+        },
+        "eqy_config_sha256": "a19f3ab79252147db360bc0c14e096974b3f2c38b1fea9f30c6220dc7e326d5e"
+      }
+    ]
+  }
+}

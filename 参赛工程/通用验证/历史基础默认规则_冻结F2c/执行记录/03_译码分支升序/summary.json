@@ -1,0 +1,9 @@
+{
+  "cases": 56,
+  "changed_cases": 53,
+  "comparisons": 57344,
+  "actual_pass_executed": true,
+  "descending": false,
+  "exit_code": 0,
+  "stable_duplicates_checked": true
+}

@@ -1,0 +1,147 @@
+{
+  "partition": {
+    "index": 1,
+    "name": "test3",
+    "inbits": {
+      "clk": [
+        0
+      ],
+      "cs": [
+        0
+      ],
+      "sr_in": [
+        0
+      ]
+    },
+    "outbits": {
+      "gpioout": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "sr_out": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.test3",
+    "internal": {
+      "cs_$lut_A_Y": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_A_Y": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_A_Y": [
+        0
+      ],
+      "gpioout_dffeas_q_2_ena": [
+        0
+      ],
+      "gpioout_dffeas_q_d": [
+        0
+      ],
+      "gpioout_dffeas_q_d_$lut_Y_A": [
+        0
+      ],
+      "gpioout_dffeas_q_d_$lut_Y_A_$lut_Y_A": [
+        0
+      ],
+      "gpioout_dffeas_q_d_$lut_Y_A_$lut_Y_A_1": [
+        0
+      ],
+      "rw": [
+        0
+      ],
+      "sr": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "unused": {},
+    "cellcount": 30,
+    "bitcount": 33
+  },
+  "gate_module": {
+    "name": "gold.test3",
+    "internal": {
+      "cs_$lut_A_Y": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_A_Y": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_2": [
+        0
+      ],
+      "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_2_$lut_Y_A": [
+        0
+      ],
+      "gpioout_dffeas_q_2_ena": [
+        0
+      ],
+      "gpioout_dffeas_q_2_ena_$lut_Y_A": [
+        0
+      ],
+      "gpioout_dffeas_q_2_ena_$lut_Y_A_$lut_A_Y": [
+        0
+      ],
+      "gpioout_dffeas_q_2_ena_$lut_Y_A_$lut_Y_A": [
+        0
+      ],
+      "rw": [
+        0
+      ],
+      "sr": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "unused": {},
+    "cellcount": 30,
+    "bitcount": 33
+  }
+}

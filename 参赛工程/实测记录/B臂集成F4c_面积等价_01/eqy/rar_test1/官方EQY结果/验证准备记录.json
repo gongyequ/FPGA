@@ -1,0 +1,212 @@
+{
+  "top": "test1",
+  "inputs": {
+    "gold": {
+      "sha256": "c0e66b7453dd056a07dd16f2ffb627529979558044495ce94ce2c8bde1f89f45",
+      "raw_cell_counts": {
+        "dffeas": 222,
+        "$lut": 288
+      },
+      "converted_ff_count": 222,
+      "ports": {
+        "clock": {
+          "direction": "input",
+          "width": 1
+        },
+        "reset": {
+          "direction": "input",
+          "width": 1
+        },
+        "valid": {
+          "direction": "input",
+          "width": 1
+        },
+        "I0": {
+          "direction": "input",
+          "width": 16
+        },
+        "I1": {
+          "direction": "input",
+          "width": 16
+        },
+        "I2": {
+          "direction": "input",
+          "width": 16
+        },
+        "I3": {
+          "direction": "input",
+          "width": 16
+        },
+        "I4": {
+          "direction": "input",
+          "width": 16
+        },
+        "I5": {
+          "direction": "input",
+          "width": 16
+        },
+        "I6": {
+          "direction": "input",
+          "width": 16
+        },
+        "I7": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q0": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q1": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q2": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q3": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q4": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q5": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q6": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q7": {
+          "direction": "input",
+          "width": 16
+        },
+        "por6_out": {
+          "direction": "output",
+          "width": 1
+        },
+        "inter0007_out": {
+          "direction": "output",
+          "width": 1
+        },
+        "inter0008_out": {
+          "direction": "output",
+          "width": 12
+        },
+        "inter0009_out": {
+          "direction": "output",
+          "width": 12
+        }
+      }
+    },
+    "gate": {
+      "sha256": "65403d8f486b36191776b0bd9e3f41689c3580dac9bf5311e6ffbf9693f29303",
+      "raw_cell_counts": {
+        "dffeas": 222,
+        "$lut": 288
+      },
+      "converted_ff_count": 222,
+      "ports": {
+        "clock": {
+          "direction": "input",
+          "width": 1
+        },
+        "reset": {
+          "direction": "input",
+          "width": 1
+        },
+        "valid": {
+          "direction": "input",
+          "width": 1
+        },
+        "I0": {
+          "direction": "input",
+          "width": 16
+        },
+        "I1": {
+          "direction": "input",
+          "width": 16
+        },
+        "I2": {
+          "direction": "input",
+          "width": 16
+        },
+        "I3": {
+          "direction": "input",
+          "width": 16
+        },
+        "I4": {
+          "direction": "input",
+          "width": 16
+        },
+        "I5": {
+          "direction": "input",
+          "width": 16
+        },
+        "I6": {
+          "direction": "input",
+          "width": 16
+        },
+        "I7": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q0": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q1": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q2": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q3": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q4": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q5": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q6": {
+          "direction": "input",
+          "width": 16
+        },
+        "Q7": {
+          "direction": "input",
+          "width": 16
+        },
+        "por6_out": {
+          "direction": "output",
+          "width": 1
+        },
+        "inter0007_out": {
+          "direction": "output",
+          "width": 1
+        },
+        "inter0008_out": {
+          "direction": "output",
+          "width": 12
+        },
+        "inter0009_out": {
+          "direction": "output",
+          "width": 12
+        }
+      }
+    }
+  },
+  "normalization": "After raw post-ABC ILANG and exact FF inverse, EQY applies setundef -zero -init to both sides. Known initial values remain unchanged. This is our disclosed strategy, not a supplied official normalization script.",
+  "partition": "Whole design: only top I/O matched, all output cones grouped.",
+  "official_model_reference": "C:\\Users\\13889\\Desktop\\项目\\oss-cad-suite-windows-x64-20261013\\oss-cad-suite\\share\\yosys\\intel\\common\\ff_map.v"
+}

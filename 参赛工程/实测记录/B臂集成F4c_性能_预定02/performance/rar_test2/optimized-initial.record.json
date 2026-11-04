@@ -1,0 +1,39 @@
+{
+  "command": [
+    "U:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/performance/rar_test2/optimized-initial.ys"
+  ],
+  "variant": "optimized",
+  "started_utc": "2026-11-03T17:31:06.327241+00:00",
+  "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.19893640000373125,
+  "peak_working_set_bytes": 17608704,
+  "memory_samples": 126,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "rar_test2",
+  "top": "test2",
+  "script_sha256": "80fb416be0fb4c8d8521f4e63e20dafa88f24a1bd6412248cf4df66b246f62cc",
+  "abc_process_count": 1,
+  "pmux_messages": [
+    "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 0 decoder tables."
+  ],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&dch -f -r",
+    "&if -W 300 -a -v -F 4 -c",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ]
+}

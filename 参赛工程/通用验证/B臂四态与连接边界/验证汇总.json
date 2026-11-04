@@ -1,0 +1,246 @@
+{
+  "started_utc": "2026-11-03T17:16:36.259482+00:00",
+  "program": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\候选程序\\B臂集成F4c\\yosys.exe",
+  "program_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+  "source_sha256": "a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3",
+  "model_sha256": "a7df1f7cbf09c98d96f791c7b11ab55e64dd197663f67aa6a9d4ada13a61cd82",
+  "script_sha256": "59e4b80c1267a9b629c171a3b5529831bf94237aaa269d2d6a3682b36bd91ee0",
+  "scope": "actual optional C++ rule; finite official four-state simulation, not EQY or performance",
+  "positive_checks": [
+    {
+      "case": "k1_o1_arm0",
+      "width": 3,
+      "inner_arms": 1,
+      "outer_arms": 1,
+      "arm": 0,
+      "passed": true
+    },
+    {
+      "case": "k1_o2_arm0",
+      "width": 3,
+      "inner_arms": 1,
+      "outer_arms": 2,
+      "arm": 0,
+      "passed": true
+    },
+    {
+      "case": "k1_o2_arm1",
+      "width": 3,
+      "inner_arms": 1,
+      "outer_arms": 2,
+      "arm": 1,
+      "passed": true
+    },
+    {
+      "case": "k1_o3_arm0",
+      "width": 3,
+      "inner_arms": 1,
+      "outer_arms": 3,
+      "arm": 0,
+      "passed": true
+    },
+    {
+      "case": "k1_o3_arm1",
+      "width": 3,
+      "inner_arms": 1,
+      "outer_arms": 3,
+      "arm": 1,
+      "passed": true
+    },
+    {
+      "case": "k1_o3_arm2",
+      "width": 3,
+      "inner_arms": 1,
+      "outer_arms": 3,
+      "arm": 2,
+      "passed": true
+    },
+    {
+      "case": "k2_o1_arm0",
+      "width": 4,
+      "inner_arms": 2,
+      "outer_arms": 1,
+      "arm": 0,
+      "passed": true
+    },
+    {
+      "case": "k2_o2_arm0",
+      "width": 4,
+      "inner_arms": 2,
+      "outer_arms": 2,
+      "arm": 0,
+      "passed": true
+    },
+    {
+      "case": "k2_o2_arm1",
+      "width": 4,
+      "inner_arms": 2,
+      "outer_arms": 2,
+      "arm": 1,
+      "passed": true
+    },
+    {
+      "case": "k2_o3_arm0",
+      "width": 4,
+      "inner_arms": 2,
+      "outer_arms": 3,
+      "arm": 0,
+      "passed": true
+    },
+    {
+      "case": "k2_o3_arm1",
+      "width": 4,
+      "inner_arms": 2,
+      "outer_arms": 3,
+      "arm": 1,
+      "passed": true
+    },
+    {
+      "case": "k2_o3_arm2",
+      "width": 4,
+      "inner_arms": 2,
+      "outer_arms": 3,
+      "arm": 2,
+      "passed": true
+    },
+    {
+      "case": "k3_o1_arm0",
+      "width": 5,
+      "inner_arms": 3,
+      "outer_arms": 1,
+      "arm": 0,
+      "passed": true
+    },
+    {
+      "case": "k3_o2_arm0",
+      "width": 5,
+      "inner_arms": 3,
+      "outer_arms": 2,
+      "arm": 0,
+      "passed": true
+    },
+    {
+      "case": "k3_o2_arm1",
+      "width": 5,
+      "inner_arms": 3,
+      "outer_arms": 2,
+      "arm": 1,
+      "passed": true
+    },
+    {
+      "case": "k3_o3_arm0",
+      "width": 5,
+      "inner_arms": 3,
+      "outer_arms": 3,
+      "arm": 0,
+      "passed": true
+    },
+    {
+      "case": "k3_o3_arm1",
+      "width": 5,
+      "inner_arms": 3,
+      "outer_arms": 3,
+      "arm": 1,
+      "passed": true
+    },
+    {
+      "case": "k3_o3_arm2",
+      "width": 5,
+      "inner_arms": 3,
+      "outer_arms": 3,
+      "arm": 2,
+      "passed": true
+    }
+  ],
+  "guard_checks": [
+    {
+      "case": "exhaustive_scalar_k1",
+      "reason": "width cost guard",
+      "passed": true
+    },
+    {
+      "case": "exhaustive_scalar_k2",
+      "reason": "width cost guard",
+      "passed": true
+    },
+    {
+      "case": "repeat_with_fallback_and_data",
+      "reason": "all helper PMUX gates preserved; exact JSON stable",
+      "passed": true
+    },
+    {
+      "case": "reject_fanout",
+      "reason": "fanout",
+      "passed": true
+    },
+    {
+      "case": "reject_top_output",
+      "reason": "top_output",
+      "passed": true
+    },
+    {
+      "case": "reject_partial",
+      "reason": "partial",
+      "passed": true
+    },
+    {
+      "case": "reject_reordered",
+      "reason": "reordered",
+      "passed": true
+    },
+    {
+      "case": "reject_inner_unselected",
+      "reason": "inner_unselected",
+      "passed": true
+    },
+    {
+      "case": "reject_outer_unselected",
+      "reason": "outer_unselected",
+      "passed": true
+    },
+    {
+      "case": "reject_ambiguous",
+      "reason": "ambiguous",
+      "passed": true
+    },
+    {
+      "case": "reject_self_loop",
+      "reason": "self_loop",
+      "passed": true
+    },
+    {
+      "case": "reject_unknown_consumer",
+      "reason": "unknown_consumer",
+      "passed": true
+    },
+    {
+      "case": "reject_marked_inner",
+      "reason": "marked_inner",
+      "passed": true
+    },
+    {
+      "case": "reject_marked_outer",
+      "reason": "marked_outer",
+      "passed": true
+    },
+    {
+      "case": "reject_width_limit",
+      "reason": "width_limit",
+      "passed": true
+    },
+    {
+      "case": "reject_arm_limit",
+      "reason": "arm_limit",
+      "passed": true
+    },
+    {
+      "case": "manual_command_default_off",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "finished_utc": "2026-11-03T17:17:00.471631+00:00",
+  "four_state_comparisons": 323840,
+  "converted_positive_cases": 18,
+  "guard_count": 17
+}

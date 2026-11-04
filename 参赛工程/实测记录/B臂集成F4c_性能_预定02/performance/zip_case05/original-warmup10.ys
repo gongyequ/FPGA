@@ -1,0 +1,5 @@
+read_verilog -sv X:/inputs/cases/zip_case05.v
+hierarchy -check -top pmux_case05_nested
+scratchpad -set abc9.exe W:/bin/yosys-abc.exe
+synth_intel -family cycloneiv -top pmux_case05_nested
+stat

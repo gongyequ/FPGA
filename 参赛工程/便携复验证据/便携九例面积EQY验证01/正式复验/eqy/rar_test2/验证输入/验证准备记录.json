@@ -1,0 +1,106 @@
+{
+  "top": "test2",
+  "inputs": {
+    "gold": {
+      "sha256": "261b2dddba64f6e1f22b3d316e81c9f6f343e16755cace7c9fa3ca1715c5eb6c",
+      "raw_cell_counts": {
+        "$lut": 25
+      },
+      "converted_ff_count": 0,
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "width": 1
+        },
+        "a": {
+          "direction": "input",
+          "width": 1
+        },
+        "b": {
+          "direction": "input",
+          "width": 1
+        },
+        "c": {
+          "direction": "input",
+          "width": 1
+        },
+        "d": {
+          "direction": "input",
+          "width": 1
+        },
+        "dataa": {
+          "direction": "input",
+          "width": 5
+        },
+        "datab": {
+          "direction": "input",
+          "width": 5
+        },
+        "datac": {
+          "direction": "input",
+          "width": 5
+        },
+        "datad": {
+          "direction": "input",
+          "width": 5
+        },
+        "out": {
+          "direction": "output",
+          "width": 5
+        }
+      }
+    },
+    "gate": {
+      "sha256": "618961369ae3109b41520f853d04f31c133b8c75dda1e6be2a64d1f24fcc9723",
+      "raw_cell_counts": {
+        "$lut": 15
+      },
+      "converted_ff_count": 0,
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "width": 1
+        },
+        "a": {
+          "direction": "input",
+          "width": 1
+        },
+        "b": {
+          "direction": "input",
+          "width": 1
+        },
+        "c": {
+          "direction": "input",
+          "width": 1
+        },
+        "d": {
+          "direction": "input",
+          "width": 1
+        },
+        "dataa": {
+          "direction": "input",
+          "width": 5
+        },
+        "datab": {
+          "direction": "input",
+          "width": 5
+        },
+        "datac": {
+          "direction": "input",
+          "width": 5
+        },
+        "datad": {
+          "direction": "input",
+          "width": 5
+        },
+        "out": {
+          "direction": "output",
+          "width": 5
+        }
+      }
+    }
+  },
+  "normalization": "After raw post-ABC ILANG and exact FF inverse, EQY applies setundef -zero -init to both sides. Known initial values remain unchanged. This is our disclosed strategy, not a supplied official normalization script.",
+  "partition": "Whole design: only top I/O matched, all output cones grouped.",
+  "official_model_reference": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\官方工具\\oss-cad-suite\\share\\yosys\\intel\\common\\ff_map.v"
+}

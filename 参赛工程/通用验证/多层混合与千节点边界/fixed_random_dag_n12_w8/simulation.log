@@ -1,0 +1,2 @@
+RESULT vectors=2304 bits=18432 known=8002 x=6413 z=4017 errors=0
+test.v:268: $finish called at 768 (1s)

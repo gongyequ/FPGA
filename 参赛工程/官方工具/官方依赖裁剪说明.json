@@ -1,0 +1,109 @@
+{
+  "suite_release": "20261013",
+  "official_url": "https://github.com/YosysHQ/oss-cad-suite-build/releases/tag/2026-10-13",
+  "contents": "Official byte-identical Yosys/ABC/EQY/SBY/Python/Tcl/Icarus runtime subset; excludes unrelated FPGA/PnR/GUI tools, Python caches/tests.",
+  "core_tools": [
+    {
+      "file": "bin/yosys.exe",
+      "sha256": "a9a1b18604fd984972e8c6786a52261cee9e6cbe002b65e5ca353beacbd65e90"
+    },
+    {
+      "file": "bin/yosys-abc.exe",
+      "sha256": "60e1136f56b0eb4d256246aa6accfa36a8d97af2dc0693269ad62ba2359b33e5"
+    },
+    {
+      "file": "bin/eqy.exe",
+      "sha256": "6eccec0f9ef3e9e493b9b0ce7d60369a1ecf3fe0f20ec9ccce0b03f334a61811"
+    },
+    {
+      "file": "bin/eqy-script.py",
+      "sha256": "ad027ca0436c8c517e8e7a334721142a0e4d3088eb7f940ff6dd59e019ccb808"
+    },
+    {
+      "file": "bin/sby.exe",
+      "sha256": "6eccec0f9ef3e9e493b9b0ce7d60369a1ecf3fe0f20ec9ccce0b03f334a61811"
+    },
+    {
+      "file": "bin/sby-script.py",
+      "sha256": "456ed28b00192b80cce32320f7f10370cd507f0527b1fedcc84da292f4f0d7b3"
+    },
+    {
+      "file": "bin/yosys-smtbmc.exe",
+      "sha256": "6eccec0f9ef3e9e493b9b0ce7d60369a1ecf3fe0f20ec9ccce0b03f334a61811"
+    },
+    {
+      "file": "bin/yosys-smtbmc-script.py",
+      "sha256": "0192f63913bdff347912602315504d5a6ed9e3ff8fbf0dbcdc7c33e5b66681d9"
+    },
+    {
+      "file": "bin/yosys-witness.exe",
+      "sha256": "6eccec0f9ef3e9e493b9b0ce7d60369a1ecf3fe0f20ec9ccce0b03f334a61811"
+    },
+    {
+      "file": "bin/yosys-witness-script.py",
+      "sha256": "1e6bde30b23bd0ee728170f1611552a623a35cdcd52516533c9a2f3800fca553"
+    },
+    {
+      "file": "bin/iverilog.exe",
+      "sha256": "44a128d541a4348d2f60ec1168a7d9924353b63a61ae19e0c63a406dfceaef17"
+    },
+    {
+      "file": "bin/iverilog-vpi.exe",
+      "sha256": "3031fbbc9ae7d6d224fbfb957b6f122b88222c616f34e1ff3e96b9054bb223a5"
+    },
+    {
+      "file": "bin/vvp.exe",
+      "sha256": "13e2d9f6b7c6a4ce6e0fcb65a67717bd44a16770a3ed0431a0f84787b396c059"
+    },
+    {
+      "file": "bin/libvvp-1.dll",
+      "sha256": "8c08824e26c8a537033c159b5129afdae43ec24a32f1d618e9fedf50dd93ee3d"
+    }
+  ],
+  "recursively_resolved_official_dlls": {
+    "libpython3.11.dll": "bc87b3852aacead2788b39461fa7816f6916edf9f3c4ea09a7c61b21161fd33c",
+    "libgcc_s_seh-1.dll": "8601abde8bcffd435233865553ea9f4175e6b07cc0e8c9d08f50ecebab98b019",
+    "libwinpthread-1.dll": "ccbd0ad81d6fed75e076670710643ad02d3c390179866ad3e1fe6b9ef7bc92c2",
+    "libcrypto-3-x64.dll": "fab2e0c84badd7e866d6c912a3838066b2f6727f9a84c30201d885e565ff8756",
+    "libssl-3-x64.dll": "d6a44e72357bb3fcc90f67bc170231314292b940d137c37868ef2579907671da",
+    "zlib1.dll": "84e998099a945872750d326f4a86a4fc275bbf1434e2de88d7d87973465ed491",
+    "libsqlite3-0.dll": "8bb0e8cbafd10b7df1b0d01b5e72588713f28b274318baeccd7859a6b08d53d4",
+    "liblzma-5.dll": "1c30363488f55dd6c26438fb85516d5ca15e5f04719fef0f6c41312f9f00c9bc",
+    "libffi-8.dll": "00eb744d7ede0b6b274627207af248024d2601203182df185b490ab625c2b326",
+    "libbz2-1.dll": "8de14c88d70cbac79bc8e3fdbc9859f7abc1d397a42533d1bddf1d4268136ea7",
+    "libexpat-1.dll": "9e4f2180da2aedda3cfa8bb4a11d175c6e3c0216d4dea52b71d6ec67857b1b1a",
+    "libstdc++-6.dll": "29e4a7219d914fcdf296c07951280dd77bc284f0ad3eae052da32ac05264858e",
+    "libintl-8.dll": "d13216ebd314465299e0022706edf1b117d4468f11cd3bfd7768480d97f4e802",
+    "iconv.dll": "9f4100cf0f20030bb5e7b0191a75cd27c5e0f5e8205cc358e6aee22006d0261c",
+    "libreadline8.dll": "9a8b0f17791a91aa419d35d26d4bfea668b1163492fd65a98ae8431eac16bae9",
+    "tcl86.dll": "069d9af252fda401134f830dea0d7af49bb31cca0b91a34d4d9f67e7f627da16",
+    "libtermcap-0.dll": "400a4452231d5de692fa8c1a4000eb013f6cf99a836764f5b37eefc503e9671c",
+    "libvvp-1.dll": "8c08824e26c8a537033c159b5129afdae43ec24a32f1d618e9fedf50dd93ee3d"
+  },
+  "external_or_system_import_names": [
+    "ADVAPI32.dll",
+    "CRYPT32.dll",
+    "Cabinet.dll",
+    "IPHLPAPI.DLL",
+    "KERNEL32.dll",
+    "NETAPI32.dll",
+    "OLEAUT32.dll",
+    "RPCRT4.dll",
+    "SHLWAPI.dll",
+    "USER32.dll",
+    "USERENV.dll",
+    "VERSION.dll",
+    "WINMM.dll",
+    "WS2_32.dll",
+    "api-ms-win-core-path-l1-1-0.dll",
+    "bcrypt.dll",
+    "msi.dll",
+    "msvcrt.dll",
+    "ole32.dll"
+  ],
+  "external_prerequisites": [
+    "Windows x64",
+    "Python 3.10+ for project scripts",
+    "Git for Windows with intact usr/bin"
+  ]
+}

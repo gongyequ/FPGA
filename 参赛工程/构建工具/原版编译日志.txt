@@ -1,0 +1,843 @@
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+-- Could NOT find GTest (missing: GTEST_LIBRARY GTEST_INCLUDE_DIR GTEST_MAIN_LIBRARY) 
+-- 
+-- The following packages have been found:
+
+ * FLEX (required version >= 2.6), The Fast Lexical Analyzer, <https://github.com/westes/flex>
+   Compiling the Verilog lexer
+ * BISON (required version >= 3.6), The Yacc-compatible Parser Generator, <https://www.gnu.org/software/bison/>
+   Compiling the Verilog parser
+ * Python3 (required version >= 3.7), Dynamic programming language (Interpreter), <https://www.python.org/>
+   Generating data files
+   Running external SMT2 solvers
+ * tcl, Dynamic programming language, <https://www.tcl-lang.org/>
+   Parsing SDC constraint files
+   Binding Yosys API
+
+-- The following packages have not been found:
+
+ * PkgConfig, Library metadata manager, <https://www.freedesktop.org/wiki/Software/pkg-config/>
+   Discovering dependencies
+ * zlib, A massively spiffy yet delicately unobtrusive compression library, <https://github.com/madler/zlib>
+   Handling Gzip and FST file formats
+ * libffi, A Portable Foreign Function Interface Library, <https://sourceware.org/libffi/>
+   Implementing Verilog DPI-C
+ * editline, Line editing and history library (BSD), <https://www.thrysoee.dk/editline/>
+   Enhancing the command prompt
+ * readline, Line editing and history library (GPL), <https://tiswww.case.edu/php/chet/readline/rltop.html>
+   Enhancing the command prompt
+ * GTest, C++ testing and mocking framework by Google, <https://google.github.io/googletest/>
+   Running unit tests
+
+-- The following features have been enabled:
+
+ * have_spawn, Passes that invoke external tools
+ * have_plugins, Dynamically loadable binary plugins
+ * with_abc, Production-quality logic synthesis flow
+ * with_tcl, Tcl scripting and SDC parsing
+
+-- The following features have been disabled:
+
+ * have_glob, Glob expansion in filenames
+ * have_threads, Multithreaded netlist operations
+ * with_zlib, Transparent Gzip decompression and FST file format support
+ * with_libffi, Verilog DPI-C foreign function interface
+ * with_readline, Using readline for prompt editing and history
+ * with_editline, Using editline for prompt editing and history
+ * with_python, Python scripting and embedding
+ * with_verific, Verific frontend integration
+
+-- Configuring Yosys 0.69+286
+-- Git commit 37f25dae9 from C:\Users\13889\Desktop\椤圭洰\pmux-opt\yosys-src at HEAD
+-- External ABC: R:/suite/bin/yosys-abc.exe
+-- {fmt} version: 12.2.1
+-- Build type: Release
+-- C++ modules support is disabled. Enable with -DTOMLPLUSPLUS_BUILD_MODULES=ON
+-- Configuring done (2.4s)
+-- Generating done (2.1s)
+-- Build files have been written to: R:/build
+[1/296] Building CXX object passes\cmds\CMakeFiles\yosys_delete.dir\delete.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[2/296] Building CXX object kernel\CMakeFiles\yosys_kernel.dir\tclapi.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[3/296] Building CXX object passes\cmds\CMakeFiles\yosys_add.dir\add.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[4/296] Building CXX object kernel\CMakeFiles\yosys_kernel.dir\yw.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[5/296] Building CXX object passes\cmds\CMakeFiles\yosys_exec.dir\exec.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[6/296] Building CXX object kernel\CMakeFiles\yosys_driver.dir\driver.cc.obj
+[7/296] Building CXX object passes\cmds\CMakeFiles\yosys_design_equal.dir\design_equal.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[8/296] Building CXX object passes\cmds\CMakeFiles\yosys_design.dir\design.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[9/296] Building CXX object passes\cmds\CMakeFiles\yosys_viz.dir\viz.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[10/296] Building CXX object passes\cmds\CMakeFiles\yosys_autoname.dir\autoname.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[11/296] Building CXX object passes\cmds\CMakeFiles\yosys_select.dir\select.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[12/296] Building CXX object passes\cmds\CMakeFiles\yosys_show.dir\show.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[13/296] Building CXX object passes\cmds\CMakeFiles\yosys_rename.dir\rename.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[14/296] Building CXX object passes\cmds\CMakeFiles\yosys_connect.dir\connect.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[15/296] Building CXX object passes\cmds\CMakeFiles\yosys_optbarriers.dir\optbarriers.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[16/296] Building CXX object passes\cmds\CMakeFiles\yosys_splitcells.dir\splitcells.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[17/296] Building CXX object passes\cmds\CMakeFiles\yosys_scatter.dir\scatter.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[18/296] Building CXX object passes\cmds\CMakeFiles\yosys_splitnets.dir\splitnets.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[19/296] Building CXX object passes\cmds\CMakeFiles\yosys_setundef.dir\setundef.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[20/296] Building CXX object passes\cmds\CMakeFiles\yosys_setattr.dir\setattr.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[21/296] Building CXX object passes\cmds\CMakeFiles\yosys_internal_stats.dir\internal_stats.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[22/296] Building CXX object passes\cmds\CMakeFiles\yosys_copy.dir\copy.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[23/296] Building CXX object passes\cmds\CMakeFiles\yosys_stat.dir\stat.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[24/296] Building CXX object passes\cmds\CMakeFiles\yosys_splice.dir\splice.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[25/296] Building CXX object passes\cmds\CMakeFiles\yosys_logcmd.dir\logcmd.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[26/296] Building CXX object passes\cmds\CMakeFiles\yosys_tee.dir\tee.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[27/296] Building CXX object passes\cmds\CMakeFiles\yosys_glift.dir\glift.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[28/296] Building CXX object passes\cmds\CMakeFiles\yosys_scc.dir\scc.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[29/296] Building CXX object passes\cmds\CMakeFiles\yosys_torder.dir\torder.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[30/296] Building CXX object passes\cmds\CMakeFiles\yosys_write_file.dir\write_file.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[31/296] Building CXX object passes\cmds\CMakeFiles\yosys_connwrappers.dir\connwrappers.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[32/296] Building CXX object passes\cmds\CMakeFiles\yosys_trace.dir\trace.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[33/296] Building CXX object passes\cmds\CMakeFiles\yosys_plugin.dir\plugin.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[34/296] Building CXX object passes\cmds\CMakeFiles\yosys_edgetypes.dir\edgetypes.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[35/296] Building CXX object passes\cmds\CMakeFiles\yosys_portlist.dir\portlist.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[36/296] Building CXX object passes\cmds\CMakeFiles\yosys_chtype.dir\chtype.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[37/296] Building CXX object passes\cmds\CMakeFiles\yosys_blackbox.dir\blackbox.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[38/296] Building CXX object passes\cmds\CMakeFiles\yosys_check.dir\check.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[39/296] Building CXX object passes\cmds\CMakeFiles\yosys_chformal.dir\chformal.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[40/296] Building CXX object passes\cmds\CMakeFiles\yosys_linux_perf.dir\linux_perf.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[41/296] Building CXX object passes\cmds\CMakeFiles\yosys_ltp.dir\ltp.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[42/296] Building CXX object passes\cmds\CMakeFiles\yosys_scratchpad.dir\scratchpad.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[43/296] Building CXX object passes\cmds\CMakeFiles\yosys_bugpoint.dir\bugpoint.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[44/296] Building CXX object passes\cmds\CMakeFiles\yosys_logger.dir\logger.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[45/296] Building CXX object passes\cmds\CMakeFiles\yosys_printattrs.dir\printattrs.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[46/296] Building CXX object passes\cmds\CMakeFiles\yosys_sta.dir\sta.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[47/296] Building CXX object passes\cmds\CMakeFiles\yosys_box_derive.dir\box_derive.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[48/296] Building CXX object passes\cmds\CMakeFiles\yosys_clean_zerowidth.dir\clean_zerowidth.cc.obj
+R:\src\passes\cmds\clean_zerowidth.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[49/296] Building CXX object passes\cmds\CMakeFiles\yosys_future.dir\future.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[50/296] Building CXX object passes\cmds\CMakeFiles\yosys_dft_tag.dir\dft_tag.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[51/296] Building CXX object passes\cmds\CMakeFiles\yosys_xprop.dir\xprop.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[52/296] Building CXX object passes\cmds\CMakeFiles\yosys_example_dt.dir\example_dt.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[53/296] Building CXX object passes\cmds\CMakeFiles\yosys_setenv.dir\setenv.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[54/296] Building CXX object passes\cmds\CMakeFiles\yosys_portarcs.dir\portarcs.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[55/296] Building CXX object passes\cmds\CMakeFiles\yosys_wrapcell.dir\wrapcell.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(462): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+        with
+        [
+            _Ty=__int64
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(462): note: the template instantiation context (the oldest one first) is
+R:\src\passes\cmds\wrapcell.cc(122): note: see reference to function template instantiation '`anonymous-namespace'::Chunk &std::vector<`anonymous-namespace'::Chunk,std::allocator<`anonymous-namespace'::Chunk>>::emplace_back<_Ty1&,_Ty2&,__int64>(_Ty1 &,_Ty2 &,__int64 &&)' being compiled
+        with
+        [
+            _Ty1=Yosys::RTLIL::IdString,
+            _Ty2=int
+        ]
+R:\src\passes\cmds\wrapcell.cc(122): note: see the first reference to 'std::vector<`anonymous-namespace'::Chunk,std::allocator<`anonymous-namespace'::Chunk>>::emplace_back' in '`anonymous-namespace'::collect_chunks'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vector(924): note: see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<Yosys::RTLIL::IdString&,int&,__int64>(Yosys::RTLIL::IdString &,int &,__int64 &&)' being compiled
+        with
+        [
+            _Ty=`anonymous-namespace'::Chunk
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vector(845): note: see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<Yosys::RTLIL::IdString&,int&,__int64>(Yosys::RTLIL::IdString &,int &,__int64 &&)' being compiled
+        with
+        [
+            _Ty=`anonymous-namespace'::Chunk
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vector(863): note: see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Yosys::RTLIL::IdString&,int&,__int64>(_Alloc &,_Objty *const ,Yosys::RTLIL::IdString &,int &,__int64 &&)' being compiled
+        with
+        [
+            _Alloc=std::allocator<`anonymous-namespace'::Chunk>,
+            _Ty=`anonymous-namespace'::Chunk,
+            _Objty=`anonymous-namespace'::Chunk
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(730): note: see reference to function template instantiation '_Ty *std::construct_at<_Objty,Yosys::RTLIL::IdString&,int&,__int64>(_Ty *const ,Yosys::RTLIL::IdString &,int &,__int64 &&) noexcept(<expr>)' being compiled
+        with
+        [
+            _Ty=`anonymous-namespace'::Chunk,
+            _Objty=`anonymous-namespace'::Chunk
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(463): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+        with
+        [
+            _Ty=__int64
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(463): note: the template instantiation context (the oldest one first) is
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vector(863): note: see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Yosys::RTLIL::IdString&,int&,__int64>(_Alloc &,_Objty *const ,Yosys::RTLIL::IdString &,int &,__int64 &&)' being compiled
+        with
+        [
+            _Alloc=std::allocator<`anonymous-namespace'::Chunk>,
+            _Ty=`anonymous-namespace'::Chunk,
+            _Objty=`anonymous-namespace'::Chunk
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(730): note: see reference to function template instantiation '_Ty *std::construct_at<_Objty,Yosys::RTLIL::IdString&,int&,__int64>(_Ty *const ,Yosys::RTLIL::IdString &,int &,__int64 &&) noexcept(false)' being compiled
+        with
+        [
+            _Ty=`anonymous-namespace'::Chunk,
+            _Objty=`anonymous-namespace'::Chunk
+        ]
+[56/296] Building CXX object passes\cmds\CMakeFiles\yosys_test_select.dir\test_select.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[57/296] Building CXX object passes\cmds\CMakeFiles\yosys_abstract.dir\abstract.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[58/296] Building CXX object passes\cmds\CMakeFiles\yosys_linecoverage.dir\linecoverage.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[59/296] Building CXX object passes\cmds\CMakeFiles\yosys_sort.dir\sort.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[60/296] Building CXX object passes\cmds\CMakeFiles\yosys_timeest.dir\timeest.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[61/296] Building CXX object passes\cmds\CMakeFiles\yosys_symfpu.dir\symfpu.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[62/296] Building CXX object passes\cmds\CMakeFiles\yosys_icell_liberty.dir\icell_liberty.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[63/296] Building CXX object passes\cmds\sdc\CMakeFiles\yosys_sdc.dir\sdc.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[64/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_miter.dir\equiv_miter.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[65/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_make.dir\equiv_make.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[66/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_status.dir\equiv_status.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[67/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_simple.dir\equiv_simple.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[68/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_add.dir\equiv_add.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[69/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_remove.dir\equiv_remove.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[70/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_purge.dir\equiv_purge.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[71/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_struct.dir\equiv_struct.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[72/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_opt.dir\equiv_opt.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[73/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_mark.dir\equiv_mark.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[74/296] Building CXX object passes\equiv\CMakeFiles\yosys_equiv_induct.dir\equiv_induct.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[75/296] Building CXX object passes\fsm\CMakeFiles\yosys_fsm_detect.dir\fsm_detect.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[76/296] Building CXX object passes\fsm\CMakeFiles\yosys_fsm_opt.dir\fsm_opt.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[77/296] Building CXX object passes\fsm\CMakeFiles\yosys_fsm_recode.dir\fsm_recode.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[78/296] Building CXX object passes\fsm\CMakeFiles\yosys_fsm_info.dir\fsm_info.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[79/296] Copying share/include/passes/fsm/fsmdata.h
+[80/296] Building CXX object passes\fsm\CMakeFiles\yosys_fsm_expand.dir\fsm_expand.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[81/296] Building CXX object passes\fsm\CMakeFiles\yosys_fsm_extract.dir\fsm_extract.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[82/296] Building CXX object passes\fsm\CMakeFiles\yosys_fsm_export.dir\fsm_export.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[83/296] Building CXX object passes\fsm\CMakeFiles\yosys_fsm.dir\fsm.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[84/296] Building CXX object passes\hierarchy\CMakeFiles\yosys_keep_hierarchy.dir\keep_hierarchy.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[85/296] Building CXX object passes\fsm\CMakeFiles\yosys_fsm_map.dir\fsm_map.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[86/296] Building CXX object passes\hierarchy\CMakeFiles\yosys_flatten.dir\flatten.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[87/296] Building CXX object passes\hierarchy\CMakeFiles\yosys_uniquify.dir\uniquify.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[88/296] Building CXX object passes\hierarchy\CMakeFiles\yosys_hierarchy.dir\hierarchy.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[89/296] Building CXX object passes\hierarchy\CMakeFiles\yosys_submod.dir\submod.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[90/296] Building CXX object passes\memory\CMakeFiles\yosys_memlib.dir\memlib.cc.obj
+R:\src\passes\memory\memlib.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[91/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_collect.dir\memory_collect.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[92/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_unpack.dir\memory_unpack.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[93/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_dff.dir\memory_dff.cc.obj
+R:\src\passes\memory\memory_dff.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/qcsat.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ffmerge.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[94/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_share.dir\memory_share.cc.obj
+R:\src\passes\memory\memory_share.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/qcsat.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[95/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_memx.dir\memory_memx.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[96/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_map.dir\memory_map.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[97/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_nordff.dir\memory_nordff.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[98/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_narrow.dir\memory_narrow.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[99/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_bram.dir\memory_bram.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[100/296] Building CXX object passes\memory\CMakeFiles\yosys_memory.dir\memory.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[101/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_bmux2rom.dir\memory_bmux2rom.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[102/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_mem_widen.dir\opt_mem_widen.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[103/296] Building CXX object passes\memory\CMakeFiles\yosys_memory_libmap.dir\memory_libmap.cc.obj
+R:\src\passes\memory\memory_libmap.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/qcsat.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\passes\memory\memory_libmap.cc(839): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[104/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_muxtree.dir\opt_muxtree.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[105/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_merge.dir\opt_merge.cc.obj
+R:\src\passes\opt\opt_merge.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[106/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_share.dir\opt_share.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[107/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_reduce.dir\opt_reduce.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[108/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_hier.dir\opt_hier.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[109/296] Building CXX object passes\opt\CMakeFiles\yosys_opt.dir\opt.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[110/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_mem.dir\opt_mem.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[111/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_mem_feedback.dir\opt_mem_feedback.cc.obj
+R:\src\passes\opt\opt_mem_feedback.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[112/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_mem_priority.dir\opt_mem_priority.cc.obj
+R:\src\passes\opt\opt_mem_priority.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/qcsat.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[113/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_demorgan.dir\opt_demorgan.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[114/296] Building CXX object passes\opt\CMakeFiles\yosys_wreduce.dir\wreduce.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[115/296] Building CXX object passes\opt\CMakeFiles\yosys_rmports.dir\rmports.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[116/296] Building CXX object passes\opt\CMakeFiles\yosys_share.dir\share.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/qcsat.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[117/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_lut_ins.dir\opt_lut_ins.cc.obj
+R:\src\passes\opt\opt_lut_ins.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[118/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_lut.dir\opt_lut.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[119/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_ffinv.dir\opt_ffinv.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[120/296] Building CXX object passes\opt\CMakeFiles\yosys_muxpack.dir\muxpack.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[121/296] Building CXX object passes\opt\CMakeFiles\yosys_pmux2shiftx.dir\pmux2shiftx.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[122/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_balance_tree.dir\opt_balance_tree.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[123/296] Building CXX object passes\opt\CMakeFiles\yosys_peepopt.dir\peepopt.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[124/296] Building CXX object passes\opt\clean\CMakeFiles\yosys_opt_clean.dir\cells_temp.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[125/296] Building CXX object passes\opt\clean\CMakeFiles\yosys_opt_clean.dir\cells_all.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[126/296] Building CXX object passes\opt\clean\CMakeFiles\yosys_opt_clean.dir\wires.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[127/296] Building CXX object passes\opt\clean\CMakeFiles\yosys_opt_clean.dir\inits.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[128/296] Building CXX object passes\opt\clean\CMakeFiles\yosys_opt_clean.dir\opt_clean.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[129/296] Building CXX object passes\opt\CMakeFiles\yosys_opt_expr.dir\opt_expr.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[130/296] Building CXX object passes\opt\dff\CMakeFiles\yosys_opt_dff.dir\opt_dff.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/qcsat.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[131/296] Building CXX object passes\opt\dff\CMakeFiles\yosys_opt_dff.dir\simple.cc.obj
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/qcsat.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[132/296] Building CXX object passes\opt\dff\CMakeFiles\yosys_opt_dff.dir\constbits.cc.obj
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/qcsat.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[133/296] Building CXX object passes\proc\CMakeFiles\yosys_proc_clean.dir\proc_clean.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[134/296] Building CXX object passes\opt\dff\CMakeFiles\yosys_opt_dff.dir\eqbits.cc.obj
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/qcsat.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[135/296] Building CXX object passes\proc\CMakeFiles\yosys_proc_prune.dir\proc_prune.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[136/296] Building CXX object passes\pmgen\CMakeFiles\yosys_test_pmgen.dir\test_pmgen.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[137/296] Building CXX object passes\proc\CMakeFiles\yosys_proc_rmdead.dir\proc_rmdead.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[138/296] Building CXX object passes\proc\CMakeFiles\yosys_proc_init.dir\proc_init.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[139/296] Building CXX object passes\proc\CMakeFiles\yosys_proc_arst.dir\proc_arst.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[140/296] Building CXX object passes\proc\CMakeFiles\yosys_proc_rom.dir\proc_rom.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[141/296] Building CXX object passes\proc\CMakeFiles\yosys_proc_mux.dir\proc_mux.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[142/296] Building CXX object passes\proc\CMakeFiles\yosys_proc_memwr.dir\proc_memwr.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[143/296] Building CXX object passes\proc\CMakeFiles\yosys_proc_dlatch.dir\proc_dlatch.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[144/296] Building CXX object passes\proc\CMakeFiles\yosys_proc.dir\proc.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[145/296] Building CXX object passes\proc\CMakeFiles\yosys_proc_dff.dir\proc_dff.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[146/296] Building CXX object passes\sat\CMakeFiles\yosys_freduce.dir\freduce.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[147/296] Building CXX object passes\sat\CMakeFiles\yosys_assertpmux.dir\assertpmux.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[148/296] Building CXX object passes\sat\CMakeFiles\yosys_miter.dir\miter.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[149/296] Building CXX object passes\sat\CMakeFiles\yosys_sat.dir\sat.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[150/296] Building CXX object passes\sat\CMakeFiles\yosys_eval.dir\eval.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[151/296] Building CXX object passes\sat\CMakeFiles\yosys_expose.dir\expose.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[152/296] Building CXX object passes\sat\CMakeFiles\yosys_supercover.dir\supercover.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[153/296] Building CXX object passes\sat\CMakeFiles\yosys_clk2fflogic.dir\clk2fflogic.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[154/296] Building CXX object passes\sat\CMakeFiles\yosys_async2sync.dir\async2sync.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[155/296] Building CXX object passes\sat\CMakeFiles\yosys_formalff.dir\formalff.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[156/296] Building CXX object passes\sat\CMakeFiles\yosys_fmcombine.dir\fmcombine.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[157/296] Building CXX object passes\sat\CMakeFiles\yosys_mutate.dir\mutate.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[158/296] Building CXX object passes\sat\CMakeFiles\yosys_fminit.dir\fminit.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[159/296] Building CXX object passes\sat\CMakeFiles\yosys_cutpoint.dir\cutpoint.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[160/296] Building CXX object passes\techmap\CMakeFiles\yosys_libparse.dir\libparse.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[161/296] Building CXX object passes\sat\CMakeFiles\yosys_synthprop.dir\synthprop.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[162/296] Building CXX object passes\sat\CMakeFiles\yosys_recover_names.dir\recover_names.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[163/296] Building CXX object passes\techmap\CMakeFiles\yosys_simplemap.dir\simplemap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[164/296] Building CXX object passes\sat\CMakeFiles\yosys_qbfsat.dir\qbfsat.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[165/296] Building CXX object passes\techmap\CMakeFiles\yosys_maccmap.dir\maccmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[166/296] Building CXX object passes\techmap\CMakeFiles\yosys_booth.dir\booth.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[167/296] Building CXX object passes\techmap\CMakeFiles\yosys_mcm.dir\mcm.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[168/296] Building CXX object passes\techmap\CMakeFiles\yosys_dfflibmap.dir\dfflibmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[169/296] Building CXX object passes\techmap\CMakeFiles\yosys_techmap.dir\techmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[170/296] Building CXX object passes\techmap\CMakeFiles\yosys_libcache.dir\libcache.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[171/296] Building CXX object passes\techmap\CMakeFiles\yosys_abc9_exe.dir\abc9_exe.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[172/296] Building CXX object passes\techmap\CMakeFiles\yosys_abc_new.dir\abc_new.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[173/296] Building CXX object passes\techmap\CMakeFiles\yosys_abc9.dir\abc9.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[174/296] Building CXX object passes\techmap\CMakeFiles\yosys_abc9_ops.dir\abc9_ops.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[175/296] Building CXX object passes\techmap\CMakeFiles\yosys_abc_ops_reintegrate.dir\abc_ops_reintegrate.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[176/296] Building CXX object passes\techmap\CMakeFiles\yosys_abc.dir\abc.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[177/296] Building CXX object passes\techmap\CMakeFiles\yosys_hilomap.dir\hilomap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[178/296] Building CXX object passes\techmap\CMakeFiles\yosys_clkbufmap.dir\clkbufmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[179/296] Building CXX object passes\techmap\CMakeFiles\yosys_iopadmap.dir\iopadmap.cc.obj
+R:\src\passes\techmap\iopadmap.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[180/296] Building CXX object passes\techmap\CMakeFiles\yosys_extract.dir\extract.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[181/296] Building CXX object passes\techmap\CMakeFiles\yosys_extract_reduce.dir\extract_reduce.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[182/296] Building CXX object passes\techmap\CMakeFiles\yosys_extract_counter.dir\extract_counter.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[183/296] Building CXX object passes\techmap\CMakeFiles\yosys_dffinit.dir\dffinit.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[184/296] Building CXX object passes\techmap\CMakeFiles\yosys_alumacc.dir\alumacc.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[185/296] Building CXX object passes\techmap\CMakeFiles\yosys_extract_fa.dir\extract_fa.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[186/296] Building CXX object passes\techmap\CMakeFiles\yosys_pmuxtree.dir\pmuxtree.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[187/296] Building CXX object passes\techmap\CMakeFiles\yosys_bmuxmap.dir\bmuxmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[188/296] Building CXX object passes\techmap\CMakeFiles\yosys_demuxmap.dir\demuxmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[189/296] Building CXX object passes\techmap\CMakeFiles\yosys_bwmuxmap.dir\bwmuxmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[190/296] Building CXX object passes\techmap\CMakeFiles\yosys_muxcover.dir\muxcover.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[191/296] Building CXX object passes\techmap\CMakeFiles\yosys_aigmap.dir\aigmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[192/296] Building CXX object passes\techmap\CMakeFiles\yosys_tribuf.dir\tribuf.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[193/296] Building CXX object passes\techmap\CMakeFiles\yosys_lut2bmux.dir\lut2bmux.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[194/296] Building CXX object passes\techmap\CMakeFiles\yosys_lut2mux.dir\lut2mux.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[195/296] Building CXX object passes\techmap\CMakeFiles\yosys_shregmap.dir\shregmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[196/296] Building CXX object passes\techmap\CMakeFiles\yosys_deminout.dir\deminout.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[197/296] Building CXX object passes\techmap\CMakeFiles\yosys_insbuf.dir\insbuf.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[198/296] Building CXX object passes\techmap\CMakeFiles\yosys_attrmap.dir\attrmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[199/296] Building CXX object passes\techmap\CMakeFiles\yosys_attrmvcp.dir\attrmvcp.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[200/296] Building CXX object passes\techmap\CMakeFiles\yosys_bufnorm.dir\bufnorm.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[201/296] Building CXX object passes\techmap\CMakeFiles\yosys_zinit.dir\zinit.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[202/296] Building CXX object passes\techmap\CMakeFiles\yosys_dffunmap.dir\dffunmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[203/296] Building CXX object passes\techmap\CMakeFiles\yosys_dfflegalize.dir\dfflegalize.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\passes\techmap\dfflegalize.cc(966): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[204/296] Building CXX object passes\techmap\CMakeFiles\yosys_extractinv.dir\extractinv.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[205/296] Building CXX object passes\techmap\CMakeFiles\yosys_constmap.dir\constmap.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[206/296] Building CXX object passes\techmap\CMakeFiles\yosys_clockgate.dir\clockgate.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[207/296] Building CXX object passes\techmap\CMakeFiles\yosys_arith_tree.dir\arith_tree.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[208/296] Building CXX object passes\techmap\CMakeFiles\yosys_cellmatch.dir\cellmatch.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[209/296] Building CXX object passes\techmap\CMakeFiles\yosys-filterlib.dir\filterlib.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[210/296] Building CXX object passes\tests\CMakeFiles\yosys_test_autotb.dir\test_autotb.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[211/296] Building CXX object passes\tests\CMakeFiles\yosys_raise_error.dir\raise_error.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[212/296] Building CXX object passes\tests\CMakeFiles\yosys_test_kogge_stone.dir\test_kogge_stone.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[213/296] Building CXX object passes\tests\CMakeFiles\yosys_test_abcloop.dir\test_abcloop.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[214/296] Building CXX object frontends\ast\CMakeFiles\yosys_ast.dir\dpicall.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[215/296] Building CXX object frontends\aiger\CMakeFiles\yosys_read_aiger.dir\aigerparse.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[216/296] Building CXX object passes\tests\CMakeFiles\yosys_test_cell.dir\test_cell.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[217/296] Building CXX object frontends\ast\CMakeFiles\yosys_ast.dir\ast.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[218/296] Building CXX object frontends\ast\CMakeFiles\yosys_ast.dir\genrtlil.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[219/296] Building CXX object frontends\blif\CMakeFiles\yosys_read_blif.dir\blifparse.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[220/296] Building CXX object frontends\json\CMakeFiles\yosys_read_json.dir\jsonparse.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[221/296] Building CXX object frontends\rpc\CMakeFiles\yosys_read_rpc.dir\rpc_frontend.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[222/296] Building CXX object frontends\liberty\CMakeFiles\yosys_read_liberty.dir\liberty.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[223/296] Building CXX object frontends\rtlil\CMakeFiles\yosys_read_rtlil.dir\rtlil_frontend.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[224/296] Building CXX object frontends\verilog\CMakeFiles\yosys_read_verilog.dir\const2ast.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[225/296] Building CXX object frontends\verific\CMakeFiles\yosys_read_verific.dir\verific.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[226/296] Building CXX object frontends\verilog\CMakeFiles\yosys_read_verilog.dir\preproc.cc.obj
+R:\src\frontends\verilog\preproc.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[227/296] Building CXX object frontends\verilog\CMakeFiles\yosys_read_verilog.dir\verilog_error.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[228/296] Building CXX object frontends\verilog\CMakeFiles\yosys_read_verilog.dir\verilog_frontend.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[229/296] Building CXX object backends\aiger\CMakeFiles\yosys_write_aiger.dir\aiger.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[230/296] Building CXX object backends\aiger\CMakeFiles\yosys_write_xaiger.dir\xaiger.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(303): warning C4267: 'initializing': conversion from 'size_t' to '_Ty2', possible loss of data
+        with
+        [
+            _Ty2=int
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(303): note: the template instantiation context (the oldest one first) is
+R:\src\backends\aiger\xaiger.cc(609): note: see reference to function template instantiation 'std::pair<K,T>::pair<Yosys::RTLIL::SigSpec,unsigned __int64,0>(std::pair<Yosys::RTLIL::SigSpec,unsigned __int64> &&) noexcept(false)' being compiled
+        with
+        [
+            K=Yosys::RTLIL::SigSpec,
+            T=int
+        ]
+R:\src\backends\aiger\xaiger.cc(609): note: see the first reference to 'std::pair<K,T>::pair' in '`anonymous-namespace'::XAigerWriter::write_aiger'
+        with
+        [
+            K=Yosys::RTLIL::SigSpec,
+            T=int
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(1680): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(1680): note: the template instantiation context (the oldest one first) is
+R:\src\backends\aiger\xaiger.cc(597): note: see reference to function template instantiation 'void std::_Binder<std::_Unforced,`anonymous-namespace'::XAigerWriter::write_aiger::<lambda_1> &,std::reference_wrapper<std::stringstream>,const std::_Ph<1> &>::operator ()<unsigned __int64>(unsigned __int64 &&) noexcept(false)' being compiled
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\functional(2181): note: see reference to function template instantiation 'void std::_Call_binder<std::_Unforced,0,1,`anonymous-namespace'::XAigerWriter::write_aiger::<lambda_1>,std::tuple<std::reference_wrapper<std::stringstream>,std::_Ph<1>>,std::tuple<unsigned __int64 &&>>(std::_Invoker_ret<std::_Unforced>,std::integer_sequence<size_t,0,1>,_Cv_FD &,_Cv_tuple_TiD &,_Untuple &&) noexcept(false)' being compiled
+        with
+        [
+            _Cv_FD=`anonymous-namespace'::XAigerWriter::write_aiger::<lambda_1>,
+            _Cv_tuple_TiD=std::tuple<std::reference_wrapper<std::stringstream>,std::_Ph<1>>,
+            _Untuple=std::tuple<unsigned __int64 &&>
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\functional(2127): note: see reference to function template instantiation 'void std::_Invoker_ret<std::_Unforced>::_Call<_Cv_FD&,std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>&,unsigned __int64>(_Fx,std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>> &,unsigned __int64 &&) noexcept(false)' being compiled
+        with
+        [
+            _Cv_FD=`anonymous-namespace'::XAigerWriter::write_aiger::<lambda_1>,
+            _Fx=`anonymous-namespace'::XAigerWriter::write_aiger::<lambda_1> &
+        ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\functional(2117): note: see reference to function template instantiation 'void std::invoke<_Cv_FD&,std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>&,unsigned __int64>(_Callable,_Ty1,unsigned __int64 &&) noexcept(false)' being compiled
+        with
+        [
+            _Cv_FD=`anonymous-namespace'::XAigerWriter::write_aiger::<lambda_1>,
+            _Callable=`anonymous-namespace'::XAigerWriter::write_aiger::<lambda_1> &,
+            _Ty1=std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>> &
+        ]
+[231/296] Building CXX object backends\aiger2\CMakeFiles\yosys_write_aiger2.dir\aiger.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[232/296] Building CXX object frontends\verilog\CMakeFiles\yosys_read_verilog.dir\verilog_lexer.cc.obj
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdint.h(49): warning C4005: 'INT8_MIN': macro redefinition
+R:\build\frontends\verilog\verilog_lexer.cc(81): note: see previous definition of 'INT8_MIN'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdint.h(50): warning C4005: 'INT16_MIN': macro redefinition
+R:\build\frontends\verilog\verilog_lexer.cc(84): note: see previous definition of 'INT16_MIN'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdint.h(51): warning C4005: 'INT32_MIN': macro redefinition
+R:\build\frontends\verilog\verilog_lexer.cc(87): note: see previous definition of 'INT32_MIN'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdint.h(53): warning C4005: 'INT8_MAX': macro redefinition
+R:\build\frontends\verilog\verilog_lexer.cc(90): note: see previous definition of 'INT8_MAX'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdint.h(54): warning C4005: 'INT16_MAX': macro redefinition
+R:\build\frontends\verilog\verilog_lexer.cc(93): note: see previous definition of 'INT16_MAX'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdint.h(55): warning C4005: 'INT32_MAX': macro redefinition
+R:\build\frontends\verilog\verilog_lexer.cc(96): note: see previous definition of 'INT32_MAX'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdint.h(57): warning C4005: 'UINT8_MAX': macro redefinition
+R:\build\frontends\verilog\verilog_lexer.cc(99): note: see previous definition of 'UINT8_MAX'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdint.h(58): warning C4005: 'UINT16_MAX': macro redefinition
+R:\build\frontends\verilog\verilog_lexer.cc(102): note: see previous definition of 'UINT16_MAX'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdint.h(59): warning C4005: 'UINT32_MAX': macro redefinition
+R:\build\frontends\verilog\verilog_lexer.cc(105): note: see previous definition of 'UINT32_MAX'
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[233/296] Building CXX object backends\blif\CMakeFiles\yosys_write_blif.dir\blif.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[234/296] Building CXX object frontends\ast\CMakeFiles\yosys_ast.dir\simplify.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\frontends\ast\simplify.cc(2403): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\frontends\ast\simplify.cc(4434): warning C4805: '==': unsafe mix of type 'unsigned __int64' and type 'bool' in operation
+[235/296] Building CXX object frontends\verilog\CMakeFiles\yosys_read_verilog.dir\verilog_parser.tab.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[236/296] Building CXX object backends\btor\CMakeFiles\yosys_write_btor.dir\btor.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[237/296] Building CXX object backends\edif\CMakeFiles\yosys_write_edif.dir\edif.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[238/296] Building CXX object backends\cxxrtl\CMakeFiles\yosys_write_cxxrtl.dir\cxxrtl_backend.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[239/296] Building CXX object backends\functional\CMakeFiles\yosys_write_functional_cxx.dir\cxx.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[240/296] Building CXX object backends\functional\CMakeFiles\yosys_write_functional_smt2.dir\smtlib.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[241/296] Building CXX object backends\firrtl\CMakeFiles\yosys_write_firrtl.dir\firrtl.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[242/296] Building CXX object backends\functional\CMakeFiles\yosys_write_functional_rosette.dir\smtlib_rosette.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[243/296] Building CXX object backends\functional\CMakeFiles\yosys_test_generic.dir\test_generic.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[244/296] Building CXX object backends\intersynth\CMakeFiles\yosys_write_intersynth.dir\intersynth.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[245/296] Building CXX object backends\rtlil\CMakeFiles\yosys_write_rtlil.dir\rtlil_backend.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[246/296] Building CXX object backends\jny\CMakeFiles\yosys_write_jny.dir\jny.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[247/296] Building CXX object backends\json\CMakeFiles\yosys_write_json.dir\json.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[248/296] Building CXX object backends\simplec\CMakeFiles\yosys_write_simplec.dir\simplec.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[249/296] Building CXX object backends\table\CMakeFiles\yosys_write_table.dir\table.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[250/296] Building CXX object backends\spice\CMakeFiles\yosys_write_spice.dir\spice.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[251/296] Building CXX object backends\smv\CMakeFiles\yosys_write_smv.dir\smv.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[252/296] Building CXX object techlibs\achronix\CMakeFiles\yosys_synth_achronix.dir\synth_achronix.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[253/296] Building CXX object techlibs\anlogic\CMakeFiles\yosys_anlogic_eqn.dir\anlogic_eqn.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[254/296] Building CXX object techlibs\analogdevices\CMakeFiles\yosys_synth_analogdevices.dir\synth_analogdevices.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[255/296] Building CXX object techlibs\anlogic\CMakeFiles\yosys_anlogic_fixcarry.dir\anlogic_fixcarry.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[256/296] Building CXX object backends\smt2\CMakeFiles\yosys_write_smt2.dir\smt2.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[257/296] Building CXX object techlibs\anlogic\CMakeFiles\yosys_synth_anlogic.dir\synth_anlogic.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[258/296] Building CXX object backends\verilog\CMakeFiles\yosys_write_verilog.dir\verilog_backend.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/ff.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/mem.h(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[259/296] Building CXX object techlibs\common\CMakeFiles\yosys_synth.dir\synth.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[260/296] Building CXX object techlibs\common\CMakeFiles\yosys_opensta.dir\opensta.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[261/296] Building CXX object techlibs\common\CMakeFiles\yosys_prep.dir\prep.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[262/296] Building CXX object techlibs\common\CMakeFiles\yosys_sdc_expand.dir\sdc_expand.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[263/296] Building CXX object techlibs\efinix\CMakeFiles\yosys_efinix_fixcarry.dir\efinix_fixcarry.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[264/296] Building CXX object techlibs\easic\CMakeFiles\yosys_synth_easic.dir\synth_easic.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[265/296] Building CXX object techlibs\efinix\CMakeFiles\yosys_synth_efinix.dir\synth_efinix.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[266/296] Building CXX object techlibs\gatemate\CMakeFiles\yosys_gatemate_foldinv.dir\gatemate_foldinv.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[267/296] Building CXX object techlibs\fabulous\CMakeFiles\yosys_synth_fabulous.dir\synth_fabulous.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[268/296] Building CXX object techlibs\gatemate\CMakeFiles\yosys_synth_gatemate.dir\synth_gatemate.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[269/296] Building CXX object techlibs\ice40\CMakeFiles\yosys_ice40_braminit.dir\ice40_braminit.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[270/296] Building CXX object techlibs\gowin\CMakeFiles\yosys_synth_gowin.dir\synth_gowin.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[271/296] Building CXX object techlibs\ice40\CMakeFiles\yosys_ice40_opt.dir\ice40_opt.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[272/296] Building CXX object techlibs\ice40\CMakeFiles\yosys_ice40_wrapcarry.dir\ice40_wrapcarry.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[273/296] Building CXX object techlibs\ice40\CMakeFiles\yosys_synth_ice40.dir\synth_ice40.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[274/296] Building CXX object techlibs\intel\CMakeFiles\yosys_synth_intel.dir\synth_intel.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[275/296] Building CXX object techlibs\intel_alm\CMakeFiles\yosys_synth_intel_alm.dir\synth_intel_alm.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[276/296] Building CXX object techlibs\lattice\CMakeFiles\yosys_lattice_dsp_nexus.dir\lattice_dsp_nexus.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[277/296] Building CXX object techlibs\lattice\CMakeFiles\yosys_lattice_gsr.dir\lattice_gsr.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[278/296] Building CXX object techlibs\lattice\CMakeFiles\yosys_synth_lattice.dir\synth_lattice.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[279/296] Building CXX object techlibs\microchip\CMakeFiles\yosys_microchip_dffopt.dir\microchip_dffopt.cc.obj
+R:\src\techlibs\microchip\microchip_dffopt.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[280/296] Building CXX object techlibs\nanoxplore\CMakeFiles\yosys_nx_carry.dir\nx_carry.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[281/296] Building CXX object techlibs\microchip\CMakeFiles\yosys_microchip_dsp.dir\microchip_dsp.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[282/296] Building CXX object techlibs\microchip\CMakeFiles\yosys_synth_microchip.dir\synth_microchip.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[283/296] Building CXX object techlibs\nanoxplore\CMakeFiles\yosys_synth_nanoxplore.dir\synth_nanoxplore.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[284/296] Building CXX object techlibs\quicklogic\CMakeFiles\yosys_ql_bram_merge.dir\ql_bram_merge.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[285/296] Building CXX object techlibs\quicklogic\CMakeFiles\yosys_ql_bram_types.dir\ql_bram_types.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[286/296] Building CXX object techlibs\quicklogic\CMakeFiles\yosys_ql_dsp_io_regs.dir\ql_dsp_io_regs.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[287/296] Building CXX object techlibs\quicklogic\CMakeFiles\yosys_ql_dsp_macc.dir\ql_dsp_macc.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[288/296] Building CXX object techlibs\quicklogic\CMakeFiles\yosys_ql_dsp_simd.dir\ql_dsp_simd.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[289/296] Building CXX object techlibs\quicklogic\CMakeFiles\yosys_ql_ioff.dir\ql_ioff.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[290/296] Linking CXX executable yosys-filterlib.exe
+[291/296] Building CXX object techlibs\sf2\CMakeFiles\yosys_synth_sf2.dir\synth_sf2.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[292/296] Building CXX object techlibs\quicklogic\CMakeFiles\yosys_synth_quicklogic.dir\synth_quicklogic.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[293/296] Building CXX object techlibs\xilinx\CMakeFiles\yosys_xilinx_dffopt.dir\xilinx_dffopt.cc.obj
+R:\src\techlibs\xilinx\xilinx_dffopt.cc(1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[294/296] Building CXX object techlibs\xilinx\CMakeFiles\yosys_synth_xilinx.dir\synth_xilinx.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[295/296] Building CXX object techlibs\xilinx\CMakeFiles\yosys_xilinx_dsp.dir\xilinx_dsp.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[296/296] Linking CXX executable yosys.exe

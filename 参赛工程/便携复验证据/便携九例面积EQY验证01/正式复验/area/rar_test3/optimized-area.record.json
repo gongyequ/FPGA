@@ -1,0 +1,72 @@
+{
+  "command": [
+    "U:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/area/rar_test3/optimized-area.ys"
+  ],
+  "variant": "optimized",
+  "started_utc": "2026-11-03T18:19:52.912982+00:00",
+  "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.2525885999202728,
+  "peak_working_set_bytes": 18378752,
+  "memory_samples": 161,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "rar_test3",
+  "top": "test3",
+  "script_sha256": "217192d0c9cc76ebbd6559a00d1cb9d0096ac3a65741e88244829214300c8b22",
+  "abc_process_count": 1,
+  "pmux_messages": [
+    "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 3 decoder tables."
+  ],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&dch -f -r",
+    "&if -W 300 -a -v -F 4 -c",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ],
+  "cell_types": {
+    "$lut": 12,
+    "dffeas": 17
+  },
+  "lut": 12,
+  "inverters": 0,
+  "logic_area": 12,
+  "dff": 17,
+  "io_bits": 12,
+  "ports": {
+    "clk": {
+      "direction": "input",
+      "width": 1
+    },
+    "cs": {
+      "direction": "input",
+      "width": 1
+    },
+    "sr_in": {
+      "direction": "input",
+      "width": 1
+    },
+    "gpioout": {
+      "direction": "output",
+      "width": 8
+    },
+    "sr_out": {
+      "direction": "output",
+      "width": 1
+    }
+  },
+  "raw_il_sha256": "8b9933057150c75f0fc999dc7957e1abfee182860e69765fa4d53230b94f711d",
+  "raw_json_sha256": "b3df1a4828cd7340ebc31b38a9e193f3afb3d94fb11db8073c0be8a1bd5f3154"
+}

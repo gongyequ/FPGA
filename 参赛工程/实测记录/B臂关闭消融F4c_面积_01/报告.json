@@ -1,0 +1,104 @@
+{
+  "candidate": "Boff_F4c",
+  "abc_override": false,
+  "diagnostic_only": false,
+  "binding_sha256": "7ecc80dce35c8b42f760d8b559d7a9361602d22ce9961330909d264918fe7ba3",
+  "area": {
+    "case_count": 9,
+    "mean_reduction_percent": 11.326328178305634,
+    "original_total": 2389,
+    "optimized_total": 2211,
+    "total_reduction_percent": 7.450816241105063,
+    "area_gate_pass": true,
+    "gate_definition": "逐例下降百分比算术平均>=10%；9例均无面积反增；DFF和顶层IO保持不变。",
+    "cases": [
+      {
+        "case": "rar_test1",
+        "original": 288,
+        "optimized": 288,
+        "reduction_percent": 0.0,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "rar_test2",
+        "original": 25,
+        "optimized": 15,
+        "reduction_percent": 40.0,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "rar_test3",
+        "original": 12,
+        "optimized": 12,
+        "reduction_percent": 0.0,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "rar_test4",
+        "original": 31,
+        "optimized": 24,
+        "reduction_percent": 22.580645161290324,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case01",
+        "original": 405,
+        "optimized": 385,
+        "reduction_percent": 4.938271604938271,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case02",
+        "original": 446,
+        "optimized": 400,
+        "reduction_percent": 10.31390134529148,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case03",
+        "original": 401,
+        "optimized": 371,
+        "reduction_percent": 7.4812967581047385,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case04",
+        "original": 371,
+        "optimized": 341,
+        "reduction_percent": 8.086253369272237,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case05",
+        "original": 410,
+        "optimized": 375,
+        "reduction_percent": 8.536585365853659,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      }
+    ]
+  },
+  "status": "AREA_COMPLETE",
+  "completed_stages": [
+    "identity",
+    "area"
+  ],
+  "qualification": "研究工具结果，不是组委会认证；外部ABC覆盖需固化进候选后按相同赛事入口重新验收。"
+}

@@ -1,0 +1,12 @@
+
+-- Running command `pmux_opt -order-decode -flatten-fallback -uniform-abc; scratchpad -get abc9.script' --
+
+1. Executing project PMUX structural optimization.
+
+2. Executing PMUX2SHIFTX pass.
+PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 0 decoder tables.
++&dch,-f,-r;,&if,{W},{D},{R},-a,-v,-F,4,-c;,&mfs
+
+End of script. Logfile hash: 3fe6d0045b
+Yosys 0.69+286 (git sha1 37f25dae9-dirty, Release, MSVC C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 19.44.35215.0) [C:Users889Desktop�圭洰\pmux-optyosys-src at HEAD]
+Time spent: 25% 1x scratchpad (0 sec), 25% 1x pmux_opt (0 sec), ...

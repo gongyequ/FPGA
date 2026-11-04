@@ -1,0 +1,11 @@
+{
+  "command": [
+    "N:/yosys.exe",
+    "-Q",
+    "-s",
+    "gate.ys"
+  ],
+  "exitcode": 0,
+  "wall_seconds": 0.3191315997391939,
+  "scope": "supplemental isolated tool call; not official efficiency score"
+}

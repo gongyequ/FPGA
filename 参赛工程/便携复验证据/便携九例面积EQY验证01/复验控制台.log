@@ -1,0 +1,30 @@
+绑定运行目录：original
+绑定运行目录：optimized
+绑定候选源码快照
+rar_test1 original area=288
+rar_test1 optimized area=288
+rar_test2 original area=25
+rar_test2 optimized area=15
+rar_test3 original area=12
+rar_test3 optimized area=12
+rar_test4 original area=31
+rar_test4 optimized area=24
+zip_case01 original area=405
+zip_case01 optimized area=348
+zip_case02 original area=446
+zip_case02 optimized area=400
+zip_case03 original area=401
+zip_case03 optimized area=370
+zip_case04 original area=371
+zip_case04 optimized area=292
+zip_case05 original area=410
+zip_case05 optimized area=366
+EQY rar_test1 PASS
+EQY rar_test2 PASS
+EQY rar_test3 PASS
+EQY rar_test4 PASS
+EQY zip_case01 PASS
+EQY zip_case02 PASS
+EQY zip_case03 PASS
+EQY zip_case04 PASS
+EQY zip_case05 PASS

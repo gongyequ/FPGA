@@ -1,0 +1,18 @@
+{
+  "command": [
+    "V:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/performance/zip_case05/original-warmup04.ys"
+  ],
+  "variant": "original",
+  "started_utc": "2026-11-03T17:30:10.511616+00:00",
+  "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.45251179998740554,
+  "peak_working_set_bytes": 26505216,
+  "memory_samples": 295,
+  "final_memory_query_ok": true,
+  "timed_out": false
+}

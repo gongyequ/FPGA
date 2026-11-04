@@ -1,0 +1,76 @@
+{
+  "command": [
+    "U:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/area/zip_case01/optimized-area.ys"
+  ],
+  "variant": "optimized",
+  "started_utc": "2026-11-03T17:47:32.598066+00:00",
+  "binary_sha256": "80856566da9f1e458e370e56f33dd1c3ad60ddfa476a12eb59a4cbc7dee2fb1e",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.4577641999348998,
+  "peak_working_set_bytes": 23789568,
+  "memory_samples": 297,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "zip_case01",
+  "top": "pmux_case01_balanced",
+  "script_sha256": "28c7cbe7f9d658fdcde1f5f7bf20c0d8f28cffdbb38269418d7a9f507da3d096",
+  "abc_process_count": 1,
+  "pmux_messages": [
+    "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 1 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 5 decoder tables."
+  ],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&dch -f -r",
+    "&if -W 300 -a -v -F 4 -c",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ],
+  "cell_types": {
+    "dffeas": 12,
+    "$lut": 385
+  },
+  "lut": 385,
+  "inverters": 0,
+  "logic_area": 385,
+  "dff": 12,
+  "io_bits": 79,
+  "ports": {
+    "clk": {
+      "direction": "input",
+      "width": 1
+    },
+    "rst": {
+      "direction": "input",
+      "width": 1
+    },
+    "en": {
+      "direction": "input",
+      "width": 1
+    },
+    "data_in": {
+      "direction": "input",
+      "width": 48
+    },
+    "ctrl_in": {
+      "direction": "input",
+      "width": 16
+    },
+    "data_out": {
+      "direction": "output",
+      "width": 12
+    }
+  },
+  "raw_il_sha256": "d30bb0c5f4dc5ba9ae61671db78cbe4963253722bf9a2256628bfff512e34d89",
+  "raw_json_sha256": "120a1685c076e5f13e24d87c9f30c26eea170b10ca341486a6a363421cb03693"
+}

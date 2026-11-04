@@ -1,0 +1,807 @@
+{
+  "name": "fixed_random_dag_n48_w12",
+  "description": "固定种子DAG：分支臂序、嵌套与共享混合；不是按官方用例拼接",
+  "input_pmux_count": 48,
+  "ports": [
+    {
+      "name": "a0",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b0",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s0",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a1",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b1",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s1",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a2",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b2",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s2",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b3",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s3",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a4",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b4",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s4",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a5",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b5",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s5",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b6",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s6",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a7",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b7",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s7",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a8",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b8",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s8",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b9",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s9",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a10",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b10",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s10",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a11",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b11",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s11",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b12",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s12",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a13",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b13",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s13",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a14",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b14",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s14",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b15",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s15",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a16",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b16",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s16",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a17",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b17",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s17",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b18",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s18",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a19",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b19",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s19",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a20",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b20",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s20",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b21",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s21",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a22",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b22",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s22",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a23",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b23",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s23",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b24",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s24",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a25",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b25",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s25",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a26",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b26",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s26",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b27",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s27",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a28",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b28",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s28",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a29",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b29",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s29",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b30",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s30",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a31",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b31",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s31",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a32",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b32",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s32",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b33",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s33",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a34",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b34",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s34",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a35",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b35",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s35",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b36",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s36",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a37",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b37",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s37",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a38",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b38",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s38",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b39",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s39",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a40",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b40",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s40",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a41",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b41",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s41",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b42",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s42",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a43",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b43",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s43",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a44",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b44",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s44",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b45",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s45",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a46",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b46",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s46",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a47",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b47",
+      "width": 36,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s47",
+      "width": 3,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "out0",
+      "width": 12,
+      "direction": "output",
+      "kind": "data"
+    },
+    {
+      "name": "out1",
+      "width": 12,
+      "direction": "output",
+      "kind": "data"
+    },
+    {
+      "name": "out2",
+      "width": 12,
+      "direction": "output",
+      "kind": "data"
+    }
+  ],
+  "selection": null,
+  "expect_unchanged": false,
+  "min_removed_with_default": 0,
+  "min_removed_with_b": 0,
+  "simulate": true,
+  "samples": 768,
+  "scope": "supplemental structural regression; not official nine-case area/performance",
+  "input_sha256": "6afb140a72ef184bf794e69e3d66350f3483480e60acf09eb7e883fc5c590d94"
+}

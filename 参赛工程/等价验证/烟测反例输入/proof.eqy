@@ -1,0 +1,9 @@
+[gold]
+read_verilog gold.v
+prep -top top
+[gate]
+read_verilog gate.v
+prep -top top
+[strategy sat]
+use sat
+depth 5

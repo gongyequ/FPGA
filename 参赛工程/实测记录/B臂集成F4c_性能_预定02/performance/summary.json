@@ -1,0 +1,209 @@
+[
+  {
+    "case": "rar_test1",
+    "review_triggered": false,
+    "review_executed": false,
+    "samples_used": 1,
+    "wall_seconds": {
+      "baseline": 0.3711009998805821,
+      "candidate": 0.3781452002003789,
+      "overhead_percent": 1.8981895284743366
+    },
+    "peak_working_set_bytes": {
+      "baseline": 24104960,
+      "candidate": 23949312,
+      "overhead_percent": -0.6457094307561584
+    },
+    "within_5_percent": true,
+    "within_15_percent": true,
+    "within_absolute_limits_2GiB": true,
+    "within_absolute_limits_2GB_decimal": true,
+    "baseline_exceeds_absolute_limits": false,
+    "baseline_exception_requires_separate_interpretation": false,
+    "score_scope": "5%为效率满分相对条件；>15%为效率项0条件，5%-15%之间不猜测未公布扣分公式；绝对限/原版超限例外另列。"
+  },
+  {
+    "case": "rar_test2",
+    "review_triggered": false,
+    "review_executed": false,
+    "samples_used": 1,
+    "wall_seconds": {
+      "baseline": 0.20794029999524355,
+      "candidate": 0.19893640000373125,
+      "overhead_percent": -4.330040877943453
+    },
+    "peak_working_set_bytes": {
+      "baseline": 17551360,
+      "candidate": 17608704,
+      "overhead_percent": 0.3267211201867015
+    },
+    "within_5_percent": true,
+    "within_15_percent": true,
+    "within_absolute_limits_2GiB": true,
+    "within_absolute_limits_2GB_decimal": true,
+    "baseline_exceeds_absolute_limits": false,
+    "baseline_exception_requires_separate_interpretation": false,
+    "score_scope": "5%为效率满分相对条件；>15%为效率项0条件，5%-15%之间不猜测未公布扣分公式；绝对限/原版超限例外另列。"
+  },
+  {
+    "case": "rar_test3",
+    "review_triggered": false,
+    "review_executed": false,
+    "samples_used": 1,
+    "wall_seconds": {
+      "baseline": 0.29112950013950467,
+      "candidate": 0.2869647000916302,
+      "overhead_percent": -1.4305661383950286
+    },
+    "peak_working_set_bytes": {
+      "baseline": 18321408,
+      "candidate": 18395136,
+      "overhead_percent": 0.4024144869215318
+    },
+    "within_5_percent": true,
+    "within_15_percent": true,
+    "within_absolute_limits_2GiB": true,
+    "within_absolute_limits_2GB_decimal": true,
+    "baseline_exceeds_absolute_limits": false,
+    "baseline_exception_requires_separate_interpretation": false,
+    "score_scope": "5%为效率满分相对条件；>15%为效率项0条件，5%-15%之间不猜测未公布扣分公式；绝对限/原版超限例外另列。"
+  },
+  {
+    "case": "rar_test4",
+    "review_triggered": false,
+    "review_executed": false,
+    "samples_used": 1,
+    "wall_seconds": {
+      "baseline": 0.2934411000460386,
+      "candidate": 0.2676732004620135,
+      "overhead_percent": -8.781285096049041
+    },
+    "peak_working_set_bytes": {
+      "baseline": 19189760,
+      "candidate": 18722816,
+      "overhead_percent": -2.433297758804698
+    },
+    "within_5_percent": true,
+    "within_15_percent": true,
+    "within_absolute_limits_2GiB": true,
+    "within_absolute_limits_2GB_decimal": true,
+    "baseline_exceeds_absolute_limits": false,
+    "baseline_exception_requires_separate_interpretation": false,
+    "score_scope": "5%为效率满分相对条件；>15%为效率项0条件，5%-15%之间不猜测未公布扣分公式；绝对限/原版超限例外另列。"
+  },
+  {
+    "case": "zip_case01",
+    "review_triggered": false,
+    "review_executed": false,
+    "samples_used": 1,
+    "wall_seconds": {
+      "baseline": 0.4680820996873081,
+      "candidate": 0.46296169981360435,
+      "overhead_percent": -1.093910636002593
+    },
+    "peak_working_set_bytes": {
+      "baseline": 26419200,
+      "candidate": 24809472,
+      "overhead_percent": -6.093023255813956
+    },
+    "within_5_percent": true,
+    "within_15_percent": true,
+    "within_absolute_limits_2GiB": true,
+    "within_absolute_limits_2GB_decimal": true,
+    "baseline_exceeds_absolute_limits": false,
+    "baseline_exception_requires_separate_interpretation": false,
+    "score_scope": "5%为效率满分相对条件；>15%为效率项0条件，5%-15%之间不猜测未公布扣分公式；绝对限/原版超限例外另列。"
+  },
+  {
+    "case": "zip_case02",
+    "review_triggered": false,
+    "review_executed": false,
+    "samples_used": 1,
+    "wall_seconds": {
+      "baseline": 0.4462387999519706,
+      "candidate": 0.43601469974964857,
+      "overhead_percent": -2.2911723954578633
+    },
+    "peak_working_set_bytes": {
+      "baseline": 25206784,
+      "candidate": 25346048,
+      "overhead_percent": 0.5524861878453136
+    },
+    "within_5_percent": true,
+    "within_15_percent": true,
+    "within_absolute_limits_2GiB": true,
+    "within_absolute_limits_2GB_decimal": true,
+    "baseline_exceeds_absolute_limits": false,
+    "baseline_exception_requires_separate_interpretation": false,
+    "score_scope": "5%为效率满分相对条件；>15%为效率项0条件，5%-15%之间不猜测未公布扣分公式；绝对限/原版超限例外另列。"
+  },
+  {
+    "case": "zip_case03",
+    "review_triggered": true,
+    "review_executed": true,
+    "samples_used": 5,
+    "wall_seconds": {
+      "baseline": 0.4823119199834764,
+      "candidate": 0.48141990005970003,
+      "overhead_percent": -0.18494668840175477
+    },
+    "peak_working_set_bytes": {
+      "baseline": 26480640,
+      "candidate": 25237094.4,
+      "overhead_percent": -4.696055684454759
+    },
+    "within_5_percent": true,
+    "within_15_percent": true,
+    "within_absolute_limits_2GiB": true,
+    "within_absolute_limits_2GB_decimal": true,
+    "baseline_exceeds_absolute_limits": false,
+    "baseline_exception_requires_separate_interpretation": false,
+    "score_scope": "5%为效率满分相对条件；>15%为效率项0条件，5%-15%之间不猜测未公布扣分公式；绝对限/原版超限例外另列。"
+  },
+  {
+    "case": "zip_case04",
+    "review_triggered": false,
+    "review_executed": false,
+    "samples_used": 1,
+    "wall_seconds": {
+      "baseline": 0.43458699993789196,
+      "candidate": 0.4047352997586131,
+      "overhead_percent": -6.86898139694585
+    },
+    "peak_working_set_bytes": {
+      "baseline": 23846912,
+      "candidate": 23511040,
+      "overhead_percent": -1.4084507042253502
+    },
+    "within_5_percent": true,
+    "within_15_percent": true,
+    "within_absolute_limits_2GiB": true,
+    "within_absolute_limits_2GB_decimal": true,
+    "baseline_exceeds_absolute_limits": false,
+    "baseline_exception_requires_separate_interpretation": false,
+    "score_scope": "5%为效率满分相对条件；>15%为效率项0条件，5%-15%之间不猜测未公布扣分公式；绝对限/原版超限例外另列。"
+  },
+  {
+    "case": "zip_case05",
+    "review_triggered": false,
+    "review_executed": false,
+    "samples_used": 1,
+    "wall_seconds": {
+      "baseline": 0.48506159987300634,
+      "candidate": 0.4802918001078069,
+      "overhead_percent": -0.983338975183401
+    },
+    "peak_working_set_bytes": {
+      "baseline": 26431488,
+      "candidate": 25018368,
+      "overhead_percent": -5.346350534635058
+    },
+    "within_5_percent": true,
+    "within_15_percent": true,
+    "within_absolute_limits_2GiB": true,
+    "within_absolute_limits_2GB_decimal": true,
+    "baseline_exceeds_absolute_limits": false,
+    "baseline_exception_requires_separate_interpretation": false,
+    "score_scope": "5%为效率满分相对条件；>15%为效率项0条件，5%-15%之间不猜测未公布扣分公式；绝对限/原版超限例外另列。"
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "case_count": 9,
+  "mean_reduction_percent": 11.326328178305634,
+  "original_total": 2389,
+  "optimized_total": 2211,
+  "total_reduction_percent": 7.450816241105063,
+  "area_gate_pass": true,
+  "gate_definition": "逐例下降百分比算术平均>=10%；9例均无面积反增；DFF和顶层IO保持不变。",
+  "cases": [
+    {
+      "case": "rar_test1",
+      "original": 288,
+      "optimized": 288,
+      "reduction_percent": 0.0,
+      "no_area_increase": true,
+      "dff_unchanged": true,
+      "io_unchanged": true
+    },
+    {
+      "case": "rar_test2",
+      "original": 25,
+      "optimized": 15,
+      "reduction_percent": 40.0,
+      "no_area_increase": true,
+      "dff_unchanged": true,
+      "io_unchanged": true
+    },
+    {
+      "case": "rar_test3",
+      "original": 12,
+      "optimized": 12,
+      "reduction_percent": 0.0,
+      "no_area_increase": true,
+      "dff_unchanged": true,
+      "io_unchanged": true
+    },
+    {
+      "case": "rar_test4",
+      "original": 31,
+      "optimized": 24,
+      "reduction_percent": 22.580645161290324,
+      "no_area_increase": true,
+      "dff_unchanged": true,
+      "io_unchanged": true
+    },
+    {
+      "case": "zip_case01",
+      "original": 405,
+      "optimized": 385,
+      "reduction_percent": 4.938271604938271,
+      "no_area_increase": true,
+      "dff_unchanged": true,
+      "io_unchanged": true
+    },
+    {
+      "case": "zip_case02",
+      "original": 446,
+      "optimized": 400,
+      "reduction_percent": 10.31390134529148,
+      "no_area_increase": true,
+      "dff_unchanged": true,
+      "io_unchanged": true
+    },
+    {
+      "case": "zip_case03",
+      "original": 401,
+      "optimized": 371,
+      "reduction_percent": 7.4812967581047385,
+      "no_area_increase": true,
+      "dff_unchanged": true,
+      "io_unchanged": true
+    },
+    {
+      "case": "zip_case04",
+      "original": 371,
+      "optimized": 341,
+      "reduction_percent": 8.086253369272237,
+      "no_area_increase": true,
+      "dff_unchanged": true,
+      "io_unchanged": true
+    },
+    {
+      "case": "zip_case05",
+      "original": 410,
+      "optimized": 375,
+      "reduction_percent": 8.536585365853659,
+      "no_area_increase": true,
+      "dff_unchanged": true,
+      "io_unchanged": true
+    }
+  ]
+}

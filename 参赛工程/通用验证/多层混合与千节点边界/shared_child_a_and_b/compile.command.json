@@ -1,0 +1,17 @@
+{
+  "command": [
+    "M:/bin/iverilog.exe",
+    "-g2012",
+    "-s",
+    "tb",
+    "-o",
+    "sim.vvp",
+    "simlib.v",
+    "gold.v",
+    "gate.v",
+    "test.v"
+  ],
+  "exitcode": 0,
+  "wall_seconds": 0.09908480010926723,
+  "scope": "supplemental isolated tool call; not official efficiency score"
+}

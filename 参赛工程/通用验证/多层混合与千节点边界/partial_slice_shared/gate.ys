@@ -1,0 +1,10 @@
+read_rtlil input.il
+check -assert
+pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm partial_slice_shared
+select *
+check -assert
+rename partial_slice_shared gate
+write_json gate.json
+write_rtlil gate.il
+write_verilog -noexpr -noattr gate.v
+stat

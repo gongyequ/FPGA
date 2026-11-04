@@ -1,0 +1,41 @@
+B 臂关闭消融专用构建与身份核对
+
+1. 已修正的历史构建身份失配
+历史候选“B臂研究001”源快照中 synth_intel 未启用 index-full-x 或 flatten-data-arm，但其二进制实际默认命令仍包含 -index-full-x。
+原因：恢复 synth_intel.cc 时保留了旧修改时间，Ninja 增量构建仅重编了 pmux_opt.cc，复用了此前索引集成版本的 synth_intel 对象。
+历史 exe SHA256：0c8ba2d67d922169a60be86ddb23386f3ca7d60f52e13a29361268364d4c48bd。
+该历史版本与日志均保留，并增加失配说明；不得将其作为“仅关闭 B 臂规则”的默认综合消融对照。
+此发现涉及历史研究版的集成配置身份，不涉及 B 规则本身的手工命令语义，也不自动证明历史程序其他结果有效。
+
+2. 正式 B-on 程序不受此失配影响
+正式“B臂集成F4c”构建日志明确包含 synth_intel.cc 对象重编；实际 help synth_intel 输出匹配源码快照：
+pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm
+其默认命令没有 -index-full-x。
+正式 exe SHA256：a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53。
+正式候选、早退 F4c 和原冻结程序均未覆盖。
+
+3. 新建真实 B-off 消融程序
+程序：效率与面积研究_20261104/候选程序/B臂关闭消融F4c/yosys.exe
+exe SHA256：80856566da9f1e458e370e56f33dd1c3ad60ddfa476a12eb59a4cbc7dee2fb1e。
+pmux_opt.cc SHA256（与正式 B-on 完全同字节）：a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3。
+关闭版本 synth_intel.cc SHA256：2dc992a748e8e6f92ff7a394e90dadc648bb25e1a6791e5b2fdbe7a99ca1fcb2。
+开启版本 synth_intel.cc SHA256：8a4841fbf64547eae41f22de7c0baf182a619ac201db058c7b8f3f569ac68128。
+两份 synth 源文件唯一字节差分是新增 pass 调用中的“ -flatten-data-arm”。
+此次显式更新 synth 源文件 mtime，并检查 Ninja dry-run、实际重编日志、程序中命令字符串及真实 help 输出四层证据。
+默认关闭命令：pmux_opt -order-decode -flatten-fallback -uniform-abc。
+
+4. 三版实际配置烟测
+对真实 B-off、正式 B-on、已验收早退 F4c 分别执行 help synth_intel、help pmux_opt、版本和实际 scratchpad 配置检查，均通过。
+插入点仍为 peepopt → opt_clean → pmux_opt → cmp2lut。
+统一 ABC 配置均为：+&dch,-f,-r;,&if,{W},{D},{R},-a,-v,-F,4,-c;,&mfs。
+完整证据见“三版真实流水线烟测/三版配置核对汇总.json”及各目录中的原始日志与命令记录。
+后续每次候选构建必须以“实际 help 输出对照源快照”作为集成身份烟测；仅源码快照、文件 mtime 或编译退出码不能证明当前程序包含了该源码配置。
+
+5. B 臂语义测试证据身份
+“构建记录/B臂嵌套_实际C++验证/验证汇总.json”绑定的程序 SHA 是正式 B-on 的 a603b6…389b53，非失配的历史 B臂研究001。
+“结构研究/扩展通用回归/B臂F4c实际回归001/运行身份.json”同样绑定正式 B-on 的 a603b6…389b53。
+以上两组实际 C++ 四态及连接保护回归不受历史研究版默认调用身份失配影响。
+
+6. 面积消融与性能范围
+本次仅构建与配置烟测，未执行性能测量，也未复用失配历史程序面积作为对照。
+真实 B-off 九例面积由根代理按同一正式入口执行，B-on 已验收面积可复用；应在读到该结果后再给出严格的同源码 B 规则面积增益归因。

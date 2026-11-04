@@ -1,0 +1,131 @@
+
+-- Running command `help synth_intel' --
+
+    synth_intel [options]
+
+This command runs synthesis for Intel FPGAs.
+
+    -family <max10 | cyclone10lp | cycloneiv | cycloneive>
+        generate the synthesis netlist for the specified family.
+        MAX10 is the default target if no family argument specified.
+        For Cyclone IV GX devices, use cycloneiv argument; for Cyclone IV E, use
+        cycloneive. For Cyclone V and Cyclone 10 GX, use the synth_intel_alm
+        backend instead.
+
+    -top <module>
+        use the specified module as top module (default='top')
+
+    -vqm <file>
+        write the design to the specified Verilog Quartus Mapping File. Writing
+        of an output file is omitted if this parameter is not specified.
+        Note that this backend has not been tested and is likely incompatible
+        with recent versions of Quartus.
+
+    -vpr <file>
+        write BLIF files for VPR flow experiments. The synthesized BLIF output
+        file is not compatible with the Quartus flow. Writing of an
+        output file is omitted if this parameter is not specified.
+
+    -run <from_label>:<to_label>
+        only run the commands between the labels (see below). an empty
+        from label is synonymous to 'begin', and empty to label is
+        synonymous to the end of the command list.
+
+    -dff
+        pass DFFs to ABC to perform sequential logic optimisations
+        (EXPERIMENTAL)
+
+    -iopads
+        use IO pad cells in output netlist
+
+    -nobram
+        do not use block RAM cells in output netlist
+
+    -nodsp
+        do not map multipliers to MUL18/MUL9 cells
+
+    -noflatten
+        do not flatten design before synthesis
+
+The following commands are executed by this synthesis command:
+
+    begin:
+
+    family:
+        read_verilog -sv -lib +/intel/max10/cells_sim.v
+        read_verilog -sv -lib +/intel/common/m9k_bb.v
+        read_verilog -sv -lib +/intel/common/altpll_bb.v
+        hierarchy -check -top <top>
+
+    coarse:
+        proc
+        check
+        flatten    (skip if -noflatten)
+        tribuf -logic
+        deminout
+        opt_expr
+        check
+        opt_clean
+        opt -nodffe -nosdff
+        fsm
+        opt
+        wreduce
+        peepopt
+        opt_clean
+        pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm
+        techmap -map +/cmp2lut.v -D LUT_WIDTH=4
+        opt_expr
+        opt_clean
+        techmap -map +mul2dsp.v [...]    (unless -nodsp)
+        opt
+        memory -nomap
+        opt_clean
+
+    map_bram:    (skip if -nobram)
+        memory_bram -rules +/intel/common/brams_m9k.txt    (if applicable for family)
+        techmap -map +/intel/common/brams_map_m9k.v    (if applicable for family)
+
+    map_ffram:
+        opt -fast -mux_undef -undriven -fine -full
+        memory_map
+        opt -undriven -fine
+        techmap -map +/techmap.v
+        opt -full
+        clean -purge
+        setundef -undriven -zero
+
+    map_ffs:
+        dfflegalize -cell $_DFFE_PN0P_ 01
+        techmap -map +/intel/common/ff_map.v
+
+    map_luts:
+        abc9 -lut 4 -W 300
+        clean
+        opt -fast
+        autoname
+        clean
+
+    map_cells:
+        iopadmap -bits -outpad $__outpad I:O -inpad $__inpad O:I    (if -iopads)
+        techmap -map +/intel/max10/cells_map.v
+        clean -purge
+
+    check:
+        hierarchy -check
+        stat
+        check -noinit
+        blackbox =A:whitebox
+
+    vqm:
+        write_verilog -attr2comment -defparam -nohex -decimal -renameprefix syn_ <file-name>
+
+    vpr:
+        opt_clean -purge
+        write_blif <file-name>
+
+
+WARNING: THE 'synth_intel' COMMAND IS EXPERIMENTAL.
+
+End of script. Logfile hash: 6af19977fc
+Yosys 0.69+286 (git sha1 37f25dae9-dirty, Release, MSVC C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 19.44.35215.0) [C:Users889Desktop�圭洰\pmux-optyosys-src at HEAD]
+Time spent: 50% 1x help (0 sec), 50% 0x id_gc (0 sec)

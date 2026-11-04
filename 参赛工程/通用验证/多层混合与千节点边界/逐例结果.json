@@ -1,0 +1,1009 @@
+[
+  {
+    "case": "fallback_d4_w8_k2",
+    "input_pmux_count": 4,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.046998000238090754,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.18503799987956882,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 4,
+    "cells_after": 4,
+    "required_min_removed": 2,
+    "removed_names": [
+      "p0",
+      "p1",
+      "p2"
+    ],
+    "model_sha256": {
+      "gold": "d39ed9c547e96dbef07dd884632909ffab770361d99059290781a22b2e1c4de4",
+      "gate": "dc9c0d894c5d32b9014a3642630840d09213cb41b14fec7135320f4b4bb922b0"
+    },
+    "simulation": {
+      "vectors": 512,
+      "bits": 4096,
+      "known_bits": 1746,
+      "x_bits": 1490,
+      "z_bits": 860,
+      "errors": 0
+    }
+  },
+  {
+    "case": "fallback_d8_w5_k2",
+    "input_pmux_count": 8,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.04676380008459091,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.049694900400936604,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 8,
+    "cells_after": 8,
+    "required_min_removed": 2,
+    "removed_names": [
+      "p0",
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "p5",
+      "p6"
+    ],
+    "model_sha256": {
+      "gold": "6a8e9b1ccb3a70f8d78fb21c9776e314d6c83644f981d1758a6c35578571d77d",
+      "gate": "14c5e3d526b4458338592540bb39f65efeb4ecf8fcd707f513153167f0431225"
+    },
+    "simulation": {
+      "vectors": 512,
+      "bits": 2560,
+      "known_bits": 1083,
+      "x_bits": 909,
+      "z_bits": 568,
+      "errors": 0
+    }
+  },
+  {
+    "case": "fallback_d6_w16_k3",
+    "input_pmux_count": 6,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.04538620030507445,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.04893120005726814,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 6,
+    "cells_after": 6,
+    "required_min_removed": 2,
+    "removed_names": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ],
+    "model_sha256": {
+      "gold": "e16c77b4da193491a84c489aa7b6c24b077e3a4ca054228077ee90b43f5223a0",
+      "gate": "afc4962ac0c70971ad6ec4ad84ebe77661efbbd54b30b5808840bca63a065b2d"
+    },
+    "simulation": {
+      "vectors": 512,
+      "bits": 8192,
+      "known_bits": 3393,
+      "x_bits": 3104,
+      "z_bits": 1695,
+      "errors": 0
+    }
+  },
+  {
+    "case": "data_arm_d4_w8_k2",
+    "input_pmux_count": 4,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.04738869983702898,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.05630949977785349,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 4,
+    "cells_after": 7,
+    "required_min_removed": 2,
+    "removed_names": [
+      "p0",
+      "p1",
+      "p2"
+    ],
+    "model_sha256": {
+      "gold": "37e0f2073d40746920cec9b049bac209f3dc425e7160dbd374ef5840d3b8640e",
+      "gate": "e42a80deb74320568e864fe303c052803facee77ef50346491081b91fc96f1b2"
+    },
+    "simulation": {
+      "vectors": 512,
+      "bits": 4096,
+      "known_bits": 1753,
+      "x_bits": 1481,
+      "z_bits": 862,
+      "errors": 0
+    }
+  },
+  {
+    "case": "data_arm_d6_w12_k3",
+    "input_pmux_count": 6,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.04580970015376806,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.0491248001344502,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 6,
+    "cells_after": 10,
+    "required_min_removed": 2,
+    "removed_names": [
+      "p1",
+      "p2",
+      "p3",
+      "p4"
+    ],
+    "model_sha256": {
+      "gold": "486c9575c31dbedc767edc9f6c4f4d25ac78552b393c896369da4d178521040f",
+      "gate": "0bee298bf0f03bdc05b54047a41788f7fd109ca903cf77829a68909e38e74f42"
+    },
+    "simulation": {
+      "vectors": 512,
+      "bits": 6144,
+      "known_bits": 2565,
+      "x_bits": 2262,
+      "z_bits": 1317,
+      "errors": 0
+    }
+  },
+  {
+    "case": "mixed_chain_d7_w12_k2",
+    "input_pmux_count": 7,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.04983620019629598,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.05185170006006956,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 7,
+    "cells_after": 10,
+    "required_min_removed": 2,
+    "removed_names": [
+      "p0",
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "p5"
+    ],
+    "model_sha256": {
+      "gold": "1ee086eaa9d872cc730cb49c960eabb71eaff7d1f15f6a65187ea7c9138e2625",
+      "gate": "fb62e6a30ebbaed2b78d886df4b1bb4f2ce60901fdc5be57d69f03f68a9c2688"
+    },
+    "simulation": {
+      "vectors": 512,
+      "bits": 6144,
+      "known_bits": 2602,
+      "x_bits": 2225,
+      "z_bits": 1317,
+      "errors": 0
+    }
+  },
+  {
+    "case": "shared_child_a_and_b",
+    "input_pmux_count": 3,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.04477720009163022,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.05147749977186322,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 3,
+    "cells_after": 3,
+    "required_min_removed": 0,
+    "removed_names": [],
+    "model_sha256": {
+      "gold": "91747915659389e457b64deb9854a9a5fe413ddffea0c9cc7f21572af596e46e",
+      "gate": "fc41de233b2cdcb1e9bc04ae043c08ad140f55dd3e561ce5b124449cde7e7e69"
+    },
+    "simulation": {
+      "vectors": 1024,
+      "bits": 8192,
+      "known_bits": 3298,
+      "x_bits": 3188,
+      "z_bits": 1706,
+      "errors": 0
+    }
+  },
+  {
+    "case": "shared_child_top_output",
+    "input_pmux_count": 2,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.062067899852991104,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.04820440011098981,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 2,
+    "cells_after": 2,
+    "required_min_removed": 0,
+    "removed_names": [],
+    "model_sha256": {
+      "gold": "e3bed17312def84f799a6ebf46d54bc3bf546c2099b44b43f53bb4dfbdb5776f",
+      "gate": "29e629ea52ee4df278dfd54785458deedb3929a532c3f7991dd33f129945a0f6"
+    },
+    "simulation": {
+      "vectors": 1024,
+      "bits": 8192,
+      "known_bits": 2987,
+      "x_bits": 3701,
+      "z_bits": 1504,
+      "errors": 0
+    }
+  },
+  {
+    "case": "partial_slice_shared",
+    "input_pmux_count": 2,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.06019139988347888,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.05576330004259944,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 2,
+    "cells_after": 2,
+    "required_min_removed": 0,
+    "removed_names": [],
+    "model_sha256": {
+      "gold": "3d633922331317f270accec5bfc99feab78d2a5fc1284a246b4a8b018aff7ff3",
+      "gate": "e11b1642ff35f0fcc5e6a7eb9aa69b49351ae7941adb4badfc89c6ab975b3ddf"
+    },
+    "simulation": {
+      "vectors": 1024,
+      "bits": 4096,
+      "known_bits": 1617,
+      "x_bits": 1678,
+      "z_bits": 801,
+      "errors": 0
+    }
+  },
+  {
+    "case": "reordered_data_bits",
+    "input_pmux_count": 2,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.050931899808347225,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.05534540023654699,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 2,
+    "cells_after": 2,
+    "required_min_removed": 0,
+    "removed_names": [],
+    "model_sha256": {
+      "gold": "49a71d14ee424bccbd163eccabd9a878978de7c5538efd12c2515b47ad237e70",
+      "gate": "d46f177fa5231aff171d51fd114e2f5c2dbeafd7588ccae86033db1e477190a9"
+    },
+    "simulation": {
+      "vectors": 512,
+      "bits": 4096,
+      "known_bits": 1597,
+      "x_bits": 1670,
+      "z_bits": 829,
+      "errors": 0
+    }
+  },
+  {
+    "case": "partial_selection_outer_only",
+    "input_pmux_count": 2,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.06507720006629825,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.06563890026882291,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 2,
+    "cells_after": 2,
+    "required_min_removed": 0,
+    "removed_names": [],
+    "model_sha256": {
+      "gold": "02353f0de37eda93595307c965401de8100f4e030ff215132de09a4a04fd4892",
+      "gate": "9dbb034c85347e430d16268eeb676031ad3db5b391b142a0010bdaf507812716"
+    },
+    "simulation": {
+      "vectors": 512,
+      "bits": 4096,
+      "known_bits": 1582,
+      "x_bits": 1690,
+      "z_bits": 824,
+      "errors": 0
+    }
+  },
+  {
+    "case": "partial_selection_inner_only",
+    "input_pmux_count": 2,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.050010399892926216,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.05139110004529357,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 2,
+    "cells_after": 2,
+    "required_min_removed": 0,
+    "removed_names": [],
+    "model_sha256": {
+      "gold": "02353f0de37eda93595307c965401de8100f4e030ff215132de09a4a04fd4892",
+      "gate": "9dbb034c85347e430d16268eeb676031ad3db5b391b142a0010bdaf507812716"
+    },
+    "simulation": {
+      "vectors": 512,
+      "bits": 4096,
+      "known_bits": 1582,
+      "x_bits": 1690,
+      "z_bits": 824,
+      "errors": 0
+    }
+  },
+  {
+    "case": "no_matching_pmux_width",
+    "input_pmux_count": 2,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.04749620007351041,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.05268559977412224,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 2,
+    "cells_after": 2,
+    "required_min_removed": 0,
+    "removed_names": [],
+    "model_sha256": {
+      "gold": "bf6e26da7d351b98560e7dcd49e8aa39e025d390a261fe02fdf4ea57ff07f863",
+      "gate": "f1d3c13628ddbe5d8e6309963892dc242f384cee5d68ea00602d8653ed0b9b28"
+    },
+    "simulation": {
+      "vectors": 512,
+      "bits": 1024,
+      "known_bits": 394,
+      "x_bits": 432,
+      "z_bits": 198,
+      "errors": 0
+    }
+  },
+  {
+    "case": "fixed_random_dag_n12_w8",
+    "input_pmux_count": 12,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.051397900097072124,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.05130810011178255,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 12,
+    "cells_after": 13,
+    "required_min_removed": 0,
+    "removed_names": [
+      "p2",
+      "p6"
+    ],
+    "model_sha256": {
+      "gold": "8eabd3cfeef2ae97b05b440e6d9920ca403764f407a02460f7fd6cfbb96fdabf",
+      "gate": "4d87df0b87c7ce86fbac27b51af5eec213c9ad246e59bee97198e057c67cf465"
+    },
+    "simulation": {
+      "vectors": 2304,
+      "bits": 18432,
+      "known_bits": 8002,
+      "x_bits": 6413,
+      "z_bits": 4017,
+      "errors": 0
+    }
+  },
+  {
+    "case": "fixed_random_dag_n48_w12",
+    "input_pmux_count": 48,
+    "simulation_requested": true,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.0553442002274096,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.06860799994319677,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 48,
+    "cells_after": 58,
+    "required_min_removed": 0,
+    "removed_names": [
+      "p12",
+      "p14",
+      "p16",
+      "p17",
+      "p18",
+      "p20",
+      "p21",
+      "p31",
+      "p33",
+      "p37",
+      "p38",
+      "p6",
+      "p7"
+    ],
+    "model_sha256": {
+      "gold": "abbaa1e2d51f5b0705d32f01ff001213a1c66e05de4f5cc75801ded2ae2774ca",
+      "gate": "b80acaf51b2c3c6668e88f1de9b910fcf4b768a718fbc01b682a4aa27cf8e458"
+    },
+    "simulation": {
+      "vectors": 2304,
+      "bits": 27648,
+      "known_bits": 11855,
+      "x_bits": 9803,
+      "z_bits": 5990,
+      "errors": 0
+    }
+  },
+  {
+    "case": "scale_998_pmux_cells",
+    "input_pmux_count": 998,
+    "simulation_requested": false,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.15051089972257614,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.33302490040659904,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 998,
+    "cells_after": 1030,
+    "required_min_removed": 2,
+    "removed_names": [
+      "p870",
+      "p872",
+      "p874",
+      "p876",
+      "p878",
+      "p880",
+      "p882",
+      "p884",
+      "p886",
+      "p888",
+      "p890",
+      "p892",
+      "p894",
+      "p896",
+      "p898",
+      "p900",
+      "p902",
+      "p904",
+      "p906",
+      "p908",
+      "p910",
+      "p912",
+      "p914",
+      "p916",
+      "p918",
+      "p920",
+      "p922",
+      "p924",
+      "p926",
+      "p928",
+      "p930",
+      "p932",
+      "p934",
+      "p936",
+      "p938",
+      "p940",
+      "p942",
+      "p944",
+      "p946",
+      "p948",
+      "p950",
+      "p952",
+      "p954",
+      "p956",
+      "p958",
+      "p960",
+      "p962",
+      "p964",
+      "p966",
+      "p968",
+      "p970",
+      "p972",
+      "p974",
+      "p976",
+      "p978",
+      "p980",
+      "p982",
+      "p984",
+      "p986",
+      "p988",
+      "p990",
+      "p992",
+      "p994",
+      "p996"
+    ],
+    "model_sha256": {},
+    "scale_record_scope": "standalone read/check/one custom pass/export, no synth_intel/ABC; not official nine-case timing"
+  },
+  {
+    "case": "scale_1000_pmux_cells",
+    "input_pmux_count": 1000,
+    "simulation_requested": false,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.14951569959521294,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.3191315997391939,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 1000,
+    "cells_after": 1032,
+    "required_min_removed": 2,
+    "removed_names": [
+      "p872",
+      "p874",
+      "p876",
+      "p878",
+      "p880",
+      "p882",
+      "p884",
+      "p886",
+      "p888",
+      "p890",
+      "p892",
+      "p894",
+      "p896",
+      "p898",
+      "p900",
+      "p902",
+      "p904",
+      "p906",
+      "p908",
+      "p910",
+      "p912",
+      "p914",
+      "p916",
+      "p918",
+      "p920",
+      "p922",
+      "p924",
+      "p926",
+      "p928",
+      "p930",
+      "p932",
+      "p934",
+      "p936",
+      "p938",
+      "p940",
+      "p942",
+      "p944",
+      "p946",
+      "p948",
+      "p950",
+      "p952",
+      "p954",
+      "p956",
+      "p958",
+      "p960",
+      "p962",
+      "p964",
+      "p966",
+      "p968",
+      "p970",
+      "p972",
+      "p974",
+      "p976",
+      "p978",
+      "p980",
+      "p982",
+      "p984",
+      "p986",
+      "p988",
+      "p990",
+      "p992",
+      "p994",
+      "p996",
+      "p998"
+    ],
+    "model_sha256": {},
+    "scale_record_scope": "standalone read/check/one custom pass/export, no synth_intel/ABC; not official nine-case timing"
+  },
+  {
+    "case": "scale_1002_pmux_cells",
+    "input_pmux_count": 1002,
+    "simulation_requested": false,
+    "original": {
+      "command": [
+        "O:/yosys.exe",
+        "-Q",
+        "-s",
+        "gold.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.1587763000279665,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "optimized": {
+      "command": [
+        "N:/yosys.exe",
+        "-Q",
+        "-s",
+        "gate.ys"
+      ],
+      "exitcode": 0,
+      "wall_seconds": 0.3631238001398742,
+      "scope": "supplemental isolated tool call; not official efficiency score"
+    },
+    "structure_check": "PASS",
+    "cells_before": 1002,
+    "cells_after": 1034,
+    "required_min_removed": 2,
+    "removed_names": [
+      "p1000",
+      "p874",
+      "p876",
+      "p878",
+      "p880",
+      "p882",
+      "p884",
+      "p886",
+      "p888",
+      "p890",
+      "p892",
+      "p894",
+      "p896",
+      "p898",
+      "p900",
+      "p902",
+      "p904",
+      "p906",
+      "p908",
+      "p910",
+      "p912",
+      "p914",
+      "p916",
+      "p918",
+      "p920",
+      "p922",
+      "p924",
+      "p926",
+      "p928",
+      "p930",
+      "p932",
+      "p934",
+      "p936",
+      "p938",
+      "p940",
+      "p942",
+      "p944",
+      "p946",
+      "p948",
+      "p950",
+      "p952",
+      "p954",
+      "p956",
+      "p958",
+      "p960",
+      "p962",
+      "p964",
+      "p966",
+      "p968",
+      "p970",
+      "p972",
+      "p974",
+      "p976",
+      "p978",
+      "p980",
+      "p982",
+      "p984",
+      "p986",
+      "p988",
+      "p990",
+      "p992",
+      "p994",
+      "p996",
+      "p998"
+    ],
+    "model_sha256": {},
+    "scale_record_scope": "standalone read/check/one custom pass/export, no synth_intel/ABC; not official nine-case timing"
+  }
+]

@@ -1,0 +1,3 @@
+RESULT samples=589824 errors=0
+PASS
+tb.sv:46: $finish called at 65536000 (1ps)

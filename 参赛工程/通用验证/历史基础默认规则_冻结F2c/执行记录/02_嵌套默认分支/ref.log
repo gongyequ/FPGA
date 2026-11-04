@@ -1,0 +1,34 @@
+
+-- Executing script file `ref.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: ref.il
+
+2. Executing CHECK pass (checking for obvious problems).
+Checking module case8_ref...
+Checking module case7_ref...
+Checking module case6_ref...
+Checking module case5_ref...
+Checking module case4_ref...
+Checking module case3_ref...
+Checking module case2_ref...
+Checking module case1_ref...
+Checking module case0_ref...
+Found and reported 0 problems.
+
+3. Executing Verilog backend.
+Dumping module `\case0_ref'.
+Dumping module `\case1_ref'.
+Dumping module `\case2_ref'.
+Dumping module `\case3_ref'.
+Dumping module `\case4_ref'.
+Dumping module `\case5_ref'.
+Dumping module `\case6_ref'.
+Dumping module `\case7_ref'.
+Dumping module `\case8_ref'.
+
+4. Executing JSON backend.
+
+End of script. Logfile hash: 252d7f90fe
+Yosys 0.69+286 (git sha1 37f25dae9, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)
+Time spent: 16% 2x write_verilog (0 sec), 16% 2x write_json (0 sec), ...

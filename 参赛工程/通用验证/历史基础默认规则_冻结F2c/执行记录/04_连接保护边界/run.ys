@@ -1,0 +1,6 @@
+read_rtlil input.il
+pmux_opt -flatten-fallback protected_fanout protected_partial protected_permuted protected_second_consumer protected_cost protected_branch_limit protected_gate positive positive_chain
+pmux_opt -flatten-fallback protected_selection/outer_p
+select *
+check
+write_json output.json

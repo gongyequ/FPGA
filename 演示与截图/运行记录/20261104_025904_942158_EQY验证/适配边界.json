@@ -1,0 +1,18 @@
+{
+  "top": "pmux_case04_feedback",
+  "semantic_scope": "Exact FF replacement only; original ports, all non-FF cells and all original netnames unchanged.",
+  "results": {
+    "gold": {
+      "cells": 387,
+      "converted_ff_count": 16,
+      "unchanged_non_ff_cells": 371,
+      "status": "PASS"
+    },
+    "gate": {
+      "cells": 308,
+      "converted_ff_count": 16,
+      "unchanged_non_ff_cells": 292,
+      "status": "PASS"
+    }
+  }
+}

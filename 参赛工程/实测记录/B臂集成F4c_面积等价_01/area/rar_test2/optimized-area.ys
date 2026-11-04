@@ -1,0 +1,7 @@
+read_verilog -sv X:/inputs/cases/rar_test2.v
+hierarchy -check -top test2
+scratchpad -set abc9.exe W:/bin/yosys-abc.exe
+synth_intel -family cycloneiv -top test2 -run begin:map_cells
+write_rtlil X:/area/rar_test2/optimized-area.il
+write_json X:/area/rar_test2/optimized-area.json
+stat

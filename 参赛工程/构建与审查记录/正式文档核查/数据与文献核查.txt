@@ -1,0 +1,129 @@
+新版B臂F4c技术/设计文档数据与文献核查
+日期：2026-11-04；只读核查，不改正式文档或运行EDA。
+
+一、可直接使用的准确摘要
+基于官方Yosys 0.69+286固定源码与相同编译/官方依赖条件，候选采用通用PMUX结构规则、B臂嵌套吸收和统一F4c映射。九例逻辑单元逐例下降率算术平均14.0805335%，总量2389降至2115（11.469234%），无单例反增，DFF和IO不变。新B规则同源码消融净省96个单元。九例ABC后网表在披露的归一化策略下全部通过真实EQY；预先固定三批九例性能按答疑复核规则均满足5%相对条件，最差时间增幅3.328624%、最差内存增幅1.076779%。这是本地验收结果，不代表官方认证或异机稳定保证。
+
+二、评分与公式
+资源口径与平均：Li = LUT数 + 取反逻辑单元数；ri = (Li,base - Li,opt)/Li,base ×100%；Rmean = (r1+…+r9)/9。
+赛事口径为逐例百分比算术平均；总量比例Rtotal=(ΣLbase−ΣLopt)/ΣLbase单独披露。各例不允许反增。
+依据：Sheet1!C25, C67, C130, C150, C165
+
+面积评分：本地基本目标Rmean≥10%；指南面积项40分，达到20%以上为满分档。
+未公布中间得分的完整插值公式，不从14.0805%自行推算具体分数；7例下降、2例持平。
+依据：Sheet1!C25, C130, C150
+
+相对效率：ΔT=(Topt/Tbase−1)×100%；ΔM=(Mopt/Mbase−1)×100%。复核时先分别求两版均值，再求比值。
+所有例两项均≤5%是效率满分的相对条件，不是资格线；任一例任一项>15%则效率项0分。5%<增幅≤15%属于扣分区间，精确扣分函数未知。
+依据：Sheet1!B105, C105, C166
+
+绝对效率：节点规模≤1000：完整优化耗时≤60s、运行峰值内存≤2GB；原版本身超过时有超限例外。
+不要将60s或2GB作为5%/15%分母。本地同时报告2,000,000,000字节及2GiB两种边界，不冒称答疑定义了GB二进制单位。
+依据：Sheet1!B37, C37
+
+测量对象：时间=Yosys进程启动至完整synth_intel结束的墙钟；内存=同次Yosys主进程历史峰值工作集。
+包含ABC运行及等待的墙钟；不把子进程峰值相加作为本次评分内存。编译、EQY和独立仿真不计为优化运行耗时。
+依据：Sheet1!C147, C151, C165
+
+预热复核：测试开始/重启：原版pmux_case05_nested预热10次。初测原版→优化版；任一指标>5%的短例复核两版各5次，取均值之比。
+C147明确1～10s同短例；10s精确边界与初测是否纳入5次未完全明确。本地公开采用max(两版初测)<10s触发、另取5对新样本，不选最小值。三批均事前固定完整九例，不能拼最佳单例。
+依据：Sheet1!C132, C147, C148, C164, C166
+
+版本和流水线：0.69大版本；同评测脚本、相应ABC；新pass接入synth_intel默认路径，全部用例统一ABC脚本。
+允许0.69小版本差异；不改其他pass实现或顺序，不额外多次调用ABC，不做ABC后自研LUT改写。
+依据：Sheet1!C37, C53, C130, C147, C162, C165, C166
+
+EQY与其他资源：ABC后/map_cells前IL；自备EQY配置。DFF或IO超过原版20%影响评分，当前候选二者逐例不变。
+答疑允许验证策略及x/z按0初始化，但未逐项完全定义初始化截面。本项目须披露现有dffeas适配及setundef -zero -init，不能宣称组委会已验证。
+依据：Sheet1!C53, C165, C166, C167
+
+三、算法与证明边界
+官方Yosys 0.69+286，commit 37f25dae90177888ac89573be92c3826da71f26e；两版同MSVC Release、同官方ABC及相同Windows Tcl初始化兼容补丁。
+Yosys/ABC/EQY/仿真库为官方；pmux_opt、默认入口集成、共同Tcl运行兼容补丁、测量及验证配套分别披露为本项目实现。不得称未修改的官方发布二进制。
+P(A,B,S)表示固定0.69官方simlib的$pmux；无有效1且无X时输出A，唯一有效1输出对应B，多选或出现X导致未知。S中的Z在该case模型不激活分支；数据Z按所选数据传播。此结论限定该单元模型，不是把所有电路Z当0。
+T=P(Ai,Bi,Si)，外层第j个数据臂为T，选择位t=So[j]，其余数据/选择臂记为Bo_other/So_other。
+先构造h=P(1,全0数据,Si)，G=P(全0向量,[h,Si],t)。用[Ai,Bi]及G替换外层第j个数据臂和选择位，其余臂保持成对关系。G必须由单选择臂PMUX实现。
+t=0或Z时G全0，避免未选中内层未知值泄漏；t=1时G保留内层默认、单选和多选行为；t=X时G为X，保持外层未知传播。不能用普通AND或MUX无条件替换该门控。
+两层均被选中；非辅助控制门；内层完整同序Y恰被外层一个B臂消费，拒绝部分/逆序、共享及顶层输出扇出。
+拒绝自环、PMUX驱动歧义、宽度不一致及未知连接用户。
+数据宽W>Ki+1、合并后Ko+Ki≤16；每模块每次命令最多32次B合并，每次重建连接信息。
+依据官方模型进行分类推导并用实际C++输出作有限严格四态回归；有限回归本身不等于所有输入的数学形式证明。
+同pmux源码、同F4c脚本，只改变synth_intel是否启用-flatten-data-arm：2211→2115，B规则净省96；不可把全部274个下降归功于B规则。
+完整四位索引-index-full-x默认关闭且因RAR1 288→321被拒；shiftx-small、const-decode、const-polarity、desc-order非本候选默认收益来源。
+
+正式EQY配置：两边真实ABC后IL、受限dffeas逆映射；opt_clean、setundef -zero -init、prep；整组、use sat、depth 20。20是k归纳深度上限，不是只验证20个周期。
+严格四态层：实际新候选C++323840次向量比较0错、17保护检查通过；扩展18结构检查、15仿真结构12800输出向量/111104位0错，含46056已知位、41736个X位、23312个Z位。旧45组仿真未计入。
+压力层：998/1000/1002个PMUX为独立pass测试；其时间不作为全综合成绩，PMUX个数增大不等于最终LUT面积增大。
+
+四、六条已核实官方/主源文献（按正文使用需求选择，不必堆砌）
+R1 WOLF C, GLASER J. Yosys - A Free Verilog Synthesis Suite[C]//Austrochip Workshop on Microelectronics 2013. 2013: 47–52.
+https://yosyshq.net/yosys/files/yosys-austrochip2013.pdf
+已浏览官方论文PDF及官方文献索引；作者机构书目核实年份、页码。未查证到DOI，不补造。
+引用目的：支持Yosys的RTLIL与可扩展pass框架背景；不用于证明本项目新规则或成绩。
+核实来源：https://yosyshq.net/yosys/documentation.html；https://research.jku.at/de/publications/yosys-a-free-verilog-synthesis-suite/
+
+R2 BRAYTON R, MISHCHENKO A. ABC: An Academic Industrial-Strength Verification Tool[C]//Computer Aided Verification. LNCS 6174. Berlin, Heidelberg: Springer, 2010: 24–40. DOI: 10.1007/978-3-642-14295-6_5.
+https://doi.org/10.1007/978-3-642-14295-6_5
+Springer出版者页面与作者官方发表列表一致，核实作者、标题、会议、卷、页码、2010年和DOI。
+引用目的：说明ABC作为官方逻辑综合与验证工具的背景；本项目只统一配置其脚本，不把ABC算法说成自研。
+核实来源：https://link.springer.com/chapter/10.1007/978-3-642-14295-6_5；https://people.eecs.berkeley.edu/~alanmi/publications/
+
+R3 YosysHQ. Yosys Open SYnthesis Suite: techlibs/common/simlib.v[CP/OL]. 提交37f25dae90177888ac89573be92c3826da71f26e[2026-11-04].
+https://github.com/YosysHQ/yosys/blob/37f25dae90177888ac89573be92c3826da71f26e/techlibs/common/simlib.v
+网页缓存未返回固定提交文件，随后GitHub插件成功读取同一提交的树和simlib.v完整内容；核查$pmux实际case分支。
+引用目的：本项目四态模型的直接依据；单独引用$pmux模型所在固定源码，不以浮动latest代替0.69行为。
+核实来源：https://github.com/YosysHQ/yosys/tree/37f25dae90177888ac89573be92c3826da71f26e
+
+R4 YosysHQ. EQY Strategies[EB/OL].[2026-11-04].
+https://yosyshq.readthedocs.io/projects/eqy/en/latest/strategies.html
+已浏览官方文档The sat Strategy及depth定义。网页没有独立发表年份，不把页脚2026版权年冒充发表年。
+引用目的：说明use sat调用Yosys sat -tempinduct进行k归纳；depth是尝试深度上限。
+核实来源：https://yosyshq.readthedocs.io/projects/eqy/en/latest/strategies.html
+
+R5 YosysHQ. Equivalence and X-Propagation[EB/OL].[2026-11-04].
+https://yosyshq.readthedocs.io/projects/eqy/en/latest/xprop.html
+已浏览官方Safe-Replacement Equivalence、Formal X-Propagation和Avoiding X-Bits说明。没有独立发表日期。
+引用目的：解释EQY的安全替换关系与X语义，说明归一化证明和未经归一化四态仿真的不同范围。
+核实来源：https://yosyshq.readthedocs.io/projects/eqy/en/latest/xprop.html
+
+R6 YosysHQ. OSS CAD Suite: Release 2026-10-13[CP/OL]. 2026-10-13[2026-11-04].
+https://github.com/YosysHQ/oss-cad-suite-build/releases/tag/2026-10-13
+已浏览官方发布页，标题2026-10-13、发布日13 Oct可见。网页动态资产列表未展开；具体Windows包文件名及程序身份另由本地官方依赖清单支持，未声称从网页读到全部资产。
+引用目的：说明官方工具来源；工具版本与可执行文件哈希以项目依赖清单固定。
+核实来源：https://github.com/YosysHQ/oss-cad-suite-build/releases/tag/2026-10-13
+
+正式文档固定编号引用
+[1] 全国大学生嵌入式芯片与系统设计竞赛. 2026 FPGA赛道选题指南（中科亿海微）：选题二——多路选择器PMUX结构优化[Z]. 2026: 4–5. 赛事PDF原件随代码提交。
+[2] FPGA创新大赛问题汇总[Z]. 最新所用文件“FPGA创新大赛问题汇总 (1).xlsx”，Sheet1!C25、C67、B105/C105、C130、C132、C147、C150–C151、C162、C164–C167；原件随代码提交。
+[3] YosysHQ. Yosys官方源代码[CP/OL]. 提交37f25dae90177888ac89573be92c3826da71f26e[2026-11-04]. 相关文件：techlibs/common/simlib.v、techlibs/intel/synth_intel.cc、techlibs/intel/common/ff_map.v。 https://github.com/YosysHQ/yosys/tree/37f25dae90177888ac89573be92c3826da71f26e
+[4] WOLF C, GLASER J. Yosys - A Free Verilog Synthesis Suite[C]//Austrochip Workshop on Microelectronics 2013. 2013: 47–52. https://yosyshq.net/yosys/files/yosys-austrochip2013.pdf
+[5] BRAYTON R, MISHCHENKO A. ABC: An Academic Industrial-Strength Verification Tool[C]//Computer Aided Verification. LNCS 6174. Springer, 2010: 24–40. DOI: 10.1007/978-3-642-14295-6_5. 实际ABC取自Yosys官方子模块[2026-11-04]： https://github.com/YosysHQ/abc/tree/6c5104934c90eb3cdef9ea063318f7588908a185
+[6] YosysHQ. EQY Strategies[EB/OL].[2026-11-04]. https://yosyshq.readthedocs.io/projects/eqy/en/latest/strategies.html
+[7] YosysHQ. Equivalence and X-Propagation[EB/OL].[2026-11-04]. https://yosyshq.readthedocs.io/projects/eqy/en/latest/xprop.html
+[8] YosysHQ. OSS CAD Suite: Release 2026-10-13[CP/OL]. 2026-10-13[2026-11-04]. Windows x64工具来源与哈希见随包依赖清单。 https://github.com/YosysHQ/oss-cad-suite-build/releases/tag/2026-10-13
+[9] 本项目. B臂F4c版本原始测试记录[Z]. 2026-11-04，未公开工程资料，随代码提交。含九例面积与EQY、预先固定三批性能、实际C++四态回归、扩展结构回归及程序/源码SHA256。
+
+五、模板与中文检查
+{"摘要": 800, "功能与特性": 400, "应用领域": 400, "主要技术特点": 400, "主要性能指标": 200, "主要创新点": 200, "设计流程": 200, "可扩展之处": 300, "心得体会": 1000, "参考文献篇数": 20}
+模板要求不要出现涉及学校名称等内容；同时审查封面、正文、页眉页脚、图像、属性及路径。真实公开文献作者照实引用，作者机构无需列出。
+机械/板级电路/开发板实物不适用应如实注明，用真实软件架构和测试证据说明，不伪造硬件照片。
+旧生成正式文档.py内仍硬编码F2c、45组仿真及4.9845%；校核修订脚本只改引用/术语，不会自动升级数据，不能直接无审查复用。
+
+1. 所有新候选结论绑定a603b6…程序、a3f12a…自研源码；旧F2c只作为注明身份的历史对照。
+2. 摘要、性能表、总结、图表统一14.0805335%均值及11.469234%总量，不能沿用10.5086%或把总量当均值。
+3. 5%写成效率满分相对条件；不自行计算精确总分，不承诺晋级或正式认证。
+4. 最大时间增幅3.328624%与内存1.076779%来自三批复核后结果；52次原始候选样本另列，不宣称每个原始样本≤5%。
+5. 323840次实际C++四态比较+17保护与12800输出向量/111104位是两个不同测试集，不能简单相加成统一案例数。
+6. 扩展测试18个结构检查、15个普通仿真结构；X41736位/Z23312位均严格比较，没有借setundef过关。
+7. 旧45组/45000周期/560000位/974912四态属于旧F2c，不能列作本候选执行结果。
+8. 998/1000/1002压力记录是独立pass含读写约0.32–0.36s，不是完整综合效率或峰值内存成绩。
+9. EQY为ABC后两版IL、受限触发器逆适配及opt_clean→setundef -zero -init→prep、整组SAT归纳；不是未经归一化全四态证明或原RTL到器件全链路证明。
+10. 模型说明不把PMUX等同优先级MUX，不把选择Z当X；不宣称全部任意网表均保证减小面积。
+11. 不写EQ6HL130上板、PCB、功耗、最高频率或布局布线实测；目前是软件优化器与统一Cyclone IV逻辑计数口径。
+12. 引用有真实标题/作者/年份或访问日期/URL，来源类型明确；本地测试记录不是公开学术论文。
+13. 模板原作者/lastModifiedBy、批注/修订/属性、学校信息/路径匿名；不篡改真实文献作者名来满足匿名。
+14. 中文正文设zh-CN及中文字体；术语、文件名、代码/URL、SHA仅对应英文run设noProof，清除遗留proofErr。不能以全篇关闭拼写检查掩盖中文错字。
+15. DOCX提取复核U+FFFD、异常问号、字节串及旧版本残留；最终PDF逐页视觉核查。拼写/编码检查不等于内容正确或排版通过。
+16. 交付路径、压缩包是否真的包含新材料须按最终打包结果更新；不能照抄旧包名字与旧报告引用。
+
+完整逐例数据、原始答疑单元格、来源SHA和结构公式见同名JSON。

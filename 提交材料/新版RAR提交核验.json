@@ -1,0 +1,86 @@
+{
+  "archive": "PMUX优化代码_零点六九_新版正式提交.rar",
+  "bytes": 103240273,
+  "decimal_MB": 103.240273,
+  "sha256": "8c22b219572e21172e1fe53039770e8c48dbb54a2f2f890885ee8c281e984415",
+  "format": "true RAR5, solid, unencrypted, no volumes",
+  "magic": "526172211a070100",
+  "less_than_200000000_bytes": true,
+  "file_count_verified": 22205,
+  "all_extracted_file_hashes_match": true,
+  "actual_relocated_entry_config_check_passed": true,
+  "official_case_area_rerun": 9,
+  "official_eqy_rerun_passed": 9,
+  "performance": "三批预定证据原样保留，本次打包没有重新选择或增加性能批次",
+  "official_RAR_version": "7.23 x64",
+  "official_RAR_sha256": "f561764bc3e9ed208744321a89a819b562edeaf06e203c02a06976121fda1991",
+  "official_tool_origin": "https://www.rarlab.com/download.htm",
+  "official_RAR_signer": "win.rar GmbH, Authenticode Valid verified before packaging",
+  "program_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+  "pmux_source_sha256": "a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3",
+  "final_docs": [
+    {
+      "file": "正式文档/技术文档_PMUX结构优化_零点六九_新版.docx",
+      "bytes": 395615,
+      "sha256": "bf064504b7773307b038f97fc68b347ef61747ce6b018459853c10a5500e76cd"
+    },
+    {
+      "file": "正式文档/技术文档_PMUX结构优化_零点六九_新版.pdf",
+      "bytes": 639462,
+      "sha256": "a228c35ab377d75e2850db45b94b36914a678d22e7560fbd9166b6ab1a28d375"
+    },
+    {
+      "file": "正式文档/设计文档_PMUX结构优化_零点六九_新版.docx",
+      "bytes": 368882,
+      "sha256": "05a8c12ed946db77d1c47860c8dcc9456de022029946a73c36712d402911ae66"
+    },
+    {
+      "file": "正式文档/设计文档_PMUX结构优化_零点六九_新版.pdf",
+      "bytes": 672466,
+      "sha256": "7e44fcc681a903f8ff3982b85e2ffbab8e877ae7bcd3fa43605bb9e96ee2a23f"
+    }
+  ],
+  "steps": [
+    {
+      "arguments": [
+        "a",
+        "-cfg-",
+        "-m5",
+        "-md64m",
+        "-mt4",
+        "-s",
+        "-r",
+        "-idn",
+        "-idp",
+        "PMUX优化代码_零点六九_新版正式提交.rar",
+        "代码包内容"
+      ],
+      "log": "交付制作记录/代码整理/RAR压缩日志.txt",
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "t",
+        "-cfg-",
+        "-idn",
+        "-idp",
+        "PMUX优化代码_零点六九_新版正式提交.rar"
+      ],
+      "log": "交付制作记录/代码整理/RAR完整性测试日志.txt",
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "x",
+        "-cfg-",
+        "-idn",
+        "-idp",
+        "PMUX优化代码_零点六九_新版正式提交.rar",
+        "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\交付制作记录\\代码整理\\最终RAR实际解压核验\\"
+      ],
+      "log": "交付制作记录/代码整理/RAR实际解压日志.txt",
+      "returncode": 0
+    }
+  ],
+  "manifest_sha256": "68952bb5d1a2ec626a32323eeabbe3c4e023d8c0d9ce0e868259bc567e76036b"
+}

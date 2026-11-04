@@ -1,0 +1,1205 @@
+{
+  "creator": "Yosys 0.69+286 (git sha1 37f25dae9, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1); project ff_map inverse adapter",
+  "modules": {
+    "test3": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "X:/inputs/cases/rar_test3.v:13.1-53.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [
+            2
+          ]
+        },
+        "cs": {
+          "direction": "input",
+          "bits": [
+            3
+          ]
+        },
+        "sr_in": {
+          "direction": "input",
+          "bits": [
+            4
+          ]
+        },
+        "gpioout": {
+          "direction": "output",
+          "bits": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "sr_out": {
+          "direction": "output",
+          "bits": [
+            13
+          ]
+        }
+      },
+      "cells": {
+        "cs_$lut_A": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "01",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              3
+            ],
+            "Y": [
+              14
+            ]
+          }
+        },
+        "gpioout_dffeas_q": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              15
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              16
+            ],
+            "Q": [
+              12
+            ]
+          }
+        },
+        "gpioout_dffeas_q_1": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              17
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              18
+            ],
+            "Q": [
+              7
+            ]
+          }
+        },
+        "gpioout_dffeas_q_2": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              19
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              20
+            ],
+            "Q": [
+              5
+            ]
+          }
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1011",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              21,
+              22
+            ],
+            "Y": [
+              19
+            ]
+          }
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_A": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0010",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              3,
+              22
+            ],
+            "Y": [
+              18
+            ]
+          }
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0001010100111111",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              23,
+              24,
+              25,
+              26
+            ],
+            "Y": [
+              22
+            ]
+          }
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1000000000000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              21,
+              27,
+              17,
+              28
+            ],
+            "Y": [
+              24
+            ]
+          }
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_A": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1010100000000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              3,
+              23,
+              25,
+              26
+            ],
+            "Y": [
+              16
+            ]
+          }
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000000000010000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              29,
+              30,
+              31,
+              32
+            ],
+            "Y": [
+              23
+            ]
+          }
+        },
+        "gpioout_dffeas_q_2_ena_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "00001000",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              28,
+              3,
+              33
+            ],
+            "Y": [
+              20
+            ]
+          }
+        },
+        "gpioout_dffeas_q_3": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              31
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              16
+            ],
+            "Q": [
+              9
+            ]
+          }
+        },
+        "gpioout_dffeas_q_4": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              29
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              18
+            ],
+            "Q": [
+              6
+            ]
+          }
+        },
+        "gpioout_dffeas_q_5": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              32
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              18
+            ],
+            "Q": [
+              8
+            ]
+          }
+        },
+        "gpioout_dffeas_q_6": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              30
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              16
+            ],
+            "Q": [
+              10
+            ]
+          }
+        },
+        "gpioout_dffeas_q_7": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              27
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              16
+            ],
+            "Q": [
+              11
+            ]
+          }
+        },
+        "gpioout_dffeas_q_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1110",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              21,
+              33
+            ],
+            "Y": [
+              15
+            ]
+          }
+        },
+        "gpioout_dffeas_q_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1000",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              25,
+              26
+            ],
+            "Y": [
+              33
+            ]
+          }
+        },
+        "gpioout_dffeas_q_d_$lut_Y_A_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1000000000000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              29,
+              30,
+              31,
+              32
+            ],
+            "Y": [
+              25
+            ]
+          }
+        },
+        "gpioout_dffeas_q_d_$lut_Y_A_$lut_Y_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0100000000000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              21,
+              27,
+              17,
+              28
+            ],
+            "Y": [
+              26
+            ]
+          }
+        },
+        "rw_dffeas_q": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              29
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              14
+            ],
+            "Q": [
+              28
+            ]
+          }
+        },
+        "sr_dffeas_q": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              4
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              14
+            ],
+            "Q": [
+              21
+            ]
+          }
+        },
+        "sr_dffeas_q_1": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              17
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              14
+            ],
+            "Q": [
+              29
+            ]
+          }
+        },
+        "sr_dffeas_q_2": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              32
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              14
+            ],
+            "Q": [
+              17
+            ]
+          }
+        },
+        "sr_dffeas_q_3": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              31
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              14
+            ],
+            "Q": [
+              32
+            ]
+          }
+        },
+        "sr_dffeas_q_4": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              30
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              14
+            ],
+            "Q": [
+              31
+            ]
+          }
+        },
+        "sr_dffeas_q_5": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              27
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              14
+            ],
+            "Q": [
+              30
+            ]
+          }
+        },
+        "sr_dffeas_q_6": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              21
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              14
+            ],
+            "Q": [
+              27
+            ]
+          }
+        },
+        "sr_out_dffeas_q": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test3.v:28.1-52.4|V:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              28
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              14
+            ],
+            "Q": [
+              13
+            ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [
+            2
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test3.v:15.7-15.10"
+          }
+        },
+        "cs": {
+          "hide_name": 0,
+          "bits": [
+            3
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test3.v:15.12-15.14"
+          }
+        },
+        "cs_$lut_A_Y": {
+          "hide_name": 0,
+          "bits": [
+            14
+          ],
+          "attributes": {}
+        },
+        "gpioout": {
+          "hide_name": 0,
+          "bits": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test3.v:18.14-18.21"
+          }
+        },
+        "gpioout_dffeas_q_2_d": {
+          "hide_name": 0,
+          "bits": [
+            19
+          ],
+          "attributes": {}
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            22
+          ],
+          "attributes": {}
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_A_Y": {
+          "hide_name": 0,
+          "bits": [
+            18
+          ],
+          "attributes": {}
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            24
+          ],
+          "attributes": {}
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1": {
+          "hide_name": 0,
+          "bits": [
+            23
+          ],
+          "attributes": {}
+        },
+        "gpioout_dffeas_q_2_d_$lut_Y_A_$lut_Y_A_1_$lut_A_Y": {
+          "hide_name": 0,
+          "bits": [
+            16
+          ],
+          "attributes": {}
+        },
+        "gpioout_dffeas_q_2_ena": {
+          "hide_name": 0,
+          "bits": [
+            20
+          ],
+          "attributes": {}
+        },
+        "gpioout_dffeas_q_d": {
+          "hide_name": 0,
+          "bits": [
+            15
+          ],
+          "attributes": {}
+        },
+        "gpioout_dffeas_q_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            33
+          ],
+          "attributes": {}
+        },
+        "gpioout_dffeas_q_d_$lut_Y_A_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            25
+          ],
+          "attributes": {}
+        },
+        "gpioout_dffeas_q_d_$lut_Y_A_$lut_Y_A_1": {
+          "hide_name": 0,
+          "bits": [
+            26
+          ],
+          "attributes": {}
+        },
+        "rw": {
+          "hide_name": 0,
+          "bits": [
+            28
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test3.v:23.6-23.8"
+          }
+        },
+        "sr": {
+          "hide_name": 0,
+          "bits": [
+            21,
+            27,
+            30,
+            31,
+            32,
+            17,
+            29,
+            28
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test3.v:24.11-24.13"
+          }
+        },
+        "sr_in": {
+          "hide_name": 0,
+          "bits": [
+            4
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test3.v:16.7-16.12"
+          }
+        },
+        "sr_out": {
+          "hide_name": 0,
+          "bits": [
+            13
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test3.v:17.8-17.14"
+          }
+        },
+        "$eqy_ff_initial_gpioout_dffeas_q": {
+          "hide_name": 1,
+          "bits": [
+            12
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_gpioout_dffeas_q_1": {
+          "hide_name": 1,
+          "bits": [
+            7
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_gpioout_dffeas_q_2": {
+          "hide_name": 1,
+          "bits": [
+            5
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_gpioout_dffeas_q_3": {
+          "hide_name": 1,
+          "bits": [
+            9
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_gpioout_dffeas_q_4": {
+          "hide_name": 1,
+          "bits": [
+            6
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_gpioout_dffeas_q_5": {
+          "hide_name": 1,
+          "bits": [
+            8
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_gpioout_dffeas_q_6": {
+          "hide_name": 1,
+          "bits": [
+            10
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_gpioout_dffeas_q_7": {
+          "hide_name": 1,
+          "bits": [
+            11
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_rw_dffeas_q": {
+          "hide_name": 1,
+          "bits": [
+            28
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_sr_dffeas_q": {
+          "hide_name": 1,
+          "bits": [
+            21
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_sr_dffeas_q_1": {
+          "hide_name": 1,
+          "bits": [
+            29
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_sr_dffeas_q_2": {
+          "hide_name": 1,
+          "bits": [
+            17
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_sr_dffeas_q_3": {
+          "hide_name": 1,
+          "bits": [
+            32
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_sr_dffeas_q_4": {
+          "hide_name": 1,
+          "bits": [
+            31
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_sr_dffeas_q_5": {
+          "hide_name": 1,
+          "bits": [
+            30
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_sr_dffeas_q_6": {
+          "hide_name": 1,
+          "bits": [
+            27
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_sr_out_dffeas_q": {
+          "hide_name": 1,
+          "bits": [
+            13
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        }
+      }
+    }
+  }
+}

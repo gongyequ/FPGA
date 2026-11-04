@@ -1,0 +1,1327 @@
+{
+  "creator": "Yosys 0.69+286 (git sha1 37f25dae9, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1); project ff_map inverse adapter",
+  "modules": {
+    "test4": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "X:/inputs/cases/rar_test4.v:1.1-85.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [
+            2
+          ]
+        },
+        "reset_n": {
+          "direction": "input",
+          "bits": [
+            3
+          ]
+        },
+        "ena": {
+          "direction": "input",
+          "bits": [
+            4
+          ]
+        },
+        "datain": {
+          "direction": "input",
+          "bits": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        "dataout": {
+          "direction": "output",
+          "bits": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "only_5b": {
+          "direction": "output",
+          "bits": [
+            16
+          ]
+        },
+        "datain_5bis7": {
+          "direction": "output",
+          "bits": [
+            17
+          ]
+        },
+        "data_dp": {
+          "direction": "output",
+          "bits": [
+            18
+          ]
+        },
+        "data_dn": {
+          "direction": "output",
+          "bits": [
+            19
+          ]
+        }
+      },
+      "cells": {
+        "data_dn_dffeas_q": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test4.v:30.1-83.4|U:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              20
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              3
+            ],
+            "E": [
+              "1"
+            ],
+            "Q": [
+              19
+            ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "00100000",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              4,
+              9,
+              21
+            ],
+            "Y": [
+              20
+            ]
+          }
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0010100010000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              8,
+              7,
+              5,
+              6
+            ],
+            "Y": [
+              21
+            ]
+          }
+        },
+        "data_dp_dffeas_q": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test4.v:30.1-83.4|U:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              22
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              3
+            ],
+            "E": [
+              "1"
+            ],
+            "Q": [
+              18
+            ]
+          }
+        },
+        "data_dp_dffeas_q_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "00100000",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              23,
+              8,
+              4
+            ],
+            "Y": [
+              22
+            ]
+          }
+        },
+        "data_dp_dffeas_q_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000001000101000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              9,
+              7,
+              5,
+              6
+            ],
+            "Y": [
+              23
+            ]
+          }
+        },
+        "datain_5bis7_dffeas_q": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test4.v:30.1-83.4|U:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              24
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              "1"
+            ],
+            "E": [
+              3
+            ],
+            "Q": [
+              17
+            ]
+          }
+        },
+        "datain_5bis7_dffeas_q_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "00100000",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              25,
+              9,
+              4
+            ],
+            "Y": [
+              24
+            ]
+          }
+        },
+        "datain_5bis7_dffeas_q_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0100000000000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              8,
+              7,
+              5,
+              6
+            ],
+            "Y": [
+              25
+            ]
+          }
+        },
+        "dataout_dffeas_q": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test4.v:30.1-83.4|U:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              26
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              3
+            ],
+            "E": [
+              "1"
+            ],
+            "Q": [
+              14
+            ]
+          }
+        },
+        "dataout_dffeas_q_1": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test4.v:30.1-83.4|U:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              27
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              3
+            ],
+            "E": [
+              "1"
+            ],
+            "Q": [
+              15
+            ]
+          }
+        },
+        "dataout_dffeas_q_1_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000101010001000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              4,
+              28,
+              29,
+              9
+            ],
+            "Y": [
+              27
+            ]
+          }
+        },
+        "dataout_dffeas_q_1_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0111111000010111",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              8,
+              7,
+              6,
+              5
+            ],
+            "Y": [
+              28
+            ]
+          }
+        },
+        "dataout_dffeas_q_1_d_$lut_Y_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0101010101010001",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              5,
+              8,
+              7,
+              6
+            ],
+            "Y": [
+              29
+            ]
+          }
+        },
+        "dataout_dffeas_q_2": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test4.v:30.1-83.4|U:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              30
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              3
+            ],
+            "E": [
+              "1"
+            ],
+            "Q": [
+              11
+            ]
+          }
+        },
+        "dataout_dffeas_q_2_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "10001010",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              4,
+              9,
+              31
+            ],
+            "Y": [
+              30
+            ]
+          }
+        },
+        "dataout_dffeas_q_2_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0111111111111110",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              8,
+              7,
+              5,
+              6
+            ],
+            "Y": [
+              31
+            ]
+          }
+        },
+        "dataout_dffeas_q_3": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test4.v:30.1-83.4|U:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              32
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              3
+            ],
+            "E": [
+              "1"
+            ],
+            "Q": [
+              10
+            ]
+          }
+        },
+        "dataout_dffeas_q_3_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000110010001100",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              33,
+              4,
+              34,
+              9
+            ],
+            "Y": [
+              32
+            ]
+          }
+        },
+        "dataout_dffeas_q_3_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0001011101111100",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              8,
+              7,
+              5,
+              6
+            ],
+            "Y": [
+              33
+            ]
+          }
+        },
+        "dataout_dffeas_q_3_d_$lut_Y_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0111111011101000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              8,
+              7,
+              5,
+              6
+            ],
+            "Y": [
+              34
+            ]
+          }
+        },
+        "dataout_dffeas_q_4": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test4.v:30.1-83.4|U:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              35
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              3
+            ],
+            "E": [
+              "1"
+            ],
+            "Q": [
+              12
+            ]
+          }
+        },
+        "dataout_dffeas_q_4_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1000000011000000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              36,
+              4,
+              37,
+              9
+            ],
+            "Y": [
+              35
+            ]
+          }
+        },
+        "dataout_dffeas_q_4_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1010101110111101",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              8,
+              7,
+              5,
+              6
+            ],
+            "Y": [
+              37
+            ]
+          }
+        },
+        "dataout_dffeas_q_4_d_$lut_Y_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0011111011101000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              8,
+              7,
+              5,
+              6
+            ],
+            "Y": [
+              36
+            ]
+          }
+        },
+        "dataout_dffeas_q_5": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test4.v:30.1-83.4|U:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              38
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              3
+            ],
+            "E": [
+              "1"
+            ],
+            "Q": [
+              13
+            ]
+          }
+        },
+        "dataout_dffeas_q_5_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0000110001001000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              34,
+              4,
+              39,
+              9
+            ],
+            "Y": [
+              38
+            ]
+          }
+        },
+        "dataout_dffeas_q_5_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0101010101010100",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              7,
+              8,
+              5,
+              6
+            ],
+            "Y": [
+              39
+            ]
+          }
+        },
+        "dataout_dffeas_q_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1000100010100000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              4,
+              40,
+              41,
+              9
+            ],
+            "Y": [
+              26
+            ]
+          }
+        },
+        "dataout_dffeas_q_d_$lut_Y_A_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "1010101110111100",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              6,
+              8,
+              7,
+              5
+            ],
+            "Y": [
+              41
+            ]
+          }
+        },
+        "dataout_dffeas_q_d_$lut_Y_A_1_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0010101110101011",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              6,
+              7,
+              5,
+              8
+            ],
+            "Y": [
+              40
+            ]
+          }
+        },
+        "only_5b_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "01",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              42
+            ],
+            "Y": [
+              16
+            ]
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q": {
+          "hide_name": 0,
+          "type": "$_DFFE_PN0P_",
+          "parameters": {},
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "X:/inputs/cases/rar_test4.v:30.1-83.4|U:\\share\\intel/common/ff_map.v:7.54-7.182"
+          },
+          "port_directions": {
+            "D": "input",
+            "C": "input",
+            "R": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [
+              43
+            ],
+            "C": [
+              2
+            ],
+            "R": [
+              3
+            ],
+            "E": [
+              "1"
+            ],
+            "Q": [
+              42
+            ]
+          }
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d_$lut_Y": {
+          "hide_name": 0,
+          "type": "$lut",
+          "parameters": {
+            "LUT": "0101111101110111",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {},
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [
+              4,
+              36,
+              33,
+              9
+            ],
+            "Y": [
+              43
+            ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [
+            2
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test4.v:14.8-14.11"
+          }
+        },
+        "data_dn": {
+          "hide_name": 0,
+          "bits": [
+            19
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test4.v:22.9-22.16"
+          }
+        },
+        "data_dn_dffeas_q_d": {
+          "hide_name": 0,
+          "bits": [
+            20
+          ],
+          "attributes": {}
+        },
+        "data_dn_dffeas_q_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            21
+          ],
+          "attributes": {}
+        },
+        "data_dp": {
+          "hide_name": 0,
+          "bits": [
+            18
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test4.v:21.9-21.16"
+          }
+        },
+        "data_dp_dffeas_q_d": {
+          "hide_name": 0,
+          "bits": [
+            22
+          ],
+          "attributes": {}
+        },
+        "data_dp_dffeas_q_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            23
+          ],
+          "attributes": {}
+        },
+        "datain": {
+          "hide_name": 0,
+          "bits": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test4.v:17.12-17.18"
+          }
+        },
+        "datain_5bis7": {
+          "hide_name": 0,
+          "bits": [
+            17
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test4.v:20.9-20.21"
+          }
+        },
+        "datain_5bis7_dffeas_q_d": {
+          "hide_name": 0,
+          "bits": [
+            24
+          ],
+          "attributes": {}
+        },
+        "datain_5bis7_dffeas_q_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            25
+          ],
+          "attributes": {}
+        },
+        "dataout": {
+          "hide_name": 0,
+          "bits": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test4.v:18.13-18.20"
+          }
+        },
+        "dataout_dffeas_q_1_d": {
+          "hide_name": 0,
+          "bits": [
+            27
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_1_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            28
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_1_d_$lut_Y_A_1": {
+          "hide_name": 0,
+          "bits": [
+            29
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_2_d": {
+          "hide_name": 0,
+          "bits": [
+            30
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_2_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            31
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_3_d": {
+          "hide_name": 0,
+          "bits": [
+            32
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_3_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            33
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_3_d_$lut_Y_A_1": {
+          "hide_name": 0,
+          "bits": [
+            34
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_4_d": {
+          "hide_name": 0,
+          "bits": [
+            35
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_4_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            37
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_4_d_$lut_Y_A_1": {
+          "hide_name": 0,
+          "bits": [
+            36
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_5_d": {
+          "hide_name": 0,
+          "bits": [
+            38
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_5_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            39
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_d": {
+          "hide_name": 0,
+          "bits": [
+            26
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_d_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            41
+          ],
+          "attributes": {}
+        },
+        "dataout_dffeas_q_d_$lut_Y_A_1": {
+          "hide_name": 0,
+          "bits": [
+            40
+          ],
+          "attributes": {}
+        },
+        "ena": {
+          "hide_name": 0,
+          "bits": [
+            4
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test4.v:16.8-16.11"
+          }
+        },
+        "only_5b": {
+          "hide_name": 0,
+          "bits": [
+            16
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test4.v:19.9-19.16"
+          }
+        },
+        "only_5b_$lut_Y_A": {
+          "hide_name": 0,
+          "bits": [
+            42
+          ],
+          "attributes": {}
+        },
+        "only_5b_$lut_Y_A_dffeas_q_d": {
+          "hide_name": 0,
+          "bits": [
+            43
+          ],
+          "attributes": {}
+        },
+        "reset_n": {
+          "hide_name": 0,
+          "bits": [
+            3
+          ],
+          "attributes": {
+            "src": "X:/inputs/cases/rar_test4.v:15.8-15.15"
+          }
+        },
+        "$eqy_ff_initial_data_dn_dffeas_q": {
+          "hide_name": 1,
+          "bits": [
+            19
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_data_dp_dffeas_q": {
+          "hide_name": 1,
+          "bits": [
+            18
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_datain_5bis7_dffeas_q": {
+          "hide_name": 1,
+          "bits": [
+            17
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_dataout_dffeas_q": {
+          "hide_name": 1,
+          "bits": [
+            14
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_dataout_dffeas_q_1": {
+          "hide_name": 1,
+          "bits": [
+            15
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_dataout_dffeas_q_2": {
+          "hide_name": 1,
+          "bits": [
+            11
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_dataout_dffeas_q_3": {
+          "hide_name": 1,
+          "bits": [
+            10
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_dataout_dffeas_q_4": {
+          "hide_name": 1,
+          "bits": [
+            12
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_dataout_dffeas_q_5": {
+          "hide_name": 1,
+          "bits": [
+            13
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        },
+        "$eqy_ff_initial_only_5b_$lut_Y_A_dffeas_q": {
+          "hide_name": 1,
+          "bits": [
+            42
+          ],
+          "attributes": {
+            "init": "0"
+          }
+        }
+      }
+    }
+  }
+}

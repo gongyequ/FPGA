@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\候选程序\\B臂集成F4c\\yosys.exe",
+    "-Q",
+    "-s",
+    "off.ys"
+  ],
+  "exit_code": 0
+}

@@ -1,0 +1,6 @@
+read_rtlil guards.il
+write_json before.json
+select reject_fanout_guard reject_top_output_guard reject_partial_guard reject_reordered_guard reject_ambiguous_guard reject_self_loop_guard reject_unknown_consumer_guard reject_marked_inner_guard reject_marked_outer_guard reject_width_limit_guard reject_arm_limit_guard reject_inner_unselected_guard/c:outer reject_outer_unselected_guard/c:inner
+pmux_opt -flatten-data-arm
+select *
+write_json after.json

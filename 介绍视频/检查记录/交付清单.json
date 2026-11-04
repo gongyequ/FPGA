@@ -1,0 +1,19 @@
+{
+  "duration_seconds": 174,
+  "video_bytes": 3068734,
+  "video_sha256": "73d300d3c10eb3ce71252546cc8f91eff12ef07836872624a49f9fec3f1bcf4a",
+  "zip_bytes": 7828414,
+  "zip_sha256": "99d139fe92f1b040873416a571821fa4059984b5e0abb766d268a56296e73542",
+  "chapters": 12,
+  "document_screenshots": 7,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 24,
+  "frames": 4176,
+  "audio_tracks": 0,
+  "under_three_minutes": true,
+  "voice_script_intervals_match": true,
+  "realtime_player_review": false
+}

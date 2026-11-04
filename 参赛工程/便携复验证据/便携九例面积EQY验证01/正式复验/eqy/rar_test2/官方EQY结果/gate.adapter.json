@@ -1,0 +1,9 @@
+{
+  "source_sha256": "37df965ac7ac8b26ced8f8639e554e09df873f6280a61d2d6ee52eafc6fbef8f",
+  "result_sha256": "5fe63d70746ec7816127f387ced5c47c3f1dbb9c85647067187503f61c82394f",
+  "top": "test2",
+  "converted_ff_count": 0,
+  "changes": [],
+  "reference": "Official share/yosys/intel/common/ff_map.v; exact inverse, no general dffeas emulation.",
+  "status": "ACCEPTED_EXACT_CONFIGURATION"
+}

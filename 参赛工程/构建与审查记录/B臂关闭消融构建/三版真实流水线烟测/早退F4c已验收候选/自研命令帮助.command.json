@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "R:/yosys.exe",
+    "-Q",
+    "-p",
+    "help pmux_opt"
+  ],
+  "cwd": "C:\\Users\\13889\\AppData\\Local\\Temp\\pmux-config-audit-vgf98boy",
+  "returncode": 0
+}

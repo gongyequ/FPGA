@@ -1,0 +1,38 @@
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing RTLIL frontend.
+=== Custom Tcl command ===
+Input filename: pre_pmux.il
+
+2. Executing project PMUX structural optimization.
+PMUX data-arm flattening: merged 2 single-use nested data arms.
+PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 8 decoder tables.
+
+3. Printing statistics.
+
+=== pmux_case04_feedback ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       70 wires
+      439 wire bits
+       26 public wires
+      291 public wire bits
+        6 ports
+      115 port bits
+       52 cells
+        6   $add
+        2   $adffe
+       16   $eq
+        2   $logic_and
+        8   $logic_not
+       10   $pmux
+        4   $sub
+        4   $xor
+
+4. Executing RTLIL backend.
+Output filename: after_pmux.il

@@ -1,0 +1,4 @@
+ninja: Entering directory `R:/build'
+[1/2] Building CXX object techlibs\intel\CMakeFiles\yosys_synth_intel.dir\synth_intel.cc.obj
+R:\src\kernel/hashlib.h(1019): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+[2/2] Linking CXX executable yosys.exe

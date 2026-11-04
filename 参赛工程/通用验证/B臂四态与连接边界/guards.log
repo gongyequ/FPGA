@@ -1,0 +1,17 @@
+
+-- Executing script file `guards.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: guards.il
+
+2. Executing JSON backend.
+
+3. Executing project PMUX structural optimization.
+PMUX data-arm flattening: merged 0 single-use nested data arms.
+PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 0 decoder tables.
+
+4. Executing JSON backend.
+
+End of script. Logfile hash: b0a68eede9
+Yosys 0.69+286 (git sha1 37f25dae9-dirty, Release, MSVC C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 19.44.35215.0) [C:Users889Desktop�圭洰\pmux-optyosys-src at HEAD]
+Time spent: 20% 4x write_json (0 sec), 20% 2x select (0 sec), ...

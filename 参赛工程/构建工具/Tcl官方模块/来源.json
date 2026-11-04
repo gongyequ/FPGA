@@ -1,0 +1,17 @@
+[
+  {
+    "file": "msgcat/msgcat.tcl",
+    "url": "https://raw.githubusercontent.com/tcltk/tcl/core-8-6-15/library/msgcat/msgcat.tcl",
+    "sha256": "5732951b02b45c3702c2f9ee7c43deabfcfe0aaae893f89bcc59e32bd9444ce3"
+  },
+  {
+    "file": "msgcat/pkgIndex.tcl",
+    "url": "https://raw.githubusercontent.com/tcltk/tcl/core-8-6-15/library/msgcat/pkgIndex.tcl",
+    "sha256": "3d391b5c9219666880499e6e5c87edb05e64c5d25fe2c0e66874fb0271f2e3d1"
+  },
+  {
+    "file": "license.terms",
+    "url": "https://raw.githubusercontent.com/tcltk/tcl/core-8-6-15/license.terms",
+    "sha256": "c0a69a2bfd757361ec7e6143973b103c90409316b49e9c88db26ad6388e79f16"
+  }
+]

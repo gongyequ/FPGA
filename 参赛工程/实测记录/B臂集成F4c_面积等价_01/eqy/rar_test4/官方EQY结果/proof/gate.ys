@@ -1,0 +1,8 @@
+read_rtlil gate.il
+opt_clean
+setundef -zero -init
+prep -top test4
+opt_clean
+check -initdrv
+setundef -undriven -undef
+write_rtlil proof/gate.il

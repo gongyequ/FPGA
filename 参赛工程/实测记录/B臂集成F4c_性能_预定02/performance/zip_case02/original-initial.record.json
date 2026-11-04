@@ -1,0 +1,41 @@
+{
+  "command": [
+    "V:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/performance/zip_case02/original-initial.ys"
+  ],
+  "variant": "original",
+  "started_utc": "2026-11-03T17:31:08.752261+00:00",
+  "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.4462387999519706,
+  "peak_working_set_bytes": 25206784,
+  "memory_samples": 289,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "zip_case02",
+  "top": "pmux_case02_pipeline",
+  "script_sha256": "3c2800527f298ce3aedd4c630b68a2ca65e52a6dde8b655f40b2ecd3ea4301dc",
+  "abc_process_count": 1,
+  "pmux_messages": [],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&scorr",
+    "&sweep",
+    "&dc2",
+    "&dch -f -r",
+    "&ps",
+    "&if -W 300 -v",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ]
+}

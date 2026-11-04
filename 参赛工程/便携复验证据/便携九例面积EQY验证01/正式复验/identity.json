@@ -1,0 +1,192 @@
+{
+  "binding_sha256": "82ab01f3845416bf52583d2071d144a9a621e8e49d30bda65256096eec586110",
+  "binding": {
+    "schema": 1,
+    "candidate": "Barm_F4c_portable",
+    "programs": {
+      "original": {
+        "binary": {
+          "bytes": 37359104,
+          "sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4"
+        },
+        "runtime_tree_sha256": "71950e40e960b18d98fb7278bcca624ecacdde39f4dd993aaf67c5cf23bd4ce2"
+      },
+      "optimized": {
+        "binary": {
+          "bytes": 37565440,
+          "sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53"
+        },
+        "runtime_tree_sha256": "cff39f02d7b8754dc37f5a2d4ce21dce957f578f4e9c841df0fa0c0f54397e96"
+      }
+    },
+    "candidate_source_tree_sha256": "b150073b69991b43575509ec3efc8f9bc066687287e6d3a0fb39d7a1706b9761",
+    "baseline_source_basis": {
+      "kind": "explicit source snapshot",
+      "tree_sha256": "0934dda3e700c44b1df69bb0d26a49586bc9d9a52508d0c0f1fc71e1c10ca3e4"
+    },
+    "tools": {
+      "official_yosys": {
+        "bytes": 37024256,
+        "sha256": "a9a1b18604fd984972e8c6786a52261cee9e6cbe002b65e5ca353beacbd65e90"
+      },
+      "abc": {
+        "bytes": 26603520,
+        "sha256": "60e1136f56b0eb4d256246aa6accfa36a8d97af2dc0693269ad62ba2359b33e5"
+      },
+      "eqy": {
+        "bytes": 56427,
+        "sha256": "ad027ca0436c8c517e8e7a334721142a0e4d3088eb7f940ff6dd59e019ccb808"
+      },
+      "sby": {
+        "bytes": 19836,
+        "sha256": "456ed28b00192b80cce32320f7f10370cd507f0527b1fedcc84da292f4f0d7b3"
+      },
+      "make": {
+        "bytes": 438784,
+        "sha256": "b524a658ae29b772cbd51f971269932b39ad33faa24f21ed76b8b8b92b0e297f"
+      },
+      "ff_map": {
+        "bytes": 630,
+        "sha256": "6de068e4123712bae46a0cc1f7b88c728bfb2f0e0be52440930eec5c714d9491"
+      },
+      "git_bash": {
+        "bytes": 2456832,
+        "sha256": "acf4ecb52e601f7b4a37db51b07650b5d0315eafd010590e98079fa026da4b7b"
+      },
+      "git_sh": {
+        "bytes": 2456832,
+        "sha256": "acf4ecb52e601f7b4a37db51b07650b5d0315eafd010590e98079fa026da4b7b"
+      },
+      "git_grep": {
+        "bytes": 213710,
+        "sha256": "497202418334f8a48d9f34cd2e1b2c03c4f957e02304b613e10931c0457e8d4a"
+      },
+      "git_awk": {
+        "bytes": 1219175,
+        "sha256": "c57f626dd07175e23aaef766d9c699fce950483b1ceb665c4771a45d87c14099"
+      },
+      "git_cat": {
+        "bytes": 38719,
+        "sha256": "f1b37048ee5c70fdc31dde509e562261c9b2d102d94c903393f55b45e883ef90"
+      }
+    },
+    "cases": [
+      {
+        "case": "rar_test1",
+        "top": "test1",
+        "file": "rar_test1.v",
+        "sha256": "2d2dba011b0e8799d0de3790b69b7f01c6eb6ac665c4321b57b0378a4972fd13",
+        "parameters": "official defaults"
+      },
+      {
+        "case": "rar_test2",
+        "top": "test2",
+        "file": "rar_test2.v",
+        "sha256": "e43c9b437071488551caf3121e227e86f4fe3190751f245beac3b7ecc3fdb146",
+        "parameters": "official defaults"
+      },
+      {
+        "case": "rar_test3",
+        "top": "test3",
+        "file": "rar_test3.v",
+        "sha256": "1551b9212622ccef6019d6e77de2c43dc8c80d267957b55a42121f34a08780e9",
+        "parameters": "official defaults"
+      },
+      {
+        "case": "rar_test4",
+        "top": "test4",
+        "file": "rar_test4.v",
+        "sha256": "c0c5042928bd6bf568e2b7fb2193f2b6db9c4193ba3a5378fc50a331d43422d7",
+        "parameters": "official defaults"
+      },
+      {
+        "case": "zip_case01",
+        "top": "pmux_case01_balanced",
+        "file": "zip_case01.v",
+        "sha256": "463263f4b265cbad3b634d69d316cd29e7ea0a62f91ee396dbeeecf7df5c7343",
+        "parameters": "official defaults"
+      },
+      {
+        "case": "zip_case02",
+        "top": "pmux_case02_pipeline",
+        "file": "zip_case02.v",
+        "sha256": "8639081b2fb7c446edef52a514d63b49333e444ce21638f03bdee97dc954e0ea",
+        "parameters": "official defaults"
+      },
+      {
+        "case": "zip_case03",
+        "top": "pmux_case03_crossbar",
+        "file": "zip_case03.v",
+        "sha256": "bf1fc3bf6383beb007a69587d77a29ea74fb1fbdf7429fb401c0855a31c05932",
+        "parameters": "official defaults"
+      },
+      {
+        "case": "zip_case04",
+        "top": "pmux_case04_feedback",
+        "file": "zip_case04.v",
+        "sha256": "d668d258d804674dd1412538e7bce04d4630d02928ffe113413b536e6b9ed70f",
+        "parameters": "official defaults"
+      },
+      {
+        "case": "zip_case05",
+        "top": "pmux_case05_nested",
+        "file": "zip_case05.v",
+        "sha256": "57d64edd3704d9d74407145080a63d06390e4a598c419a948fdea22fb1147f1d",
+        "parameters": "official defaults"
+      }
+    ],
+    "abc_override": null,
+    "helpers": {
+      "工具定位.py": {
+        "bytes": 5589,
+        "sha256": "7a3d5caad59069355d997dd65e5007ea8de3fba50b9737b6da7767df71b157ce"
+      },
+      "生成正式验证输入.py": {
+        "bytes": 5140,
+        "sha256": "0de23e57982a418809f307422ae2207916085aa45c2be2713b6f74f291a185ed"
+      },
+      "官方等价验证入口.py": {
+        "bytes": 4242,
+        "sha256": "53b1c3cc76a2e1cb6382ad385dd1e5e7942ea82f7244e3cca9fd35486377b0d3"
+      },
+      "触发器逆映射适配.py": {
+        "bytes": 3763,
+        "sha256": "d9d44e3e97d7ef61502c71ea8cd4458da636a125f19f0511fc3dfd2a9d97645c"
+      },
+      "核验适配边界.py": {
+        "bytes": 2619,
+        "sha256": "9cbd1da48137c2947a0d75fb66f5f8da439e5f06f070270d4bb8734064d75be6"
+      },
+      "核对证明输入来源.py": {
+        "bytes": 2697,
+        "sha256": "35c9ed17f6dde813b16d5cdd1e97c789b755a28cb05f004c500a4bc73e9d6bca"
+      },
+      "研究复测.py": {
+        "bytes": 32736,
+        "sha256": "d96b346d3a958bb912320c30b0ecaec950caeadf85b8479de2844175169bf414"
+      },
+      "复测公共.py": {
+        "bytes": 11107,
+        "sha256": "b4cf1394e7c2df5b8db5bf80be60cae9d3cf310f2953c8e5c4b740229d0d0640"
+      },
+      "官方测量规则参考": {
+        "bytes": 9398,
+        "sha256": "90656bad53b4c370e6c20205cad131893311770e72251a64bde21085ddfa6a3f"
+      }
+    },
+    "measurement_policy": "10 baseline zip05 warmups; fixed case order; initial pair; either ratio>1.05 and max(initial wall)<10 -> 5 fresh pairs; ratio of arithmetic means"
+  },
+  "created_utc": "2026-11-03T18:19:50.466848+00:00",
+  "paths": {
+    "package": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容",
+    "suite": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\官方工具\\oss-cad-suite",
+    "make": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\等价验证\\官方依赖\\make-4.4.1\\WinRel\\gnumake.exe",
+    "git": "D:\\Git\\usr\\bin",
+    "programs": {
+      "original": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\原版程序",
+      "optimized": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\优化程序"
+    },
+    "candidate_source": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\开发源码"
+  },
+  "scope": "研究记录；源码哈希是所提供源码快照身份，不独立证明该EXE由此快照编译；编译日志应另行保留。"
+}

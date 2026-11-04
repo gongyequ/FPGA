@@ -1,0 +1,129 @@
+{
+  "name": "mixed_chain_d7_w12_k2",
+  "description": "默认A与B臂交替嵌套；两规则及辅助门标签相互作用",
+  "input_pmux_count": 7,
+  "ports": [
+    {
+      "name": "a0",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b0",
+      "width": 24,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s0",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b1",
+      "width": 24,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s1",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a2",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b2",
+      "width": 24,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s2",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b3",
+      "width": 24,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s3",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a4",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b4",
+      "width": 24,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s4",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b5",
+      "width": 24,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s5",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "a6",
+      "width": 12,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b6",
+      "width": 24,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s6",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "out0",
+      "width": 12,
+      "direction": "output",
+      "kind": "data"
+    }
+  ],
+  "selection": null,
+  "expect_unchanged": false,
+  "min_removed_with_default": 2,
+  "min_removed_with_b": 0,
+  "simulate": true,
+  "samples": 512,
+  "scope": "supplemental structural regression; not official nine-case area/performance",
+  "input_sha256": "b029b2ecf6796ad6bbea1269140a5bf5e05ba18e7202fd3ebc9c9a3e127974ca"
+}

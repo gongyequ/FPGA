@@ -1,0 +1,10 @@
+{
+  "status": "AREA_COMPLETE",
+  "completed_stages": [
+    "identity",
+    "area"
+  ],
+  "stage_requested": "area",
+  "started_utc": "2026-11-03T17:46:23.365349+00:00",
+  "finished_utc": "2026-11-03T17:47:48.920013+00:00"
+}

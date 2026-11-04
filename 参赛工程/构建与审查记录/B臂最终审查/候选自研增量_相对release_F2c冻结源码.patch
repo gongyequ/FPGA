@@ -1,0 +1,317 @@
+--- a/passes/opt/pmux_opt.cc
++++ b/passes/opt/pmux_opt.cc
+@@ -24,7 +24,12 @@
+ 
+     void help() override
+     {
+-        log("\n    pmux_opt [-shiftx-small] [-flatten-fallback] [-const-decode] [-const-polarity] [-order-decode [-desc-order]] [-uniform-abc] [selection]\n\n");
++        log("\n    pmux_opt [-shiftx-small] [-flatten-fallback] [-const-decode] [-const-polarity] [-order-decode [-desc-order]] [-uniform-abc] [-index-full-x] [-flatten-data-arm] [selection]\n\n");
++        log("-index-full-x is an optional research rule for complete four-bit\n");
++        log("decoders with an all-X default and data width at most 32.\n");
++        log("It preserves natural control-bit order and is disabled by default.\n");
++        log("-flatten-data-arm is an optional research rule merging single-use\n");
++        log("PMUX data-arm nesting through four-state PMUX control gates.\n");
+         log("Remove constant-zero select arms and share identical data columns.\n");
+         log("A one-arm cell remains a $pmux; B == A is not a removal condition.\n");
+         log("-shiftx-small invokes upstream pmux2shiftx only for dense, mutually\n");
+@@ -77,9 +82,172 @@
+         return !facts.empty();
+     }
+ 
++    bool index_full_x_decode(RTLIL::Module *module, RTLIL::Cell *pmux,
++            SigMap &sigmap, const dict<SigBit, Cell*> &predicate_drivers,
++            const pool<SigBit> &ambiguous_predicates)
++    {
++        SigSpec a = sigmap(pmux->getPort(ID::A));
++        SigSpec b = pmux->getPort(ID::B), s = sigmap(pmux->getPort(ID::S));
++        SigSpec y = pmux->getPort(ID::Y);
++        const int width = GetSize(a), count = GetSize(s);
++        if (width < 1 || width > 32 || count != 16 || GetSize(y) != width ||
++                GetSize(b) != width * count) return false;
++        for (auto bit : a)
++            if (bit != State::Sx) return false; // Must not include Sz or live wires.
++
++        SigSpec natural_control;
++        std::vector<int> arm_at_code(16, -1);
++        for (int arm = 0; arm < count; ++arm) {
++            SigBit selected = s[arm];
++            if (!selected.wire || ambiguous_predicates.count(selected) ||
++                    !predicate_drivers.count(selected)) return false;
++            Cell *compare = predicate_drivers.at(selected);
++            if (GetSize(compare->getPort(ID::Y)) != 1) return false;
++            SigSpec control, literal;
++            if (compare->type == ID($eq)) {
++                control = sigmap(compare->getPort(ID::A));
++                literal = sigmap(compare->getPort(ID::B));
++                bool as = compare->getParam(ID::A_SIGNED).as_bool();
++                bool bs = compare->getParam(ID::B_SIGNED).as_bool();
++                if (as != bs) return false; // Conservative unsupported case.
++                int compare_width = std::max(GetSize(control), GetSize(literal));
++                if (compare_width != 4) return false;
++                control.extend_u0(compare_width, as && bs);
++                literal.extend_u0(compare_width, as && bs);
++                if (control.is_fully_const()) std::swap(control, literal);
++            } else if (compare->type == ID($logic_not)) {
++                control = sigmap(compare->getPort(ID::A));
++                literal = SigSpec(State::S0, GetSize(control));
++            } else return false;
++            if (GetSize(control) != 4 || GetSize(literal) != 4) return false;
++            pool<SigBit> seen;
++            int code = 0;
++            for (int bit = 0; bit < 4; ++bit) {
++                if (!control[bit].wire || seen.count(control[bit])) return false;
++                seen.insert(control[bit]);
++                if (literal[bit] == State::S1) code |= 1 << bit;
++                else if (literal[bit] != State::S0) return false;
++            }
++            if (arm == 0) natural_control = control;
++            else if (control != natural_control) return false;
++            if (arm_at_code[code] >= 0) return false;
++            arm_at_code[code] = arm;
++        }
++        for (int arm : arm_at_code) if (arm < 0) return false;
++
++        int stride = 1, shift_bits = 0;
++        while (stride < width) { stride <<= 1; ++shift_bits; }
++        if (stride * count > 512) return false;
++        SigSpec table(State::Sx, stride * count);
++        for (int code = 0; code < count; ++code)
++            table.replace(code * stride, b.extract(arm_at_code[code] * width, width));
++        SigSpec index(State::S0, shift_bits); // Low bits first in RTLIL SigSpec.
++        index.append(natural_control);
++        module->addShiftx(NEW_ID, table, index, y, false, pmux->get_src_attribute());
++        module->remove(pmux);
++        return true;
++    }
++
++
++    int flatten_data_arms(Module *module, Design *design)
++    {
++        const IdString data_gate_attr("\\pmux_opt_data_gate");
++        const IdString fallback_gate_attr("\\pmux_opt_control_gate");
++        int merged = 0;
++        for (int iteration = 0; iteration < 32; ++iteration) {
++            SigMap sigmap(module);
++            dict<SigBit, Cell*> drivers;
++            pool<SigBit> ambiguous;
++            dict<SigBit, int> users;
++            for (auto cell : module->cells()) {
++                if (cell->type != ID($pmux)) continue;
++                for (auto bit : sigmap(cell->getPort(ID::Y))) {
++                    if (drivers.count(bit)) ambiguous.insert(bit);
++                    drivers[bit] = cell;
++                }
++            }
++            for (auto wire : module->wires())
++                if (wire->port_output)
++                    for (auto bit : sigmap(SigSpec(wire))) users[bit]++;
++            for (auto cell : module->cells())
++                for (auto conn : cell->connections())
++                    if (!cell->known() || cell->input(conn.first))
++                        for (auto bit : sigmap(conn.second)) users[bit]++;
++            bool changed = false;
++            for (auto outer : module->selected_cells()) {
++                if (outer->type != ID($pmux) ||
++                    outer->get_bool_attribute(data_gate_attr) ||
++                    outer->get_bool_attribute(fallback_gate_attr)) continue;
++                SigSpec oa = outer->getPort(ID::A), ob = outer->getPort(ID::B);
++                SigSpec os = outer->getPort(ID::S), oy = outer->getPort(ID::Y);
++                int width = GetSize(oa), outer_count = GetSize(os);
++                if (width < 1 || outer_count < 1 || GetSize(oy) != width ||
++                        GetSize(ob) != width * outer_count) continue;
++                for (int arm = 0; arm < outer_count; ++arm) {
++                    SigSpec old_data = sigmap(ob.extract(arm * width, width));
++                    if (old_data.empty() || !drivers.count(old_data[0]) ||
++                            ambiguous.count(old_data[0])) continue;
++                    Cell *inner = drivers.at(old_data[0]);
++                    if (inner == outer || !design->selected(module, inner) ||
++                        inner->get_bool_attribute(data_gate_attr) ||
++                        inner->get_bool_attribute(fallback_gate_attr)) continue;
++                    if (sigmap(inner->getPort(ID::Y)) != old_data) continue;
++                    bool single_consumer = true;
++                    for (auto bit : old_data)
++                        if (!bit.wire || users[bit] != 1 || ambiguous.count(bit))
++                            single_consumer = false;
++                    if (!single_consumer) continue;
++                    SigSpec ia = inner->getPort(ID::A), ib = inner->getPort(ID::B);
++                    SigSpec is = inner->getPort(ID::S);
++                    int inner_count = GetSize(is);
++                    if (GetSize(ia) != width || inner_count < 1 ||
++                            GetSize(ib) != width * inner_count) continue;
++                    // Structural engineering guard, never keyed on input identity.
++                    if (width <= inner_count + 1 || outer_count + inner_count > 16)
++                        continue;
++                    std::string src = outer->get_src_attribute();
++                    SigSpec h = module->addWire(NEW_ID, 1);
++                    Cell *h_gate = module->addPmux(NEW_ID, SigSpec(State::S1),
++                            SigSpec(State::S0, inner_count), is, h, src);
++                    h_gate->set_bool_attribute(data_gate_attr);
++                    SigSpec inner_selects = h;
++                    inner_selects.append(is); // index 0 is inner-default select.
++                    SigSpec gated = module->addWire(NEW_ID, inner_count + 1);
++                    Cell *t_gate = module->addPmux(NEW_ID,
++                            SigSpec(State::S0, inner_count + 1), inner_selects,
++                            SigSpec(os[arm]), gated, src);
++                    t_gate->set_bool_attribute(data_gate_attr);
++                    SigSpec next_b, next_s;
++                    for (int old_arm = 0; old_arm < outer_count; ++old_arm) {
++                        if (old_arm == arm) {
++                            next_b.append(ia);
++                            next_b.append(ib);
++                            next_s.append(gated);
++                        } else {
++                            next_b.append(ob.extract(old_arm * width, width));
++                            next_s.append(os[old_arm]);
++                        }
++                    }
++                    outer->setPort(ID::B, next_b);
++                    outer->setPort(ID::S, next_s);
++                    outer->setParam(ID::S_WIDTH, GetSize(next_s));
++                    module->remove(inner);
++                    merged++;
++                    changed = true;
++                    break;
++                }
++                if (changed) break; // Rebuild all connectivity after each rewrite.
++            }
++            if (!changed) break;
++        }
++        return merged;
++    }
++
++
+     int flatten_fallbacks(Module *module, Design *design)
+     {
+         const IdString gate_attr("\\pmux_opt_control_gate");
++        const IdString data_gate_attr("\\pmux_opt_data_gate");
+         int merged = 0;
+         // Rebuild connectivity after each merge; bound work on large designs.
+         for (int iteration = 0; iteration < 32; iteration++) {
+@@ -98,7 +266,7 @@
+             // fallback exists. This is a structural early exit, not a case filter.
+             bool possible = false;
+             for (auto cell : module->selected_cells()) {
+-                if (cell->type != ID($pmux) || cell->get_bool_attribute(gate_attr)) continue;
++                if (cell->type != ID($pmux) || (cell->get_bool_attribute(gate_attr) || cell->get_bool_attribute(data_gate_attr))) continue;
+                 SigSpec a = sigmap(cell->getPort(ID::A));
+                 if (!a.empty() && drivers.count(a[0]) && drivers.at(a[0]) != cell &&
+                     sigmap(drivers.at(a[0])->getPort(ID::Y)) == a) {
+@@ -115,11 +283,11 @@
+                         for (auto bit : sigmap(conn.second)) users[bit]++;
+             bool changed = false;
+             for (auto outer : module->selected_cells()) {
+-                if (outer->type != ID($pmux) || outer->get_bool_attribute(gate_attr)) continue;
++                if (outer->type != ID($pmux) || (outer->get_bool_attribute(gate_attr) || outer->get_bool_attribute(data_gate_attr))) continue;
+                 SigSpec oa = sigmap(outer->getPort(ID::A));
+                 if (oa.empty() || !drivers.count(oa[0]) || ambiguous.count(oa[0])) continue;
+                 Cell *inner = drivers.at(oa[0]);
+-                if (inner == outer || !design->selected(module, inner) || inner->get_bool_attribute(gate_attr)) continue;
++                if (inner == outer || !design->selected(module, inner) || (inner->get_bool_attribute(gate_attr) || inner->get_bool_attribute(data_gate_attr))) continue;
+                 if (sigmap(inner->getPort(ID::Y)) != oa) continue;
+                 bool sole_use = true;
+                 for (auto bit : oa)
+@@ -196,9 +364,11 @@
+     {
+         log_header(design, "Executing project PMUX structural optimization.\n");
+         bool shiftx_small = false, flatten_fallback = false, const_decode = false, const_polarity = false, uniform_abc = false;
+-        bool order_decode = false, desc_order = false;
++        bool order_decode = false, desc_order = false, index_full_x = false, flatten_data_arm = false;
+         size_t argidx = 1;
+         for (; argidx < args.size(); argidx++) {
++            if (args[argidx] == "-flatten-data-arm") { flatten_data_arm = true; continue; }
++            if (args[argidx] == "-index-full-x") { index_full_x = true; continue; }
+             if (args[argidx] == "-shiftx-small") { shiftx_small = true; continue; }
+             if (args[argidx] == "-flatten-fallback") { flatten_fallback = true; continue; }
+             if (args[argidx] == "-const-decode") { const_decode = true; continue; }
+@@ -215,29 +385,59 @@
+         // archive selects by its own area cost within one external invocation.
+         if (uniform_abc && design->scratchpad_get_string("abc9.script").empty())
+             design->scratchpad_set_string("abc9.script",
+-                "+&dch,-f,-r;,&if,{W},{D},{R},-a,-v,-F,2,-c;,&mfs");
++                "+&dch,-f,-r;,&if,{W},{D},{R},-a,-v,-F,4,-c;,&mfs");
+         int removed_arms = 0, shared_columns = 0, shifted_cells = 0, nested_cells = 0, constant_bits = 0, polarity_cells = 0, ordered_cells = 0;
++        int indexed_full_tables = 0, merged_data_arms = 0;
+         RTLIL::Selection shift_selection = RTLIL::Selection::EmptySelection(design);
+ 
+         for (auto module : design->selected_modules()) {
+             if (module->get_bool_attribute(ID::blackbox)) continue;
++            // Keep uniform ABC setup above, even for modules without PMUX.
++            // All structural transformations below require a selected PMUX.
++            bool has_selected_pmux = false;
++            for (auto cell : module->cells()) {
++                if (cell->type == ID($pmux) && design->selected(module, cell)) {
++                    has_selected_pmux = true;
++                    break;
++                }
++            }
++            if (!has_selected_pmux) continue;
+             {
+             SigMap sigmap(module);
+             dict<SigBit, Cell*> predicate_drivers;
+             pool<SigBit> ambiguous_predicates;
+-            if (const_decode || order_decode)
++            if (const_decode || order_decode || index_full_x)
+                 for (auto driver : module->cells()) {
+                     if ((driver->type != ID($eq) && driver->type != ID($logic_not)) || driver->getPort(ID::Y).size() != 1) continue;
+                     SigBit output = sigmap(driver->getPort(ID::Y))[0];
+                     if (predicate_drivers.count(output)) ambiguous_predicates.insert(output);
+                     predicate_drivers[output] = driver;
+                 }
++            if (index_full_x) {
++                // Extra conservative driver audit used only by this optional rule.
++                // Module input pins also drive their canonical signal bits.
++                for (auto wire : module->wires())
++                    if (wire->port_input)
++                        for (auto bit : sigmap(SigSpec(wire)))
++                            if (predicate_drivers.count(bit)) ambiguous_predicates.insert(bit);
++                for (auto driver : module->cells())
++                    for (auto conn : driver->connections())
++                        if (!driver->known() || driver->output(conn.first))
++                            for (auto bit : sigmap(conn.second))
++                                if (predicate_drivers.count(bit) && predicate_drivers.at(bit) != driver)
++                                    ambiguous_predicates.insert(bit);
++            }
+             for (auto cell : module->selected_cells()) {
+                 if (cell->type != ID($pmux)) continue;
+                 SigSpec a = cell->getPort(ID::A), b = cell->getPort(ID::B);
+                 SigSpec s = cell->getPort(ID::S), y = cell->getPort(ID::Y);
+                 if (a.empty() || s.empty() || y.size() != a.size() || b.size() != a.size()*s.size())
+                     continue;
++                if (index_full_x && index_full_x_decode(module, cell, sigmap,
++                        predicate_drivers, ambiguous_predicates)) {
++                    indexed_full_tables++;
++                    continue;
++                }
+                 SigSpec mapped_s = sigmap(s);
+                 bool has_zero_arm = false;
+                 for (auto bit : mapped_s) if (bit == State::S0) has_zero_arm = true;
+@@ -387,6 +587,7 @@
+ 
+             } // Release the first alias map before rebuilding nested connectivity.
+             if (flatten_fallback) nested_cells += flatten_fallbacks(module, design);
++            if (flatten_data_arm) merged_data_arms += flatten_data_arms(module, design);
+             if (!shiftx_small) continue;
+             // Refresh aliases after column sharing before constructing decoders.
+             SigMap decoder_map(module);
+@@ -423,6 +624,10 @@
+         shift_selection.optimize(design);
+         if (!shift_selection.empty())
+             Pass::call_on_selection(design, shift_selection, "pmux2shiftx -norange");
++        if (flatten_data_arm)
++            log("PMUX data-arm flattening: merged %d single-use nested data arms.\n", merged_data_arms);
++        if (index_full_x)
++            log("PMUX full-table indexing: converted %d complete natural four-bit tables.\n", indexed_full_tables);
+         log("PMUX structural optimization: removed %d zero-select arms, shared %d columns, selected %d dense decoders, merged %d nested fallbacks, propagated %d predicate bits, complemented %d constant tables, reordered %d decoder tables.\n",
+             removed_arms, shared_columns, shifted_cells, nested_cells, constant_bits, polarity_cells, ordered_cells);
+     }
+--- a/techlibs/intel/synth_intel.cc
++++ b/techlibs/intel/synth_intel.cc
+@@ -212,7 +212,7 @@
+ 			run("wreduce");
+ 			run("peepopt");
+ 			run("opt_clean");
+-			run("pmux_opt -order-decode -flatten-fallback -uniform-abc");
++			run("pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm");
+ 			run("techmap -map +/cmp2lut.v -D LUT_WIDTH=4");
+ 			run("opt_expr");
+ 			run("opt_clean");

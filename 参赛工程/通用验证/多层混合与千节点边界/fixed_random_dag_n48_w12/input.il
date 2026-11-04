@@ -1,0 +1,571 @@
+autoidx 1
+attribute \top 1
+module \fixed_random_dag_n48_w12
+  wire width 12 input 1 \a0
+  wire width 36 input 2 \b0
+  wire width 3 input 3 \s0
+  wire width 12 \y0
+  wire width 12 input 4 \a1
+  wire width 36 input 5 \b1
+  wire width 3 input 6 \s1
+  wire width 12 \y1
+  wire width 12 input 7 \a2
+  wire width 36 input 8 \b2
+  wire width 3 input 9 \s2
+  wire width 12 \y2
+  wire width 36 input 10 \b3
+  wire width 3 input 11 \s3
+  wire width 12 \y3
+  wire width 12 input 12 \a4
+  wire width 36 input 13 \b4
+  wire width 3 input 14 \s4
+  wire width 12 \y4
+  wire width 12 input 15 \a5
+  wire width 36 input 16 \b5
+  wire width 3 input 17 \s5
+  wire width 12 \y5
+  wire width 36 input 18 \b6
+  wire width 3 input 19 \s6
+  wire width 12 \y6
+  wire width 12 input 20 \a7
+  wire width 36 input 21 \b7
+  wire width 3 input 22 \s7
+  wire width 12 \y7
+  wire width 12 input 23 \a8
+  wire width 36 input 24 \b8
+  wire width 3 input 25 \s8
+  wire width 12 \y8
+  wire width 36 input 26 \b9
+  wire width 3 input 27 \s9
+  wire width 12 \y9
+  wire width 12 input 28 \a10
+  wire width 36 input 29 \b10
+  wire width 3 input 30 \s10
+  wire width 12 \y10
+  wire width 12 input 31 \a11
+  wire width 36 input 32 \b11
+  wire width 3 input 33 \s11
+  wire width 12 \y11
+  wire width 36 input 34 \b12
+  wire width 3 input 35 \s12
+  wire width 12 \y12
+  wire width 12 input 36 \a13
+  wire width 36 input 37 \b13
+  wire width 3 input 38 \s13
+  wire width 12 \y13
+  wire width 12 input 39 \a14
+  wire width 36 input 40 \b14
+  wire width 3 input 41 \s14
+  wire width 12 \y14
+  wire width 36 input 42 \b15
+  wire width 3 input 43 \s15
+  wire width 12 \y15
+  wire width 12 input 44 \a16
+  wire width 36 input 45 \b16
+  wire width 3 input 46 \s16
+  wire width 12 \y16
+  wire width 12 input 47 \a17
+  wire width 36 input 48 \b17
+  wire width 3 input 49 \s17
+  wire width 12 \y17
+  wire width 36 input 50 \b18
+  wire width 3 input 51 \s18
+  wire width 12 \y18
+  wire width 12 input 52 \a19
+  wire width 36 input 53 \b19
+  wire width 3 input 54 \s19
+  wire width 12 \y19
+  wire width 12 input 55 \a20
+  wire width 36 input 56 \b20
+  wire width 3 input 57 \s20
+  wire width 12 \y20
+  wire width 36 input 58 \b21
+  wire width 3 input 59 \s21
+  wire width 12 \y21
+  wire width 12 input 60 \a22
+  wire width 36 input 61 \b22
+  wire width 3 input 62 \s22
+  wire width 12 \y22
+  wire width 12 input 63 \a23
+  wire width 36 input 64 \b23
+  wire width 3 input 65 \s23
+  wire width 12 \y23
+  wire width 36 input 66 \b24
+  wire width 3 input 67 \s24
+  wire width 12 \y24
+  wire width 12 input 68 \a25
+  wire width 36 input 69 \b25
+  wire width 3 input 70 \s25
+  wire width 12 \y25
+  wire width 12 input 71 \a26
+  wire width 36 input 72 \b26
+  wire width 3 input 73 \s26
+  wire width 12 \y26
+  wire width 36 input 74 \b27
+  wire width 3 input 75 \s27
+  wire width 12 \y27
+  wire width 12 input 76 \a28
+  wire width 36 input 77 \b28
+  wire width 3 input 78 \s28
+  wire width 12 \y28
+  wire width 12 input 79 \a29
+  wire width 36 input 80 \b29
+  wire width 3 input 81 \s29
+  wire width 12 \y29
+  wire width 36 input 82 \b30
+  wire width 3 input 83 \s30
+  wire width 12 \y30
+  wire width 12 input 84 \a31
+  wire width 36 input 85 \b31
+  wire width 3 input 86 \s31
+  wire width 12 \y31
+  wire width 12 input 87 \a32
+  wire width 36 input 88 \b32
+  wire width 3 input 89 \s32
+  wire width 12 \y32
+  wire width 36 input 90 \b33
+  wire width 3 input 91 \s33
+  wire width 12 \y33
+  wire width 12 input 92 \a34
+  wire width 36 input 93 \b34
+  wire width 3 input 94 \s34
+  wire width 12 \y34
+  wire width 12 input 95 \a35
+  wire width 36 input 96 \b35
+  wire width 3 input 97 \s35
+  wire width 12 \y35
+  wire width 36 input 98 \b36
+  wire width 3 input 99 \s36
+  wire width 12 \y36
+  wire width 12 input 100 \a37
+  wire width 36 input 101 \b37
+  wire width 3 input 102 \s37
+  wire width 12 \y37
+  wire width 12 input 103 \a38
+  wire width 36 input 104 \b38
+  wire width 3 input 105 \s38
+  wire width 12 \y38
+  wire width 36 input 106 \b39
+  wire width 3 input 107 \s39
+  wire width 12 \y39
+  wire width 12 input 108 \a40
+  wire width 36 input 109 \b40
+  wire width 3 input 110 \s40
+  wire width 12 \y40
+  wire width 12 input 111 \a41
+  wire width 36 input 112 \b41
+  wire width 3 input 113 \s41
+  wire width 12 \y41
+  wire width 36 input 114 \b42
+  wire width 3 input 115 \s42
+  wire width 12 \y42
+  wire width 12 input 116 \a43
+  wire width 36 input 117 \b43
+  wire width 3 input 118 \s43
+  wire width 12 \y43
+  wire width 12 input 119 \a44
+  wire width 36 input 120 \b44
+  wire width 3 input 121 \s44
+  wire width 12 \y44
+  wire width 36 input 122 \b45
+  wire width 3 input 123 \s45
+  wire width 12 \y45
+  wire width 12 input 124 \a46
+  wire width 36 input 125 \b46
+  wire width 3 input 126 \s46
+  wire width 12 \y46
+  wire width 12 input 127 \a47
+  wire width 36 input 128 \b47
+  wire width 3 input 129 \s47
+  wire width 12 \y47
+  wire width 12 output 130 \out0
+  wire width 12 output 131 \out1
+  wire width 12 output 132 \out2
+  cell $pmux \p0
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a0
+    connect \B { \b0 [11:0] \b0 [35:24] \b0 [23:12] }
+    connect \S { \s0 [0] \s0 [2] \s0 [1] }
+    connect \Y \y0
+  end
+  cell $pmux \p1
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a1
+    connect \B { \b1 [23:12] \b1 [11:0] \y0 }
+    connect \S { \s1 [1] \s1 [0] \s1 [2] }
+    connect \Y \y1
+  end
+  cell $pmux \p2
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a2
+    connect \B { \y0 \b2 [35:24] \b2 [23:12] }
+    connect \S { \s2 [0] \s2 [2] \s2 [1] }
+    connect \Y \y2
+  end
+  cell $pmux \p3
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y0
+    connect \B { \b3 [23:12] \b3 [11:0] \b3 [35:24] }
+    connect \S { \s3 [1] \s3 [0] \s3 [2] }
+    connect \Y \y3
+  end
+  cell $pmux \p4
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a4
+    connect \B { \b4 [11:0] \y2 \b4 [35:24] }
+    connect \S { \s4 [0] \s4 [1] \s4 [2] }
+    connect \Y \y4
+  end
+  cell $pmux \p5
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a5
+    connect \B { \b5 [23:12] \y4 \b5 [35:24] }
+    connect \S { \s5 [1] \s5 [0] \s5 [2] }
+    connect \Y \y5
+  end
+  cell $pmux \p6
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y4
+    connect \B { \b6 [35:24] \b6 [11:0] \b6 [23:12] }
+    connect \S { \s6 [2] \s6 [0] \s6 [1] }
+    connect \Y \y6
+  end
+  cell $pmux \p7
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a7
+    connect \B { \y3 \y3 \b7 [23:12] }
+    connect \S { \s7 [2] \s7 [0] \s7 [1] }
+    connect \Y \y7
+  end
+  cell $pmux \p8
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a8
+    connect \B { \b8 [23:12] \y0 \b8 [35:24] }
+    connect \S { \s8 [1] \s8 [0] \s8 [2] }
+    connect \Y \y8
+  end
+  cell $pmux \p9
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y2
+    connect \B { \b9 [35:24] \b9 [23:12] \b9 [11:0] }
+    connect \S { \s9 [2] \s9 [1] \s9 [0] }
+    connect \Y \y9
+  end
+  cell $pmux \p10
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a10
+    connect \B { \b10 [23:12] \b10 [11:0] \y0 }
+    connect \S { \s10 [1] \s10 [0] \s10 [2] }
+    connect \Y \y10
+  end
+  cell $pmux \p11
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a11
+    connect \B { \b11 [23:12] \y2 \b11 [35:24] }
+    connect \S { \s11 [1] \s11 [0] \s11 [2] }
+    connect \Y \y11
+  end
+  cell $pmux \p12
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y8
+    connect \B { \b12 [35:24] \b12 [23:12] \b12 [11:0] }
+    connect \S { \s12 [2] \s12 [1] \s12 [0] }
+    connect \Y \y12
+  end
+  cell $pmux \p13
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a13
+    connect \B { \b13 [23:12] \y2 \b13 [35:24] }
+    connect \S { \s13 [1] \s13 [0] \s13 [2] }
+    connect \Y \y13
+  end
+  cell $pmux \p14
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a14
+    connect \B { \b14 [35:24] \y6 \b14 [23:12] }
+    connect \S { \s14 [2] \s14 [0] \s14 [1] }
+    connect \Y \y14
+  end
+  cell $pmux \p15
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y3
+    connect \B { \b15 [35:24] \b15 [11:0] \b15 [23:12] }
+    connect \S { \s15 [2] \s15 [0] \s15 [1] }
+    connect \Y \y15
+  end
+  cell $pmux \p16
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a16
+    connect \B { \b16 [35:24] \y7 \b16 [11:0] }
+    connect \S { \s16 [2] \s16 [1] \s16 [0] }
+    connect \Y \y16
+  end
+  cell $pmux \p17
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a17
+    connect \B { \b17 [23:12] \b17 [35:24] \y15 }
+    connect \S { \s17 [1] \s17 [2] \s17 [0] }
+    connect \Y \y17
+  end
+  cell $pmux \p18
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y12
+    connect \B { \b18 [23:12] \b18 [11:0] \b18 [35:24] }
+    connect \S { \s18 [1] \s18 [0] \s18 [2] }
+    connect \Y \y18
+  end
+  cell $pmux \p19
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a19
+    connect \B { \b19 [35:24] \b19 [11:0] \y8 }
+    connect \S { \s19 [2] \s19 [0] \s19 [1] }
+    connect \Y \y19
+  end
+  cell $pmux \p20
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a20
+    connect \B { \b20 [35:24] \y19 \b20 [11:0] }
+    connect \S { \s20 [2] \s20 [1] \s20 [0] }
+    connect \Y \y20
+  end
+  cell $pmux \p21
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y1
+    connect \B { \b21 [35:24] \b21 [11:0] \y1 }
+    connect \S { \s21 [2] \s21 [0] \s21 [1] }
+    connect \Y \y21
+  end
+  cell $pmux \p22
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a22
+    connect \B { \b22 [23:12] \y2 \b22 [11:0] }
+    connect \S { \s22 [1] \s22 [2] \s22 [0] }
+    connect \Y \y22
+  end
+  cell $pmux \p23
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a23
+    connect \B { \b23 [35:24] \b23 [11:0] \y5 }
+    connect \S { \s23 [2] \s23 [0] \s23 [1] }
+    connect \Y \y23
+  end
+  cell $pmux \p24
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y23
+    connect \B { \b24 [11:0] \b24 [35:24] \b24 [23:12] }
+    connect \S { \s24 [0] \s24 [2] \s24 [1] }
+    connect \Y \y24
+  end
+  cell $pmux \p25
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a25
+    connect \B { \b25 [35:24] \b25 [23:12] \y23 }
+    connect \S { \s25 [2] \s25 [1] \s25 [0] }
+    connect \Y \y25
+  end
+  cell $pmux \p26
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a26
+    connect \B { \b26 [23:12] \b26 [11:0] \y23 }
+    connect \S { \s26 [1] \s26 [0] \s26 [2] }
+    connect \Y \y26
+  end
+  cell $pmux \p27
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y4
+    connect \B { \b27 [23:12] \b27 [35:24] \b27 [11:0] }
+    connect \S { \s27 [1] \s27 [2] \s27 [0] }
+    connect \Y \y27
+  end
+  cell $pmux \p28
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a28
+    connect \B { \y5 \b28 [11:0] \b28 [23:12] }
+    connect \S { \s28 [2] \s28 [0] \s28 [1] }
+    connect \Y \y28
+  end
+  cell $pmux \p29
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a29
+    connect \B { \y18 \b29 [35:24] \b29 [11:0] }
+    connect \S { \s29 [1] \s29 [2] \s29 [0] }
+    connect \Y \y29
+  end
+  cell $pmux \p30
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y15
+    connect \B { \b30 [11:0] \b30 [35:24] \b30 [23:12] }
+    connect \S { \s30 [0] \s30 [2] \s30 [1] }
+    connect \Y \y30
+  end
+  cell $pmux \p31
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a31
+    connect \B { \b31 [35:24] \b31 [11:0] \y17 }
+    connect \S { \s31 [2] \s31 [0] \s31 [1] }
+    connect \Y \y31
+  end
+  cell $pmux \p32
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a32
+    connect \B { \b32 [23:12] \b32 [35:24] \y5 }
+    connect \S { \s32 [1] \s32 [2] \s32 [0] }
+    connect \Y \y32
+  end
+  cell $pmux \p33
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y23
+    connect \B { \b33 [23:12] \b33 [35:24] \b33 [11:0] }
+    connect \S { \s33 [1] \s33 [2] \s33 [0] }
+    connect \Y \y33
+  end
+  cell $pmux \p34
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a34
+    connect \B { \b34 [35:24] \b34 [11:0] \y19 }
+    connect \S { \s34 [2] \s34 [0] \s34 [1] }
+    connect \Y \y34
+  end
+  cell $pmux \p35
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a35
+    connect \B { \b35 [35:24] \y28 \y28 }
+    connect \S { \s35 [2] \s35 [0] \s35 [1] }
+    connect \Y \y35
+  end
+  cell $pmux \p36
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y8
+    connect \B { \b36 [23:12] \b36 [11:0] \b36 [35:24] }
+    connect \S { \s36 [1] \s36 [0] \s36 [2] }
+    connect \Y \y36
+  end
+  cell $pmux \p37
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a37
+    connect \B { \b37 [35:24] \b37 [11:0] \y16 }
+    connect \S { \s37 [2] \s37 [0] \s37 [1] }
+    connect \Y \y37
+  end
+  cell $pmux \p38
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a38
+    connect \B { \y14 \b38 [35:24] \b38 [11:0] }
+    connect \S { \s38 [1] \s38 [2] \s38 [0] }
+    connect \Y \y38
+  end
+  cell $pmux \p39
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y33
+    connect \B { \b39 [35:24] \b39 [11:0] \b39 [23:12] }
+    connect \S { \s39 [2] \s39 [0] \s39 [1] }
+    connect \Y \y39
+  end
+  cell $pmux \p40
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a40
+    connect \B { \b40 [23:12] \b40 [11:0] \y3 }
+    connect \S { \s40 [1] \s40 [0] \s40 [2] }
+    connect \Y \y40
+  end
+  cell $pmux \p41
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a41
+    connect \B { \b41 [11:0] \b41 [35:24] \y21 }
+    connect \S { \s41 [0] \s41 [2] \s41 [1] }
+    connect \Y \y41
+  end
+  cell $pmux \p42
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y25
+    connect \B { \b42 [35:24] \b42 [11:0] \y25 }
+    connect \S { \s42 [2] \s42 [0] \s42 [1] }
+    connect \Y \y42
+  end
+  cell $pmux \p43
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a43
+    connect \B { \b43 [11:0] \b43 [23:12] \y20 }
+    connect \S { \s43 [0] \s43 [1] \s43 [2] }
+    connect \Y \y43
+  end
+  cell $pmux \p44
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a44
+    connect \B { \b44 [23:12] \y1 \b44 [35:24] }
+    connect \S { \s44 [1] \s44 [0] \s44 [2] }
+    connect \Y \y44
+  end
+  cell $pmux \p45
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \y31
+    connect \B { \b45 [23:12] \b45 [35:24] \b45 [11:0] }
+    connect \S { \s45 [1] \s45 [2] \s45 [0] }
+    connect \Y \y45
+  end
+  cell $pmux \p46
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a46
+    connect \B { \y38 \b46 [35:24] \b46 [23:12] }
+    connect \S { \s46 [0] \s46 [2] \s46 [1] }
+    connect \Y \y46
+  end
+  cell $pmux \p47
+    parameter \WIDTH 12
+    parameter \S_WIDTH 3
+    connect \A \a47
+    connect \B { \b47 [23:12] \b47 [35:24] \y37 }
+    connect \S { \s47 [1] \s47 [2] \s47 [0] }
+    connect \Y \y47
+  end
+  connect \out0 \y45
+  connect \out1 \y46
+  connect \out2 \y47
+end

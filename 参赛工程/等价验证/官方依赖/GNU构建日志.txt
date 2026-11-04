@@ -1,0 +1,115 @@
+
+Creating GNU Make for Windows 9X/NT/2K/XP/Vista/7/8/10/11
+
+- Building without Guile
+**********************************************************************
+** Visual Studio 2022 Developer Command Prompt v17.14.13
+** Copyright (c) 2025 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35215 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Compiling .\WinRel version
+        1 file(s) copied.
+        1 file(s) copied.
+        1 file(s) copied.
+- Compiling src/ar.c
+ar.c
+- Compiling src/arscan.c
+arscan.c
+- Compiling src/commands.c
+commands.c
+- Compiling src/default.c
+default.c
+- Compiling src/dir.c
+dir.c
+- Compiling src/expand.c
+expand.c
+- Compiling src/file.c
+file.c
+- Compiling src/function.c
+function.c
+src/function.c(1959): warning C4267: 'function': conversion from 'size_t' to 'unsigned int', possible loss of data
+- Compiling src/getopt.c
+getopt.c
+- Compiling src/getopt1.c
+getopt1.c
+- Compiling src/guile.c
+guile.c
+- Compiling src/hash.c
+hash.c
+- Compiling src/implicit.c
+implicit.c
+- Compiling src/job.c
+job.c
+C:\Users\13889\Desktop\项目\零点六九基线重做\等价验证\官方依赖\make-4.4.1\src\job.c(895) : warning C4701: potentially uninitialized local variable 'exit_sig' used
+C:\Users\13889\Desktop\项目\零点六九基线重做\等价验证\官方依赖\make-4.4.1\src\job.c(990) : warning C4701: potentially uninitialized local variable 'coredump' used
+C:\Users\13889\Desktop\项目\零点六九基线重做\等价验证\官方依赖\make-4.4.1\src\job.c(895) : warning C4701: potentially uninitialized local variable 'exit_code' used
+- Compiling src/load.c
+load.c
+- Compiling src/loadapi.c
+loadapi.c
+- Compiling src/main.c
+main.c
+- Compiling src/misc.c
+misc.c
+src/misc.c(435): warning C4267: 'function': conversion from 'size_t' to 'unsigned int', possible loss of data
+src/misc.c(457): warning C4267: 'function': conversion from 'size_t' to 'unsigned int', possible loss of data
+- Compiling src/output.c
+output.c
+- Compiling src/read.c
+read.c
+src/read.c(3479): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\13889\Desktop\项目\零点六九基线重做\等价验证\官方依赖\make-4.4.1\src\read.c(2137) : warning C4701: potentially uninitialized local variable 'cmds' used
+C:\Users\13889\Desktop\项目\零点六九基线重做\等价验证\官方依赖\make-4.4.1\src\read.c(2137) : warning C4703: potentially uninitialized local pointer variable 'cmds' used
+- Compiling src/remake.c
+remake.c
+- Compiling src/remote-stub.c
+remote-stub.c
+- Compiling src/rule.c
+rule.c
+- Compiling src/shuffle.c
+shuffle.c
+- Compiling src/signame.c
+signame.c
+- Compiling src/strcache.c
+strcache.c
+- Compiling src/variable.c
+variable.c
+C:\Users\13889\Desktop\项目\零点六九基线重做\等价验证\官方依赖\make-4.4.1\src\variable.c(1891) : warning C4701: potentially uninitialized local variable 'origin' used
+C:\Users\13889\Desktop\项目\零点六九基线重做\等价验证\官方依赖\make-4.4.1\src\variable.c(1891) : warning C4703: potentially uninitialized local pointer variable 'origin' used
+- Compiling src/version.c
+version.c
+- Compiling src/vpath.c
+vpath.c
+- Compiling src/w32/pathstuff.c
+pathstuff.c
+- Compiling src/w32/w32os.c
+w32os.c
+- Compiling src/w32/compat/posixfcn.c
+posixfcn.c
+- Compiling src/w32/subproc/misc.c
+misc.c
+- Compiling src/w32/subproc/sub_proc.c
+sub_proc.c
+- Compiling src/w32/subproc/w32err.c
+w32err.c
+- Compiling lib/fnmatch.c
+fnmatch.c
+- Compiling lib/glob.c
+glob.c
+- Compiling lib/getloadavg.c
+getloadavg.c
+- Compiling src\w32\compat\dirent.c
+dirent.c
+
+- Linking ./WinRel/gnumake.exe
+   Creating library .\WinRel\gnumake.lib and object .\WinRel\gnumake.exp
+
+.\WinRel build succeeded.
+        1 file(s) copied.
+        1 file(s) copied.

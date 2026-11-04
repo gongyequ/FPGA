@@ -1,0 +1,62 @@
+[
+  {
+    "asset": "command_demo.tcl",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\视频演示_20261104\\command_demo.tcl",
+    "sha256": "cba3aeb24d427306a93c5b26413a40bfafd7e630e978110fc767efbefaad98d0"
+  },
+  {
+    "asset": "命令运行.log",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\视频演示_20261104\\运行记录\\20261104_025843_562577_Tcl命令\\自定义命令.log",
+    "sha256": "956248ec8fb60f4bbeff1e50a6c2ffb5896e71f99604862a74944c93721d8c92"
+  },
+  {
+    "asset": "命令执行.json",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\视频演示_20261104\\运行记录\\20261104_025843_562577_Tcl命令\\自定义命令_执行.json",
+    "sha256": "1d83c0a0d20cf795895e486e05c3c6c5244d1d8ecca859012a3ffee9e76927f5"
+  },
+  {
+    "asset": "original.log",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\视频演示_20261104\\运行记录\\20261104_030210_465218_面积对比\\original.log",
+    "sha256": "325b660856ba1b286d68c213fbd2ea28ab3539a4eae4e9d83915c94ba70a0cde"
+  },
+  {
+    "asset": "optimized.log",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\视频演示_20261104\\运行记录\\20261104_030210_465218_面积对比\\optimized.log",
+    "sha256": "7cadad75310986554eb693abfc3272c3228546d0b51b4236f9f78936c00a2cce"
+  },
+  {
+    "asset": "单例面积.json",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\视频演示_20261104\\运行记录\\20261104_030210_465218_面积对比\\本次面积结果.json",
+    "sha256": "62d1935bb2318f6f22097a0a5727b6c1403903f4423d4d00fc4fb5bc0df0dece"
+  },
+  {
+    "asset": "单例EQY.json",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\视频演示_20261104\\运行记录\\20261104_030211_923233_EQY验证\\本次EQY结果.json",
+    "sha256": "86ec1e2daf78d2d1ee47b7db0046783f54eae6b510fc4c709bf82e6f36078466"
+  },
+  {
+    "asset": "eqy-console.log",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\视频演示_20261104\\运行记录\\20261104_030211_923233_EQY验证\\官方EQY结果\\eqy-console.log",
+    "sha256": "a1a859e4af1f3beee6943423c1b72d038ba47fd26ea26fa19f62ccd61f788203"
+  },
+  {
+    "asset": "EQY_PASS",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\视频演示_20261104\\运行记录\\20261104_030211_923233_EQY验证\\官方EQY结果\\proof\\PASS",
+    "sha256": "31cdf03edb145bcaa78246c423b3ce298ecbb52eb775771d2b5f14126acbb6e7"
+  },
+  {
+    "asset": "九例面积.json",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\实测记录\\B臂集成F4c_面积等价_01\\area\\summary.json",
+    "sha256": "f35fda12b0ffb6d81fd0fb1b1d34b1e5504a650529f5d7d7e1f85d3061c78ce6"
+  },
+  {
+    "asset": "九例EQY.json",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\实测记录\\B臂集成F4c_面积等价_01\\eqy\\正式EQY汇总.json",
+    "sha256": "ed87f5782b782d5bca4829183210aaccbed3230987851e431aa15a8ddaca2476"
+  },
+  {
+    "asset": "pmux_opt.cc",
+    "original": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\开发源码\\passes\\opt\\pmux_opt.cc",
+    "sha256": "a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3"
+  }
+]

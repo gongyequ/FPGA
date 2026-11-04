@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "R:/yosys.exe",
+    "-Q",
+    "-p",
+    "pmux_opt -order-decode -flatten-fallback -uniform-abc; scratchpad -get abc9.script"
+  ],
+  "cwd": "C:\\Users\\13889\\AppData\\Local\\Temp\\pmux-config-audit-vgf98boy",
+  "returncode": 0
+}

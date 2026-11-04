@@ -1,0 +1,4 @@
+read_rtlil ref.il
+check
+write_json ref.json
+write_verilog -noattr -noexpr ref.v

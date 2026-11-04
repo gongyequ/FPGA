@@ -1,0 +1,21 @@
+{
+  "command": [
+    "X:/bin/eqy.exe",
+    "-f",
+    "proof.eqy"
+  ],
+  "cwd": "C:\\Users\\13889\\AppData\\Local\\Temp\\eqy-official-8pff48rh",
+  "exit_code": 0,
+  "wall_seconds": 3.0003451998345554,
+  "started_utc": "2026-11-03T18:20:54.634179+00:00",
+  "eqy_sha256": "ad027ca0436c8c517e8e7a334721142a0e4d3088eb7f940ff6dd59e019ccb808",
+  "sby_sha256": "456ed28b00192b80cce32320f7f10370cd507f0527b1fedcc84da292f4f0d7b3",
+  "yosys_sha256": "a9a1b18604fd984972e8c6786a52261cee9e6cbe002b65e5ca353beacbd65e90",
+  "make_sha256": "b524a658ae29b772cbd51f971269932b39ad33faa24f21ed76b8b8b92b0e297f",
+  "resolved_dependencies": {
+    "suite": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\官方工具\\oss-cad-suite",
+    "gnu_make": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\等价验证\\官方依赖\\make-4.4.1\\WinRel\\gnumake.exe",
+    "git_usr_bin": "D:\\Git\\usr\\bin"
+  },
+  "note": "Official EQY unmodified. GNU Make 4.4.1 built from GNU release sources. No status shims."
+}

@@ -1,0 +1,75 @@
+{
+  "name": "fallback_d4_w8_k2",
+  "description": "多层默认A嵌套，含成本/分支上限造成的部分合并",
+  "input_pmux_count": 4,
+  "ports": [
+    {
+      "name": "a0",
+      "width": 8,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b0",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s0",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b1",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s1",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b2",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s2",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b3",
+      "width": 16,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s3",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "out0",
+      "width": 8,
+      "direction": "output",
+      "kind": "data"
+    }
+  ],
+  "selection": null,
+  "expect_unchanged": false,
+  "min_removed_with_default": 2,
+  "min_removed_with_b": 0,
+  "simulate": true,
+  "samples": 512,
+  "scope": "supplemental structural regression; not official nine-case area/performance",
+  "input_sha256": "4e8b8690b041f21465b2c20f3dd7f4face3ece2f9549d4137ef75819c860f466"
+}

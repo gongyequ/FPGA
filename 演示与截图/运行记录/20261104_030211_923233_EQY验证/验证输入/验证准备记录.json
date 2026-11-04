@@ -1,0 +1,76 @@
+{
+  "top": "pmux_case04_feedback",
+  "inputs": {
+    "gold": {
+      "sha256": "55e0704863cc6c159854e0aec13d67fb0e01e0b9422f0932559031c5b6dc034a",
+      "raw_cell_counts": {
+        "dffeas": 16,
+        "$lut": 371
+      },
+      "converted_ff_count": 16,
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "width": 1
+        },
+        "rst": {
+          "direction": "input",
+          "width": 1
+        },
+        "en": {
+          "direction": "input",
+          "width": 1
+        },
+        "data_in": {
+          "direction": "input",
+          "width": 64
+        },
+        "ctrl_in": {
+          "direction": "input",
+          "width": 32
+        },
+        "data_out": {
+          "direction": "output",
+          "width": 16
+        }
+      }
+    },
+    "gate": {
+      "sha256": "2dbeb2f0291a54380b59744c3d802c1f95eea51448ffb4256f6fbd82ec329698",
+      "raw_cell_counts": {
+        "dffeas": 16,
+        "$lut": 292
+      },
+      "converted_ff_count": 16,
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "width": 1
+        },
+        "rst": {
+          "direction": "input",
+          "width": 1
+        },
+        "en": {
+          "direction": "input",
+          "width": 1
+        },
+        "data_in": {
+          "direction": "input",
+          "width": 64
+        },
+        "ctrl_in": {
+          "direction": "input",
+          "width": 32
+        },
+        "data_out": {
+          "direction": "output",
+          "width": 16
+        }
+      }
+    }
+  },
+  "normalization": "After raw post-ABC ILANG and exact FF inverse, EQY applies setundef -zero -init to both sides. Known initial values remain unchanged. This is our disclosed strategy, not a supplied official normalization script.",
+  "partition": "Whole design: only top I/O matched, all output cones grouped.",
+  "official_model_reference": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\官方工具\\oss-cad-suite\\share\\yosys\\intel\\common\\ff_map.v"
+}

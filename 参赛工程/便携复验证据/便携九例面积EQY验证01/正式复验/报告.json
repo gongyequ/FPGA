@@ -1,0 +1,988 @@
+{
+  "candidate": "Barm_F4c_portable",
+  "abc_override": false,
+  "diagnostic_only": false,
+  "binding_sha256": "82ab01f3845416bf52583d2071d144a9a621e8e49d30bda65256096eec586110",
+  "area": {
+    "case_count": 9,
+    "mean_reduction_percent": 14.080533528168981,
+    "original_total": 2389,
+    "optimized_total": 2115,
+    "total_reduction_percent": 11.46923398911679,
+    "area_gate_pass": true,
+    "gate_definition": "逐例下降百分比算术平均>=10%；9例均无面积反增；DFF和顶层IO保持不变。",
+    "cases": [
+      {
+        "case": "rar_test1",
+        "original": 288,
+        "optimized": 288,
+        "reduction_percent": 0.0,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "rar_test2",
+        "original": 25,
+        "optimized": 15,
+        "reduction_percent": 40.0,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "rar_test3",
+        "original": 12,
+        "optimized": 12,
+        "reduction_percent": 0.0,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "rar_test4",
+        "original": 31,
+        "optimized": 24,
+        "reduction_percent": 22.580645161290324,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case01",
+        "original": 405,
+        "optimized": 348,
+        "reduction_percent": 14.074074074074074,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case02",
+        "original": 446,
+        "optimized": 400,
+        "reduction_percent": 10.31390134529148,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case03",
+        "original": 401,
+        "optimized": 370,
+        "reduction_percent": 7.73067331670823,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case04",
+        "original": 371,
+        "optimized": 292,
+        "reduction_percent": 21.29380053908356,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      },
+      {
+        "case": "zip_case05",
+        "original": 410,
+        "optimized": 366,
+        "reduction_percent": 10.731707317073171,
+        "no_area_increase": true,
+        "dff_unchanged": true,
+        "io_unchanged": true
+      }
+    ]
+  },
+  "eqy": {
+    "official_case_count": 9,
+    "executed_case_count": 9,
+    "pass_count": 9,
+    "all_nine_pass": true,
+    "cases": [
+      {
+        "case": "rar_test1",
+        "top": "test1",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "c0e66b7453dd056a07dd16f2ffb627529979558044495ce94ce2c8bde1f89f45",
+            "raw_cell_counts": {
+              "dffeas": 222,
+              "$lut": 288
+            },
+            "converted_ff_count": 222,
+            "ports": {
+              "clock": {
+                "direction": "input",
+                "width": 1
+              },
+              "reset": {
+                "direction": "input",
+                "width": 1
+              },
+              "valid": {
+                "direction": "input",
+                "width": 1
+              },
+              "I0": {
+                "direction": "input",
+                "width": 16
+              },
+              "I1": {
+                "direction": "input",
+                "width": 16
+              },
+              "I2": {
+                "direction": "input",
+                "width": 16
+              },
+              "I3": {
+                "direction": "input",
+                "width": 16
+              },
+              "I4": {
+                "direction": "input",
+                "width": 16
+              },
+              "I5": {
+                "direction": "input",
+                "width": 16
+              },
+              "I6": {
+                "direction": "input",
+                "width": 16
+              },
+              "I7": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q0": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q1": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q2": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q3": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q4": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q5": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q6": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q7": {
+                "direction": "input",
+                "width": 16
+              },
+              "por6_out": {
+                "direction": "output",
+                "width": 1
+              },
+              "inter0007_out": {
+                "direction": "output",
+                "width": 1
+              },
+              "inter0008_out": {
+                "direction": "output",
+                "width": 12
+              },
+              "inter0009_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          },
+          "gate": {
+            "sha256": "65403d8f486b36191776b0bd9e3f41689c3580dac9bf5311e6ffbf9693f29303",
+            "raw_cell_counts": {
+              "dffeas": 222,
+              "$lut": 288
+            },
+            "converted_ff_count": 222,
+            "ports": {
+              "clock": {
+                "direction": "input",
+                "width": 1
+              },
+              "reset": {
+                "direction": "input",
+                "width": 1
+              },
+              "valid": {
+                "direction": "input",
+                "width": 1
+              },
+              "I0": {
+                "direction": "input",
+                "width": 16
+              },
+              "I1": {
+                "direction": "input",
+                "width": 16
+              },
+              "I2": {
+                "direction": "input",
+                "width": 16
+              },
+              "I3": {
+                "direction": "input",
+                "width": 16
+              },
+              "I4": {
+                "direction": "input",
+                "width": 16
+              },
+              "I5": {
+                "direction": "input",
+                "width": 16
+              },
+              "I6": {
+                "direction": "input",
+                "width": 16
+              },
+              "I7": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q0": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q1": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q2": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q3": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q4": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q5": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q6": {
+                "direction": "input",
+                "width": 16
+              },
+              "Q7": {
+                "direction": "input",
+                "width": 16
+              },
+              "por6_out": {
+                "direction": "output",
+                "width": 1
+              },
+              "inter0007_out": {
+                "direction": "output",
+                "width": 1
+              },
+              "inter0008_out": {
+                "direction": "output",
+                "width": 12
+              },
+              "inter0009_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 35.76872800011188
+      },
+      {
+        "case": "rar_test2",
+        "top": "test2",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "261b2dddba64f6e1f22b3d316e81c9f6f343e16755cace7c9fa3ca1715c5eb6c",
+            "raw_cell_counts": {
+              "$lut": 25
+            },
+            "converted_ff_count": 0,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "a": {
+                "direction": "input",
+                "width": 1
+              },
+              "b": {
+                "direction": "input",
+                "width": 1
+              },
+              "c": {
+                "direction": "input",
+                "width": 1
+              },
+              "d": {
+                "direction": "input",
+                "width": 1
+              },
+              "dataa": {
+                "direction": "input",
+                "width": 5
+              },
+              "datab": {
+                "direction": "input",
+                "width": 5
+              },
+              "datac": {
+                "direction": "input",
+                "width": 5
+              },
+              "datad": {
+                "direction": "input",
+                "width": 5
+              },
+              "out": {
+                "direction": "output",
+                "width": 5
+              }
+            }
+          },
+          "gate": {
+            "sha256": "618961369ae3109b41520f853d04f31c133b8c75dda1e6be2a64d1f24fcc9723",
+            "raw_cell_counts": {
+              "$lut": 15
+            },
+            "converted_ff_count": 0,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "a": {
+                "direction": "input",
+                "width": 1
+              },
+              "b": {
+                "direction": "input",
+                "width": 1
+              },
+              "c": {
+                "direction": "input",
+                "width": 1
+              },
+              "d": {
+                "direction": "input",
+                "width": 1
+              },
+              "dataa": {
+                "direction": "input",
+                "width": 5
+              },
+              "datab": {
+                "direction": "input",
+                "width": 5
+              },
+              "datac": {
+                "direction": "input",
+                "width": 5
+              },
+              "datad": {
+                "direction": "input",
+                "width": 5
+              },
+              "out": {
+                "direction": "output",
+                "width": 5
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 2.05071510002017
+      },
+      {
+        "case": "rar_test3",
+        "top": "test3",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "193e9e8091e53ed4692b0db9442ab7e509c0f4d1eac55d48e6b606ece777ec01",
+            "raw_cell_counts": {
+              "$lut": 12,
+              "dffeas": 17
+            },
+            "converted_ff_count": 17,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "cs": {
+                "direction": "input",
+                "width": 1
+              },
+              "sr_in": {
+                "direction": "input",
+                "width": 1
+              },
+              "gpioout": {
+                "direction": "output",
+                "width": 8
+              },
+              "sr_out": {
+                "direction": "output",
+                "width": 1
+              }
+            }
+          },
+          "gate": {
+            "sha256": "8b9933057150c75f0fc999dc7957e1abfee182860e69765fa4d53230b94f711d",
+            "raw_cell_counts": {
+              "$lut": 12,
+              "dffeas": 17
+            },
+            "converted_ff_count": 17,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "cs": {
+                "direction": "input",
+                "width": 1
+              },
+              "sr_in": {
+                "direction": "input",
+                "width": 1
+              },
+              "gpioout": {
+                "direction": "output",
+                "width": 8
+              },
+              "sr_out": {
+                "direction": "output",
+                "width": 1
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 3.118610499892384
+      },
+      {
+        "case": "rar_test4",
+        "top": "test4",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "a234386a19ad7ef70612334205ee4355c5f6b421f631def0dfcc97d717cc248e",
+            "raw_cell_counts": {
+              "dffeas": 10,
+              "$lut": 31
+            },
+            "converted_ff_count": 10,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "reset_n": {
+                "direction": "input",
+                "width": 1
+              },
+              "ena": {
+                "direction": "input",
+                "width": 1
+              },
+              "datain": {
+                "direction": "input",
+                "width": 5
+              },
+              "dataout": {
+                "direction": "output",
+                "width": 6
+              },
+              "only_5b": {
+                "direction": "output",
+                "width": 1
+              },
+              "datain_5bis7": {
+                "direction": "output",
+                "width": 1
+              },
+              "data_dp": {
+                "direction": "output",
+                "width": 1
+              },
+              "data_dn": {
+                "direction": "output",
+                "width": 1
+              }
+            }
+          },
+          "gate": {
+            "sha256": "55c53841aeba161a24ba956f7dc3c8d1ae42eb0ad1eddb4cf634b3df46639528",
+            "raw_cell_counts": {
+              "dffeas": 10,
+              "$lut": 24
+            },
+            "converted_ff_count": 10,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "reset_n": {
+                "direction": "input",
+                "width": 1
+              },
+              "ena": {
+                "direction": "input",
+                "width": 1
+              },
+              "datain": {
+                "direction": "input",
+                "width": 5
+              },
+              "dataout": {
+                "direction": "output",
+                "width": 6
+              },
+              "only_5b": {
+                "direction": "output",
+                "width": 1
+              },
+              "datain_5bis7": {
+                "direction": "output",
+                "width": 1
+              },
+              "data_dp": {
+                "direction": "output",
+                "width": 1
+              },
+              "data_dn": {
+                "direction": "output",
+                "width": 1
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 2.0574945001862943
+      },
+      {
+        "case": "zip_case01",
+        "top": "pmux_case01_balanced",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "620f8c42ab0776311586f12675680f99039e72d0e12a6737d9520624e18fa69f",
+            "raw_cell_counts": {
+              "dffeas": 12,
+              "$lut": 405
+            },
+            "converted_ff_count": 12,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 16
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          },
+          "gate": {
+            "sha256": "69a298d6c1f240a58eafc2b422fb59ad0c1a5b48a1f8aaddc74adcc5b5c28922",
+            "raw_cell_counts": {
+              "dffeas": 12,
+              "$lut": 348
+            },
+            "converted_ff_count": 12,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 16
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 2.733459800016135
+      },
+      {
+        "case": "zip_case02",
+        "top": "pmux_case02_pipeline",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "3b0ae7f16d693ce0bdd033536d2e4808c973e65c4f4bb8b4a7962cd80604b8e2",
+            "raw_cell_counts": {
+              "dffeas": 24,
+              "$lut": 446
+            },
+            "converted_ff_count": 24,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 64
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          },
+          "gate": {
+            "sha256": "75493c1d7babb277829b20c5579758b0f7f5c19f6030648593963bd00a1a5041",
+            "raw_cell_counts": {
+              "dffeas": 24,
+              "$lut": 400
+            },
+            "converted_ff_count": 24,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 64
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 3.9631354003213346
+      },
+      {
+        "case": "zip_case03",
+        "top": "pmux_case03_crossbar",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "b347541a518995273a651c29e950353cacab03ddc2ac5b86cabe2165b10f38cf",
+            "raw_cell_counts": {
+              "dffeas": 10,
+              "$lut": 401
+            },
+            "converted_ff_count": 10,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 40
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 32
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 10
+              }
+            }
+          },
+          "gate": {
+            "sha256": "6a3023191a0bf3cb8b1ac2e88d6db17f3517b003435e5fc42d7df81d71c60211",
+            "raw_cell_counts": {
+              "dffeas": 10,
+              "$lut": 370
+            },
+            "converted_ff_count": 10,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 40
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 32
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 10
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 3.0003451998345554
+      },
+      {
+        "case": "zip_case04",
+        "top": "pmux_case04_feedback",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "daeaa06f04ec2be8759fa0fd1a05d4cc6dff07340a8263f2f416ade4db2489fe",
+            "raw_cell_counts": {
+              "dffeas": 16,
+              "$lut": 371
+            },
+            "converted_ff_count": 16,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 64
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 32
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 16
+              }
+            }
+          },
+          "gate": {
+            "sha256": "8867ecda1f824c30f5fbd883262324804b18baa52cb60eb0043e8e4411bbc0d5",
+            "raw_cell_counts": {
+              "dffeas": 16,
+              "$lut": 292
+            },
+            "converted_ff_count": 16,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 64
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 32
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 16
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 2.6094957003369927
+      },
+      {
+        "case": "zip_case05",
+        "top": "pmux_case05_nested",
+        "status": "PASS",
+        "inputs": {
+          "gold": {
+            "sha256": "521db3626b68681ec4915cd44727201f556b7b09cf78550e60fe7783cf0431f7",
+            "raw_cell_counts": {
+              "dffeas": 12,
+              "$lut": 410
+            },
+            "converted_ff_count": 12,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 16
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          },
+          "gate": {
+            "sha256": "05814834c5b2e31072a422dd9e817066ed1bfe320d6d212fc7643d9693337fa7",
+            "raw_cell_counts": {
+              "dffeas": 12,
+              "$lut": 366
+            },
+            "converted_ff_count": 12,
+            "ports": {
+              "clk": {
+                "direction": "input",
+                "width": 1
+              },
+              "rst": {
+                "direction": "input",
+                "width": 1
+              },
+              "en": {
+                "direction": "input",
+                "width": 1
+              },
+              "data_in": {
+                "direction": "input",
+                "width": 48
+              },
+              "ctrl_in": {
+                "direction": "input",
+                "width": 16
+              },
+              "data_out": {
+                "direction": "output",
+                "width": 12
+              }
+            }
+          }
+        },
+        "exit_code": 0,
+        "wall_seconds": 3.0221540001221
+      }
+    ]
+  },
+  "status": "EQY_COMPLETE",
+  "completed_stages": [
+    "identity",
+    "area",
+    "eqy"
+  ],
+  "qualification": "研究工具结果，不是组委会认证；外部ABC覆盖需固化进候选后按相同赛事入口重新验收。"
+}

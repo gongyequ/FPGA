@@ -1,0 +1,2 @@
+read_json gate.json
+write_rtlil gate.il

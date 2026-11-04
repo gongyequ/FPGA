@@ -1,0 +1,76 @@
+{
+  "command": [
+    "U:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/area/zip_case02/optimized-area.ys"
+  ],
+  "variant": "optimized",
+  "started_utc": "2026-11-03T17:26:11.873125+00:00",
+  "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.4709116001613438,
+  "peak_working_set_bytes": 25247744,
+  "memory_samples": 305,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "zip_case02",
+  "top": "pmux_case02_pipeline",
+  "script_sha256": "83af9fa45c2fe834bde1c6ff4ab9e6ddc24c6fc0919f1ebbb0055c41e1c92be2",
+  "abc_process_count": 1,
+  "pmux_messages": [
+    "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 24 decoder tables."
+  ],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&dch -f -r",
+    "&if -W 300 -a -v -F 4 -c",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ],
+  "cell_types": {
+    "dffeas": 24,
+    "$lut": 400
+  },
+  "lut": 400,
+  "inverters": 0,
+  "logic_area": 400,
+  "dff": 24,
+  "io_bits": 127,
+  "ports": {
+    "clk": {
+      "direction": "input",
+      "width": 1
+    },
+    "rst": {
+      "direction": "input",
+      "width": 1
+    },
+    "en": {
+      "direction": "input",
+      "width": 1
+    },
+    "data_in": {
+      "direction": "input",
+      "width": 48
+    },
+    "ctrl_in": {
+      "direction": "input",
+      "width": 64
+    },
+    "data_out": {
+      "direction": "output",
+      "width": 12
+    }
+  },
+  "raw_il_sha256": "75493c1d7babb277829b20c5579758b0f7f5c19f6030648593963bd00a1a5041",
+  "raw_json_sha256": "d9cc652d0d1ebb14e0356d363d1f04c11ddf24bdaf2881e4c75e94d58f8a9741"
+}

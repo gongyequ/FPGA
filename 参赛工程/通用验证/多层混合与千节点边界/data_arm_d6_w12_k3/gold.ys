@@ -1,0 +1,7 @@
+read_rtlil input.il
+check -assert
+rename data_arm_d6_w12_k3 gold
+write_json gold.json
+write_rtlil gold.il
+write_verilog -noexpr -noattr gold.v
+stat

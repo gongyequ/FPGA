@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\suite\\bin\\yosys.exe",
+    "-Q",
+    "-s",
+    "ref.ys"
+  ],
+  "exit_code": 0
+}

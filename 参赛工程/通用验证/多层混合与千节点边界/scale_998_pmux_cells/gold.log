@@ -1,0 +1,34 @@
+
+-- Executing script file `gold.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: input.il
+
+2. Executing CHECK pass (checking for obvious problems).
+Checking module scale_998_pmux_cells...
+Found and reported 0 problems.
+Renaming module \scale_998_pmux_cells to \gold.
+
+3. Executing JSON backend.
+
+4. Executing RTLIL backend.
+Output filename: gold.il
+
+5. Printing statistics.
+
+=== gold ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     4241 wires
+    35924 wire bits
+     4241 public wires
+    35924 public wire bits
+     3243 ports
+    27940 port bits
+      998 cells
+      998   $pmux
+
+End of script. Logfile hash: d3623805a7
+Yosys 0.69+286 (git sha1 37f25dae9-dirty, Release, MSVC C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 19.44.35215.0) [C:Users889Desktop�圭洰\pmux-optyosys-src at HEAD]
+Time spent: 14% 2x write_rtlil (0 sec), 14% 2x write_json (0 sec), ...

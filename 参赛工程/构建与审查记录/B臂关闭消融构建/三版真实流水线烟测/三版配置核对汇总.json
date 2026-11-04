@@ -1,0 +1,49 @@
+{
+  "all_passed": true,
+  "results": [
+    {
+      "name": "B关闭消融",
+      "program": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\候选程序\\B臂关闭消融F4c\\yosys.exe",
+      "program_sha256": "80856566da9f1e458e370e56f33dd1c3ad60ddfa476a12eb59a4cbc7dee2fb1e",
+      "pmux_source_snapshot": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\构建记录\\B臂关闭消融构建\\pmux_opt.cc",
+      "pmux_source_sha256": "a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3",
+      "synth_source_snapshot": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\构建记录\\B臂关闭消融构建\\synth_intel.cc",
+      "synth_source_sha256": "2dc992a748e8e6f92ff7a394e90dadc648bb25e1a6791e5b2fdbe7a99ca1fcb2",
+      "source_pmux_call": "pmux_opt -order-decode -flatten-fallback -uniform-abc",
+      "actual_help_pmux_call": "pmux_opt -order-decode -flatten-fallback -uniform-abc",
+      "abc_script": "+&dch,-f,-r;,&if,{W},{D},{R},-a,-v,-F,4,-c;,&mfs",
+      "source_matches_actual_binary": true,
+      "pass": true
+    },
+    {
+      "name": "B开启正式候选",
+      "program": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\候选程序\\B臂集成F4c\\yosys.exe",
+      "program_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+      "pmux_source_snapshot": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\构建记录\\B臂默认集成构建\\pmux_opt.cc",
+      "pmux_source_sha256": "a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3",
+      "synth_source_snapshot": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\构建记录\\B臂默认集成构建\\synth_intel.cc",
+      "synth_source_sha256": "8a4841fbf64547eae41f22de7c0baf182a619ac201db058c7b8f3f569ac68128",
+      "source_pmux_call": "pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm",
+      "actual_help_pmux_call": "pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm",
+      "abc_script": "+&dch,-f,-r;,&if,{W},{D},{R},-a,-v,-F,4,-c;,&mfs",
+      "source_matches_actual_binary": true,
+      "pass": true
+    },
+    {
+      "name": "早退F4c已验收候选",
+      "program": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\候选程序\\早退F4c\\yosys.exe",
+      "program_sha256": "ede6943c372347c7f817ba5379ab5868bcf824325a612c282832f871f53765bc",
+      "pmux_source_snapshot": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\构建记录\\索引候选构建\\早退F4c原源码.cc",
+      "pmux_source_sha256": "e23b86ef0c9277dd7ccb2f26dadcdde21a911ab826afd647f919bb27662facec",
+      "synth_source_snapshot": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\开发源码\\techlibs\\intel\\synth_intel.cc",
+      "synth_source_sha256": "2dc992a748e8e6f92ff7a394e90dadc648bb25e1a6791e5b2fdbe7a99ca1fcb2",
+      "source_pmux_call": "pmux_opt -order-decode -flatten-fallback -uniform-abc",
+      "actual_help_pmux_call": "pmux_opt -order-decode -flatten-fallback -uniform-abc",
+      "abc_script": "+&dch,-f,-r;,&if,{W},{D},{R},-a,-v,-F,4,-c;,&mfs",
+      "source_matches_actual_binary": true,
+      "pass": true
+    }
+  ],
+  "performance_executed": false,
+  "area_executed": false
+}

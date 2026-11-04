@@ -1,0 +1,229 @@
+{
+  "status": "prepared_not_executed",
+  "scope": "unmodified official PMUX model construction; not C++/EQY/area/performance",
+  "cases": [
+    {
+      "name": "k1_o1_arm0",
+      "ki": 1,
+      "ko": 1,
+      "arm": 0,
+      "width": 3,
+      "exhaustive_data": false,
+      "control_patterns": 16,
+      "data_patterns": 16,
+      "comparisons": 256
+    },
+    {
+      "name": "k1_o2_arm0",
+      "ki": 1,
+      "ko": 2,
+      "arm": 0,
+      "width": 3,
+      "exhaustive_data": false,
+      "control_patterns": 64,
+      "data_patterns": 16,
+      "comparisons": 1024
+    },
+    {
+      "name": "k1_o2_arm1",
+      "ki": 1,
+      "ko": 2,
+      "arm": 1,
+      "width": 3,
+      "exhaustive_data": false,
+      "control_patterns": 64,
+      "data_patterns": 16,
+      "comparisons": 1024
+    },
+    {
+      "name": "k1_o3_arm0",
+      "ki": 1,
+      "ko": 3,
+      "arm": 0,
+      "width": 3,
+      "exhaustive_data": false,
+      "control_patterns": 256,
+      "data_patterns": 16,
+      "comparisons": 4096
+    },
+    {
+      "name": "k1_o3_arm1",
+      "ki": 1,
+      "ko": 3,
+      "arm": 1,
+      "width": 3,
+      "exhaustive_data": false,
+      "control_patterns": 256,
+      "data_patterns": 16,
+      "comparisons": 4096
+    },
+    {
+      "name": "k1_o3_arm2",
+      "ki": 1,
+      "ko": 3,
+      "arm": 2,
+      "width": 3,
+      "exhaustive_data": false,
+      "control_patterns": 256,
+      "data_patterns": 16,
+      "comparisons": 4096
+    },
+    {
+      "name": "k2_o1_arm0",
+      "ki": 2,
+      "ko": 1,
+      "arm": 0,
+      "width": 4,
+      "exhaustive_data": false,
+      "control_patterns": 64,
+      "data_patterns": 16,
+      "comparisons": 1024
+    },
+    {
+      "name": "k2_o2_arm0",
+      "ki": 2,
+      "ko": 2,
+      "arm": 0,
+      "width": 4,
+      "exhaustive_data": false,
+      "control_patterns": 256,
+      "data_patterns": 16,
+      "comparisons": 4096
+    },
+    {
+      "name": "k2_o2_arm1",
+      "ki": 2,
+      "ko": 2,
+      "arm": 1,
+      "width": 4,
+      "exhaustive_data": false,
+      "control_patterns": 256,
+      "data_patterns": 16,
+      "comparisons": 4096
+    },
+    {
+      "name": "k2_o3_arm0",
+      "ki": 2,
+      "ko": 3,
+      "arm": 0,
+      "width": 4,
+      "exhaustive_data": false,
+      "control_patterns": 1024,
+      "data_patterns": 16,
+      "comparisons": 16384
+    },
+    {
+      "name": "k2_o3_arm1",
+      "ki": 2,
+      "ko": 3,
+      "arm": 1,
+      "width": 4,
+      "exhaustive_data": false,
+      "control_patterns": 1024,
+      "data_patterns": 16,
+      "comparisons": 16384
+    },
+    {
+      "name": "k2_o3_arm2",
+      "ki": 2,
+      "ko": 3,
+      "arm": 2,
+      "width": 4,
+      "exhaustive_data": false,
+      "control_patterns": 1024,
+      "data_patterns": 16,
+      "comparisons": 16384
+    },
+    {
+      "name": "k3_o1_arm0",
+      "ki": 3,
+      "ko": 1,
+      "arm": 0,
+      "width": 5,
+      "exhaustive_data": false,
+      "control_patterns": 256,
+      "data_patterns": 16,
+      "comparisons": 4096
+    },
+    {
+      "name": "k3_o2_arm0",
+      "ki": 3,
+      "ko": 2,
+      "arm": 0,
+      "width": 5,
+      "exhaustive_data": false,
+      "control_patterns": 1024,
+      "data_patterns": 16,
+      "comparisons": 16384
+    },
+    {
+      "name": "k3_o2_arm1",
+      "ki": 3,
+      "ko": 2,
+      "arm": 1,
+      "width": 5,
+      "exhaustive_data": false,
+      "control_patterns": 1024,
+      "data_patterns": 16,
+      "comparisons": 16384
+    },
+    {
+      "name": "k3_o3_arm0",
+      "ki": 3,
+      "ko": 3,
+      "arm": 0,
+      "width": 5,
+      "exhaustive_data": false,
+      "control_patterns": 4096,
+      "data_patterns": 16,
+      "comparisons": 65536
+    },
+    {
+      "name": "k3_o3_arm1",
+      "ki": 3,
+      "ko": 3,
+      "arm": 1,
+      "width": 5,
+      "exhaustive_data": false,
+      "control_patterns": 4096,
+      "data_patterns": 16,
+      "comparisons": 65536
+    },
+    {
+      "name": "k3_o3_arm2",
+      "ki": 3,
+      "ko": 3,
+      "arm": 2,
+      "width": 5,
+      "exhaustive_data": false,
+      "control_patterns": 4096,
+      "data_patterns": 16,
+      "comparisons": 65536
+    },
+    {
+      "name": "exhaustive_scalar_k1",
+      "ki": 1,
+      "ko": 1,
+      "arm": 0,
+      "width": 1,
+      "exhaustive_data": true,
+      "control_patterns": 16,
+      "data_patterns": 64,
+      "comparisons": 1024
+    },
+    {
+      "name": "exhaustive_scalar_k2",
+      "ki": 2,
+      "ko": 1,
+      "arm": 0,
+      "width": 1,
+      "exhaustive_data": true,
+      "control_patterns": 64,
+      "data_patterns": 256,
+      "comparisons": 16384
+    }
+  ],
+  "expected_comparisons": 323840,
+  "model_sha256": "41bb80a7891e91e83bf7b360e27ed620fb9bbb7c8a30faa168a2990b392ea70e",
+  "bench_sha256": "68baa85c585b11e44557bc75ea8ead3755acc76aaade67aa5dfa900a60745f3a"
+}

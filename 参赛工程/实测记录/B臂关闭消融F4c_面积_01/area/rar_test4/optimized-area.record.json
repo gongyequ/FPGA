@@ -1,0 +1,88 @@
+{
+  "command": [
+    "U:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/area/rar_test4/optimized-area.ys"
+  ],
+  "variant": "optimized",
+  "started_utc": "2026-11-03T17:47:31.902849+00:00",
+  "binary_sha256": "80856566da9f1e458e370e56f33dd1c3ad60ddfa476a12eb59a4cbc7dee2fb1e",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.22400320041924715,
+  "peak_working_set_bytes": 18698240,
+  "memory_samples": 145,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "rar_test4",
+  "top": "test4",
+  "script_sha256": "ed34c7262804970b7ccc37435cce64370fff98e28912ae0777a98f1023125bb7",
+  "abc_process_count": 1,
+  "pmux_messages": [
+    "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 0 decoder tables."
+  ],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&dch -f -r",
+    "&if -W 300 -a -v -F 4 -c",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ],
+  "cell_types": {
+    "dffeas": 10,
+    "$lut": 24
+  },
+  "lut": 24,
+  "inverters": 0,
+  "logic_area": 24,
+  "dff": 10,
+  "io_bits": 18,
+  "ports": {
+    "clk": {
+      "direction": "input",
+      "width": 1
+    },
+    "reset_n": {
+      "direction": "input",
+      "width": 1
+    },
+    "ena": {
+      "direction": "input",
+      "width": 1
+    },
+    "datain": {
+      "direction": "input",
+      "width": 5
+    },
+    "dataout": {
+      "direction": "output",
+      "width": 6
+    },
+    "only_5b": {
+      "direction": "output",
+      "width": 1
+    },
+    "datain_5bis7": {
+      "direction": "output",
+      "width": 1
+    },
+    "data_dp": {
+      "direction": "output",
+      "width": 1
+    },
+    "data_dn": {
+      "direction": "output",
+      "width": 1
+    }
+  },
+  "raw_il_sha256": "55c53841aeba161a24ba956f7dc3c8d1ae42eb0ad1eddb4cf634b3df46639528",
+  "raw_json_sha256": "cedcc9ae3025d4cd3195056874b7d790de3c1dd677232a30d862a29efea06fef"
+}

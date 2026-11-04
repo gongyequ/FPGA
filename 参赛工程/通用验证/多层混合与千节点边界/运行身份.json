@@ -1,0 +1,17 @@
+{
+  "programs": {
+    "original": {
+      "path": "C:\\Users\\13889\\Desktop\\项目\\零点六九参赛交付包_20261103\\原版程序",
+      "sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4"
+    },
+    "optimized": {
+      "path": "C:\\Users\\13889\\Desktop\\项目\\效率与面积研究_20261104\\候选程序\\B臂集成F4c",
+      "sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53"
+    }
+  },
+  "model_sha256": "41bb80a7891e91e83bf7b360e27ed620fb9bbb7c8a30faa168a2990b392ea70e",
+  "iverilog_sha256": "44a128d541a4348d2f60ec1168a7d9924353b63a61ae19e0c63a406dfceaef17",
+  "vvp_sha256": "13e2d9f6b7c6a4ce6e0fcb65a67717bd44a16770a3ed0431a0f84787b396c059",
+  "pass_command": "pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm",
+  "scope": "supplemental original-model regression; no ABC or official score"
+}

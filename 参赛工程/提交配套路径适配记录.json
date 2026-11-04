@@ -1,0 +1,20 @@
+[
+  {
+    "file": "通用验证/验证B臂嵌套.py",
+    "old_sha256": "59e4b80c1267a9b629c171a3b5529831bf94237aaa269d2d6a3682b36bd91ee0",
+    "new_sha256": "4f7f5e01bf7dac7ba04537f36a6bbeb54d09285fa5382390387c0a1e7a5e6e22",
+    "purpose": "package-relative paths or aliases only; no algorithm changes"
+  },
+  {
+    "file": "通用验证/生成并运行扩展回归.py",
+    "old_sha256": "b91960011482d061546afadef3406d6d39bbcc38ee02c9f51791bee22648844c",
+    "new_sha256": "61684de6142235fe0df61f6027cdc0eceef07e932c9a09394351538995bea2b8",
+    "purpose": "package-relative paths or aliases only; no algorithm changes"
+  },
+  {
+    "file": "验证脚本/运行九例仿真.py",
+    "old_sha256": "6e5a3a013a46a15c29ac13a15f716cac09752ff15e00df5e42045ae4ce125595",
+    "new_sha256": "787d55dc6a5e73fe3a4b4f7f66469cf449833e825817c9d24af7b8a0e4de87eb",
+    "purpose": "package-relative paths or aliases only; no algorithm changes"
+  }
+]

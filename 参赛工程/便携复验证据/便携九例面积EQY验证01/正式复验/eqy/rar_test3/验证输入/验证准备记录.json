@@ -1,0 +1,68 @@
+{
+  "top": "test3",
+  "inputs": {
+    "gold": {
+      "sha256": "193e9e8091e53ed4692b0db9442ab7e509c0f4d1eac55d48e6b606ece777ec01",
+      "raw_cell_counts": {
+        "$lut": 12,
+        "dffeas": 17
+      },
+      "converted_ff_count": 17,
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "width": 1
+        },
+        "cs": {
+          "direction": "input",
+          "width": 1
+        },
+        "sr_in": {
+          "direction": "input",
+          "width": 1
+        },
+        "gpioout": {
+          "direction": "output",
+          "width": 8
+        },
+        "sr_out": {
+          "direction": "output",
+          "width": 1
+        }
+      }
+    },
+    "gate": {
+      "sha256": "8b9933057150c75f0fc999dc7957e1abfee182860e69765fa4d53230b94f711d",
+      "raw_cell_counts": {
+        "$lut": 12,
+        "dffeas": 17
+      },
+      "converted_ff_count": 17,
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "width": 1
+        },
+        "cs": {
+          "direction": "input",
+          "width": 1
+        },
+        "sr_in": {
+          "direction": "input",
+          "width": 1
+        },
+        "gpioout": {
+          "direction": "output",
+          "width": 8
+        },
+        "sr_out": {
+          "direction": "output",
+          "width": 1
+        }
+      }
+    }
+  },
+  "normalization": "After raw post-ABC ILANG and exact FF inverse, EQY applies setundef -zero -init to both sides. Known initial values remain unchanged. This is our disclosed strategy, not a supplied official normalization script.",
+  "partition": "Whole design: only top I/O matched, all output cones grouped.",
+  "official_model_reference": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\代码包内容\\官方工具\\oss-cad-suite\\share\\yosys\\intel\\common\\ff_map.v"
+}

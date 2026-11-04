@@ -1,0 +1,16 @@
+{
+  "command": [
+    "V:/yosys.exe",
+    "-V"
+  ],
+  "variant": "original",
+  "started_utc": "2026-11-03T18:19:50.674877+00:00",
+  "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.05732040014117956,
+  "peak_working_set_bytes": 10502144,
+  "memory_samples": 33,
+  "final_memory_query_ok": true,
+  "timed_out": false
+}

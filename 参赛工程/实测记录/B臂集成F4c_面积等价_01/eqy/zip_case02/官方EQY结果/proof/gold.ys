@@ -1,0 +1,8 @@
+read_rtlil gold.il
+opt_clean
+setundef -zero -init
+prep -top pmux_case02_pipeline
+opt_clean
+check -initdrv
+setundef -undriven -undef
+write_rtlil proof/gold.il

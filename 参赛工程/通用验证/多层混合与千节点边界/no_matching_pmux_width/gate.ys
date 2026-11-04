@@ -1,0 +1,10 @@
+read_rtlil input.il
+check -assert
+pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm no_matching_pmux_width
+select *
+check -assert
+rename no_matching_pmux_width gate
+write_json gate.json
+write_rtlil gate.il
+write_verilog -noexpr -noattr gate.v
+stat

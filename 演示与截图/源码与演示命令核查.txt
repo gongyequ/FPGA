@@ -1,0 +1,177 @@
+PMUX 视频演示：源码与命令核查
+日期：2026-11-04
+核查范围：只读最新“零点六九新版正式提交_20261104/代码包内容”；本代理没有运行 EDA，没有修改冻结包。下列语法与流程已核对源码/既有日志，根代理仍须实际运行视频使用的新脚本并留存新日志，不能把建议脚本说成已执行。
+
+一、推荐展示用例与可讲的真实结果
+
+官方文件：代码包内容/官方测试用例/zip_case04.v。
+顶层：pmux_case04_feedback。
+默认参数：LANES=2，WIDTH=8，必须保持默认值。
+结构：带寄存器反馈的多层 case/PMUX，既有数据反馈又有B数据分支嵌套，适合解释“保护时序状态，仅改组合选择结构”。
+正式原版面积：371个$lut、0个取反、16个dffeas。
+正式优化面积：292个$lut、0个取反、16个dffeas。
+减少79个逻辑单元，下降21.2938005391%；顶层接口115位不变。
+实际规则日志：B数据臂吸收2次、译码表排序8次、A/default吸收0次、零臂/列共享0次。
+不能在ZIP04画面声称A规则也实际命中了；A可作为整体算法讲解，ZIP04实跑只展示它真实命中的规则。
+九例平均下降14.0805%是整体结果，不是ZIP04的下降比例；两个比例不能互换。
+
+二、最新包的接口核查
+
+1. 验证脚本/配置与启动.py
+  --程序：原版、优化版、original、optimized；默认优化版。
+  --工作目录：可指定独立演示目录，默认当前目录。
+  --version：真实执行-V，不能同时传其他Yosys参数。
+  --检查配置：仅定位、打印配置，不启动EDA或创建别名。
+  --帮助/--help-launcher：启动器帮助；-h保留给Yosys。
+  -- 后的参数直接交给真实Yosys。-c和-s脚本的父目录会被映射为ASCII路径，脚本文件名本身宜用英文。
+
+普通最短用法（工作目录已准备demo.tcl）：
+  python -B "$pkg/验证脚本/配置与启动.py" --程序 优化版 --工作目录 "$work" -- -Q -c demo.tcl
+其中$pkg和$work应由PowerShell设为实际路径变量，不是Tcl变量。
+
+严格冻结包不新增内容时的注意事项：
+启动器会创建PACKAGE/suite、PACKAGE/original或PACKAGE/optimized目录联接（已存在且目标正确则复用），Python导入若未禁用字节码还可能产生__pycache__。
+不要直接假设启动器完全不写包目录。建议视频驱动使用独立代理包或直接导入工具定位的ascii_directory：
+  · 代理包只复制启动器及等价验证/工具定位.py到演示目录；其原版程序、优化程序和官方工具目录使用演示目录内的junction指向冻结包。启动器新联接只落在代理包。
+  · 或根代理直接用importlib读取工具定位.py，sys.dont_write_bytecode=True；用ExitStack/ascii_directory映射真实程序目录、工作目录与官方套件，并设置子进程PATH、TCL_LIBRARY、YOSYS_DATDIR、ABC。不会改官方程序。
+  · 中文路径必须映射“真实程序目录”，不能仅映射一个指向中文真实目标的optimized联接再交给Tcl初始化。
+  · 复用工具定位只选择空闲X/W/V/U/T/P/Q，不碰R/S；避免另写固定盘符覆盖脚本。
+  · 用 -B 或 PYTHONDONTWRITEBYTECODE=1，保留原EXE、源码和既有证据字节。
+
+2. 一键复验.py
+  --阶段 配置|面积|等价|性能|全部，默认等价。
+  --输出目录：必须尚不存在，且必须位于代码包内容目录之外。
+  --已有证据：单独性能阶段必须提供先前同入口的正式证据目录。
+  “等价”实际先重跑九例两版面积再执行九例EQY；不是单例开关。
+  这个入口没有--用例，不能给它虚构单例参数。三分钟现场演示建议单例调用既有EQY工具；九例汇总用既有真实记录展示并注明历史完成结果。
+
+三、真实Tcl调用已经由官方源码确认
+
+开发源码/kernel/driver.cc:282 注册-c/--tcl-scriptfile；:368提取--之后的脚本参数；:621–631把参数放入Tcl argc/argv并Tcl_EvalFile。
+开发源码/kernel/tclapi.cc:81–95处理“yosys -import”，为已注册pass建立Tcl proc，等价于：
+  proc pmux_opt args { yosys pmux_opt {*}$args }
+该官方桥接不是我们自制证明器或额外算法。
+“proc”和“rename”因Tcl命令冲突被导入为“procs”和“renames”；pmux_opt无此冲突。
+因此两种调用均有效：
+  yosys pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm
+或者：
+  yosys -import
+  pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm
+
+新增命令是本项目C++ Pass注册到Yosys命令系统后，通过官方Tcl桥直接调用；不是仅写一个同名Tcl空壳。证据：开发源码/passes/opt/pmux_opt.cc中的Pass("pmux_opt",...)和execute，以及passes/opt/CMakeLists.txt注册。
+正式synth_intel源码第215行已经调用这四个开关。不要先手工运行一次pmux_opt，再执行完整优化版synth_intel，并把改变了流程的结果叫正式默认入口。
+帮助文字有历史残留：-flatten-data-arm的help仍称optional research rule，但当前正式synth_intel已经启用。视频口播应以实际调用和日志为准，不能把它说成正式默认关闭；不要为修帮助文字重编已冻结二进制。
+
+四、建议最短Tcl面积脚本
+
+把官方zip_case04.v按原字节复制到$work；同一area.tcl分别由原版与优化版运行。
+以下为可运行脚本正文，输出目录由Tcl创建；角色参数通过第二个--传入：
+
+  yosys -import
+  if {$argc != 1} { error "expected role: original or optimized" }
+  set role [lindex $argv 0]
+  if {$role ni {original optimized}} { error "invalid role" }
+  set top pmux_case04_feedback
+  file mkdir area/zip_case04
+  read_verilog -sv zip_case04.v
+  hierarchy -check -top $top
+  synth_intel -family cycloneiv -top $top -run begin:map_cells
+  write_rtlil area/zip_case04/${role}-area.il
+  write_json area/zip_case04/${role}-area.json
+  stat
+
+使用启动器（如保持包目录不变，先创建上文独立代理包，用$launch指向代理启动器）：
+  python -B "$launch" --程序 原版 --工作目录 "$work" -- -Q -l original.log -c area.tcl -- original
+  python -B "$launch" --程序 优化版 --工作目录 "$work" -- -Q -l optimized.log -c area.tcl -- optimized
+
+这里第一个--交给启动器作参数边界，第二个--由Yosys转发给Tcl argv。源码已确认此行为。
+此脚本对比ABC后、器件map_cells前的LUT资源，不是完整性能测量。视频只讲面积时无需展示或宣称这段的耗时是赛事完整效率成绩。
+启动器的ABC环境变量优先使用随程序附带的同哈希官方yosys-abc.exe；若根代理直接启动程序，也必须保留这一设置，不能落回旧构建绝对路径。
+正式测量工具额外显式设置abc9.exe；视频驱动若设置该scratchpad，应传ASCII映射后的固定官方ABC路径，并核对哈希一致。
+
+五、显式“新增Tcl命令”展示与正式成绩分开
+
+若需要现场明确输入pmux_opt而非仅展示synth_intel内部调用，建议提前在独立演示目录生成pre_pmux.il，再用下面短脚本展示真实命令命中：
+
+  yosys -import
+  read_rtlil pre_pmux.il
+  pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm
+  stat
+
+pre_pmux.il应由同一官方zip_case04输入，运行正式插入点之前的官方预处理得到，不能自造一个替代官方测试用例。插入点之前coarse实际顺序为：
+  proc; check; flatten; tribuf -logic; deminout; opt_expr; check; opt_clean;
+  opt -nodffe -nosdff; fsm; opt; wreduce; peepopt; opt_clean
+若用Tcl导入调用，proc需写procs或yosys proc。完整begin的器件库加载与hierarchy可先用synth_intel -family cycloneiv -top pmux_case04_feedback -run begin:coarse完成；此范围止于coarse之前，然后逐项执行上述官方预处理，写pre_pmux.il。
+这段只作为命令与结构变换演示，不另报正式面积。正式371→292对比仍来自第四节未重复插入规则的两次完整面积流程。
+为了录像简洁，可直接展示“yosys -import”“pmux_opt ...”的脚本行，再在新综合日志展示真实自动调用与2次B吸收；不必把全部预处理命令逐行念出。
+
+六、真实单例EQY命令
+
+随包单例最短接口已有实现，可用新生成的area目录：
+
+  python -B "$pkg/等价验证/批量正式等价验证.py" --基线目录 "$work/area" --优化目录 "$work/area" --输出目录 "$work/eqy" --用例 zip_case04
+  python -B "$pkg/等价验证/核验适配边界.py" --输入目录 "$work/eqy/zip_case04/验证输入" --报告 "$work/eqy/适配边界.json"
+
+EQY输出目录必须尚不存在。脚本依赖随包真实官方工具/真实GNU Make与系统Git for Windows，不替换工具。必要环境变量明确设到包内：
+  PMUX_OSS_CAD_SUITE = $pkg/官方工具/oss-cad-suite
+  PMUX_EQY_MAKE = $pkg/等价验证/官方依赖/make-4.4.1/WinRel/gnumake.exe
+Git可自动定位；显式PMUX_GIT_USR_BIN仅指向实际Git usr/bin，不能指向WSL命令。
+
+单例结果中的official_case_count仍为9，executed_case_count=1、pass_count=1，all_nine_pass=false是正常的“只演示一例”，不能在视频把它裁掉而声称刚刚重跑了九例。
+上面的批量入口会记录原始输入hash和PASS，但正式完整入口还做输入来源绑定；根代理建议对这次单例额外核对：
+  · 新生成original/optimized-area.il各自SHA与准备记录gold/gate相同；
+  · 准备输入raw IL与实际执行目录raw IL相同；适配IL及proof.eqy执行副本相同；
+  · execution.json exit_code=0、proof/PASS真实存在、eqy-console.log含DONE (PASS, rc=0)。
+现成核对证明输入来源.py的CLI以9例为成功要求，单例时all_nine=false不能当单例失败或绕过为true；可使用其check函数取唯一case的inputs_match_executed_proof，或者自行逐项读hash验证。
+
+七、既有真实日志定位（最新包内便携复验）
+
+共同根目录：
+  代码包内容/便携复验证据/便携九例面积EQY验证01/正式复验
+
+原版面积日志：
+  area/zip_case04/original-area.log
+  第839行：ABC RESULTS: $lut cells: 371。
+  第899–900行：371 $lut，16 dffeas。
+优化面积日志：
+  area/zip_case04/optimized-area.log
+  第348行：Executing project PMUX structural optimization。
+  第349行：PMUX data-arm flattening: merged 2 single-use nested data arms。
+  第350行：reordered 8 decoder tables，其余结构计数如上。
+  第887行：ABC RESULTS: $lut cells: 292。
+  第947–948行：292 $lut，16 dffeas。
+面积结构化记录：同目录original-area.record.json、optimized-area.record.json，含exe哈希、实际ABC序列、资源数、IO、原始网表hash。
+
+真实EQY日志：
+  eqy/zip_case04/官方EQY结果/eqy-console.log
+  末尾包含Successfully proved designs equivalent和DONE (PASS, rc=0)。
+  该既有运行从02:20:58到02:21:01，summary约2秒；仅可称该次记录，不是当前新运行耗时承诺。
+PASS标志：eqy/zip_case04/官方EQY结果/proof/PASS。
+证明策略：eqy/zip_case04/官方EQY结果/proof.eqy。
+执行身份：eqy/zip_case04/官方EQY结果/execution.json。
+适配与原始/执行输入：同目录gold/gate.adapter.json、gold/gate.raw.il、gold/gate.il。
+九例整体：正式复验/eqy/正式EQY汇总.json和正式复验/报告.txt。
+
+八、视频中必须准确的证明边界
+
+推荐一句口播：
+“这里比较两版实际ABC后的网表。在答疑允许的初始化策略下，对受限触发器按官方映射作逆适配，保留明确初值，再由官方EQY调用Yosys的SAT归纳证明。ZIP04得到PASS；同样流程的九个公开用例也已有全部通过记录。”
+
+屏幕小字可写：
+“ABC后/map_cells前；受限FF逆适配；setundef -zero -init；EQY SAT归纳。并非未归一化全四态或RTL到最终器件全链路证明。”
+
+解释要点：
+  · 对比ABC后真实IL，最终器件映射之前，不是拿空模块、截到ABC之前或仅仿真输出冒充形式证明。
+  · FF适配是自研配套，依据官方ff_map，对不支持配置拒绝；不改LUT组合逻辑。
+  · X/Z及未定义初始化按披露策略归零，明确已知初值保留。规则级严格四态测试是另一层证据，不与EQY范围混淆。
+  · use sat/depth20是SAT时间归纳，不是只跑20周期仿真；本次九例不靠SBY/Z3求解。
+  · 真实PASS是工具结果，不等于组委会已认证，不保证未知隐藏用例全部通过。
+
+九、约三分钟展示顺序建议
+
+00:00–00:25：问题与思路，选择逻辑资源偏多；官方工具继续使用，只新增PMUX结构规则与固定参数。
+00:25–00:50：展示自研pmux_opt.cc注册、yosys -import和pmux_opt四开关；明确正式synth_intel已接入。
+00:50–01:25：B臂吸收示意，宽内层换成窄PMUX控制，完整单消费、位宽和臂数守卫；不增加寄存器，不按文件名特判。
+01:25–02:05：新运行原版/优化版ZIP04，展示371→292、16触发器不变、2次B吸收。面积减少79个、21.29%。
+02:05–02:40：新运行单例EQY，镜头停在DONE(PASS)及旁边边界说明；九例汇总若展示明确是已有全量记录。
+02:40–03:00：九例平均14.0805%、无单例反增、EQY9/9的整体结论与源码/脚本可复验；不重复全量性能长跑，不编造录像时的新成绩。

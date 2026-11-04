@@ -1,0 +1,146 @@
+{
+  "command": [
+    "V:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/area/rar_test1/original-area.ys"
+  ],
+  "variant": "original",
+  "started_utc": "2026-11-03T17:26:07.494900+00:00",
+  "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.5607806998305023,
+  "peak_working_set_bytes": 24219648,
+  "memory_samples": 366,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "rar_test1",
+  "top": "test1",
+  "script_sha256": "ebcd3d1dcc118f3c6b5fe62ab04a6882efa9d84102370db9f9c4a92cf21ea5da",
+  "abc_process_count": 1,
+  "pmux_messages": [],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&scorr",
+    "&sweep",
+    "&dc2",
+    "&dch -f -r",
+    "&ps",
+    "&if -W 300 -v",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ],
+  "cell_types": {
+    "dffeas": 222,
+    "$lut": 288
+  },
+  "lut": 288,
+  "inverters": 0,
+  "logic_area": 288,
+  "dff": 222,
+  "io_bits": 285,
+  "ports": {
+    "clock": {
+      "direction": "input",
+      "width": 1
+    },
+    "reset": {
+      "direction": "input",
+      "width": 1
+    },
+    "valid": {
+      "direction": "input",
+      "width": 1
+    },
+    "I0": {
+      "direction": "input",
+      "width": 16
+    },
+    "I1": {
+      "direction": "input",
+      "width": 16
+    },
+    "I2": {
+      "direction": "input",
+      "width": 16
+    },
+    "I3": {
+      "direction": "input",
+      "width": 16
+    },
+    "I4": {
+      "direction": "input",
+      "width": 16
+    },
+    "I5": {
+      "direction": "input",
+      "width": 16
+    },
+    "I6": {
+      "direction": "input",
+      "width": 16
+    },
+    "I7": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q0": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q1": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q2": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q3": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q4": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q5": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q6": {
+      "direction": "input",
+      "width": 16
+    },
+    "Q7": {
+      "direction": "input",
+      "width": 16
+    },
+    "por6_out": {
+      "direction": "output",
+      "width": 1
+    },
+    "inter0007_out": {
+      "direction": "output",
+      "width": 1
+    },
+    "inter0008_out": {
+      "direction": "output",
+      "width": 12
+    },
+    "inter0009_out": {
+      "direction": "output",
+      "width": 12
+    }
+  },
+  "raw_il_sha256": "c0e66b7453dd056a07dd16f2ffb627529979558044495ce94ce2c8bde1f89f45",
+  "raw_json_sha256": "5835c2051d58c11ac1cbbdfdc65d1f9d4c153d278da8cf2dc232e55f0e954775"
+}

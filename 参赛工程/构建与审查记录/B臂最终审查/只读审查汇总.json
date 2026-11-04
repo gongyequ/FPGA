@@ -1,0 +1,57 @@
+{
+  "scope": "read-only source/evidence audit; no build, EDA or performance executed",
+  "baseline": "release_F2c frozen modified Yosys source, not pristine official source",
+  "source_files": [
+    {
+      "path": "passes/opt/pmux_opt.cc",
+      "baseline_sha256": "748a89f54c5189d58b0a51b4f372a9afd596ec73bf39fad7f91d6595875db827",
+      "candidate_sha256": "a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3",
+      "snapshot_sha256": "a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3"
+    },
+    {
+      "path": "techlibs/intel/synth_intel.cc",
+      "baseline_sha256": "2dc992a748e8e6f92ff7a394e90dadc648bb25e1a6791e5b2fdbe7a99ca1fcb2",
+      "candidate_sha256": "8a4841fbf64547eae41f22de7c0baf182a619ac201db058c7b8f3f569ac68128",
+      "snapshot_sha256": "8a4841fbf64547eae41f22de7c0baf182a619ac201db058c7b8f3f569ac68128"
+    }
+  ],
+  "unchanged_checked_files": [
+    {
+      "path": "passes/opt/CMakeLists.txt",
+      "sha256": "68a1fd2baeb3cda9d5ad42f0e82cbbd029a8c3e584d3781b652ba4fc3a2d2b1b"
+    },
+    {
+      "path": "techlibs/intel/CMakeLists.txt",
+      "sha256": "f076f4aa37bf6deddfc42d6137a46d03fe94fc05f84ac6102959588b339d9437"
+    },
+    {
+      "path": "kernel/tclapi.cc",
+      "sha256": "d69d905325adb921dec758375fbd393919d78089427e36ead86ff0117fff0c77"
+    },
+    {
+      "path": "passes/opt/pmux2shiftx.cc",
+      "sha256": "fd7985ff814689437cdca8be60afcff334584944ba64b5fa4558e6014fb7b377"
+    },
+    {
+      "path": "passes/techmap/abc9.cc",
+      "sha256": "ab42ef2065dd8dbed7ff3a27e005cbfd27ce67781ece48992eb4ed5f4655523a"
+    },
+    {
+      "path": "passes/techmap/abc9_exe.cc",
+      "sha256": "cca35325995959b1bf8a802f3eb712b526075a961507f9689f75b96fef1fbef2"
+    }
+  ],
+  "default_synth_call": "pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm",
+  "synth_delta_only_flag": true,
+  "index_default_off": true,
+  "same_abc_script_all_cases": true,
+  "total_b_merges": 15,
+  "mean_reduction_percent": 14.080533528168981,
+  "total_reduction_percent": 11.46923398911679,
+  "f4_without_b_mean_reduction_percent": 11.326328178305634,
+  "b_increment_total_cells": 96,
+  "eqy_summary_pass_count": 9,
+  "eqy_all_nine_pass": true,
+  "performance": "not concluded here; scheduled and audited by root separately",
+  "patch_sha256": "7da565f8ddb67703a5f4dbd74141d0e62cfd418338114763848be8f0aa8a6996"
+}

@@ -1,0 +1,5 @@
+read_verilog -sv X:/inputs/cases/rar_test2.v
+hierarchy -check -top test2
+scratchpad -set abc9.exe W:/bin/yosys-abc.exe
+synth_intel -family cycloneiv -top test2
+stat

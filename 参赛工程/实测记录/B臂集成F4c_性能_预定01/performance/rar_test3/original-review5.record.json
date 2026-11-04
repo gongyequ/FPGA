@@ -1,0 +1,41 @@
+{
+  "command": [
+    "V:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/performance/rar_test3/original-review5.ys"
+  ],
+  "variant": "original",
+  "started_utc": "2026-11-03T17:30:17.629982+00:00",
+  "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.2375038000755012,
+  "peak_working_set_bytes": 18288640,
+  "memory_samples": 155,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "rar_test3",
+  "top": "test3",
+  "script_sha256": "83c7704935fded90bf0afd02979862101a5879aa7037776a1c2cc3377665d40b",
+  "abc_process_count": 1,
+  "pmux_messages": [],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&scorr",
+    "&sweep",
+    "&dc2",
+    "&dch -f -r",
+    "&ps",
+    "&if -W 300 -v",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ]
+}

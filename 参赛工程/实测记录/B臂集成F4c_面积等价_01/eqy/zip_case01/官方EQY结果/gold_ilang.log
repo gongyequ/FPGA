@@ -1,0 +1,19 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+286 (git sha1 37f25dae9, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)
+
+-- Executing script file `gold_ilang.ys' --
+
+1. Executing JSON frontend.
+Importing module pmux_case01_balanced from JSON tree.
+
+2. Executing RTLIL backend.
+Output filename: gold.il
+
+End of script. Logfile hash: 99490d1c46
+Yosys 0.69+286 (git sha1 37f25dae9, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)
+Time spent: 33% 2x write_rtlil (0 sec), 33% 2x read_json (0 sec), ...

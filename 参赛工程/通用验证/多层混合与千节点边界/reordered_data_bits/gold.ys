@@ -1,0 +1,7 @@
+read_rtlil input.il
+check -assert
+rename reordered_data_bits gold
+write_json gold.json
+write_rtlil gold.il
+write_verilog -noexpr -noattr gold.v
+stat

@@ -1,0 +1,10 @@
+read_rtlil input.il
+check -assert
+pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm data_arm_d6_w12_k3
+select *
+check -assert
+rename data_arm_d6_w12_k3 gate
+write_json gate.json
+write_rtlil gate.il
+write_verilog -noexpr -noattr gate.v
+stat

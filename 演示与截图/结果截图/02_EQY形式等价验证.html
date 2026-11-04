@@ -1,0 +1,16 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>PMUX EQY形式等价验证</title><style>*{box-sizing:border-box}body{margin:0;background:#eef3f8;color:#182b42;font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif}main{width:1240px;min-height:700px;padding:30px 42px;background:#fff;margin:0 auto}.kicker{font-size:14px;font-weight:700;color:#3864ac;letter-spacing:2px}h1{font-size:32px;margin:9px 0 8px}p{margin:8px 0;font-size:16px;color:#536276}.hero{display:flex;align-items:baseline;gap:28px;margin:20px 0;padding:18px 24px;background:#edf6f3;border-left:5px solid #168063}.big{font-size:46px;font-weight:800;color:#126e54}.hero span{font-size:20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.label{font-size:17px;font-weight:700;margin-bottom:8px}pre{margin:0;background:#f3f5f9;border:1px solid #dce4ed;padding:14px 18px;font-family:Consolas,"Microsoft YaHei",monospace;font-size:16px;line-height:1.42;white-space:pre-wrap;overflow-wrap:anywhere;color:#22354a}table{width:100%;border-collapse:collapse;margin:14px 0;font-size:16px}td,th{text-align:left;padding:9px 14px;border-bottom:1px solid #dfe6ed}th{background:#eef3f8}.foot{font-size:12px;line-height:1.6;color:#69798a;margin-top:14px;overflow-wrap:anywhere}.note{font-size:15px;line-height:1.6;margin-top:15px}.pass{color:#087448;font-weight:800}.log{font-size:15px;line-height:1.55}.tag{padding:5px 12px;background:#e9f2fc;border-radius:6px;color:#285891;font-size:14px}</style><main><div class="kicker">PMUX 优化项目 · 实测结果展示页 · 02 / 02</div>
+<h1>EQY 形式等价验证通过</h1><p>官方用例 zip_case04 · 与上一张综合对比使用同一对网表</p>
+<div class="hero"><div class="big">PASS</div><span>EQY 退出码 0 · proof/PASS 文件存在 · 网表 SHA-256 对应</span></div>
+<div class="label">官方 EQY 实际输出 · eqy-console.log 末尾原文</div><pre class="log">EQY  3:02:14 [proof] run: Proved equivalence of partition &#x27;pmux_case04_feedback.data_out&#x27; using strategy &#x27;sat&#x27;
+EQY  3:02:14 [proof] run: make -f strategies.mk summary
+EQY  3:02:14 [proof] run: make[1]: Entering directory &#x27;C:/Users/13889/AppData/Local/Temp/eqy-official-3856pa4o/proof&#x27;
+EQY  3:02:15 [proof] run: make[1]: Leaving directory &#x27;C:/Users/13889/AppData/Local/Temp/eqy-official-3856pa4o/proof&#x27;
+EQY  3:02:15 [proof] run: make: Leaving directory &#x27;C:/Users/13889/AppData/Local/Temp/eqy-official-3856pa4o/proof&#x27;
+EQY  3:02:15 [proof] run: finished (returncode=0)
+EQY  3:02:15 [proof] Successfully proved equivalence of partition pmux_case04_feedback.data_out
+EQY  3:02:15 [proof] Successfully proved designs equivalent
+EQY  3:02:15 [proof] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
+EQY  3:02:15 [proof] summary: Elapsed process time unvailable on Windows
+EQY  3:02:15 [proof] DONE (PASS, rc=0)</pre>
+<div class="note"><b>验证范围：</b>ABC 后两网表，经受限 dffeas 逆适配及<br><code>opt_clean; setundef -zero -init</code> 后执行 SAT 归纳验证；已知初始值保持不变。</div>
+<div class="foot">证据来源：运行记录/20261104_030211_923233_EQY验证/官方EQY结果/eqy-console.log<br>本页根据实际运行记录排版，属于形式验证结果；PASS 表示在上述验证配置下功能等价。</div></main></html>

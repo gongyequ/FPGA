@@ -1,0 +1,37 @@
+
+-- Executing script file `gold.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: input.il
+
+2. Executing CHECK pass (checking for obvious problems).
+Checking module fallback_d8_w5_k2...
+Found and reported 0 problems.
+Renaming module \fallback_d8_w5_k2 to \gold.
+
+3. Executing JSON backend.
+
+4. Executing RTLIL backend.
+Output filename: gold.il
+
+5. Executing Verilog backend.
+Dumping module `\gold'.
+
+6. Printing statistics.
+
+=== gold ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       26 wires
+      146 wire bits
+       26 public wires
+      146 public wire bits
+       18 ports
+      106 port bits
+        8 cells
+        8   $pmux
+
+End of script. Logfile hash: c8e949dfcc
+Yosys 0.69+286 (git sha1 37f25dae9-dirty, Release, MSVC C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 19.44.35215.0) [C:Users889Desktop�圭洰\pmux-optyosys-src at HEAD]
+Time spent: 11% 2x write_verilog (0 sec), 11% 2x write_rtlil (0 sec), ...

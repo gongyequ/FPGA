@@ -1,0 +1,31 @@
+{
+  "source_program_unchanged": true,
+  "original_runtime_dependency_manifest_updated": true,
+  "official_suite_supplied_inside_package": true,
+  "all_official_tools_byte_identical_to_release": true,
+  "actual_area_cases": 9,
+  "actual_area_values": [
+    288,
+    15,
+    12,
+    24,
+    348,
+    400,
+    370,
+    292,
+    366
+  ],
+  "actual_eqy_pass_count": 9,
+  "actual_eqy_used_inside_package_tools": true,
+  "no_git_build_cache_or_directory_links": true,
+  "no_replacement_character_in_filenames": true,
+  "current_file_count_before_final_docs_manifest": 22194,
+  "current_bytes_before_final_docs_manifest": 923490248,
+  "historical_machine_paths": "Kept only as historical evidence/source metadata; no requirement to have the original workspace.",
+  "external_prerequisites": [
+    "Windows x64",
+    "Python 3.10+",
+    "Git for Windows"
+  ],
+  "no_additional_formal_performance_batch": true
+}

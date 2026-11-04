@@ -1,0 +1,76 @@
+{
+  "command": [
+    "U:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/area/zip_case03/optimized-area.ys"
+  ],
+  "variant": "optimized",
+  "started_utc": "2026-11-03T18:19:56.618772+00:00",
+  "binary_sha256": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.5266305999830365,
+  "peak_working_set_bytes": 24440832,
+  "memory_samples": 342,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "zip_case03",
+  "top": "pmux_case03_crossbar",
+  "script_sha256": "afa247c34a6f9b043b87c9f7e31768a798845ec7f54b96855395bb12dae41127",
+  "abc_process_count": 1,
+  "pmux_messages": [
+    "PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 10 decoder tables."
+  ],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&dch -f -r",
+    "&if -W 300 -a -v -F 4 -c",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ],
+  "cell_types": {
+    "dffeas": 10,
+    "$lut": 370
+  },
+  "lut": 370,
+  "inverters": 0,
+  "logic_area": 370,
+  "dff": 10,
+  "io_bits": 85,
+  "ports": {
+    "clk": {
+      "direction": "input",
+      "width": 1
+    },
+    "rst": {
+      "direction": "input",
+      "width": 1
+    },
+    "en": {
+      "direction": "input",
+      "width": 1
+    },
+    "data_in": {
+      "direction": "input",
+      "width": 40
+    },
+    "ctrl_in": {
+      "direction": "input",
+      "width": 32
+    },
+    "data_out": {
+      "direction": "output",
+      "width": 10
+    }
+  },
+  "raw_il_sha256": "6a3023191a0bf3cb8b1ac2e88d6db17f3517b003435e5fc42d7df81d71c60211",
+  "raw_json_sha256": "42ec77b3941e80274362d646e32b71806d447a2960b8e294d43ad62e12b6bb05"
+}

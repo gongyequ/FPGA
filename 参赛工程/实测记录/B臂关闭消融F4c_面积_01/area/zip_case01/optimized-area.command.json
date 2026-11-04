@@ -1,0 +1,18 @@
+{
+  "command": [
+    "U:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/area/zip_case01/optimized-area.ys"
+  ],
+  "variant": "optimized",
+  "started_utc": "2026-11-03T17:47:32.598066+00:00",
+  "binary_sha256": "80856566da9f1e458e370e56f33dd1c3ad60ddfa476a12eb59a4cbc7dee2fb1e",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.4577641999348998,
+  "peak_working_set_bytes": 23789568,
+  "memory_samples": 297,
+  "final_memory_query_ok": true,
+  "timed_out": false
+}

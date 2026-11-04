@@ -1,0 +1,170 @@
+[
+  {
+    "file": "00_设计文档首页.png",
+    "source_document": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\设计文档_PMUX结构优化_零点六九_新版.pdf",
+    "source_document_sha256": "7e44fcc681a903f8ff3982b85e2ffbab8e877ae7bcd3fa43605bb9e96ee2a23f",
+    "document_page": 1,
+    "original_png": "C:\\Users\\13889\\Desktop\\项目\\视频制作_三分钟增强版_20261104\\文档截图\\原始页面\\设计文档_第01页.png",
+    "original_png_size": [
+      1985,
+      2807
+    ],
+    "reviewed_low_resolution_png": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\交付制作记录\\文档\\设计逐页03\\page-01.png",
+    "crop_pixels": [
+      0,
+      0,
+      1985,
+      2807
+    ],
+    "width": 1985,
+    "height": 2807,
+    "content_summary": "正式设计文档首页，含标题、版本、设计约束；仅建议作为封面缩略图。",
+    "source_label": "设计文档 · 第 1 页 · 原文截图",
+    "method": "Poppler 240 dpi exact PDF rendering; rectangular crop only; no text or content edits",
+    "sha256": "baef0876785d137b949e8f53629fe417b6ae5a0f7c45bf7b57f941f3da548b1a"
+  },
+  {
+    "file": "01_整体架构.png",
+    "source_document": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\设计文档_PMUX结构优化_零点六九_新版.pdf",
+    "source_document_sha256": "7e44fcc681a903f8ff3982b85e2ffbab8e877ae7bcd3fa43605bb9e96ee2a23f",
+    "document_page": 2,
+    "original_png": "C:\\Users\\13889\\Desktop\\项目\\视频制作_三分钟增强版_20261104\\文档截图\\原始页面\\设计文档_第02页.png",
+    "original_png_size": [
+      1985,
+      2807
+    ],
+    "reviewed_low_resolution_png": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\交付制作记录\\文档\\设计逐页03\\page-02.png",
+    "crop_pixels": [
+      333,
+      386,
+      1648,
+      1291
+    ],
+    "width": 1315,
+    "height": 905,
+    "content_summary": "图1 双路径综合与验证架构：同源Yosys基线、PMUX规则、统一映射与ABC后EQY。",
+    "source_label": "设计文档 · 第 2 页 · 原文截图",
+    "method": "Poppler 240 dpi exact PDF rendering; rectangular crop only; no text or content edits",
+    "sha256": "583e547bcdb20bc7ffba23958e6e289727de2444347f803123551ada2611e294"
+  },
+  {
+    "file": "02_B臂变换图.png",
+    "source_document": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\设计文档_PMUX结构优化_零点六九_新版.pdf",
+    "source_document_sha256": "7e44fcc681a903f8ff3982b85e2ffbab8e877ae7bcd3fa43605bb9e96ee2a23f",
+    "document_page": 4,
+    "original_png": "C:\\Users\\13889\\Desktop\\项目\\视频制作_三分钟增强版_20261104\\文档截图\\原始页面\\设计文档_第04页.png",
+    "original_png_size": [
+      1985,
+      2807
+    ],
+    "reviewed_low_resolution_png": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\交付制作记录\\文档\\设计逐页03\\page-04.png",
+    "crop_pixels": [
+      340,
+      1663,
+      1638,
+      2354
+    ],
+    "width": 1298,
+    "height": 691,
+    "content_summary": "图2 嵌套数据分支控制与数据重构：宽数据层合并，使用窄控制PMUX。",
+    "source_label": "设计文档 · 第 4 页 · 原文截图",
+    "method": "Poppler 240 dpi exact PDF rendering; rectangular crop only; no text or content edits",
+    "sha256": "8e1e3f7fba473f9a2e531d0764920a54bb80eed2670e72b18be06689ec4117fe"
+  },
+  {
+    "file": "03_B臂控制公式.png",
+    "source_document": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\设计文档_PMUX结构优化_零点六九_新版.pdf",
+    "source_document_sha256": "7e44fcc681a903f8ff3982b85e2ffbab8e877ae7bcd3fa43605bb9e96ee2a23f",
+    "document_page": 4,
+    "original_png": "C:\\Users\\13889\\Desktop\\项目\\视频制作_三分钟增强版_20261104\\文档截图\\原始页面\\设计文档_第04页.png",
+    "original_png_size": [
+      1985,
+      2807
+    ],
+    "reviewed_low_resolution_png": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\交付制作记录\\文档\\设计逐页03\\page-04.png",
+    "crop_pixels": [
+      693,
+      1425,
+      1368,
+      1649
+    ],
+    "width": 675,
+    "height": 224,
+    "content_summary": "B臂控制公式 h=P(1,0,Si)，G=P(0,[h,Si],t)，Y=P(Ao,[Ai,Bi,Bo],[G,So])。",
+    "source_label": "设计文档 · 第 4 页 · 原文截图",
+    "method": "Poppler 240 dpi exact PDF rendering; rectangular crop only; no text or content edits",
+    "sha256": "2e8f0c4a723a9acdfdc105455cbcb5dbb5cd85e4983343023f5c55f8bb831f8e"
+  },
+  {
+    "file": "04_执行流程.png",
+    "source_document": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\设计文档_PMUX结构优化_零点六九_新版.pdf",
+    "source_document_sha256": "7e44fcc681a903f8ff3982b85e2ffbab8e877ae7bcd3fa43605bb9e96ee2a23f",
+    "document_page": 5,
+    "original_png": "C:\\Users\\13889\\Desktop\\项目\\视频制作_三分钟增强版_20261104\\文档截图\\原始页面\\设计文档_第05页.png",
+    "original_png_size": [
+      1985,
+      2807
+    ],
+    "reviewed_low_resolution_png": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\交付制作记录\\文档\\设计逐页03\\page-05.png",
+    "crop_pixels": [
+      438,
+      1272,
+      1548,
+      2167
+    ],
+    "width": 1110,
+    "height": 895,
+    "content_summary": "图3 默认规则与保护条件执行顺序，含统一ABC、PMUX识别、基础清理、默认与数据臂合并、官方映射。",
+    "source_label": "设计文档 · 第 5 页 · 原文截图",
+    "method": "Poppler 240 dpi exact PDF rendering; rectangular crop only; no text or content edits",
+    "sha256": "f9cb5e9a2bfb9945306e7f287e2ed88cc46bb096932d8faeea5e8e62b500d48e"
+  },
+  {
+    "file": "05_EQY验证策略.png",
+    "source_document": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\设计文档_PMUX结构优化_零点六九_新版.pdf",
+    "source_document_sha256": "7e44fcc681a903f8ff3982b85e2ffbab8e877ae7bcd3fa43605bb9e96ee2a23f",
+    "document_page": 8,
+    "original_png": "C:\\Users\\13889\\Desktop\\项目\\视频制作_三分钟增强版_20261104\\文档截图\\原始页面\\设计文档_第08页.png",
+    "original_png_size": [
+      1985,
+      2807
+    ],
+    "reviewed_low_resolution_png": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\交付制作记录\\文档\\设计逐页03\\page-08.png",
+    "crop_pixels": [
+      286,
+      681,
+      1706,
+      1737
+    ],
+    "width": 1420,
+    "height": 1056,
+    "content_summary": "7.3 正式EQY与证明范围全文：受限FF逆适配、opt_clean与setundef、SAT归纳、PASS与证明范围。",
+    "source_label": "设计文档 · 第 8 页 · 原文截图",
+    "method": "Poppler 240 dpi exact PDF rendering; rectangular crop only; no text or content edits",
+    "sha256": "fa6bbdb0b8871cf1071a290dae258c19541190536b14256b21066148680eb43c"
+  },
+  {
+    "file": "06_实测对照.png",
+    "source_document": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\设计文档_PMUX结构优化_零点六九_新版.pdf",
+    "source_document_sha256": "7e44fcc681a903f8ff3982b85e2ffbab8e877ae7bcd3fa43605bb9e96ee2a23f",
+    "document_page": 9,
+    "original_png": "C:\\Users\\13889\\Desktop\\项目\\视频制作_三分钟增强版_20261104\\文档截图\\原始页面\\设计文档_第09页.png",
+    "original_png_size": [
+      1985,
+      2807
+    ],
+    "reviewed_low_resolution_png": "C:\\Users\\13889\\Desktop\\项目\\零点六九新版正式提交_20261104\\交付制作记录\\文档\\设计逐页03\\page-09.png",
+    "crop_pixels": [
+      307,
+      1149,
+      1678,
+      2075
+    ],
+    "width": 1371,
+    "height": 926,
+    "content_summary": "九个官方用例的原版与优化资源对照表，含逐例下降比例。",
+    "source_label": "设计文档 · 第 9 页 · 原文截图",
+    "method": "Poppler 240 dpi exact PDF rendering; rectangular crop only; no text or content edits",
+    "sha256": "43c6fb6e75203b9367578c49c1c98d4b73972f61b016069510c24681b2cc6313"
+  }
+]

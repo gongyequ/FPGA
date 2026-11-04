@@ -1,0 +1,7 @@
+ninja explain: output techlibs/intel/CMakeFiles/yosys_synth_intel.dir/synth_intel.cc.obj older than most recent input R:/src/techlibs/intel/synth_intel.cc (8154293137513618 vs 8154308728164966)
+ninja explain: techlibs/intel/CMakeFiles/yosys_synth_intel.dir/synth_intel.cc.obj is dirty
+ninja explain: techlibs/intel/CMakeFiles/yosys_synth_intel.dir/synth_intel.cc.obj is dirty
+ninja explain: yosys.exe is dirty
+ninja: Entering directory `R:/build'
+[1/2] Building CXX object techlibs\intel\CMakeFiles\yosys_synth_intel.dir\synth_intel.cc.obj
+[2/2] Linking CXX executable yosys.exe

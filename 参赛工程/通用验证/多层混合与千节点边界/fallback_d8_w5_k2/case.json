@@ -1,0 +1,123 @@
+{
+  "name": "fallback_d8_w5_k2",
+  "description": "多层默认A嵌套，含成本/分支上限造成的部分合并",
+  "input_pmux_count": 8,
+  "ports": [
+    {
+      "name": "a0",
+      "width": 5,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "b0",
+      "width": 10,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s0",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b1",
+      "width": 10,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s1",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b2",
+      "width": 10,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s2",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b3",
+      "width": 10,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s3",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b4",
+      "width": 10,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s4",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b5",
+      "width": 10,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s5",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b6",
+      "width": 10,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s6",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "b7",
+      "width": 10,
+      "direction": "input",
+      "kind": "data"
+    },
+    {
+      "name": "s7",
+      "width": 2,
+      "direction": "input",
+      "kind": "select"
+    },
+    {
+      "name": "out0",
+      "width": 5,
+      "direction": "output",
+      "kind": "data"
+    }
+  ],
+  "selection": null,
+  "expect_unchanged": false,
+  "min_removed_with_default": 2,
+  "min_removed_with_b": 0,
+  "simulate": true,
+  "samples": 512,
+  "scope": "supplemental structural regression; not official nine-case area/performance",
+  "input_sha256": "c908d82d8b8e38bdf0375f7e2a3f5c5c214759863b1c5f9d01abd1d9c11c22b8"
+}

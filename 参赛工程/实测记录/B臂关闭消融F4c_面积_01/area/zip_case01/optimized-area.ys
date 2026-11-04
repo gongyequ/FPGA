@@ -1,0 +1,7 @@
+read_verilog -sv X:/inputs/cases/zip_case01.v
+hierarchy -check -top pmux_case01_balanced
+scratchpad -set abc9.exe W:/bin/yosys-abc.exe
+synth_intel -family cycloneiv -top pmux_case01_balanced -run begin:map_cells
+write_rtlil X:/area/zip_case01/optimized-area.il
+write_json X:/area/zip_case01/optimized-area.json
+stat

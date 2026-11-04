@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "completed_stages": [
+    "identity",
+    "area_reused",
+    "eqy_reused",
+    "performance"
+  ],
+  "stage_requested": "performance",
+  "started_utc": "2026-11-03T17:30:45.639964+00:00",
+  "finished_utc": "2026-11-03T17:31:35.575253+00:00"
+}

@@ -1,0 +1,105 @@
+{
+  "started_utc": "2026-11-03T14:40:46.371898+00:00",
+  "candidate_program": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\优化程序\\yosys.exe",
+  "sha256": {
+    "optimized_program": "e899292b851f8e8e3d1a1a9f04e7737fec6b7eaaa8afaef73c79436010ac4c41",
+    "official_reference_program": "a9a1b18604fd984972e8c6786a52261cee9e6cbe002b65e5ca353beacbd65e90",
+    "official_simlib": "a7df1f7cbf09c98d96f791c7b11ab55e64dd197663f67aa6a9d4ada13a61cd82",
+    "iverilog": "44a128d541a4348d2f60ec1168a7d9924353b63a61ae19e0c63a406dfceaef17",
+    "vvp": "13e2d9f6b7c6a4ce6e0fcb65a67717bd44a16770a3ed0431a0f84787b396c059",
+    "pmux_opt": "748a89f54c5189d58b0a51b4f372a9afd596ec73bf39fad7f91d6595875db827",
+    "synth_intel": "2dc992a748e8e6f92ff7a394e90dadc648bb25e1a6791e5b2fdbe7a99ca1fcb2"
+  },
+  "expected_frozen_exe_sha256": "e899292b851f8e8e3d1a1a9f04e7737fec6b7eaaa8afaef73c79436010ac4c41",
+  "test_script_sha256": {
+    "公共辅助.py": "b54af7ffe58c5af5d834efaa1d310de2ba3c1e82569cd5969dc886448d66e1b3",
+    "运行冻结默认规则.py": "9b96184c6581bb901242ebe0ab792e5d9814a6a1ddca12586cf4b07026606aa4",
+    "验证分支排序.py": "7c71526279d0ceec542ee59f2cf1f6e9e5229b828e11865d47e29d4f80d73537",
+    "验证基础清理.py": "14a199f59092b2f667c40f6bae86502a53dd05c9f8fb27c3bbd7bb75c431d77c",
+    "验证嵌套接线保护.py": "fdf94cd430ea11c543f9cc8c29d0ba445213a8b83c0dd59a9e8d875750abee56",
+    "验证嵌套规则.py": "7753a74baff585cc34f35ee7e2661d6511d2decc47398cab85130f5a3c270b22"
+  },
+  "default_rules": [
+    "zero-select cleanup",
+    "identical-column sharing",
+    "nested fallback merge",
+    "ascending decoder order"
+  ],
+  "not_exercised": [
+    "optional shiftx",
+    "optional predicate constants",
+    "optional constant polarity"
+  ],
+  "boundary": "actual default structural rules against official 0.69 four-state model; separate from post-ABC EQY and performance measurements",
+  "results": [
+    {
+      "folder": "01_零选择与相同列",
+      "script": "验证基础清理.py",
+      "command": [
+        "D:\\python\\python.exe",
+        "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\最终默认规则补充测试\\运行脚本\\验证基础清理.py",
+        "--candidate-yosys",
+        "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\优化程序\\yosys.exe",
+        "--output",
+        "执行记录/01_零选择与相同列"
+      ],
+      "started_utc": "2026-11-03T14:40:46.414771+00:00",
+      "exit_code": 0,
+      "comparisons": 327744,
+      "passed": true
+    },
+    {
+      "folder": "02_嵌套默认分支",
+      "script": "验证嵌套规则.py",
+      "command": [
+        "D:\\python\\python.exe",
+        "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\最终默认规则补充测试\\运行脚本\\验证嵌套规则.py",
+        "--candidate-yosys",
+        "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\优化程序\\yosys.exe",
+        "--output",
+        "执行记录/02_嵌套默认分支"
+      ],
+      "started_utc": "2026-11-03T14:40:48.863934+00:00",
+      "exit_code": 0,
+      "comparisons": 589824,
+      "passed": true
+    },
+    {
+      "folder": "03_译码分支升序",
+      "script": "验证分支排序.py",
+      "command": [
+        "D:\\python\\python.exe",
+        "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\最终默认规则补充测试\\运行脚本\\验证分支排序.py",
+        "--candidate-yosys",
+        "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\优化程序\\yosys.exe",
+        "--output",
+        "执行记录/03_译码分支升序"
+      ],
+      "started_utc": "2026-11-03T14:40:54.970884+00:00",
+      "exit_code": 0,
+      "comparisons": 57344,
+      "passed": true
+    },
+    {
+      "folder": "04_连接保护边界",
+      "script": "验证嵌套接线保护.py",
+      "command": [
+        "D:\\python\\python.exe",
+        "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\算法候选\\最终默认规则补充测试\\运行脚本\\验证嵌套接线保护.py",
+        "--candidate-yosys",
+        "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\优化程序\\yosys.exe",
+        "--output",
+        "执行记录/04_连接保护边界"
+      ],
+      "started_utc": "2026-11-03T14:40:56.164275+00:00",
+      "exit_code": 0,
+      "connection_modules_checked": 10,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "finished_utc": "2026-11-03T14:40:56.394422+00:00",
+  "hashes_unchanged": true,
+  "total_four_state_comparisons": 974912,
+  "connection_modules_checked": 10
+}

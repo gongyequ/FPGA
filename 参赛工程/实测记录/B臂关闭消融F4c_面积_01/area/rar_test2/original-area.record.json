@@ -1,0 +1,93 @@
+{
+  "command": [
+    "V:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/area/rar_test2/original-area.ys"
+  ],
+  "variant": "original",
+  "started_utc": "2026-11-03T17:47:30.756493+00:00",
+  "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.19585020001977682,
+  "peak_working_set_bytes": 17489920,
+  "memory_samples": 128,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "rar_test2",
+  "top": "test2",
+  "script_sha256": "888afa3f923e058553be0fcf37b1f0e3b3164bbade37c6e0cd2f8a6a35aae97f",
+  "abc_process_count": 1,
+  "pmux_messages": [],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&scorr",
+    "&sweep",
+    "&dc2",
+    "&dch -f -r",
+    "&ps",
+    "&if -W 300 -v",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ],
+  "cell_types": {
+    "$lut": 25
+  },
+  "lut": 25,
+  "inverters": 0,
+  "logic_area": 25,
+  "dff": 0,
+  "io_bits": 30,
+  "ports": {
+    "clk": {
+      "direction": "input",
+      "width": 1
+    },
+    "a": {
+      "direction": "input",
+      "width": 1
+    },
+    "b": {
+      "direction": "input",
+      "width": 1
+    },
+    "c": {
+      "direction": "input",
+      "width": 1
+    },
+    "d": {
+      "direction": "input",
+      "width": 1
+    },
+    "dataa": {
+      "direction": "input",
+      "width": 5
+    },
+    "datab": {
+      "direction": "input",
+      "width": 5
+    },
+    "datac": {
+      "direction": "input",
+      "width": 5
+    },
+    "datad": {
+      "direction": "input",
+      "width": 5
+    },
+    "out": {
+      "direction": "output",
+      "width": 5
+    }
+  },
+  "raw_il_sha256": "261b2dddba64f6e1f22b3d316e81c9f6f343e16755cace7c9fa3ca1715c5eb6c",
+  "raw_json_sha256": "39b7c43825c709da67e14325ae68103f6b7ac845810e4939bbd228325aee61e8"
+}

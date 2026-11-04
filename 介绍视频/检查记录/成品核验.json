@@ -1,0 +1,16 @@
+{
+  "file": "PMUX作品介绍_三分钟增强版_无配音.mp4",
+  "duration_seconds": 174,
+  "frames": 4176,
+  "fps": 24,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "audio_tracks": 0,
+  "full_decode_exit": 0,
+  "bytes": 3068734,
+  "sha256": "73d300d3c10eb3ce71252546cc8f91eff12ef07836872624a49f9fec3f1bcf4a",
+  "real_time_player_review": false,
+  "review": "encoded keyframes and transition samples"
+}

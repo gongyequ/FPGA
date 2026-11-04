@@ -1,0 +1,11 @@
+{
+  "command": [
+    "O:/yosys.exe",
+    "-Q",
+    "-s",
+    "gold.ys"
+  ],
+  "exitcode": 0,
+  "wall_seconds": 0.14951569959521294,
+  "scope": "supplemental isolated tool call; not official efficiency score"
+}

@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-04",
+  "purpose": "录屏辅助，不替换参赛源码或测评工具",
+  "tcl_real_run": "运行记录/20261104_025843_562577_Tcl命令",
+  "actual_B_merges": 2,
+  "actual_decoder_reorder": 8,
+  "latest_area": "C:\\Users\\13889\\Desktop\\项目\\视频演示_20261104\\运行记录\\20261104_030210_465218_面积对比",
+  "actual_logic": [
+    371,
+    292
+  ],
+  "dff": [
+    16,
+    16
+  ],
+  "actual_EQY": "视频演示_20261104\\运行记录\\20261104_030211_923233_EQY验证\\本次EQY结果.json",
+  "EQY_PASS": true,
+  "claims_scope": [
+    "对比/等价为实际重新运行；九例为有标签的原有记录汇总",
+    "LUT+NOT和stat所有cells分开说明",
+    "EQY比较的是披露归一化策略下功能等价，非网表文本一致"
+  ],
+  "submission_archive_unchanged": true
+}

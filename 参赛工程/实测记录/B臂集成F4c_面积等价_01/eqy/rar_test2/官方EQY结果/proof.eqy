@@ -1,0 +1,34 @@
+[options]
+splitnets off
+
+[gold]
+read_rtlil gold.il
+opt_clean
+setundef -zero -init
+prep -top test2
+
+[gate]
+read_rtlil gate.il
+opt_clean
+setundef -zero -init
+prep -top test2
+
+[match *]
+nodefault
+gold-match clk
+gold-match a
+gold-match b
+gold-match c
+gold-match d
+gold-match dataa
+gold-match datab
+gold-match datac
+gold-match datad
+gold-match out
+
+[collect *]
+group *
+
+[strategy sat]
+use sat
+depth 20

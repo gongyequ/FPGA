@@ -1,0 +1,9 @@
+{
+  "command": [
+    "M:/bin/vvp.exe",
+    "sim.vvp"
+  ],
+  "exitcode": 0,
+  "wall_seconds": 0.09699520003050566,
+  "scope": "supplemental isolated tool call; not official efficiency score"
+}

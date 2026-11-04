@@ -1,0 +1,7 @@
+read_rtlil input.il
+check -assert
+rename no_matching_pmux_width gold
+write_json gold.json
+write_rtlil gold.il
+write_verilog -noexpr -noattr gold.v
+stat

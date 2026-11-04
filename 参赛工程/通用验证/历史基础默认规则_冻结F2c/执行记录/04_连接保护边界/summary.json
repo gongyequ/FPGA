@@ -1,0 +1,67 @@
+{
+  "actual_pass_executed": true,
+  "candidate_binary": "C:\\Users\\13889\\Desktop\\项目\\零点六九基线重做\\优化程序\\yosys.exe",
+  "checks": [
+    {
+      "module": "protected_fanout",
+      "expected_merges": 0,
+      "generated_controls": 0,
+      "passed": true
+    },
+    {
+      "module": "protected_partial",
+      "expected_merges": 0,
+      "generated_controls": 0,
+      "passed": true
+    },
+    {
+      "module": "protected_permuted",
+      "expected_merges": 0,
+      "generated_controls": 0,
+      "passed": true
+    },
+    {
+      "module": "protected_second_consumer",
+      "expected_merges": 0,
+      "generated_controls": 0,
+      "passed": true
+    },
+    {
+      "module": "protected_cost",
+      "expected_merges": 0,
+      "generated_controls": 0,
+      "passed": true
+    },
+    {
+      "module": "protected_branch_limit",
+      "expected_merges": 0,
+      "generated_controls": 0,
+      "passed": true
+    },
+    {
+      "module": "protected_gate",
+      "expected_merges": 0,
+      "generated_controls": 0,
+      "passed": true
+    },
+    {
+      "module": "positive",
+      "expected_merges": 1,
+      "generated_controls": 1,
+      "passed": true
+    },
+    {
+      "module": "positive_chain",
+      "expected_merges": 2,
+      "generated_controls": 2,
+      "passed": true
+    },
+    {
+      "module": "protected_selection",
+      "expected_merges": 0,
+      "generated_controls": 0,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

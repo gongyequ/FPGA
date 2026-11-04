@@ -1,0 +1,45 @@
+
+-- Executing script file `gate.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: input.il
+
+2. Executing CHECK pass (checking for obvious problems).
+Checking module data_arm_d6_w12_k3...
+Found and reported 0 problems.
+
+3. Executing project PMUX structural optimization.
+PMUX data-arm flattening: merged 4 single-use nested data arms.
+PMUX structural optimization: removed 0 zero-select arms, shared 0 columns, selected 0 dense decoders, merged 0 nested fallbacks, propagated 0 predicate bits, complemented 0 constant tables, reordered 0 decoder tables.
+
+4. Executing CHECK pass (checking for obvious problems).
+Checking module data_arm_d6_w12_k3...
+Found and reported 0 problems.
+Renaming module \data_arm_d6_w12_k3 to \gate.
+
+5. Executing JSON backend.
+
+6. Executing RTLIL backend.
+Output filename: gate.il
+
+7. Executing Verilog backend.
+Dumping module `\gate'.
+
+8. Printing statistics.
+
+=== gate ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       33 wires
+      410 wire bits
+       25 public wires
+      390 public wire bits
+       19 ports
+      318 port bits
+       10 cells
+       10   $pmux
+
+End of script. Logfile hash: 6174f28ac6
+Yosys 0.69+286 (git sha1 37f25dae9-dirty, Release, MSVC C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 19.44.35215.0) [C:Users889Desktop�圭洰\pmux-optyosys-src at HEAD]
+Time spent: 9% 2x write_verilog (0 sec), 9% 2x write_rtlil (0 sec), ...

@@ -1,0 +1,90 @@
+{
+  "case": "zip_case04",
+  "top": "pmux_case04_feedback",
+  "input_sha256": "d668d258d804674dd1412538e7bce04d4630d02928ffe113413b536e6b9ed70f",
+  "programs": {
+    "original": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+    "optimized": "a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53"
+  },
+  "rows": {
+    "original": {
+      "cell_types": {
+        "dffeas": 16,
+        "$lut": 371
+      },
+      "lut": 371,
+      "inverters": 0,
+      "logic_area": 371,
+      "dff": 16,
+      "io_bits": 115,
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "width": 1
+        },
+        "rst": {
+          "direction": "input",
+          "width": 1
+        },
+        "en": {
+          "direction": "input",
+          "width": 1
+        },
+        "data_in": {
+          "direction": "input",
+          "width": 64
+        },
+        "ctrl_in": {
+          "direction": "input",
+          "width": 32
+        },
+        "data_out": {
+          "direction": "output",
+          "width": 16
+        }
+      },
+      "raw_il_sha256": "55e0704863cc6c159854e0aec13d67fb0e01e0b9422f0932559031c5b6dc034a",
+      "raw_json_sha256": "864aa599f04a1baecfe3f593aa21808cb129e1694962c7d7a2144e5bb364e0c7"
+    },
+    "optimized": {
+      "cell_types": {
+        "dffeas": 16,
+        "$lut": 292
+      },
+      "lut": 292,
+      "inverters": 0,
+      "logic_area": 292,
+      "dff": 16,
+      "io_bits": 115,
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "width": 1
+        },
+        "rst": {
+          "direction": "input",
+          "width": 1
+        },
+        "en": {
+          "direction": "input",
+          "width": 1
+        },
+        "data_in": {
+          "direction": "input",
+          "width": 64
+        },
+        "ctrl_in": {
+          "direction": "input",
+          "width": 32
+        },
+        "data_out": {
+          "direction": "output",
+          "width": 16
+        }
+      },
+      "raw_il_sha256": "2dbeb2f0291a54380b59744c3d802c1f95eea51448ffb4256f6fbd82ec329698",
+      "raw_json_sha256": "5e8872e4cd7dcf9f09ec8937b8cae6190671c857e175688530bfb7ee6731e6b7"
+    }
+  },
+  "reduction_percent": 21.293800539083556
+}

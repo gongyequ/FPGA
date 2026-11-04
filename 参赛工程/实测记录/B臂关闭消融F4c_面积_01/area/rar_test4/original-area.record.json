@@ -1,0 +1,90 @@
+{
+  "command": [
+    "V:/yosys.exe",
+    "-Q",
+    "-s",
+    "X:/area/rar_test4/original-area.ys"
+  ],
+  "variant": "original",
+  "started_utc": "2026-11-03T17:47:31.657171+00:00",
+  "binary_sha256": "b8a51e5bd03e12384a39b47d2f0b3f185722a076cff6f94d0bc5aca70f5954a4",
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "wall_seconds": 0.22127210022881627,
+  "peak_working_set_bytes": 18767872,
+  "memory_samples": 142,
+  "final_memory_query_ok": true,
+  "timed_out": false,
+  "case": "rar_test4",
+  "top": "test4",
+  "script_sha256": "2b76def751930e53d19800cffc3f765be47c6f530afd81d07f5a851c05126e9b",
+  "abc_process_count": 1,
+  "pmux_messages": [],
+  "actual_abc_commands": [
+    "read_lut <abc-temp-dir>/lutdefs.txt",
+    "read_box <abc-temp-dir>/input.box",
+    "&read <abc-temp-dir>/input.xaig",
+    "&ps",
+    "&scorr",
+    "&sweep",
+    "&dc2",
+    "&dch -f -r",
+    "&ps",
+    "&if -W 300 -v",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&mfs",
+    "&ps -l",
+    "&write -n <abc-temp-dir>/output.aig",
+    "&verify",
+    "time"
+  ],
+  "cell_types": {
+    "dffeas": 10,
+    "$lut": 31
+  },
+  "lut": 31,
+  "inverters": 0,
+  "logic_area": 31,
+  "dff": 10,
+  "io_bits": 18,
+  "ports": {
+    "clk": {
+      "direction": "input",
+      "width": 1
+    },
+    "reset_n": {
+      "direction": "input",
+      "width": 1
+    },
+    "ena": {
+      "direction": "input",
+      "width": 1
+    },
+    "datain": {
+      "direction": "input",
+      "width": 5
+    },
+    "dataout": {
+      "direction": "output",
+      "width": 6
+    },
+    "only_5b": {
+      "direction": "output",
+      "width": 1
+    },
+    "datain_5bis7": {
+      "direction": "output",
+      "width": 1
+    },
+    "data_dp": {
+      "direction": "output",
+      "width": 1
+    },
+    "data_dn": {
+      "direction": "output",
+      "width": 1
+    }
+  },
+  "raw_il_sha256": "a234386a19ad7ef70612334205ee4355c5f6b421f631def0dfcc97d717cc248e",
+  "raw_json_sha256": "802f25b0cc3cf193c64611aed8c2f6b60b61a7f53a327175df361ae941d6eb35"
+}

@@ -1,0 +1,374 @@
+[
+  {
+    "id": 0,
+    "title": "保持功能等价，减少 PMUX 逻辑资源",
+    "chapter": "设计目标",
+    "start": 0.0,
+    "end": 10.0,
+    "start_frame": 0,
+    "end_frame": 240,
+    "duration": 10,
+    "events": [
+      {
+        "start_frame": 0,
+        "settled_frame": 8,
+        "hold_end_frame": 72,
+        "stage": 0
+      },
+      {
+        "start_frame": 72,
+        "settled_frame": 80,
+        "hold_end_frame": 144,
+        "stage": 1
+      },
+      {
+        "start_frame": 144,
+        "settled_frame": 152,
+        "hold_end_frame": 240,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 1,
+    "title": "设计方案：双路径综合与验证架构",
+    "chapter": "整体架构",
+    "start": 10.0,
+    "end": 24.0,
+    "start_frame": 240,
+    "end_frame": 576,
+    "duration": 14,
+    "events": [
+      {
+        "start_frame": 240,
+        "settled_frame": 248,
+        "hold_end_frame": 312,
+        "stage": 0
+      },
+      {
+        "start_frame": 312,
+        "settled_frame": 320,
+        "hold_end_frame": 384,
+        "stage": 1
+      },
+      {
+        "start_frame": 384,
+        "settled_frame": 392,
+        "hold_end_frame": 576,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 2,
+    "title": "自定义 Tcl 命令与四个正式开关",
+    "chapter": "Tcl 命令",
+    "start": 24.0,
+    "end": 42.0,
+    "start_frame": 576,
+    "end_frame": 1008,
+    "duration": 18,
+    "events": [
+      {
+        "start_frame": 576,
+        "settled_frame": 584,
+        "hold_end_frame": 648,
+        "stage": 0
+      },
+      {
+        "start_frame": 648,
+        "settled_frame": 656,
+        "hold_end_frame": 720,
+        "stage": 1
+      },
+      {
+        "start_frame": 720,
+        "settled_frame": 728,
+        "hold_end_frame": 1008,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 3,
+    "title": "命令注册与实际执行记录",
+    "chapter": "源码与日志",
+    "start": 42.0,
+    "end": 54.0,
+    "start_frame": 1008,
+    "end_frame": 1296,
+    "duration": 12,
+    "events": [
+      {
+        "start_frame": 1008,
+        "settled_frame": 1016,
+        "hold_end_frame": 1080,
+        "stage": 0
+      },
+      {
+        "start_frame": 1080,
+        "settled_frame": 1088,
+        "hold_end_frame": 1152,
+        "stage": 1
+      },
+      {
+        "start_frame": 1152,
+        "settled_frame": 1160,
+        "hold_end_frame": 1296,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 4,
+    "title": "设计方案：嵌套数据分支如何重构",
+    "chapter": "嵌套变换",
+    "start": 54.0,
+    "end": 72.0,
+    "start_frame": 1296,
+    "end_frame": 1728,
+    "duration": 18,
+    "events": [
+      {
+        "start_frame": 1296,
+        "settled_frame": 1304,
+        "hold_end_frame": 1368,
+        "stage": 0
+      },
+      {
+        "start_frame": 1368,
+        "settled_frame": 1376,
+        "hold_end_frame": 1440,
+        "stage": 1
+      },
+      {
+        "start_frame": 1440,
+        "settled_frame": 1448,
+        "hold_end_frame": 1728,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 5,
+    "title": "控制公式：保留默认、多选与未知行为",
+    "chapter": "控制语义",
+    "start": 72.0,
+    "end": 88.0,
+    "start_frame": 1728,
+    "end_frame": 2112,
+    "duration": 16,
+    "events": [
+      {
+        "start_frame": 1728,
+        "settled_frame": 1736,
+        "hold_end_frame": 1800,
+        "stage": 0
+      },
+      {
+        "start_frame": 1800,
+        "settled_frame": 1808,
+        "hold_end_frame": 1872,
+        "stage": 1
+      },
+      {
+        "start_frame": 1872,
+        "settled_frame": 1880,
+        "hold_end_frame": 2112,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 6,
+    "title": "实现细节：连接保护、成本约束与预算",
+    "chapter": "工程实现",
+    "start": 88.0,
+    "end": 100.0,
+    "start_frame": 2112,
+    "end_frame": 2400,
+    "duration": 12,
+    "events": [
+      {
+        "start_frame": 2112,
+        "settled_frame": 2120,
+        "hold_end_frame": 2184,
+        "stage": 0
+      },
+      {
+        "start_frame": 2184,
+        "settled_frame": 2192,
+        "hold_end_frame": 2256,
+        "stage": 1
+      },
+      {
+        "start_frame": 2256,
+        "settled_frame": 2264,
+        "hold_end_frame": 2400,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 7,
+    "title": "ZIP04：同时核对面积、寄存器与接口",
+    "chapter": "单例对比",
+    "start": 100.0,
+    "end": 116.0,
+    "start_frame": 2400,
+    "end_frame": 2784,
+    "duration": 16,
+    "events": [
+      {
+        "start_frame": 2400,
+        "settled_frame": 2408,
+        "hold_end_frame": 2472,
+        "stage": 0
+      },
+      {
+        "start_frame": 2472,
+        "settled_frame": 2480,
+        "hold_end_frame": 2544,
+        "stage": 1
+      },
+      {
+        "start_frame": 2544,
+        "settled_frame": 2552,
+        "hold_end_frame": 2784,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 8,
+    "title": "公开九例：文档结果与统计口径对应",
+    "chapter": "九例汇总",
+    "start": 116.0,
+    "end": 132.0,
+    "start_frame": 2784,
+    "end_frame": 3168,
+    "duration": 16,
+    "events": [
+      {
+        "start_frame": 2784,
+        "settled_frame": 2792,
+        "hold_end_frame": 2856,
+        "stage": 0
+      },
+      {
+        "start_frame": 2856,
+        "settled_frame": 2864,
+        "hold_end_frame": 2928,
+        "stage": 1
+      },
+      {
+        "start_frame": 2928,
+        "settled_frame": 2936,
+        "hold_end_frame": 3168,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 9,
+    "title": "形式验证方案：输入、适配与证明范围",
+    "chapter": "验证方案",
+    "start": 132.0,
+    "end": 148.0,
+    "start_frame": 3168,
+    "end_frame": 3552,
+    "duration": 16,
+    "events": [
+      {
+        "start_frame": 3168,
+        "settled_frame": 3176,
+        "hold_end_frame": 3240,
+        "stage": 0
+      },
+      {
+        "start_frame": 3240,
+        "settled_frame": 3248,
+        "hold_end_frame": 3312,
+        "stage": 1
+      },
+      {
+        "start_frame": 3312,
+        "settled_frame": 3320,
+        "hold_end_frame": 3552,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 10,
+    "title": "实际 EQY 结果：在所示配置下功能等价",
+    "chapter": "验证结果",
+    "start": 148.0,
+    "end": 164.0,
+    "start_frame": 3552,
+    "end_frame": 3936,
+    "duration": 16,
+    "events": [
+      {
+        "start_frame": 3552,
+        "settled_frame": 3560,
+        "hold_end_frame": 3624,
+        "stage": 0
+      },
+      {
+        "start_frame": 3624,
+        "settled_frame": 3632,
+        "hold_end_frame": 3696,
+        "stage": 1
+      },
+      {
+        "start_frame": 3696,
+        "settled_frame": 3704,
+        "hold_end_frame": 3936,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  },
+  {
+    "id": 11,
+    "title": "可调用、可检查、可复验的交付成果",
+    "chapter": "交付成果",
+    "start": 164.0,
+    "end": 174.0,
+    "start_frame": 3936,
+    "end_frame": 4176,
+    "duration": 10,
+    "events": [
+      {
+        "start_frame": 3936,
+        "settled_frame": 3944,
+        "hold_end_frame": 4008,
+        "stage": 0
+      },
+      {
+        "start_frame": 4008,
+        "settled_frame": 4016,
+        "hold_end_frame": 4080,
+        "stage": 1
+      },
+      {
+        "start_frame": 4080,
+        "settled_frame": 4088,
+        "hold_end_frame": 4176,
+        "stage": 2
+      }
+    ],
+    "content_type": "authored graphic with cited real evidence"
+  }
+]

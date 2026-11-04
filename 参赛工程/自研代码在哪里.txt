@@ -1,0 +1,38 @@
+官方来源与本项目自研边界
+
+1. 新增算法
+开发源码/passes/opt/pmux_opt.cc 是新增自研 pass，非上游官方文件。
+默认功能：固定零选择臂删除、单臂 PMUX 保留、相同输出位列共享、相同控制字
+译码稳定排序、默认 A 支嵌套合并、B 臂嵌套吸收；无选中 PMUX 模块直接跳过分析。
+所有变换适用通用结构条件，不读取用例名，不修改寄存器、时钟、复位或官方输入。
+
+2. 最小集成
+开发源码/passes/opt/CMakeLists.txt：静态注册新增 pass。
+开发源码/techlibs/intel/CMakeLists.txt：synth_intel 声明新增 pass 依赖。
+开发源码/techlibs/intel/synth_intel.cc：原标准 pass 顺序不变，只插入一次：
+  pmux_opt -order-decode -flatten-fallback -uniform-abc -flatten-data-arm
+统一 ABC F4c 设置位于新增 pass 中；不增加额外 ABC 调用。
+完整补丁见 构建工具/PMUX优化补丁.patch。
+
+3. 官方软件
+Yosys 主体、ABC、EQY、SBY、Icarus、Tcl、Python、GNU Make 和其它依赖来自
+官方源码或官方 OSS CAD Suite。固定提交见 官方源码来源.json，许可见
+开发源码/COPYING、第三方许可、官方工具/oss-cad-suite/license。
+F4c 是调用官方 ABC 的统一参数配置，本项目不冒称为自研映射算法。
+
+4. 两版共同环境修复
+构建工具/共同Tcl兼容补丁.patch：修复 Windows Tcl 文件系统初始化兼容问题，
+原版与优化版共同使用。原版源码不是去除这一共同环境修复的纯上游源树。
+这项修复不计入 PMUX 算法收益；绝不以替换官方 Tcl/EQY 工具实现来解决问题。
+
+5. 自研配套而非官方验证器
+验证脚本、等价验证中的 Python 入口和触发器逆映射适配为本项目配套。
+它们组织输入、路径、运行、统计与证据审计，实际求解由未修改的官方 EQY/Yosys
+执行。适配边界、x/z 初始化方法和 SAT 策略在证明输入及日志中保留。
+通用验证中的测试台和断言为自建测试，不冒充官方九例或额外官方测评集。
+
+6. 源码与二进制身份
+正式程序：a603b6e7b900fa3ca8410b25d37c6b4aa26c12f22e6bd9f3dba0958e6d389b53。
+主源码：a3f12a18d255eced2823247ade38df50785a7704ea48681395ed067dc721c8f3。
+关闭的研究规则保留在实际源码中，默认不启用；这里保留真实提交源文件，
+不会为了说明简洁而删除代码后仍声称与已验收程序字节身份一致。
